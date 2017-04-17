@@ -66,6 +66,7 @@ for i in range(1,obj['interval']):
 					if i-1 in egg[element][prop]:
 						egg[element][prop].update({i:egg[element][prop][i-1]})
 		else:
+			pass
 
 #######################################
 
