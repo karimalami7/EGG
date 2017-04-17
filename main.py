@@ -1,0 +1,78 @@
+from scipy.stats import randint,binom,norm,geom,uniform
+import json_parser
+import plain_text_parser
+import g0_distrib 
+import gi_distrib 
+
+(egg,graph_elements)=plain_text_parser.graph_parser()
+
+#################evaluate config file json and put it in dict
+
+obj=json_parser.eval_config()
+
+#################property dependance dep_graph
+L=json_parser.sorted_list(obj)
+#################kahns algorithm : end
+
+
+
+
+
+
+######################################  constitute T0 debut
+
+for prop in L:
+	if obj['ListDynP'][prop]['domain']['v'] == 'true': #### si la prop a un domaine bien defini.
+	#######call distrib function   with 
+	#######  graph_elements[obj['ListDynP'][prop]['elements_type']]
+	#######	 obj['ListDynP'][prop]
+	#######  update egg
+
+		egg=g0_distrib.distrib(graph_elements[obj['ListDynP'][prop]['elements_type']],obj['ListDynP'][prop],prop,0,egg)
+
+	else:
+	#######call distrib function for each rule
+		for rule in obj['ListDynP'][prop]['rules']:
+			elements_with_rule=list()
+			for elements in egg:
+				if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+					if egg[elements][rule['if']['prop']][0] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+						elements_with_rule.append(elements)
+			config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+			config_modif["domain"]["values"]=rule["then"]["hasValues"]
+			config_modif["domain"]["distribution"]=rule["then"]["distribution"]
+			egg=g0_distrib.distrib(elements_with_rule,config_modif,prop,0,egg)
+			###### call distrib with
+			###### elements_with_rule
+			###### obj['ListDynP'][prop]
+			###### update egg 
+
+
+#######################################  constitute T0 end
+
+####################################### constitute all snapshots
+
+for i in range(1,obj['interval']):
+	for prop in L:
+		if obj['ListDynP'][prop]['domain']['v'] == 'true': ### si la propriete a un domaine d evolution bien defini
+			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
+				if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+					if obj['ListDynP'][prop]['evolution']['relation']=="true":
+						#### succession function
+						egg=gi_distrib.distrib(element,obj['ListDynP'][prop],prop,i,egg)
+					else:
+						pass#### general random generator
+				else:
+					if i-1 in egg[element][prop]:
+						egg[element][prop].update({i:egg[element][prop][i-1]})
+		else:
+
+#######################################
+
+for e in egg:
+	if not egg[e] == {} :
+		print e,egg[e],"\n\n\n"
+
+
+
+
