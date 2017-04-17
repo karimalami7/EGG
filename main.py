@@ -39,8 +39,7 @@ for prop in L:
 					if egg[elements][rule['if']['prop']][0] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
 						elements_with_rule.append(elements)
 			config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
-			config_modif["domain"]["values"]=rule["then"]["hasValues"]
-			config_modif["domain"]["distribution"]=rule["then"]["distribution"]
+			config_modif["domain"].update(rule["then"]["config"]["domain"])
 			egg=g0_distrib.distrib(elements_with_rule,config_modif,prop,0,egg)
 			###### call distrib with
 			###### elements_with_rule
@@ -54,7 +53,7 @@ for prop in L:
 
 for i in range(1,obj['interval']):
 	for prop in L:
-		if obj['ListDynP'][prop]['domain']['v'] == 'true': ### si la propriete a un domaine d evolution bien defini
+		if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
 			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 				if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
@@ -66,7 +65,25 @@ for i in range(1,obj['interval']):
 					if i-1 in egg[element][prop]:
 						egg[element][prop].update({i:egg[element][prop][i-1]})
 		else:
-			pass
+			for rule in obj['ListDynP'][prop]['rules']:
+				elements_with_rule=list()
+				for elements in egg:
+					if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+						if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+							elements_with_rule.append(elements)
+				config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+				config_modif["evolution"].update(rule["then"]["config"]["evolution"])
+
+				for element in elements_with_rule:
+					if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+						if obj['ListDynP'][prop]['evolution']['relation']=="true":
+							#### succession function
+							egg=gi_distrib.distrib(element,config_modif,prop,i,egg)
+						else:
+							pass
+					else:
+						if i-1 in egg[element][prop]:
+							egg[element][prop].update({i:egg[element][prop][i-1]})
 
 #######################################
 
