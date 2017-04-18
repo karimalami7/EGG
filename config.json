@@ -1,12 +1,10 @@
 {
 	"interval":20,
-	"nodes":[
-		{"id":"city","DynP":["weather","qAir"]},
-		{"id":"hotel","DynP":["availRoom","star","hotelPrice"]}
-	],
-	"edges":[
-		{"id":"train","DynP":["trainPrice"]}
-	],
+	"nodes_edges":
+		{"city":["weather","qAir"],
+		"hotel":["availRoom","star","hotelPrice"],
+		"train":["trainPrice"]}
+	,
 	"ListDynP": {"weather":
 		{	
 				"elements_type":"city",
