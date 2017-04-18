@@ -1,5 +1,5 @@
 {
-	"interval":10,
+	"interval":20,
 	"nodes":[
 		{"id":"city","DynP":["weather","qAir"]},
 		{"id":"hotel","DynP":["availRoom","star","hotelPrice"]}
