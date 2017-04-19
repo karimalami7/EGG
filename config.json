@@ -49,7 +49,9 @@
 					}
 				},
 				"rules":[],
-				"rulese":[]
+				"rulese":[{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"down"}},
+					{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"down"}}
+				]
 			
 
 		},"availRoom":
@@ -75,8 +77,7 @@
 				},
 				"rules":[],
 				"rulese":[
-					{"if":{"prop":"weather","hasValues":["sunny"]},"then":{"prop":"availRoom","sens":"down"}}
-				]
+					]
 			
 		},"star":
 		{
@@ -123,8 +124,8 @@
 					{"if":{"prop":"star","hasValues":[5]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
 				],
 				"rulese":[
-					{"if":{"prop":"qAir","sens":"up"},"then":{"prop":"hotelPrice","sens":"up"}},
 					{"if":{"prop":"availRoom","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
+					{"if":{"prop":"availRoom","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
 				]
 		},"trainPrice":
 		{
