@@ -2,7 +2,8 @@ from scipy.stats import randint,binom,norm,geom,uniform
 import json_parser
 import plain_text_parser
 import g0_distrib 
-import gi_distrib 
+import succ_func
+
 
 (egg,graph_elements)=plain_text_parser.graph_parser()
 
@@ -49,6 +50,21 @@ for prop in L:
 
 #######################################  constitute T0 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ####################################### constitute all snapshots
 
 for i in range(1,obj['interval']):
@@ -61,25 +77,8 @@ for i in range(1,obj['interval']):
 				if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
 						#### succession function
-						for rulee in obj['ListDynP'][prop]['rulese']:
-							if "change" in rulee['if']:
-								if egg[element][rulee['if']['prop']][i-1]==rulee['if']['change'][0] and egg[element][rulee['if']['prop']][i]==rulee['if']['change'][1]:
-									### une regle change est satisfaite ici
-									print "une regle change est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-							if "sens" in rulee['if']:
-								if rulee['if']['sens']=='up' :
-									### une regle sens est satisfaite ici
-									if (obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[element][rulee['if']['prop']][i-1]<egg[element][rulee['if']['prop']][i]:
-										print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-									if obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and obj['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i-1]) < obj['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i]):
-										print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-								if rulee['if']['sens']=='down':
-									### une regle sens est satisfaite ici
-									if (obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[element][rulee['if']['prop']][i-1]>egg[element][rulee['if']['prop']][i]:
-										print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-									if obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and obj['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i-1]) > obj['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i]):
-										print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-						egg=gi_distrib.distrib(element,obj['ListDynP'][prop],prop,i,egg)
+						
+						egg=succ_func.succ_func(element,obj['ListDynP'][prop],obj,prop,i,egg)
 					else:
 						pass#### general random generator
 				else:
@@ -106,25 +105,7 @@ for i in range(1,obj['interval']):
 					if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-							for rulee in obj['ListDynP'][prop]['rulese']:
-								if "change" in rulee['if']:
-									if egg[element][rulee['if']['prop']][i-1]==rulee['if']['change'][0] and egg[element][rulee['if']['prop']][i]==rulee['if']['change'][1]:
-										### une regle change est satisfaite ici
-										print "une regle change est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-								if "sens" in rulee['if']:
-									if rulee['if']['sens']=='up' :
-										### une regle sens est satisfaite ici
-										if (obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[element][rulee['if']['prop']][i-1]<egg[element][rulee['if']['prop']][i]:
-											print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-										if obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and obj['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i-1]) < obj['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i]):
-											print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-									if rulee['if']['sens']=='down':
-										### une regle sens est satisfaite ici
-										if (obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[element][rulee['if']['prop']][i-1]>egg[element][rulee['if']['prop']][i]:
-											print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-										if obj['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and obj['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i-1]) > obj['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[element][rule['if']['prop']][i]):
-											print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,element,"va influencer",prop
-							egg=gi_distrib.distrib(element,config_modif,prop,i,egg)
+							egg=succ_func.succ_func(element,config_modif,obj,prop,i,egg)
 						else:
 							pass
 					else:

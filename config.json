@@ -43,14 +43,16 @@
 					"relation":"true",
 					"staticity":0.6,
 					"offset":{
-						"min":-2,
-						"max":2,
-						"distribution":{"type":"uniform","p":0.5}
+						"min":-1,
+						"max":1,
+						"distribution":{"type":"uniform"}
 					}
 				},
 				"rules":[],
-				"rulese":[{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"down"}},
-					{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"down"}}
+				"rulese":[
+					{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+					{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+					{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
 				]
 			
 
