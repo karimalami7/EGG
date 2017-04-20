@@ -78,7 +78,7 @@ for i in range(1,obj['interval']):
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
 						#### succession function
 						
-						egg=succ_func.succ_func(element,obj['ListDynP'][prop],obj,prop,i,egg)
+						egg=succ_func.succ_func(element,dict(obj['ListDynP'][prop]),dict(obj),prop,i,dict(egg))
 					else:
 						pass#### general random generator
 				else:
@@ -105,7 +105,7 @@ for i in range(1,obj['interval']):
 					if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-							egg=succ_func.succ_func(element,config_modif,obj,prop,i,egg)
+							egg=succ_func.succ_func(element,dict(config_modif),dict(obj),prop,i,dict(egg))
 						else:
 							pass
 					else:
@@ -117,7 +117,6 @@ for i in range(1,obj['interval']):
 for e in egg:
 	if not egg[e] == {} :
 		print e,egg[e],"\n\n\n"
-
 
 
 

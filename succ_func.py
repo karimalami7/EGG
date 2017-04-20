@@ -10,28 +10,28 @@ def succ_func(elementId,elementConfig,configG,prop,i,egg):
 				### une regle change est satisfaite ici
 				print "une regle change est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,elementId,"va influencer",prop
 				print rulee['then']
-				elementConfig=then_func(rulee['then'],elementConfig)
+				elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 		if "sens" in rulee['if']:
 			if rulee['if']['sens']=='up' :
 				### une regle sens est satisfaite ici
 				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[elementId][rulee['if']['prop']][i-1]<egg[elementId][rulee['if']['prop']][i]:
 					print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,elementId,"va influencer",prop
 					print rulee['then']
-					elementConfig=then_func(rulee['then'],elementConfig)
+					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i-1]) < configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i]):
 					print "une regle sens up est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,elementId,"va influencer",prop
 					print rulee['then']
-					elementConfig=then_func(rulee['then'],elementConfig)
+					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 			if rulee['if']['sens']=='down':
 				### une regle sens est satisfaite ici
 				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[elementId][rulee['if']['prop']][i-1]>egg[elementId][rulee['if']['prop']][i]:
 					print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,elementId,"va influencer",prop
 					print rulee['then']
-					elementConfig=then_func(rulee['then'],elementConfig)
+					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i-1]) > configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i]):
 					print "une regle sens down est satisfaite ici pour la prop",rulee['if']['prop'],i-1,i,elementId,"va influencer",prop
 					print rulee['then']
-					elementConfig=then_func(rulee['then'],elementConfig)
+					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 
 
 	egg=gi_distrib.distrib(elementId,elementConfig,prop,i,egg)
