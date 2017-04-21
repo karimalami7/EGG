@@ -28,16 +28,24 @@ def distrib(param1,param2,param3,param4,egg):
 				i=i+1		
 		#############################  binom
 
-		#############################  zipf
-		if param2['domain']['distribution']['type']=="zipf":
+		#############################  geom
+		if param2['domain']['distribution']['type']=="geom":
+			
+			geomValues=list()
+			for i in range (0,len(param1)):
+				while True:
+					value=geom.rvs(param2['domain']['distribution']['p'],size=1)[0]
+					if  value > len(param2['domain']['values']):
+						pass
+					else :
+						geomValues.append(value)
+						break
+			i=0
 			for element in param1:
-				random= geom.rvs(0.3,size=1)
-				if random >5:
-					egg[element].update({param3:{param4:5}})
-				else:
-					egg[element].update({param3:{param4:random[0]}})
+				egg[element].update({param3:{param4:param2['domain']['values'][geomValues[i]-1]}})
+				i=i+1
 
-		#############################  zipf
+		#############################  geom
 
 	############################ qualitatif 
 	
