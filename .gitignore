@@ -1,0 +1,8 @@
+.DS_Store
+g0_distrib.pyc
+gi_distrib.pyc
+json_parser.pyc
+plain_text_parser.pyc
+rdfOutput.txt
+rdfcreator.pyc
+succ_func.pyc
