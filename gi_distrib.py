@@ -22,19 +22,28 @@ def distrib(param1,param2,param3,param4,egg):
 
 		###################################qualitatif avec ordre
 		else:
+			indice=param2['domain']['values'].index(egg[param1][param3][param4-1])
+			offset_list=list()
+			for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
+				### m ne va pas jusqu au bout
+				offset_list.append(param2['evolution']['offset']['min'] + m)
+
 			if param2['evolution']['offset']['distribution']['type']=="uniform":
-				indice=param2['domain']['values'].index(egg[param1][param3][param4-1])
-				offset_list=list()
-				for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
-					### m ne va pas jusqu au bout
-					offset_list.append(param2['evolution']['offset']['min'] + m)
 				random =  randint.rvs(0, len(offset_list), size=1)
-				print random,offset_list,"\n"
+				#######bug1 ici       a revoir   
 				if len(param2['domain']['values'])<indice+offset_list[random[0]]:
 					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})
 				else:
 					egg[param1][param3].update({param4:param2['domain']['values'][indice+offset_list[random[0]]]})	
 	
+			if param2['evolution']['offset']['distribution']['type']=="binom":
+				random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=1)
+				#######bug1 ici       a revoir
+				if len(param2['domain']['values'])<indice+offset_list[random[0]]:
+					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})
+				else:
+					egg[param1][param3].update({param4:param2['domain']['values'][indice+offset_list[random[0]]]})
+
 
 
 	############################ qualitatif
