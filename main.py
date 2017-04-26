@@ -4,6 +4,9 @@ import plain_text_parser
 import g0_distrib 
 import gi_distrib 
 import rdfcreator
+import succ_func
+
+
 
 (egg,graph_elements)=plain_text_parser.graph_parser()
 
@@ -50,21 +53,45 @@ for prop in L:
 
 #######################################  constitute T0 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ####################################### constitute all snapshots
 
 for i in range(1,obj['interval']):
 	for prop in L:
+		
+		#############prop qui ont evolution bien definie
+
 		if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
 			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 				if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
 						#### succession function
-						egg=gi_distrib.distrib(element,obj['ListDynP'][prop],prop,i,egg)
+						
+						egg=succ_func.succ_func(element,dict(obj['ListDynP'][prop]),dict(obj),prop,i,dict(egg))
 					else:
 						pass#### general random generator
 				else:
 					if i-1 in egg[element][prop]:
 						egg[element][prop].update({i:egg[element][prop][i-1]})
+		
+
+
+		#############prop qui ont evolution non definie
+
 		else:
 			for rule in obj['ListDynP'][prop]['rules']:
 				elements_with_rule=list()
@@ -75,11 +102,13 @@ for i in range(1,obj['interval']):
 				config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
 				config_modif["evolution"].update(rule["then"]["config"]["evolution"])
 
+				#### constitution de elements with rule and config modif
+
 				for element in elements_with_rule:
 					if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-							egg=gi_distrib.distrib(element,config_modif,prop,i,egg)
+							egg=succ_func.succ_func(element,dict(config_modif),dict(obj),prop,i,dict(egg))
 						else:
 							pass
 					else:
@@ -93,5 +122,4 @@ for e in egg:
 		print e,egg[e],"\n\n\n"
 
 rdfcreator.write_rdf(graph_elements,egg,obj)
-
 
