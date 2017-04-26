@@ -3,6 +3,7 @@ import json_parser
 import plain_text_parser
 import g0_distrib 
 import gi_distrib 
+import rdfcreator
 
 (egg,graph_elements)=plain_text_parser.graph_parser()
 
@@ -91,6 +92,6 @@ for e in egg:
 	if not egg[e] == {} :
 		print e,egg[e],"\n\n\n"
 
-
+rdfcreator.write_rdf(graph_elements,egg,obj)
 
 
