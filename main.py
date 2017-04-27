@@ -77,7 +77,7 @@ for i in range(1,obj['interval']):
 
 		if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
 			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-				if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+				if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
 						#### succession function
 						
@@ -105,7 +105,7 @@ for i in range(1,obj['interval']):
 				#### constitution de elements with rule and config modif
 
 				for element in elements_with_rule:
-					if obj['ListDynP'][prop]['duration']//i==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
 							egg=succ_func.succ_func(element,dict(config_modif),dict(obj),prop,i,dict(egg))

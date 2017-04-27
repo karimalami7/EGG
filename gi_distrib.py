@@ -10,6 +10,7 @@ def distrib(param1,param2,param3,param4,egg):
 	
 
 	if param2['domain']['type']=="qualitatif":
+		###################################### qualitatif sans ordre	
 		if param2['domain']['order']=="false":
 			if egg[param1][param3][param4-1] in param2['evolution']['succesors']:
 				random =  randint.rvs(0, len(param2['evolution']['succesors'][egg[param1][param3][param4-1]]), size=1)
@@ -30,17 +31,21 @@ def distrib(param1,param2,param3,param4,egg):
 
 			if param2['evolution']['offset']['distribution']['type']=="uniform":
 				random =  randint.rvs(0, len(offset_list), size=1)
-				#######bug1 ici       a revoir   
-				if len(param2['domain']['values'])<indice+offset_list[random[0]]:
-					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})
+				
+				if len(param2['domain']['values'])-1<indice+offset_list[random[0]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
+					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})##### we take the last value
+				elif indice+offset_list[random[0]]<0:
+					egg[param1][param3].update({param4:param2['domain']['values'][0]}) ######### we take the first value
 				else:
 					egg[param1][param3].update({param4:param2['domain']['values'][indice+offset_list[random[0]]]})	
 	
 			if param2['evolution']['offset']['distribution']['type']=="binom":
 				random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=1)
-				#######bug1 ici       a revoir
-				if len(param2['domain']['values'])<indice+offset_list[random[0]]:
-					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})
+				print param3,param1,param4,indice,offset_list,random[0]
+				if len(param2['domain']['values'])-1<indice+offset_list[random[0]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
+					egg[param1][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]}) ##### we take the last value
+				elif indice+offset_list[random[0]]<0:
+					egg[param1][param3].update({param4:param2['domain']['values'][0]}) ######### we take the first value
 				else:
 					egg[param1][param3].update({param4:param2['domain']['values'][indice+offset_list[random[0]]]})
 

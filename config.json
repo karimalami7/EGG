@@ -1,5 +1,5 @@
 {
-	"interval":50,
+	"interval":100,
 	"nodes_edges":
 		{"city":["weather","qAir"],
 		"hotel":["availRoom","star","hotelPrice"],
@@ -86,7 +86,7 @@
 					"type":"qualitatif",
 					"order":"true",
 					"v":"true",
-					"values":["2","3","1","4","5"],
+					"values":["1","2","3","4","5"],
 					"distribution":{"type":"geom","p":0.65}
 				},
 				"duration":30,
