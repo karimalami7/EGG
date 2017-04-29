@@ -101,7 +101,9 @@ for i in range(1,obj['interval']):
 						if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
 							elements_with_rule.append(elements)
 				config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+				config_modif["domain"].update(rule["then"]["config"]["domain"])
 				config_modif["evolution"].update(rule["then"]["config"]["evolution"])
+
 
 				#### constitution de elements with rule and config modif
 

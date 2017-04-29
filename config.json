@@ -134,7 +134,7 @@
 					"type":"quantitatif:con",
 					
 					"v":"true",
-					"values":{"min":"20","max":"100"},
+					"values":{"min":20,"max":100},
 					"distribution":{"type":"normal","mean":60,"sigma":6}
 				},
 				"duration":1,

@@ -63,7 +63,14 @@ def distrib(param1,param2,param3,param4,egg):
 		if param2['evolution']['offset']['distribution']["type"]=="binom":
 			random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=1)
 			### j ajoute -1 pour que random soit entre 0 et le plus grand indice de offset list qui est sa taille -1
-			egg[param1][param3].update({param4:egg[param1][param3][param4-1]+offset_list[random[0]]})
+			previous_value=egg[param1][param3][param4-1]
+			next_value=previous_value+offset_list[random[0]]
+			if next_value < param2["domain"]["values"]["min"]:
+				egg[param1][param3].update({param4:param2["domain"]["values"]["min"]})
+			elif next_value >param2["domain"]["values"]["max"]: 
+				egg[param1][param3].update({param4:param2["domain"]["values"]["max"]})
+			else:
+				egg[param1][param3].update({param4:next_value})
 
 
 
@@ -75,7 +82,14 @@ def distrib(param1,param2,param3,param4,egg):
 	if param2['domain']['type']=="quantitatif:con":
 		if param2['evolution']['offset']['distribution']["type"]=="normal":
 			random = norm.rvs(size=1)
-			egg[param1][param3].update({param4:round(egg[param1][param3][param4-1]+((random[0]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']),1)})
+			previous_value=egg[param1][param3][param4-1]
+			next_value=round(previous_value+((random[0]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']),1)
+			if next_value < param2["domain"]["values"]["min"]:
+				egg[param1][param3].update({param4:param2["domain"]["values"]["min"]})
+			elif next_value >param2["domain"]["values"]["max"]: 
+				egg[param1][param3].update({param4:param2["domain"]["values"]["max"]})
+			else:
+				egg[param1][param3].update({param4:next_value})
 	############################ quantitatif:con
 
 	return egg
