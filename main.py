@@ -5,6 +5,7 @@ import g0_distrib
 import gi_distrib 
 import rdfcreator
 import succ_func
+import copy
 
 
 
@@ -42,7 +43,7 @@ for prop in L:
 				if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
 					if egg[elements][rule['if']['prop']][0] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
 						elements_with_rule.append(elements)
-			config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+			config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
 			config_modif["domain"].update(rule["then"]["config"]["domain"])
 			egg=g0_distrib.distrib(elements_with_rule,config_modif,prop,0,egg)
 			###### call distrib with
@@ -81,7 +82,7 @@ for i in range(1,obj['interval']):
 					if obj['ListDynP'][prop]['evolution']['relation']=="true":
 						#### succession function
 						
-						egg=succ_func.succ_func(element,dict(obj['ListDynP'][prop]),dict(obj),prop,i,dict(egg))
+						egg=succ_func.succ_func(element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
 					else:
 						pass#### general random generator
 				else:
@@ -99,7 +100,7 @@ for i in range(1,obj['interval']):
 					if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
 						if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
 							elements_with_rule.append(elements)
-				config_modif=dict(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+				config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
 				config_modif["evolution"].update(rule["then"]["config"]["evolution"])
 
 				#### constitution de elements with rule and config modif
@@ -108,7 +109,7 @@ for i in range(1,obj['interval']):
 					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-							egg=succ_func.succ_func(element,dict(config_modif),dict(obj),prop,i,dict(egg))
+							egg=succ_func.succ_func(element,copy.deepcopy(config_modif),obj,prop,i,egg)
 						else:
 							pass
 					else:
