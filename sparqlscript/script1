@@ -1,0 +1,12 @@
+PREFIX ns1: <http://egg/ng/> 
+PREFIX ns2: <http://egg/predicate/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xml: <http://www.w3.org/XML/1998/namespace> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?x WHERE {
+	GRAPH ?g {<hotel:18> ns2:hasProperty "star"}
+
+	GRAPH ?g1 {?g ns2:instant "65"; ns2:value ?x}
+}

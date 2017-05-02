@@ -1,5 +1,5 @@
 {
-	"interval":100,
+	"interval":120,
 	"nodes_edges":
 		{"city":["weather","qAir"],
 		"hotel":["availRoom","star","hotelPrice"],
