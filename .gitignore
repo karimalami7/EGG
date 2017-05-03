@@ -10,3 +10,4 @@ rdfOutput.trig
 rdfOutput.ttl
 schemas/trip/egg.log
 schemas/trip/trip-output.trig
+plot.pyc

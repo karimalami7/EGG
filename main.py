@@ -8,6 +8,7 @@ import succ_func
 import copy
 import argparse
 import logging
+import plot
 
 ################# put log in egg.log
 
@@ -135,9 +136,12 @@ for i in range(1,obj['interval']):
 
 #######################################
 
-#for e in egg:
-#	if not egg[e] == {} :
-#		print e,egg[e],"\n\n\n"
+for e in egg:
+	if not egg[e] == {} :
+		print e,egg[e],"\n\n\n"
 
 rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
+
+
+plot.plot(egg["46"]["hotelPrice"])
 
