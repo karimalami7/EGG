@@ -1,5 +1,5 @@
 from scipy.stats import randint,binom,norm,geom
-
+import logging
 ############### distrib function debut
 
 def distrib(param1,param2,param3,param4,egg):

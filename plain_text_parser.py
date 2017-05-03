@@ -1,4 +1,7 @@
 import re
+import logging
+
+logging.basicConfig(filename='egg.log',level=logging.DEBUG)
 
 def graph_parser(schema):
 

@@ -1,6 +1,7 @@
 import rdflib,re
+import logging
 
-
+logging.basicConfig(filename='egg.log',level=logging.DEBUG)
 
 def write_rdf(schema,graph_elements,egg,configG):
 

@@ -7,6 +7,11 @@ import rdfcreator
 import succ_func
 import copy
 import argparse
+import logging
+
+################# put log in egg.log
+
+logging.basicConfig(filename='egg.log',level=logging.DEBUG)
 
 ################# check the arguments
 
@@ -15,7 +20,7 @@ parser = argparse.ArgumentParser(description='define the input schema.')
 parser.add_argument('schema', metavar='schema', type=str, nargs=1,
                    help='the schema to process')
 args = parser.parse_args()
-print args.schema[0]
+
 
 #################parse the gmark output
 
@@ -130,9 +135,9 @@ for i in range(1,obj['interval']):
 
 #######################################
 
-for e in egg:
-	if not egg[e] == {} :
-		print e,egg[e],"\n\n\n"
+#for e in egg:
+#	if not egg[e] == {} :
+#		print e,egg[e],"\n\n\n"
 
 rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 

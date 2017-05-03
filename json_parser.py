@@ -1,3 +1,4 @@
+import logging
 #################evaluate config file json and put it in dict
 def eval_config(schema):
 	f=open(schema+'-config.json','r')	
