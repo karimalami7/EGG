@@ -6,18 +6,28 @@ import gi_distrib
 import rdfcreator
 import succ_func
 import copy
+import argparse
 
+################# check the arguments
 
+parser = argparse.ArgumentParser(description='define the input schema.')
 
-(egg,graph_elements)=plain_text_parser.graph_parser()
+parser.add_argument('schema', metavar='schema', type=str, nargs=1,
+                   help='the schema to process')
+args = parser.parse_args()
+print args.schema[0]
+
+#################parse the gmark output
+
+(egg,graph_elements)=plain_text_parser.graph_parser(args.schema[0])
 
 #################evaluate config file json and put it in dict
 
-obj=json_parser.eval_config()
+obj=json_parser.eval_config(args.schema[0])
 
 #################property dependance dep_graph
 L=json_parser.sorted_list(obj)
-#################kahns algorithm : end
+
 
 
 
@@ -124,5 +134,5 @@ for e in egg:
 	if not egg[e] == {} :
 		print e,egg[e],"\n\n\n"
 
-rdfcreator.write_rdf(graph_elements,egg,obj)
+rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 

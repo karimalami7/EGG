@@ -1,6 +1,6 @@
 #################evaluate config file json and put it in dict
-def eval_config():
-	f=open('config.json','r')	
+def eval_config(schema):
+	f=open(schema+'-config.json','r')	
 	obj=eval(f.read())
 	return obj
 

@@ -1,12 +1,12 @@
 import re
 
-def graph_parser():
+def graph_parser(schema):
 
 	egg=dict() #### global variable : keys are graph nodes and edges id
 	
 	graph_elements=dict()
 	
-	with open('trip-graph.txt','r') as f:
+	with open(schema+'-graph.txt','r') as f:
 		for line in f.readlines():
 			match=re.match(r"(^(\w+):(\w+) (\w+):(\w+) (\w+):(\w+))",line)
 			if match:

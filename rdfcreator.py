@@ -2,7 +2,7 @@ import rdflib,re
 
 
 
-def write_rdf(graph_elements,egg,configG):
+def write_rdf(schema,graph_elements,egg,configG):
 
 	type_namespace=dict()
 	type_namespace.update({"city":"http://example.org/city"})
@@ -21,7 +21,7 @@ def write_rdf(graph_elements,egg,configG):
 	g = rdflib.ConjunctiveGraph()
 	i=0
 	
-	with open('trip-graph.txt','r') as f:
+	with open(schema+'-graph.txt','r') as f:
 		for line in f.readlines():
 			match=re.match(r"(^(\w+):(\w+) (\w+):(\w+) (\w+):(\w+))",line)
 			if match:
@@ -57,5 +57,5 @@ def write_rdf(graph_elements,egg,configG):
 
 
 
-	with open("rdfOutput.trig","w") as f:
+	with open(schema+"-output.trig","w") as f:
 		f.write(g.serialize(format='trig'))
