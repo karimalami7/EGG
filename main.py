@@ -8,7 +8,8 @@ import succ_func
 import copy
 import argparse
 import logging
-import plot
+import plot1
+import plot2
 
 ################# put log in egg.log
 
@@ -140,8 +141,33 @@ for e in egg:
 	if not egg[e] == {} :
 		print e,egg[e],"\n\n\n"
 
-rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
+#rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
-plot.plot(egg["46"]["hotelPrice"])
+########################   plot1 : debut
 
+starplot={'1':[],'2':[],'3':[],'4':[],'5':[]}
+
+for ele in graph_elements["hotel"] :
+
+	if egg[ele]["star"][0]=='1':
+		starplot["1"].append(ele)
+	if egg[ele]["star"][0]=='2':
+		starplot["2"].append(ele)
+	if egg[ele]["star"][0]=='3':
+		starplot["3"].append(ele)
+	if egg[ele]["star"][0]=='4':
+		starplot["4"].append(ele)
+	if egg[ele]["star"][0]=='5':
+		starplot["5"].append(ele)
+
+
+plot1.plot(egg,starplot)
+
+########################   plot1 : fin
+
+########################   plot2 : debut
+
+plot2.plot(egg["46"])
+
+########################   plot2 : fin

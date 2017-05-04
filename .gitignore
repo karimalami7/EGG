@@ -11,3 +11,5 @@ rdfOutput.ttl
 schemas/trip/egg.log
 schemas/trip/trip-output.trig
 plot.pyc
+plot1.pyc
+plot2.pyc
