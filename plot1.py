@@ -5,33 +5,29 @@ formdict={"1":['b-','r-'],"2":['b--','r--'],"3":['b^','r^'],"4":['b-','r-'],"5":
 
 x=list()
 y=list()
-for m in range (0,10):
-	y.append(list())
 
-def plot(egg,starplot):
+def plot(egg,elements_list,prop):
 
-	for e in  egg[starplot['1'][0]]['star'].keys():
+	for i in range(0,len(egg[elements_list[0]][prop])):
 
-		x.append(e)
+		x.append(i)
+
+	j=0
+
+	for e in elements_list:
+
+		y.append(list())
+
+
+		for keys in egg[e][prop]:
 		
-	print "starplot: ",starplot
-	i=0
-	for star in starplot:
+			y[j].append(egg[e][prop][keys])
 
-		if len (starplot[star])>=2:
+		plt.plot(x,y[j],'r-')
 
-			for j in range(0, len (egg[starplot[star][0]]['star'])):
-				
-				y[i].append(egg[starplot[star][0]]['hotelPrice'][j])
-			plt.plot(x,y[i],formdict[star][0])	
-			i=i+1
+		j=j+1
 
-			for k in range(0, len (egg[starplot[star][1]]['star'])):
-				
-				y[i].append(egg[starplot[star][1]]['hotelPrice'][k])
-			plt.plot(x,y[i],formdict[star][1])	
-			i=i+1
-
-
-
-	plt.show() # affiche la figure a l'ecran
+	plt.xlabel('interval', fontsize=14, color='black')
+	plt.ylabel('values', fontsize=14, color='black')
+	plt.title(prop)
+	plt.savefig(prop+".png")

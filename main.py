@@ -21,8 +21,16 @@ parser = argparse.ArgumentParser(description='define the input schema.')
 
 parser.add_argument('schema', metavar='schema', type=str, nargs=1,
                    help='the schema to process')
+
+parser.add_argument('--plot-byproperty', metavar='property', type=str, nargs=1,
+                   help='plot all graph element that have this property')
+
+parser.add_argument('--plot-byobject', metavar='object', type=str, nargs=1,
+                   help='plot all properties of an elements')
+
 args = parser.parse_args()
 
+print args
 
 #################parse the gmark output
 
@@ -144,30 +152,17 @@ for e in egg:
 #rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
-########################   plot1 : debut
+########################   plot1 by property : debut
 
-starplot={'1':[],'2':[],'3':[],'4':[],'5':[]}
+elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty[0]]["elements_type"]]
 
-for ele in graph_elements["hotel"] :
+plot1.plot(egg,list(elements_list),args.plot_byproperty[0])
 
-	if egg[ele]["star"][0]=='1':
-		starplot["1"].append(ele)
-	if egg[ele]["star"][0]=='2':
-		starplot["2"].append(ele)
-	if egg[ele]["star"][0]=='3':
-		starplot["3"].append(ele)
-	if egg[ele]["star"][0]=='4':
-		starplot["4"].append(ele)
-	if egg[ele]["star"][0]=='5':
-		starplot["5"].append(ele)
-
-
-plot1.plot(egg,starplot)
 
 ########################   plot1 : fin
 
 ########################   plot2 : debut
 
-plot2.plot(egg["46"])
+plot2.plot(egg[args.plot_byobject[0]],args.plot_byobject[0])
 
 ########################   plot2 : fin
