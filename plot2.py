@@ -8,7 +8,7 @@ def plot_one(element_dict,element_id,interval,config):
 	plt.figure(1)
 
 	j=1
-	for prop in egg[element_id]:
+	for prop in element_dict:
 			
 		if  config[prop]["domain"]["type"]=="quantitatif:con" or config[prop]["domain"]["type"]=="quantitatif:dis" or ( config[prop]["domain"]["type"]=="qualitatif" and config[prop]["domain"]["order"]=="true" ) :
 
@@ -17,9 +17,9 @@ def plot_one(element_dict,element_id,interval,config):
 
 			for i in range(0, interval):
 				x.append(i)
-				y.append(egg[element_id][prop][i])
+				y.append(element_dict[prop][i])
 				
-			subplot=(100*len(egg[element_id])) + 10 + j
+			subplot=(100*len(element_dict)) + 10 + j
 				
 			plt.subplot(subplot)
 			plt.plot(x, y, 'b-')
