@@ -3,10 +3,12 @@ import matplotlib.pyplot as plt
 
 formdict={"1":['b-','r-'],"2":['b--','r--'],"3":['b^','r^'],"4":['b-','r-'],"5":['b+','r+']}
 
-x=list()
-y=list()
+
 
 def plot(egg,elements_list,prop):
+
+	x=list()
+	y=list()
 
 	for i in range(0,len(egg[elements_list[0]][prop])):
 

@@ -10,6 +10,8 @@ import argparse
 import logging
 import plot1
 import plot2
+import plot3
+import plot4
 
 ################# put log in egg.log
 
@@ -22,10 +24,10 @@ parser = argparse.ArgumentParser(description='define the input schema.')
 parser.add_argument('schema', metavar='schema', type=str, nargs=1,
                    help='the schema to process')
 
-parser.add_argument('--plot-byproperty', metavar='property', type=str, nargs=1,
+parser.add_argument('--plot-byproperty', metavar='property', type=str, nargs='?',
                    help='plot all graph element that have this property')
 
-parser.add_argument('--plot-byobject', metavar='object', type=str, nargs=1,
+parser.add_argument('--plot-byobject', metavar='object', type=str, nargs='?',
                    help='plot all properties of an elements')
 
 args = parser.parse_args()
@@ -154,15 +156,34 @@ for e in egg:
 
 ########################   plot1 by property : debut
 
-elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty[0]]["elements_type"]]
+if args.plot_byproperty==None: 
 
-plot1.plot(egg,list(elements_list),args.plot_byproperty[0])
+	for prop in obj["ListDynP"]:
 
+		if  obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:con" or obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:dis" or ( obj["ListDynP"][prop]["domain"]["type"]=="qualitatif" and obj["ListDynP"][prop]["domain"]["order"]=="true" ) :
+
+			print prop
+
+			elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
+
+			plot1.plot(egg,list(elements_list),prop)
+
+else : 
+
+	elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
+
+	plot1.plot(egg,list(elements_list),args.plot_byproperty)
 
 ########################   plot1 : fin
 
 ########################   plot2 : debut
 
-plot2.plot(egg[args.plot_byobject[0]],args.plot_byobject[0])
+if args.plot_byobject==None: 
+
+	plot3.plot(egg,obj["interval"],obj["ListDynP"])
+
+else:
+
+	plot2.plot(egg[args.plot_byobject],args.plot_byobject)
 
 ########################   plot2 : fin
