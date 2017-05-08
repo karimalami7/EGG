@@ -185,6 +185,6 @@ if args.plot_byobject==None:
 
 else:
 
-	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject)
+	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"])
 
 ########################   plot2 : fin
