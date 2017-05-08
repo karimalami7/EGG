@@ -24,11 +24,14 @@ parser = argparse.ArgumentParser(description='define the input schema.')
 parser.add_argument('schema', metavar='schema', type=str, nargs=1,
                    help='the schema to process')
 
-parser.add_argument('--plot-byproperty', metavar='property', type=str, nargs='?',
+parser.add_argument('--plot-byproperty', metavar='property', type=str, nargs='?', const="all",
                    help='plot all graph element that have this property')
 
-parser.add_argument('--plot-byobject', metavar='object', type=str, nargs='?',
+parser.add_argument('--plot-byobject', metavar='object', type=str, nargs='?', const="all",
                    help='plot all properties of an elements')
+
+parser.add_argument('--rdf-output', action='store_true',
+                   help='outout egg in rdf')
 
 args = parser.parse_args()
 
@@ -145,30 +148,31 @@ for i in range(1,obj['interval']):
 						if i-1 in egg[element][prop]:
 							egg[element][prop].update({i:egg[element][prop][i-1]})
 
-#######################################
+####################################### fin egg
+
 
 for e in egg:
 	if not egg[e] == {} :
 		print e,egg[e],"\n\n\n"
 
-#rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
+if args.rdf_output == True:
+
+	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
 ########################   plot1 by property : debut
 
-if args.plot_byproperty==None: 
+if args.plot_byproperty=="all": 
 
 	for prop in obj["ListDynP"]:
 
 		if  obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:con" or obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:dis" or ( obj["ListDynP"][prop]["domain"]["type"]=="qualitatif" and obj["ListDynP"][prop]["domain"]["order"]=="true" ) :
 
-			print prop
-
 			elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
 
 			plot1.plot(egg,list(elements_list),prop)
 
-else : 
+elif not args.plot_byproperty==None:
 
 	elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
 
@@ -179,11 +183,11 @@ else :
 ########################   plot2 : debut
 
 
-if args.plot_byobject==None: 
+if args.plot_byobject=="all" : 
 
 	plot2.plot_all(egg,obj["interval"],obj["ListDynP"])
 
-else:
+elif not args.plot_byobject==None:
 
 	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"])
 
