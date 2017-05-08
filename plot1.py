@@ -7,6 +7,7 @@ formdict={"1":['b-','r-'],"2":['b--','r--'],"3":['b^','r^'],"4":['b-','r-'],"5":
 
 def plot(egg,elements_list,prop):
 
+	import matplotlib.pyplot as plt
 	x=list()
 	y=list()
 
@@ -32,4 +33,5 @@ def plot(egg,elements_list,prop):
 	plt.xlabel('interval', fontsize=14, color='black')
 	plt.ylabel('values', fontsize=14, color='black')
 	plt.title(prop)
-	plt.savefig(prop+".png")
+	plt.savefig("byproperty/"+prop+".png")
+	plt.clf() # clear plot 

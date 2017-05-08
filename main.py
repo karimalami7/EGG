@@ -178,12 +178,13 @@ else :
 
 ########################   plot2 : debut
 
+
 if args.plot_byobject==None: 
 
-	plot3.plot(egg,obj["interval"],obj["ListDynP"])
+	plot2.plot_all(egg,obj["interval"],obj["ListDynP"])
 
 else:
 
-	plot2.plot(egg[args.plot_byobject],args.plot_byobject)
+	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject)
 
 ########################   plot2 : fin
