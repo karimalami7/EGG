@@ -24,14 +24,18 @@ def plot(egg,elements_list,prop):
 
 		for keys in egg[e][prop]:
 		
-			y[j].append(egg[e][prop][keys])
+			y[j].append(int(egg[e][prop][keys]))
 
 		plt.plot(x,y[j],'r-')
 
 		j=j+1
 
-	plt.xlabel('interval', fontsize=14, color='black')
-	plt.ylabel('values', fontsize=14, color='black')
-	plt.title(prop)
-	plt.savefig("byproperty/"+prop+".png")
+	plt.xlabel('Time', fontsize=14, color='black')
+	plt.ylabel('Values', fontsize=14, color='black')
+	plt.title('Property ' + prop + ' of ')
+
+# if node " node type " + le type du noeud
+# else " edge predicate " + le type de l'arrete
+
+	plt.savefig("byproperty/"+prop+".pdf")
 	plt.clf() # clear plot 

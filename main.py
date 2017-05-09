@@ -10,8 +10,8 @@ import argparse
 import logging
 import plot1
 import plot2
-import plot3
-import plot4
+#import plot3
+#import plot4
 
 ################# put log in egg.log
 
