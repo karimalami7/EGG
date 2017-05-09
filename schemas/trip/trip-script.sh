@@ -1,7 +1,7 @@
 #/bin/bash
 
 #cd "/Users/mac/Desktop/code/EGG/schemas/trip"
-cd "/home/user/EGG/schemas/trip"
+cd "/Users/mac/Desktop/code/EGG/schemas/trip"
 
 
 
@@ -11,7 +11,7 @@ mkdir -p "byproperty"
 
 rm "egg.log"
 
-python "../../main.py" "trip" --plot-byobject --plot-byproperty --rdf-output
+python "../../main.py" "trip" --log
 
 
 # no decimals for values for star property

@@ -33,9 +33,15 @@ parser.add_argument('--plot-byobject', metavar='object', type=str, nargs='?', co
 parser.add_argument('--rdf-output', action='store_true',
                    help='outout egg in rdf')
 
+parser.add_argument('--log', action='store_true',
+                   help='outout egg in rdf')
+
 args = parser.parse_args()
 
-print args
+if args.log == False :
+	logging.disable(logging.INFO)
+
+logging.info (args)
 
 #################parse the gmark output
 
@@ -153,7 +159,7 @@ for i in range(1,obj['interval']):
 
 for e in egg:
 	if not egg[e] == {} :
-		print e,egg[e],"\n\n\n"
+		logging.info (e+str(egg[e])+"\n\n\n")
 
 if args.rdf_output == True:
 
