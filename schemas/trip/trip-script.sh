@@ -1,7 +1,7 @@
 #/bin/bash
 
 #cd "/Users/mac/Desktop/code/EGG/schemas/trip"
-cd "/Users/mac/Desktop/code/EGG/schemas/trip"
+
 
 
 
