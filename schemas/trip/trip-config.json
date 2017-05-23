@@ -6,7 +6,8 @@
 		"train":["trainPrice"]}
 	,
 	"ListDynP": {"weather":
-		{	
+		{		
+				"element":"node",
 				"elements_type":"city",
 				"domain":{
 					"type":"qualitatif",
@@ -27,6 +28,7 @@
 	
 		},"qAir":
 		{
+				"element":"node",
 				"elements_type":"city",
 				"domain":{
 					"type":"qualitatif",
@@ -56,6 +58,7 @@
 
 		},"availRoom":
 		{
+				"element":"node",
 				"elements_type":"hotel",
 				"domain":{
 					"type":"quantitatif:dis",
@@ -80,7 +83,8 @@
 					]
 			
 		},"star":
-		{
+		{	
+				"element":"node",
 				"elements_type":"hotel",
 				"domain":{
 					"type":"qualitatif",
@@ -104,11 +108,13 @@
 				"rulese":[]
 			
 		},"hotelPrice":
-		{
+		{		
+				"element":"node",
 				"elements_type":"hotel",
 				"domain":{
 					"type":"quantitatif:con",	
 					"v":"false",
+					"distribution":{"type":""}
 				},
 				"duration":1,
 				"evolution":{
@@ -128,7 +134,8 @@
 					{"if":{"prop":"availRoom","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
 				]
 		},"trainPrice":
-		{
+		{		
+				"element":"edge",
 				"elements_type":"train",
 				"domain":{
 					"type":"quantitatif:con",

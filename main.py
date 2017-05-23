@@ -172,17 +172,15 @@ if args.plot_byproperty=="all":
 
 	for prop in obj["ListDynP"]:
 
-		if  obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:con" or obj["ListDynP"][prop]["domain"]["type"]=="quantitatif:dis" or ( obj["ListDynP"][prop]["domain"]["type"]=="qualitatif" and obj["ListDynP"][prop]["domain"]["order"]=="true" ) :
+		elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
 
-			elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
-
-			plot1.plot(egg,list(elements_list),prop)
+		plot1.plot(egg,list(elements_list),prop,obj)
 
 elif not args.plot_byproperty==None:
 
 	elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
 
-	plot1.plot(egg,list(elements_list),args.plot_byproperty)
+	plot1.plot(egg,list(elements_list),args.plot_byproperty,obj)
 
 ########################   plot1 : fin
 
@@ -191,7 +189,9 @@ elif not args.plot_byproperty==None:
 
 if args.plot_byobject=="all" : 
 
-	plot2.plot_all(egg,obj["interval"],obj["ListDynP"])
+	for element in egg:
+
+		plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"])
 
 elif not args.plot_byobject==None:
 
