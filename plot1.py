@@ -49,7 +49,16 @@ def plot(egg,elements_list,prop,config_egg):
 
 					else :
 
-						plt.bar(i,prop_values_dict[prop_value],color=color_tab[config_egg["ListDynP"][prop]['domain']['values'].index(prop_value)],bottom=prop_values_dict[config_egg["ListDynP"][prop]['domain']['values'][config_egg["ListDynP"][prop]['domain']['values'].index(prop_value)-1]])
+						bottom=0
+
+						for m in range (0, config_egg["ListDynP"][prop]['domain']['values'].index(prop_value)):
+
+							bottom = bottom + prop_values_dict[config_egg["ListDynP"][prop]['domain']['values'][config_egg["ListDynP"][prop]['domain']['values'].index(prop_value)-m]]
+
+						print bottom
+						plt.bar(i,prop_values_dict[prop_value],color=color_tab[config_egg["ListDynP"][prop]['domain']['values'].index(prop_value)],bottom=bottom)
+
+				for prop_value in prop_values_dict:
 
 					prop_values_dict[prop_value]=0
 
@@ -86,6 +95,8 @@ def plot(egg,elements_list,prop,config_egg):
 			for i in range (0, len(x)):
 				y[len(y)-1].append(config_egg['ListDynP'][prop]['domain']['values'][len(config_egg['ListDynP'][prop]['domain']['values'])-1])
 			plt.plot(x,y[len(y)-1],'b+')
+
+			plt.yticks([ int(config_egg["ListDynP"][prop]['domain']['values'][i]) for i in range(0,len(config_egg["ListDynP"][prop]['domain']['values'])) ])
 
 	if config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:dis':
 
