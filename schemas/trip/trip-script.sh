@@ -11,7 +11,7 @@ mkdir -p "byproperty"
 
 rm "egg.log"
 
-python "../../main.py" "trip" --log --plot-byproperty "qAir"
+python "../../main.py" "trip" --log --rdf-output
 
 
 # no decimals for values for star property   *** ne depend pas de la valeur de la propriete

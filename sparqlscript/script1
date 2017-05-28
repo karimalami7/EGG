@@ -5,8 +5,17 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
-SELECT ?x WHERE {
-	GRAPH ?g {<hotel:18> ns2:hasProperty "star"}
+####  return values of all properties of all elements of a snapshot
 
-	GRAPH ?g1 {?g ns2:instant "65"; ns2:value ?x}
+
+SELECT ?y ?z ?x WHERE {
+	GRAPH ?g {?y ns2:hasProperty ?z}
+
+	GRAPH ?g1 {?g ns2:instant "22"; ns2:value ?x}
 }
+
+#CONSTRUCT {?y ?z ?x} WHERE {
+#	GRAPH ?g {?y ns2:hasProperty ?z}
+
+#	GRAPH ?g1 {?g ns2:instant "22"; ns2:value ?x}
+#}

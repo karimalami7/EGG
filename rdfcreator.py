@@ -18,6 +18,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 	type_namespace.update({"trainPrice":"http://example.org/trainPrice"})
 
 	predicate=rdflib.Namespace("http://egg/predicate/")
+	property_Nm=rdflib.Namespace("http://egg/property/")
 	
 	g = rdflib.ConjunctiveGraph()
 	i=0
@@ -30,8 +31,8 @@ def write_rdf(schema,graph_elements,egg,configG):
 				p=rdflib.URIRef(match.group(4)+":"+match.group(5))
 				o=rdflib.URIRef(match.group(6)+":"+match.group(7))
 				n=rdflib.URIRef("http://egg/ng/G"+str(i))
-				g.add((s,p,o,n))
-				i=i+1
+				g.add((s,p,o))
+				
 
 	for key in graph_elements:
 		for element in graph_elements[key]:
@@ -39,7 +40,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 			p=rdflib.URIRef(predicate.hasProperty)
 			if key in configG["nodes_edges"]:
 				for prop in configG["nodes_edges"][key]:
-					o=rdflib.Literal(prop)
+					o=rdflib.URIRef(prop)
 					n=rdflib.URIRef("http://egg/ng/G"+str(i))
 					g.add((s,p,o,n))
 					i=i+1
