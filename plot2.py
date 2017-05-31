@@ -43,12 +43,14 @@ def plot_one(element_dict,element_id,interval,config_egg):
 						index_of_value=config_egg[prop]['domain']['values'].index(element_dict[prop][i])
 						var[index_of_value]=axarr[j].bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
 					axarr[j].legend(var,config_egg[prop]['domain']['values'])
+					axarr[j].set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
 					axarr[j].set_yticks([0,1])
 				else: 
 					for i in range(0, interval):
 						index_of_value=config_egg[prop]['domain']['values'].index(element_dict[prop][i])
 						var[index_of_value]=axarr.bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
 					axarr.legend(var,config_egg[prop]['domain']['values'])
+					axarr.set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
 					axarr[j].set_yticks([0,1])
 			j=j+1
 	
