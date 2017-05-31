@@ -190,8 +190,9 @@ elif not args.plot_byproperty==None:
 if args.plot_byobject=="all" : 
 
 	for element in egg:
-
-		plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"])
+		if len(egg[element])>0:
+			
+			plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"])
 
 elif not args.plot_byobject==None:
 

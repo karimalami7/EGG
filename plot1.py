@@ -29,7 +29,6 @@ def plot(egg,elements_list,prop,config_egg):
 
 				prop_values_dict.update({prop_value:0})
 
-			print prop_values_dict
 
 			for i in range(0,config_egg["interval"]):
 
@@ -39,7 +38,7 @@ def plot(egg,elements_list,prop,config_egg):
 
 					prop_values_dict[value]=prop_values_dict[value]+1
 				
-				print prop_values_dict
+			
 				bar=list()
 				
 				for prop_value in prop_values_dict:
@@ -57,7 +56,7 @@ def plot(egg,elements_list,prop,config_egg):
 
 							bottom = bottom + prop_values_dict[config_egg["ListDynP"][prop]['domain']['values'][index_in_config-m]]
 
-						print bottom
+					
 						bar.insert(index_in_config,plt.bar(i,prop_values_dict[prop_value],color=color_tab[index_in_config],bottom=bottom))
 				for prop_value in prop_values_dict:
 
@@ -66,7 +65,7 @@ def plot(egg,elements_list,prop,config_egg):
 			plt.legend(bar,config_egg["ListDynP"][prop]['domain']['values'])
 
 
-		if config_egg['ListDynP'][prop]['domain']['order']=='true':
+		elif config_egg['ListDynP'][prop]['domain']['order']=='true':
 
 			j=0
 
@@ -101,7 +100,7 @@ def plot(egg,elements_list,prop,config_egg):
 
 
 
-	if config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:dis':
+	elif config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:dis':
 
 		j=0
 		for e in elements_list:
@@ -122,7 +121,7 @@ def plot(egg,elements_list,prop,config_egg):
 		plt.plot(x,y[len(y)-1],'b+')
 
 
-	if config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:con':
+	elif config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:con':
 		if config_egg['ListDynP'][prop]['domain']['distribution']['type']=="normal":
 
 			j=0
@@ -167,11 +166,11 @@ def plot(egg,elements_list,prop,config_egg):
 				for keys in egg[e][prop]:
 		
 					y[j].append(egg[e][prop][keys])
-
+				
 				plt.plot(x,y[j],'r-')
 
 				j=j+1
-
+			
 			y.append(list())
 			for i in range (0,len(x)):
 				y[len(y)-1].append(rule['then']['config']['domain']['distribution']['mean'])
@@ -184,7 +183,7 @@ def plot(egg,elements_list,prop,config_egg):
 			for i in range (0,len(x)):
 				y[len(y)-1].append(rule['then']['config']['domain']['distribution']['mean']-rule['then']['config']['domain']['distribution']['sigma'])
 			plt.plot(x,y[len(y)-1],'g+')
-
+		y=list()
 	###
 
 	plt.xlabel('Time', fontsize=14, color='black')

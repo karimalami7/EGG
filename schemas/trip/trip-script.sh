@@ -11,8 +11,7 @@ mkdir -p "byproperty"
 
 rm "egg.log"
 
-python "../../main.py" "trip" --plot-byproperty "weather"
-
+python "../../main.py" "trip" --plot-byobject --plot-byproperty --rdf-output --log
 
 # no decimals for values for star property   *** ne depend pas de la valeur de la propriete
 # plot min, max values for uniform   ***   put min max for discrete properties ***done
