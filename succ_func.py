@@ -5,36 +5,49 @@ logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s 
 
 def succ_func(elementId,elementConfig,configG,prop,i,egg):
 
+	
+	element_in_egg_pr=dict()
+	element_in_egg_nw=dict()
+
+	if configG['ListDynP'][prop]['rulese']:
+		prop_dep=configG['ListDynP'][prop]['rulese'][0]['if']['prop']
+
+		element_in_egg_nw[prop_dep]=egg[elementId][prop_dep][i]
+		element_in_egg_pr[prop_dep]=egg[elementId][prop_dep][i-1]
+
+
+	
+
 	for rulee in configG['ListDynP'][prop]['rulese']:
 		if "change" in rulee['if']:
-			if egg[elementId][rulee['if']['prop']][i-1]==rulee['if']['change'][0] and egg[elementId][rulee['if']['prop']][i]==rulee['if']['change'][1]:
+			if element_in_egg_pr[rulee['if']['prop']]==rulee['if']['change'][0] and element_in_egg_nw[rulee['if']['prop']]==rulee['if']['change'][1]:
 				### une regle change est satisfaite ici
-				logging.info ("une regle change est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
-				logging.info (rulee['then'])
+				#logging.info ("une regle change est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
+				#logging.info (rulee['then'])
 				elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 		if "sens" in rulee['if']:
 			if rulee['if']['sens']=='up' :
 				### une regle sens est satisfaite ici
-				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[elementId][rulee['if']['prop']][i-1]<egg[elementId][rulee['if']['prop']][i]:
-					logging.info ("une regle sens up est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
-					logging.info (rulee['then'])
+				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and element_in_egg_pr[rulee['if']['prop']]<element_in_egg_nw[rulee['if']['prop']]:
+					#logging.info ("une regle sens up est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
+					#logging.info (rulee['then'])
 					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
-				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i-1]) < configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i]):
-					logging.info ("une regle sens up est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
-					logging.info (rulee['then'])
+				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(element_in_egg_pr[rule['if']['prop']]) < configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(element_in_egg_nw[rule['if']['prop']]):
+					#logging.info ("une regle sens up est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
+					#logging.info (rulee['then'])
 					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 			if rulee['if']['sens']=='down':
 				### une regle sens est satisfaite ici
-				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and egg[elementId][rulee['if']['prop']][i-1]>egg[elementId][rulee['if']['prop']][i]:
-					logging.info ("une regle sens down est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
-					logging.info (rulee['then'])
+				if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and element_in_egg_pr[rulee['if']['prop']]>element_in_egg_nw[rulee['if']['prop']]:
+					#logging.info ("une regle sens down est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
+					#logging.info (rulee['then'])
 					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
-				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i-1]) > configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(egg[elementId][rule['if']['prop']][i]):
-					logging.info ("une regle sens down est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
-					logging.info (rulee['then'])
+				if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(element_in_egg_pr[rule['if']['prop']]) > configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(element_in_egg[rule['if']['prop']][i]):
+					#logging.info ("une regle sens down est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
+					#logging.info (rulee['then'])
 					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 
-
+	
 	egg=gi_distrib.distrib(elementId,elementConfig,prop,i,egg)
 	return egg
 

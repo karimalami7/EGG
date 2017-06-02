@@ -3,7 +3,7 @@ import json_parser
 import plain_text_parser
 import g0_distrib 
 import gi_distrib 
-import rdfcreator
+
 import succ_func
 import copy
 import argparse
@@ -16,8 +16,8 @@ import plot2
 ################# put log in egg.log
 
 logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
-logging.warning('is when this event was logged.')
 
+logging.info ("Let EGG begin")
 ################# check the arguments
 
 parser = argparse.ArgumentParser(description='define the input schema.')
@@ -42,11 +42,13 @@ args = parser.parse_args()
 if args.log == False :
 	logging.disable(logging.INFO)
 
-logging.info (args)
+#logging.info (args)
 
 #################parse the gmark output
 
 (egg,graph_elements)=plain_text_parser.graph_parser(args.schema[0])
+
+logging.info ("gmark output parse")
 
 #################evaluate config file json and put it in dict
 
@@ -54,6 +56,8 @@ obj=json_parser.eval_config(args.schema[0])
 
 #################property dependance dep_graph
 L=json_parser.sorted_list(obj)
+
+logging.info ("config parse")
 
 
 
@@ -87,11 +91,11 @@ for prop in L:
 			###### elements_with_rule
 			###### obj['ListDynP'][prop]
 			###### update egg 
-
+	logging.info (prop+ "end")
 
 #######################################  constitute T0 end
 
-
+logging.info ("T0 end")
 
 
 
@@ -155,15 +159,20 @@ for i in range(1,obj['interval']):
 						if i-1 in egg[element][prop]:
 							egg[element][prop].update({i:egg[element][prop][i-1]})
 
+		logging.info (str(i)+" "+prop+" "+"end")
+	logging.info (str(i)+" "+"end")
+
+
 ####################################### fin egg
 
+logging.info ("Ti end")
 
-for e in egg:
-	if not egg[e] == {} :
-		logging.info (e+str(egg[e])+"\n\n\n")
+# for e in egg:
+# 	if not egg[e] == {} :
+# 		logging.info (e+str(egg[e])+"\n\n\n")
 
 if args.rdf_output == True:
-
+	import rdfcreator
 	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
