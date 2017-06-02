@@ -11,4 +11,4 @@ mkdir -p "byproperty"
 
 rm "egg.log"
 
-python "../../main.py" "trip" --plot-byobject --plot-byproperty --rdf-output --log
+python "../../main.py" "trip"  --log

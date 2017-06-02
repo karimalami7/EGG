@@ -1,7 +1,7 @@
 import gi_distrib 
 import logging
 
-logging.basicConfig(filename='egg.log',level=logging.DEBUG)
+logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
 def succ_func(elementId,elementConfig,configG,prop,i,egg):
 

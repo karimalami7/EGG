@@ -15,7 +15,8 @@ import plot2
 
 ################# put log in egg.log
 
-logging.basicConfig(filename='egg.log',level=logging.DEBUG)
+logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
+logging.warning('is when this event was logged.')
 
 ################# check the arguments
 

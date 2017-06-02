@@ -1,7 +1,7 @@
 import re
 import logging
 
-logging.basicConfig(filename='egg.log',level=logging.DEBUG)
+logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
 def graph_parser(schema):
 
