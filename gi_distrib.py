@@ -8,7 +8,7 @@ def distrib(param1,param2,param3,param4,egg):
 	
 	############################ qualitatif 
 	
-	value_pr=egg[param1][param3][param4-1]
+	value_pr=egg[param1][param3][param4-1] # value of the previous element, needed for offset
 	if param2['domain']['type']=="qualitatif":
 		###################################### qualitatif sans ordre	
 		if param2['domain']['order']=="false":

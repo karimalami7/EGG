@@ -3,7 +3,7 @@ import json_parser
 import plain_text_parser
 import g0_distrib 
 import gi_distrib 
-
+import gi_distrib_new
 import succ_func
 import copy
 import argparse
@@ -115,49 +115,101 @@ logging.info ("T0 end")
 for i in range(1,obj['interval']):
 	for prop in L:
 		
+		if obj['ListDynP'][prop]['rulese']:
 		#############prop qui ont evolution bien definie
 
-		if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
-			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-				if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
-					if obj['ListDynP'][prop]['evolution']['relation']=="true":
-						#### succession function
+			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
+				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
+					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+						if obj['ListDynP'][prop]['evolution']['relation']=="true":
+							#### succession function
 						
-						egg=succ_func.succ_func(element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
+							egg=succ_func.succ_func(element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
+						else:
+							pass#### general random generator
 					else:
-						pass#### general random generator
-				else:
-					if i-1 in egg[element][prop]:
-						egg[element][prop].update({i:egg[element][prop][i-1]})
+						if i-1 in egg[element][prop]:
+							egg[element][prop].update({i:egg[element][prop][i-1]})
 		
 
 
 		#############prop qui ont evolution non definie
 
+			else:
+				for rule in obj['ListDynP'][prop]['rules']:
+					elements_with_rule=list()
+					for elements in egg:
+						if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+							if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+								elements_with_rule.append(elements)
+					config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+					config_modif["domain"].update(rule["then"]["config"]["domain"])
+					config_modif["evolution"].update(rule["then"]["config"]["evolution"])
+
+
+					#### constitution de elements with rule and config modif
+
+					for element in elements_with_rule:
+						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+							if obj['ListDynP'][prop]['evolution']['relation']=="true":
+								#### succession function
+								egg=succ_func.succ_func(element,copy.deepcopy(config_modif),obj,prop,i,egg)
+							else:
+								pass
+						else:
+							if i-1 in egg[element][prop]:
+								egg[element][prop].update({i:egg[element][prop][i-1]})
+
 		else:
-			for rule in obj['ListDynP'][prop]['rules']:
-				elements_with_rule=list()
-				for elements in egg:
-					if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
-						if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
-							elements_with_rule.append(elements)
-				config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
-				config_modif["domain"].update(rule["then"]["config"]["domain"])
-				config_modif["evolution"].update(rule["then"]["config"]["evolution"])
 
+		#############prop qui ont evolution bien definie
 
-				#### constitution de elements with rule and config modif
+			changing_element=list()
 
-				for element in elements_with_rule:
+			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
+				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-							egg=succ_func.succ_func(element,copy.deepcopy(config_modif),obj,prop,i,egg)
+							changing_element.append(element)
+
 						else:
-							pass
+							pass#### general random generator
 					else:
 						if i-1 in egg[element][prop]:
 							egg[element][prop].update({i:egg[element][prop][i-1]})
+				egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(obj['ListDynP'][prop]),prop,i,egg)
+
+
+		#############prop qui ont evolution non definie
+
+			else:
+				for rule in obj['ListDynP'][prop]['rules']:
+					elements_with_rule=list()
+					for elements in egg:
+						if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+							if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+								elements_with_rule.append(elements)
+					config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+					config_modif["domain"].update(rule["then"]["config"]["domain"])
+					config_modif["evolution"].update(rule["then"]["config"]["evolution"])
+
+
+					#### constitution de elements with rule and config modif
+
+					for element in elements_with_rule:
+						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+							if obj['ListDynP'][prop]['evolution']['relation']=="true":
+								#### succession function
+								changing_element.append(element)
+							else:
+								pass
+						else:
+							if i-1 in egg[element][prop]:
+								egg[element][prop].update({i:egg[element][prop][i-1]})
+
+					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
+
 
 		logging.info (str(i)+" "+prop+" "+"end")
 	logging.info (str(i)+" "+"end")

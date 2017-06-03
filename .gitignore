@@ -18,3 +18,7 @@ plot4.pyc
 egg.log
 schemas/trip/byobject/
 schemas/trip/byproperty/
+gi_distrib_new.pyc
+schemas/trip/egg.log.before
+schemas/trip/trip-graph-1000.txt
+schemas/trip/trip-graph1000000.txt
