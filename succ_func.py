@@ -1,4 +1,5 @@
 import gi_distrib 
+import gi_distrib_new
 import logging
 
 logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
@@ -9,16 +10,15 @@ def succ_func(elementId,elementConfig,configG,prop,i,egg):
 	element_in_egg_pr=dict()
 	element_in_egg_nw=dict()
 
-	if configG['ListDynP'][prop]['rulese']:
-		prop_dep=configG['ListDynP'][prop]['rulese'][0]['if']['prop']
 
-		element_in_egg_nw[prop_dep]=egg[elementId][prop_dep][i]
-		element_in_egg_pr[prop_dep]=egg[elementId][prop_dep][i-1]
-
-
+	elements_by_rule=list()
 	
 
 	for rulee in configG['ListDynP'][prop]['rulese']:
+
+		element_in_egg_nw[rulee['if']['prop']]=egg[elementId][rulee['if']['prop']][i]
+		element_in_egg_pr[rulee['if']['prop']]=egg[elementId][rulee['if']['prop']][i-1]
+
 		if "change" in rulee['if']:
 			if element_in_egg_pr[rulee['if']['prop']]==rulee['if']['change'][0] and element_in_egg_nw[rulee['if']['prop']]==rulee['if']['change'][1]:
 				### une regle change est satisfaite ici

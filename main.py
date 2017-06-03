@@ -112,7 +112,19 @@ logging.info ("T0 end")
 
 ####################################### constitute all snapshots
 
+###################### generate random numbers to decide if element has to change at a snapshot
+size_of_graph=0
+
+for prop in L:
+	size_of_graph=size_of_graph+len(graph_elements[obj['ListDynP'][prop]['elements_type']])
+
+random_for_all = list(uniform.rvs(size=(size_of_graph*(obj['interval']-1))))
+
+#####################
+
+
 for i in range(1,obj['interval']):
+
 	for prop in L:
 		
 		if obj['ListDynP'][prop]['rulese']:
@@ -120,7 +132,7 @@ for i in range(1,obj['interval']):
 
 			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
 						
@@ -150,7 +162,7 @@ for i in range(1,obj['interval']):
 					#### constitution de elements with rule and config modif
 
 					for element in elements_with_rule:
-						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 								#### succession function
 								egg=succ_func.succ_func(element,copy.deepcopy(config_modif),obj,prop,i,egg)
@@ -168,7 +180,7 @@ for i in range(1,obj['interval']):
 
 			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
 							changing_element.append(element)
@@ -198,7 +210,7 @@ for i in range(1,obj['interval']):
 					#### constitution de elements with rule and config modif
 
 					for element in elements_with_rule:
-						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<uniform.rvs(): ###check if it has to change now
+						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 								#### succession function
 								changing_element.append(element)
