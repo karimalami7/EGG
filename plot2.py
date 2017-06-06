@@ -35,6 +35,14 @@ def plot_one(element_dict,element_id,interval,config_egg):
 					axarr.set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
 					# axarr[j].set_xlabel('Time', fontsize=14, color='black')
 					axarr.set_ylabel('Values', fontsize=14, color='black').set_fontsize(12)
+
+				if config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true":
+
+
+					tab =list()
+					for i in range (0,len(config_egg[prop]["domain"]["values"])) :
+						tab.append(int(config_egg[prop]["domain"]["values"][i]))
+					axarr[j].set_yticks(tab)
 					
 			else :
 				var=[None]*len(config_egg[prop]['domain']['values'])
@@ -44,20 +52,20 @@ def plot_one(element_dict,element_id,interval,config_egg):
 						var[index_of_value]=axarr[j].bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
 					axarr[j].legend(var,config_egg[prop]['domain']['values'])
 					axarr[j].set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
-					axarr[j].set_yticks([0,1])
+					axarr[j].set_yticks([])
 				else: 
 					for i in range(0, interval):
 						index_of_value=config_egg[prop]['domain']['values'].index(element_dict[prop][i])
 						var[index_of_value]=axarr.bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
 					axarr.legend(var,config_egg[prop]['domain']['values'])
 					axarr.set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
-					axarr[j].set_yticks([0,1])
+					axarr[j].set_yticks([])
 			j=j+1
 	
 		# if node " node type " + le type du noeud
 		# else " edge predicate " + le type de l'arrete
 		f.subplots_adjust(hspace=0.4)
-		plt.xlabel("TIME").set_fontsize(16)
+		plt.xlabel("Time").set_fontsize(16)
 		plt.savefig("byobject/"+element_id+".png")
 		plt.clf()
 

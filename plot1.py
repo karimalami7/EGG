@@ -64,6 +64,8 @@ def plot(egg,elements_list,prop,config_egg):
 			
 			plt.legend(bar,config_egg["ListDynP"][prop]['domain']['values'])
 
+			plt.ylabel(str(len(elements_list))+" "+config_egg['ListDynP'][prop]["element"]+" of type "+config_egg['ListDynP'][prop]["elements_type"], fontsize=14, color='black')
+
 
 		elif config_egg['ListDynP'][prop]['domain']['order']=='true':
 
@@ -94,7 +96,7 @@ def plot(egg,elements_list,prop,config_egg):
 
 			plt.yticks([ int(config_egg["ListDynP"][prop]['domain']['values'][i]) for i in range(0,len(config_egg["ListDynP"][prop]['domain']['values'])) ])
 
-
+			plt.ylabel('Values', fontsize=14, color='black')
 
 
 
@@ -119,7 +121,7 @@ def plot(egg,elements_list,prop,config_egg):
 		for i in range (0, len(x)):
 			y[len(y)-1].append(config_egg['ListDynP'][prop]['domain']['values']["max"])
 		plt.plot(x,y[len(y)-1],'b+')
-
+		plt.ylabel('Values', fontsize=14, color='black')
 
 	elif config_egg['ListDynP'][prop]['domain']['type']=='quantitatif:con':
 		if config_egg['ListDynP'][prop]['domain']['distribution']['type']=="normal":
@@ -145,13 +147,7 @@ def plot(egg,elements_list,prop,config_egg):
 				y[len(y)-1].append(config_egg['ListDynP'][prop]['domain']['distribution']['mean'])
 			plt.plot(x,y[len(y)-1],'b+')
 			y.append(list())
-			for i in range (0,len(x)):
-				y[len(y)-1].append(config_egg['ListDynP'][prop]['domain']['distribution']['mean']+config_egg['ListDynP'][prop]['domain']['distribution']['sigma'])
-			plt.plot(x,y[len(y)-1],'g+')
-			y.append(list())
-			for i in range (0,len(x)):
-				y[len(y)-1].append(config_egg['ListDynP'][prop]['domain']['distribution']['mean']-config_egg['ListDynP'][prop]['domain']['distribution']['sigma'])
-			plt.plot(x,y[len(y)-1],'g+')
+			plt.ylabel('Values', fontsize=14, color='black')
 
 	for rule in config_egg['ListDynP'][prop]['rules']:
 		if rule['then']['config']['domain']['distribution']['type']=="normal":
@@ -176,18 +172,14 @@ def plot(egg,elements_list,prop,config_egg):
 				y[len(y)-1].append(rule['then']['config']['domain']['distribution']['mean'])
 			plt.plot(x,y[len(y)-1],'b+')
 			y.append(list())
-			for i in range (0,len(x)):
-				y[len(y)-1].append(rule['then']['config']['domain']['distribution']['mean']+rule['then']['config']['domain']['distribution']['sigma'])
-			plt.plot(x,y[len(y)-1],'g+')
-			y.append(list())
-			for i in range (0,len(x)):
-				y[len(y)-1].append(rule['then']['config']['domain']['distribution']['mean']-rule['then']['config']['domain']['distribution']['sigma'])
-			plt.plot(x,y[len(y)-1],'g+')
+
 		y=list()
+
+		plt.ylabel('Values', fontsize=14, color='black')
 	###
 
 	plt.xlabel('Time', fontsize=14, color='black')
-	plt.ylabel('Values', fontsize=14, color='black')
+	
 	plt.title('Property ' + prop + ' of '+ config_egg['ListDynP'][prop]["elements_type"])
 
 
