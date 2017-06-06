@@ -7,8 +7,6 @@ logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s 
 
 def succ_func(element_list,elementConfig,configG,prop,i,egg):
 
-
-
 	element_in_egg_pr=dict()
 	element_in_egg_nw=dict()
 
@@ -23,10 +21,13 @@ def succ_func(element_list,elementConfig,configG,prop,i,egg):
 
 		elements_by_rulee.append(list())
 
+	elements_no_rule=list()
 	
 
 	for elementId in element_list:
 		
+
+		boolean_elements=False
 		rulee_index=0
 		for rulee in configG['ListDynP'][prop]['rulese']:
 
@@ -43,7 +44,7 @@ def succ_func(element_list,elementConfig,configG,prop,i,egg):
 					#logging.info (rulee['then'])
 					elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 					elements_by_rulee[rulee_index].append(elementId)
-					element_list.remove(elementId)
+					boolean_elements=True
 			if "sens" in rulee['if']:
 				if rulee['if']['sens']=='up' :
 					### une regle sens est satisfaite ici
@@ -53,13 +54,13 @@ def succ_func(element_list,elementConfig,configG,prop,i,egg):
 					
 						elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 						elements_by_rulee[rulee_index].append(elementId)
-						element_list.remove(elementId)
+						boolean_elements=True
 					if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(element_in_egg_pr[rule['if']['prop']]) < configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(element_in_egg_nw[rule['if']['prop']]):
 						#logging.info ("une regle sens up est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
 						#logging.info (rulee['then'])
 						elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 						elements_by_rulee[rulee_index].append(elementId)
-						element_list.remove(elementId)
+						boolean_elements=True
 				if rulee['if']['sens']=='down':
 					### une regle sens est satisfaite ici
 					if (configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:dis" or configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="quantitatif:con") and element_in_egg_pr[rulee['if']['prop']]>element_in_egg_nw[rulee['if']['prop']]:
@@ -68,18 +69,20 @@ def succ_func(element_list,elementConfig,configG,prop,i,egg):
 					
 						elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 						elements_by_rulee[rulee_index].append(elementId)
-						element_list.remove(elementId)
+						boolean_elements=True
 					if configG['ListDynP'][rulee['if']['prop']]['domain']['type']=="qualitatif" and configG['ListDynP'][rule['if']['prop']]['domain']['values'].index(element_in_egg_pr[rule['if']['prop']]) > configG['ListDynP'][rule['of']['prop']]['domain']['values'].index(element_in_egg[rule['if']['prop']][i]):
 						#logging.info ("une regle sens down est satisfaite ici pour la prop"+rulee['if']['prop']+str(i-1)+str(i)+elementId+"va influencer"+prop)
 						#logging.info (rulee['then'])
 						elementConfig=then_func(dict(rulee['then']),dict(elementConfig))
 						elements_by_rulee[rulee_index].append(elementId)
-						element_list.remove(elementId)
+						boolean_elements=True
 
 			rulee_index=rulee_index+1
 
+		elements_no_rule.append(elementId)
 
-	egg=gi_distrib_new.distrib(element_list,elementConfig,prop,i,egg)#### run for those that doesnt suit any rule
+
+	egg=gi_distrib_new.distrib(elements_no_rule,elementConfig,prop,i,egg)#### run for those that doesnt suit any rule
 
 	rulee_index=0
 
