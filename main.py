@@ -127,22 +127,24 @@ for i in range(1,obj['interval']):
 
 	for prop in L:
 		
-		if obj['ListDynP'][prop]['rulese']:
+		if obj['ListDynP'][prop]['rulese']: #### properties that have dependence to other prop
 		#############prop qui ont evolution bien definie
 
 			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
+				changing_element=list()
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							#### succession function
-						
-							egg=succ_func.succ_func(element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
+							changing_element.append(element)
+							
 						else:
 							pass#### general random generator
 					else:
 						if i-1 in egg[element][prop]:
 							egg[element][prop].update({i:egg[element][prop][i-1]})
-		
+				if changing_element:
+					egg=succ_func.succ_func(changing_element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
 
 
 		#############prop qui ont evolution non definie
@@ -160,17 +162,23 @@ for i in range(1,obj['interval']):
 
 
 					#### constitution de elements with rule and config modif
-
+					changing_element=list()
 					for element in elements_with_rule:
 						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 								#### succession function
-								egg=succ_func.succ_func(element,copy.deepcopy(config_modif),obj,prop,i,egg)
+								changing_element.append(element)
+								
 							else:
 								pass
 						else:
 							if i-1 in egg[element][prop]:
 								egg[element][prop].update({i:egg[element][prop][i-1]})
+					if changing_element:
+						egg=succ_func.succ_func(changing_element,copy.deepcopy(config_modif),obj,prop,i,egg)
+		
+
+
 
 		else:
 
@@ -236,6 +244,7 @@ logging.info ("Ti end")
 # 		logging.info (e+str(egg[e])+"\n\n\n")
 
 if args.rdf_output == True:
+	print "rdf"
 	import rdfcreator
 	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
