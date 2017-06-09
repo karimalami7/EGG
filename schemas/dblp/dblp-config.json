@@ -1,0 +1,30 @@
+{
+	"interval":10,
+	"nodes_edges":
+		{"author":[],
+		"coauthor":["valid"]}
+	,
+	"ListDynP": {"valid":
+		{		
+				"element":"edge",
+				"elements_type":"coauthor",
+				"domain":{
+					"type":"qualitatif",
+					"order":"false",
+					"v":"true",
+					"values":["false","true"],
+					"distribution":{"type":"uniform"}
+				},
+				"duration":1,
+				"evolution":{
+					"e":"true",
+					"relation":"true",
+					"staticity":0,
+					"succesors":{"true":["false","true"],"false":["false","true"]}
+				},
+				"rules":[],
+				"rulese":[]
+	
+		}
+	}
+}
