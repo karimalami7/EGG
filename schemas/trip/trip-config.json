@@ -1,5 +1,5 @@
 {
-	"interval":30,
+	"interval":10,
 	"nodes_edges":
 		{"city":["weather","qAir"],
 		"hotel":["availRoom","star","hotelPrice"],
@@ -37,11 +37,11 @@
 					"values":["1","2","3","4","5","6","7","8","9","10"],
 					"distribution":{"type":"binom","p":0.6}
 				},
-				"duration":2,
+				"duration":7,
 				"evolution":{
 					"e":"true",
 					"relation":"true",
-					"staticity":0.6,
+					"staticity":0.8,
 					"offset":{
 						"min":-1,
 						"max":1,
@@ -97,7 +97,7 @@
 				"evolution":{
 					"e":"true",
 					"relation":"true",
-					"staticity":0.5,
+					"staticity":0.9,
 					"offset":{
 						"min":-1,
 						"max":1,
@@ -120,7 +120,7 @@
 				"evolution":{
 					"e":"false",
 					"relation":"true",
-					"staticity":0.2,
+					"staticity":0.5,
 				},
 				"rules":[
 					{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
@@ -148,7 +148,7 @@
 				"evolution":{
 					"e":"true",
 					"relation":"true",
-					"staticity":0.3,
+					"staticity":0.7,
 					"offset":{
 						"min":-10,
 						"max":10,

@@ -31,6 +31,6 @@ def sorted_list(obj):
 				graph[link_node].remove(unlinked_node)
 				if not graph[link_node]:
 					S.add(link_node)
-	logging.info ("sorted properties list is : "+str(L))
+	#logging.info ("sorted properties list is : "+str(L))
 	#################kahns algorithm : end
 	return L
