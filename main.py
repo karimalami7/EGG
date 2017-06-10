@@ -113,17 +113,20 @@ logging.info ("T0 end")
 ####################################### constitute all snapshots
 
 ###################### generate random numbers to decide if element has to change at a snapshot
-size_of_graph=0
 
-for prop in L:
-	size_of_graph=size_of_graph+len(graph_elements[obj['ListDynP'][prop]['elements_type']])
-
-random_for_all = list(uniform.rvs(size=(size_of_graph*(obj['interval']-1))))
 
 #####################
 
 
 for i in range(1,obj['interval']):
+
+	size_of_graph=0
+
+	for prop in L:
+		size_of_graph=size_of_graph+len(graph_elements[obj['ListDynP'][prop]['elements_type']])
+
+	random_for_all = list(uniform.rvs(size=(size_of_graph)))
+
 
 	for prop in L:
 		
