@@ -7,7 +7,7 @@ color_dict=['b','g','r','y','p']
 
 def plot_one(element_dict,element_id,interval,config_egg):
 
-	if len(element_dict) > 0 :
+	if len(element_dict) > 1 :
 		plt.figure(1)
 		plt.xlabel("time")
 		j=0
@@ -44,7 +44,8 @@ def plot_one(element_dict,element_id,interval,config_egg):
 						tab.append(int(config_egg[prop]["domain"]["values"][i]))
 					axarr[j].set_yticks(tab)
 					
-			else :
+			else : ########qualitatif plot 
+
 				var=[None]*len(config_egg[prop]['domain']['values'])
 				if type(axarr) is np.ndarray:
 					for i in range(0, interval):
@@ -66,9 +67,56 @@ def plot_one(element_dict,element_id,interval,config_egg):
 		# else " edge predicate " + le type de l'arrete
 		f.subplots_adjust(hspace=0.4)
 		plt.xlabel("Time").set_fontsize(16)
-		plt.savefig("byobject/"+element_id+".png")
-		plt.clf()
 
-	else :
 
-		print "this object has no properties"
+
+
+
+	if len(element_dict) == 1 : ### because axarr doesnot support set_yticks when there is only one plot
+
+		for prop in element_dict:
+				
+			if  config_egg[prop]["domain"]["type"]=="quantitatif:con" or config_egg[prop]["domain"]["type"]=="quantitatif:dis" or ( config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true" ) :
+	
+				y=list()
+				x=list()
+	
+				for i in range(0, interval):
+					x.append(i)
+					y.append(int(element_dict[prop][i]))
+			
+
+				plt.plot(x, y, 'b-')
+				plt.title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
+				# axarr[j].set_xlabel('Time', fontsize=14, color='black')
+				plt.ylabel('Values', fontsize=14, color='black').set_fontsize(12)
+
+				if config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true":
+
+
+					tab =list()
+					for i in range (0,len(config_egg[prop]["domain"]["values"])) :
+						tab.append(int(config_egg[prop]["domain"]["values"][i]))
+					plt.yticks(tab)
+					
+			else : ########qualitatif plot 
+
+				var=[None]*len(config_egg[prop]['domain']['values'])
+
+				for i in range(0, interval):
+					index_of_value=config_egg[prop]['domain']['values'].index(element_dict[prop][i])
+					var[index_of_value]=plt.bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
+				plt.legend(var,config_egg[prop]['domain']['values'])
+				plt.title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
+				plt.yticks([])
+			
+	
+		# if node " node type " + le type du noeud
+		# else " edge predicate " + le type de l'arrete
+		
+		plt.xlabel("Time").set_fontsize(16)
+
+	
+
+	plt.savefig("byobject/"+element_id+".png")
+	plt.clf()

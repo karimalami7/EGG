@@ -244,7 +244,7 @@ logging.info ("Ti end")
 # 		logging.info (e+str(egg[e])+"\n\n\n")
 
 if args.rdf_output == True:
-	print "rdf"
+	
 	import rdfcreator
 	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 

@@ -79,7 +79,8 @@ def succ_func(element_list,elementConfig,configG,prop,i,egg):
 
 			rulee_index=rulee_index+1
 
-		elements_no_rule.append(elementId)
+		if boolean_elements == False: 
+			elements_no_rule.append(elementId)
 
 
 	egg=gi_distrib_new.distrib(elements_no_rule,elementConfig,prop,i,egg)#### run for those that doesnt suit any rule

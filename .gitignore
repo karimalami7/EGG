@@ -23,5 +23,8 @@ schemas/trip/egg.log.before
 schemas/trip/trip-graph10000.txt
 schemas/trip/trip-graph1000000.txt
 schemas/trip/trip-graph-1000.txt
-
+schemas/dblp/byobject/
+schemas/dblp/byproperty/
+schemas/dblp/dblp-graph-1000000.txt
+schemas/dblp/dblp-output.trig
 

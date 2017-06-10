@@ -11,29 +11,71 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 
+################################propriete qualitative
 
 	if param2['domain']['type']=="qualitatif":
 		###################################### qualitatif sans ordre	
 		if param2['domain']['order']=="false":
 
-			random =  randint.rvs(0, len(param2['domain']['values']), size=len(param1))
+			no_succ_elements=list()
+			succ_elements=list()
 
-			for param1_element in param1 :
-
-				value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
+			for  succ_key in param2["evolution"]["succesors"]:
 				
-				if value_pr in param2['evolution']['succesors']:
-					random =  randint.rvs(0, len(param2['evolution']['succesors'][value_pr]), size=1)
-					egg[param1_element][param3].update({param4:param2['evolution']['succesors'][value_pr][random[0]]})
-				else:
-					egg[param1_element][param3].update({param4:param2['domain']['values'][random[0]]})
+				succ_elements.append(list())
 
+			######################### division de l'ensemble des elements en plusieurs ensembles selon la regle de succession
+				
+			for param1_element in param1:
 
+				succ_index=0
+				bool_succ=False
 
+				for succ_key in param2["evolution"]["succesors"]:
 
+					value_pr=egg[param1_element][param3][param4-1]
 
+					if succ_key == value_pr :
 
+						succ_elements[succ_index].append(param1_element)
 
+						bool_succ=True
+
+					succ_index=succ_index+1		
+
+				if bool_succ == False:
+
+					no_succ_elements.append(param1_element)
+
+			######################### end
+
+			#########################  affectation des valeurs a no succ elements
+
+			random =  list(randint.rvs(0, len(param2['domain']['values']), size=len(no_succ_elements)))
+
+			for elementId in no_succ_elements:
+
+				egg[elementId][param3].update({param4:param2['domain']['values'][random.pop()]})
+
+			######################### end
+
+			######################### affectation des valeurs aux elements de succ_elements
+
+			succ_index =0
+
+			for  succ_key in param2["evolution"]["succesors"]:
+
+				succ_list=succ_elements[succ_index]
+
+				random =  list(randint.rvs(0, len(param2['evolution']['succesors'][succ_key]), size=len(succ_list)))
+
+				for elementId in succ_list:
+
+					egg[elementId][param3].update({param4:param2['evolution']['succesors'][succ_key][random.pop()]})
+
+				succ_index=succ_index+1
+
+			######################### end
 
 
 

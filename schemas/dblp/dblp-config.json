@@ -12,15 +12,15 @@
 					"type":"qualitatif",
 					"order":"false",
 					"v":"true",
-					"values":["false","true"],
+					"values":["0","1"],
 					"distribution":{"type":"uniform"}
 				},
 				"duration":1,
 				"evolution":{
 					"e":"true",
 					"relation":"true",
-					"staticity":0,
-					"succesors":{"true":["false","true"],"false":["false","true"]}
+					"staticity":0.5,
+					"succesors":{"1":["1"]}
 				},
 				"rules":[],
 				"rulese":[]
