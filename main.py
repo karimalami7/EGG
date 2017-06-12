@@ -118,7 +118,9 @@ logging.info ("T0 end")
 #####################
 
 
-for i in range(1,obj['interval']):
+for k in range(1,obj['interval']):
+
+	i=1
 
 	size_of_graph=0
 
@@ -234,8 +236,17 @@ for i in range(1,obj['interval']):
 					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
 
 
-		logging.info (str(i)+" "+prop+" "+"end")
-	logging.info (str(i)+" "+"end")
+		logging.info (str(k)+" "+prop+" "+"end")
+	logging.info (str(k)+" "+"end")
+
+	if args.rdf_output == False:
+
+		for prop in L:
+
+			for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
+
+				egg[element][prop].update({0:egg[element][prop][1]})
+
 
 
 ####################################### fin egg
