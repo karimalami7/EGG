@@ -27,4 +27,9 @@ schemas/dblp/byobject/
 schemas/dblp/byproperty/
 schemas/dblp/dblp-graph-1000000.txt
 schemas/dblp/dblp-output.trig
-
+rdfcreator_new.pyc
+schemas/dblp/dblp-graph-1000.txt
+schemas/dblp/dblp-graph-10000000.txt
+schemas/dblp/dblp-graph-50.txt
+schemas/dblp/egg.log.1000000.after
+schemas/dblp/egg.log.1000000.normal
