@@ -1,0 +1,13 @@
+{
+	"interval":10,
+	"nodes":
+		{"author":[]},
+	"edges":	
+		{"coauthor":[]},
+	"validity":{
+		"author":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"coauthor":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+	},
+	"ListDynP":{}
+
+}

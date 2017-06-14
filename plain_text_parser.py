@@ -18,9 +18,13 @@ def graph_parser(schema):
 	  				elements_set=graph_elements[match.group(4)]
 	  				elements_set.add(match.group(5))
 	  				egg[match.group(5)]=dict()
+	  				egg[match.group(5)].update({"out":match.group(3)})
+	  				egg[match.group(5)].update({"in":match.group(7)})
 				else:
 	 				graph_elements[match.group(4)]={match.group(5)}
 	 				egg[match.group(5)]=dict()
+	 				egg[match.group(5)].update({"out":match.group(3)})
+	  				egg[match.group(5)].update({"in":match.group(7)})
 	 			# parse source nodes 
 	 			if match.group(2) in graph_elements: 
 	  				elements_set=graph_elements[match.group(2)]

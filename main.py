@@ -1,3 +1,17 @@
+#######################################
+#
+#	EGG 
+#
+#	main.py
+#
+#
+#
+#
+
+##################################
+# Packages
+##################################
+
 from scipy.stats import randint,binom,norm,geom,uniform
 import json_parser
 import plain_text_parser
@@ -10,15 +24,20 @@ import argparse
 import logging
 import plot1
 import plot2
-#import plot3
-#import plot4
 
-################# put log in egg.log
 
+################### 
+#put log in egg.log
+###################
 logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
+
 logging.info ("Let EGG begin")
-################# check the arguments
+
+
+############################
+#check the arguments : Begin 
+############################
 
 parser = argparse.ArgumentParser(description='define the input schema.')
 
@@ -42,19 +61,29 @@ args = parser.parse_args()
 if args.log == False :
 	logging.disable(logging.INFO)
 
-#logging.info (args)
+###########################
+#check the arguments : End
+###########################
 
-#################parse the gmark output
+
+#######################
+#Parse the gmark output
+#######################
 
 (egg,graph_elements)=plain_text_parser.graph_parser(args.schema[0])
 
 logging.info ("gmark output parse")
 
-#################evaluate config file json and put it in dict
+#############################################
+#evaluate config file json and put it in dict
+#############################################
 
 obj=json_parser.eval_config(args.schema[0])
 
-#################property dependance dep_graph
+##############################
+#property dependance dep_graph
+##############################
+
 L=json_parser.sorted_list(obj)
 
 logging.info ("config parse")
@@ -65,170 +94,295 @@ logging.info ("config parse")
 
 
 
-######################################  constitute T0 debut
+######################################
+# T0 : Begin
+######################################
+
+
+######################### 
+#T0 validity : Begin 
+#########################
+
+for node_label in obj["nodes"]:
+
+	
+	g0_distrib.validity(graph_elements[node_label],obj['validity'][node_label],node_label,0,egg)
+
+
+for edge_label in obj["edges"]:
+
+	changing_element=list()
+
+	for edge_element in graph_elements[edge_label] :
+
+		out_element = egg[edge_element]["out"]
+
+		in_element = egg[edge_element]["in"]
+
+		if egg[out_element]["valid"][0] == "T" and egg[in_element]["valid"][0] == "T":
+
+			changing_element.append(edge_element)
+
+		else :
+
+			egg[edge_element].update({"valid":{0:"F"}})
+
+	g0_distrib.validity(changing_element,obj['validity'][edge_label],edge_label,0,egg)
+
+
+#########################
+#T0 validity : End
+#########################
+
+
+#########################
+#T0 for properties : Begin
+#########################
+
 
 for prop in L:
+
 	if obj['ListDynP'][prop]['domain']['v'] == 'true': #### si la prop a un domaine bien defini.
-	#######call distrib function   with 
-	#######  graph_elements[obj['ListDynP'][prop]['elements_type']]
-	#######	 obj['ListDynP'][prop]
-	#######  update egg
 
 		egg=g0_distrib.distrib(graph_elements[obj['ListDynP'][prop]['elements_type']],obj['ListDynP'][prop],prop,0,egg)
 
-	else:
-	#######call distrib function for each rule
+	else:	####### call distrib function for each rule
+		
 		for rule in obj['ListDynP'][prop]['rules']:
+		
 			elements_with_rule=list()
+		
 			for elements in egg:
+		
 				if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+		
 					if egg[elements][rule['if']['prop']][0] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+		
 						elements_with_rule.append(elements)
+		
 			config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+		
 			config_modif["domain"].update(rule["then"]["config"]["domain"])
+		
 			egg=g0_distrib.distrib(elements_with_rule,config_modif,prop,0,egg)
-			###### call distrib with
-			###### elements_with_rule
-			###### obj['ListDynP'][prop]
-			###### update egg 
+		
 	logging.info (prop+ "end")
-
-#######################################  constitute T0 end
 
 logging.info ("T0 end")
 
+#########################
+#T0 for properties : End
+#########################
+
+#########################
+#T0 : End
+#########################
 
 
 
-
-
-
-
-
-
-
-
-
-
-####################################### constitute all snapshots
-
-###################### generate random numbers to decide if element has to change at a snapshot
-
-
-#####################
-
+#######################################
+# Ti : Begin
+#######################################
 
 for i in range(1,obj['interval']):
 
+	################################# 
+	#Ti validity : Begin 
+	################################# 
+
+	for node_label in obj["nodes"]:
+
+		gi_distrib_new.validity(graph_elements[node_label],obj['validity'][node_label],node_label,i,egg)
+
+
+	for edge_label in obj["edges"]:
+
+		changing_element=list()
+
+		for edge_element in graph_elements[edge_label] :
+
+			out_element = egg[edge_element]["out"]
+
+			in_element = egg[edge_element]["in"]
+
+			if egg[out_element]["valid"][i] == "T" and egg[in_element]["valid"][i] == "T":
+
+				changing_element.append(edge_element)
+
+			else :
+
+				egg[edge_element]["valid"][i] = "F"
+
+		gi_distrib_new.validity(changing_element,obj['validity'][edge_label],edge_label,i,egg)
+
+
+
+
+	################################# 
+	# Ti validity : end
+	#################################
+
+
+	#################################
+	# Ti for Dyn Properties : Begin
+	#################################
+
+
+	##############################  generate random numbers for all elements
 	size_of_graph=0
 
 	for prop in L:
+
 		size_of_graph=size_of_graph+len(graph_elements[obj['ListDynP'][prop]['elements_type']])
 
 	random_for_all = list(uniform.rvs(size=(size_of_graph)))
+	
 
+
+	############################## loop on properties
 
 	for prop in L:
 		
-		if obj['ListDynP'][prop]['rulese']: #### properties that have dependence to other prop
-		#############prop qui ont evolution bien definie
-
+		if obj['ListDynP'][prop]['rulese']: #### properties that have dependence to other prop #############prop qui ont evolution bien definie
+		
 			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
+	
 				changing_element=list()
+		
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+		
+					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+		
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
-							#### succession function
+							
 							changing_element.append(element)
 							
 						else:
-							pass#### general random generator
+				
+							pass    #### general random generator
+			
 					else:
+				
 						if i-1 in egg[element][prop]:
+				
 							egg[element][prop].update({i:egg[element][prop][i-1]})
+			
 				if changing_element:
+			
 					egg=succ_func.succ_func(changing_element,copy.deepcopy(obj['ListDynP'][prop]),obj,prop,i,egg)
 
+			
 
-		#############prop qui ont evolution non definie
-
-			else:
+			else:			#############prop qui ont evolution non definie
+				
 				for rule in obj['ListDynP'][prop]['rules']:
+					
 					elements_with_rule=list()
+				
 					for elements in egg:
+				
 						if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+				
 							if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+				
 								elements_with_rule.append(elements)
+				
 					config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+				
 					config_modif["domain"].update(rule["then"]["config"]["domain"])
+				
 					config_modif["evolution"].update(rule["then"]["config"]["evolution"])
 
-
-					#### constitution de elements with rule and config modif
 					changing_element=list()
-					for element in elements_with_rule:
-						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+					
+					for element in elements_with_rule: #### constitution de elements with rule and config modif
+						
+						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+						
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
-								#### succession function
-								changing_element.append(element)
-								
+
+								changing_element.append(element)	
+							
 							else:
+							
 								pass
+						
 						else:
+					
 							if i-1 in egg[element][prop]:
+				
 								egg[element][prop].update({i:egg[element][prop][i-1]})
+				
 					if changing_element:
+				
 						egg=succ_func.succ_func(changing_element,copy.deepcopy(config_modif),obj,prop,i,egg)
 		
 
 
+		else:   #### properties that does not have dependence to other prop
 
-		else:
-
-		#############prop qui ont evolution bien definie
-
-			changing_element=list()
+			changing_element = list()
 
 			if obj['ListDynP'][prop]['evolution']['e'] == 'true': ### si la propriete a un domaine d evolution bien defini
+			
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
-					if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+			
+					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+			
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
-							#### succession function
+			
 							changing_element.append(element)
 
 						else:
+			
 							pass#### general random generator
+			
 					else:
+			
 						if i-1 in egg[element][prop]:
+			
 							egg[element][prop].update({i:egg[element][prop][i-1]})
+			
 				egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(obj['ListDynP'][prop]),prop,i,egg)
 
+		
 
-		#############prop qui ont evolution non definie
-
-			else:
+			else:   #############prop qui ont evolution non definie
+				
 				for rule in obj['ListDynP'][prop]['rules']:
+				
 					elements_with_rule=list()
+				
 					for elements in egg:
+				
 						if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
+				
 							if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
+				
 								elements_with_rule.append(elements)
+				
 					config_modif=copy.deepcopy(obj['ListDynP'][prop])# on recupere la config et on la modifie avec les regles
+				
 					config_modif["domain"].update(rule["then"]["config"]["domain"])
+				
 					config_modif["evolution"].update(rule["then"]["config"]["evolution"])
 
 
-					#### constitution de elements with rule and config modif
-
-					for element in elements_with_rule:
-						if i%obj['ListDynP'][prop]['duration']==0 and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+					for element in elements_with_rule: #### constitution de elements with rule and config modif
+		
+						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+		
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
-								#### succession function
+		
 								changing_element.append(element)
+		
 							else:
+		
 								pass
 						else:
+		
 							if i-1 in egg[element][prop]:
+		
 								egg[element][prop].update({i:egg[element][prop][i-1]})
 
 					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
@@ -237,14 +391,34 @@ for i in range(1,obj['interval']):
 		logging.info (str(i)+" "+prop+" "+"end")
 	logging.info (str(i)+" "+"end")
 
+	#################################
+	# Ti for Dyn Properties : end
+	#################################
 
-####################################### fin egg
+#################################
+# Ti : end
+#################################
 
-logging.info ("Ti end")
+
+
+
+
+
+
+
+
+
+
 
 # for e in egg:
 # 	if not egg[e] == {} :
 # 		logging.info (e+str(egg[e])+"\n\n\n")
+
+
+
+################################
+# rdf output 
+################################
 
 if args.rdf_output == True:
 	
@@ -252,25 +426,46 @@ if args.rdf_output == True:
 	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
-########################   plot1 by property : debut
+################################
+# plot by property
+################################
 
 if args.plot_byproperty=="all": 
 
-	for prop in obj["ListDynP"]:
+	plot1.plot_validity(egg,graph_elements,obj)
 
-		elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
+	if "ListDynP" in obj:
 
-		plot1.plot(egg,list(elements_list),prop,obj)
+		for prop in obj["ListDynP"]:
 
-elif not args.plot_byproperty==None:
+			elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
 
-	elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
+			plot1.plot(egg,list(elements_list),prop,obj)
 
-	plot1.plot(egg,list(elements_list),args.plot_byproperty,obj)
+elif not args.plot_byproperty == None:
 
-########################   plot1 : fin
+	if args.plot_byproperty == "valid":
 
-########################   plot2 : debut
+		plot1.plot_validity(egg,graph_elements,obj)
+
+	else:
+
+		elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
+
+		plot1.plot(egg,list(elements_list),args.plot_byproperty,obj)
+
+################################
+# plot by object 
+################################
+
+def element_label(element):
+
+	for label in graph_elements:
+
+		if element in graph_elements[label]:
+
+			return label
+
 
 
 if args.plot_byobject=="all" : 
@@ -278,10 +473,10 @@ if args.plot_byobject=="all" :
 	for element in egg:
 		if len(egg[element])>0:
 			
-			plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"])
+			plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"],element_label(element),obj)
 
 elif not args.plot_byobject==None:
 
-	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"])
+	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"],element_label(element),obj)
 
-########################   plot2 : fin
+

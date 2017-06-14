@@ -1,106 +1,23 @@
 {
 	"interval":10,
-	"nodes_edges":
-		{"city":["weather","qAir","validity_city"],
-		"hotel":["availRoom","star","hotelPrice","validity_hotel"],
-		"train":["trainPrice","validity_train"],
-		"abrite":["validity_abrite"]
-		}
+	"nodes":
+		{"city":["weather","qAir"],
+		"hotel":["availRoom","star","hotelPrice"]},
+	"edges":
+		{"train":["trainPrice"],
+		"abrite":[]
+		}	
 	,
+	"validity":{
+		"city":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"hotel":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"train":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"abrite":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
+
+	},
 	"ListDynP": {
 
-		"validity_city":
-		{
-			"element":"node",
-			"elements_type":"city",
-			"domain":{
-				"type":"qualitatif",
-				"order":"false",
-				"v":"true",
-				"values":["1","0"],
-				"distribution":{"type":"uniform"}
-			
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"relation":"true",
-				"staticity":0,
-				"succesors":{"1":["1"]}
-			},
-			"rules":[],
-			"rulese":[]			
-		},
-
-		"validity_hotel":
-		{
-			"element":"node",
-			"elements_type":"hotel",
-			"domain":{
-				"type":"qualitatif",
-				"order":"false",
-				"v":"true",
-				"values":["1","0"],
-				"distribution":{"type":"uniform"}
-			
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"relation":"true",
-				"staticity":0,
-				"succesors":{"1":["1"]}
-			},
-			"rules":[],
-			"rulese":[]			
-		},
-
-		"validity_train":
-		{
-			"element":"node",
-			"elements_type":"train",
-			"domain":{
-				"type":"qualitatif",
-				"order":"false",
-				"v":"true",
-				"values":["1","0"],
-				"distribution":{"type":"uniform"}
-			
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"relation":"true",
-				"staticity":0,
-				"succesors":{"1":["1"]}
-			},
-			"rules":[],
-			"rulese":[]			
-		},
-
-		"validity_abrite":
-		{
-			"element":"node",
-			"elements_type":"abrite",
-			"domain":{
-				"type":"qualitatif",
-				"order":"false",
-				"v":"true",
-				"values":["1","0"],
-				"distribution":{"type":"uniform"}
-			
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"relation":"true",
-				"staticity":0,
-				"succesors":{"1":["1"]}
-			},
-			"rules":[],
-			"rulese":[]			
-		},
-
+		
 		"weather":
 		{		
 			"element":"node",

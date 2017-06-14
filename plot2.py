@@ -5,15 +5,34 @@ import matplotlib.pyplot as plt
 
 color_dict=['b','g','r','y','p']
 
-def plot_one(element_dict,element_id,interval,config_egg):
+def plot_one(element_dict,element_id,interval,config_egg,label,configG):
 
-	if len(element_dict) > 1 :
+	element_dict.pop('in', None)
+	element_dict.pop('out', None)
+	valid_dict=element_dict.pop('valid', None)
+
+	if len(element_dict) > 0 :
 		plt.figure(1)
 		plt.xlabel("time")
-		j=0
+		
 	
-		f,axarr=plt.subplots(len(element_dict), sharex=True)
-	
+		f,axarr=plt.subplots(len(element_dict)+1, sharex=True)
+
+		plot_id=list()
+		for i in range(0,interval):
+
+			if valid_dict[i] == "T":
+				plot_id.insert(0,axarr[0].bar(i,1,color=color_dict[0]))
+			else:
+				plot_id.insert(1,axarr[0].bar(i,1,color=color_dict[1]))
+
+			axarr[0].legend(plot_id,["T","F"])
+			axarr[0].set_yticks([])
+			axarr[0].set_title("Validity of "+configG["validity"][label]["type"]+" "+element_id+" of type "+label)
+
+
+		j=1
+
 		for prop in element_dict:
 				
 			if  config_egg[prop]["domain"]["type"]=="quantitatif:con" or config_egg[prop]["domain"]["type"]=="quantitatif:dis" or ( config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true" ) :
@@ -72,49 +91,19 @@ def plot_one(element_dict,element_id,interval,config_egg):
 
 
 
-	if len(element_dict) == 1 : ### because axarr doesnot support set_yticks when there is only one plot
+	if len(element_dict) == 0 : ### because axarr doesnot support set_yticks when there is only one plot
 
-		for prop in element_dict:
-				
-			if  config_egg[prop]["domain"]["type"]=="quantitatif:con" or config_egg[prop]["domain"]["type"]=="quantitatif:dis" or ( config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true" ) :
-	
-				y=list()
-				x=list()
-	
-				for i in range(0, interval):
-					x.append(i)
-					y.append(int(element_dict[prop][i]))
+		plot_id=list()
+		for i in range(0,interval):
+
+			if valid_dict[i] == "T":
+				plot_id.insert(0,plt.bar(i,1,color=color_dict[0]))
+			else:
+				plot_id.insert(1,plt.bar(i,1,color=color_dict[1]))
 			
-
-				plt.plot(x, y, 'b-')
-				plt.title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
-				# axarr[j].set_xlabel('Time', fontsize=14, color='black')
-				plt.ylabel('Values', fontsize=14, color='black').set_fontsize(12)
-
-				if config_egg[prop]["domain"]["type"]=="qualitatif" and config_egg[prop]["domain"]["order"]=="true":
-
-
-					tab =list()
-					for i in range (0,len(config_egg[prop]["domain"]["values"])) :
-						tab.append(int(config_egg[prop]["domain"]["values"][i]))
-					plt.yticks(tab)
-					
-			else : ########qualitatif plot 
-
-				var=[None]*len(config_egg[prop]['domain']['values'])
-
-				for i in range(0, interval):
-					index_of_value=config_egg[prop]['domain']['values'].index(element_dict[prop][i])
-					var[index_of_value]=plt.bar(i,1,color=color_dict[config_egg[prop]["domain"]["values"].index(element_dict[prop][i])])
-				plt.legend(var,config_egg[prop]['domain']['values'])
-				plt.title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
-				plt.yticks([])
-			
-	
-		# if node " node type " + le type du noeud
-		# else " edge predicate " + le type de l'arrete
-		
-		plt.xlabel("Time").set_fontsize(16)
+			plt.legend(plot_id,["T","F"])
+			plt.yticks([])
+			plt.title("Validity of "+configG["validity"][label]["type"]+" "+element_id+" of type "+label)
 
 	
 

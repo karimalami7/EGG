@@ -1,4 +1,4 @@
-from scipy.stats import randint,binom,norm,geom
+from scipy.stats import randint,binom,norm,geom,uniform
 import logging
 ############### distrib function debut
 
@@ -74,3 +74,47 @@ def distrib(param1,param2,param3,param4,egg):
 	############################ quantitatif:con
 	return egg
 ############### distrib function fin
+
+
+
+
+
+#######################validity distribution
+
+def validity(param1,param2,param3,param4,egg):
+
+
+	#param1 : liste d'elements du graph
+	#param2 : config de la propriete
+	#param3 : nom de la propriete
+	#param4 : snapshot id
+	
+	
+
+	if len(param2["init"]) == 1:
+
+		for value in param2["init"]:
+
+			for element in param1:
+				
+				egg[element].update({"valid":{0 : value}})
+
+
+			
+	else :
+
+		random_for_all = list(uniform.rvs(size=(len(param1))))
+
+		for element in param1:
+
+			random = random_for_all.pop()
+
+			if random < param2["init"]["T"]:
+
+				egg[element].update({"valid":{0 : "T"}})
+
+			else :
+
+				egg[element].update({"valid":{0 : "F"}})
+
+
