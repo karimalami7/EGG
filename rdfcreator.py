@@ -25,16 +25,21 @@ def write_rdf(schema,graph_elements,egg,configG):
 			
 				s=rdflib.URIRef(match.group(2)+":"+match.group(3))
 			
-				p=rdflib.URIRef("edge"+":"+match.group(4))
+				p=rdflib.URIRef(match.group(4)+":"+match.group(5))
 			
 				o=rdflib.URIRef(match.group(6)+":"+match.group(7))
 
+				n=rdflib.URIRef("http://egg/ng/gmark")
 
-				for keys in egg[match.group(5)]["valid"]:
+				g.add((s,p,o,n))
+
+				p=rdflib.URIRef("edge"+":"+match.group(4))
+
+				for snap in egg[match.group(5)]["valid"]:
 					
-					if egg[match.group(5)]["valid"][keys] == "T":
+					if egg[match.group(5)]["valid"][snap] == "T":
 						
-						n=rdflib.URIRef("http://egg/ng/snap"+str(keys))
+						n=rdflib.URIRef("http://egg/ng/snap"+str(snap))
 					
 						g.add((s,p,o,n))
 
