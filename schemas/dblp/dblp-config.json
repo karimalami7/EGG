@@ -6,7 +6,7 @@
 		{"coauthor":["num_publi"]},
 	"validity":{
 		"author":{"type":"node","init":{"F"},"succ":{"F":{"T":0.5,"F":0.5},"T":"T"}},
-		"coauthor":{"type":"node","init":{"T"},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"coauthor":{"type":"edge","init":{"T"},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
 	},
 	"ListDynP":{
 		"num_publi":

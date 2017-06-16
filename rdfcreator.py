@@ -57,7 +57,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 	vg.close()
 
-
+	logging.info ("1 rdf end")
 	
 	i=0
 
@@ -119,8 +119,11 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 
 
-
+	logging.info ("2 rdf end")				
 	
 
 	with open(schema+"-output.trig","w") as f:
-		f.write(g.serialize(format='trig'))						
+		f.write(g.serialize(format='trig'))	
+
+
+	logging.info ("rdf end")	
