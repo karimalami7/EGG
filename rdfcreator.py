@@ -13,7 +13,9 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 	g = rdflib.ConjunctiveGraph()
 
-	
+	vg = open(schema+'-vg.txt','w')
+
+
 
 	with open(schema+'-graph.txt','r') as f:
 		
@@ -35,6 +37,8 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 				p=rdflib.URIRef("edge"+":"+match.group(4))
 
+				true=list()
+
 				for snap in egg[match.group(5)]["valid"]:
 					
 					if egg[match.group(5)]["valid"][snap] == "T":
@@ -42,6 +46,17 @@ def write_rdf(schema,graph_elements,egg,configG):
 						n=rdflib.URIRef("http://egg/ng/snap"+str(snap))
 					
 						g.add((s,p,o,n))
+
+						if schema == "social":
+
+							true.append(snap)
+				
+				if schema == "social":
+
+					vg.write(match.group(3) + " " + match.group(7) + " " + str(min(true)) + "," + str(max(true)) + "\n")
+
+	vg.close()
+
 
 	
 	i=0
@@ -82,7 +97,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 				for prop in configG["edges"][key]:
 				
-					o=rdflib.URIRef(prop)
+					o=rdflib.URIRef("Property:"+prop)
 				
 					n=rdflib.URIRef("http://egg/ng/G"+str(i))
 				

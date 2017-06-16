@@ -1,14 +1,11 @@
-#############################
+###########################
+#  
+#  Asks a path from two nodes in a snapshot  
 #
-# Select the snapshots where there is a path from two nodes
-#
-
 
 
 PREFIX ns1: <http://egg/ng/> 
-PREFIX ns2: <http://egg/predicate/> 
-PREFIX ns3: <http://egg/> 
-PREFIX ns4: <edge:> 
+PREFIX ns2: <edge:> 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX xml: <http://www.w3.org/XML/1998/namespace> 
@@ -16,12 +13,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-SELECT ?x
+ASK 
+
 WHERE {
-
 	
-	GRAPH ?x {<author:24> ns4:coauthor <author:6>}
-	
-
+	GRAPH ns1:snap9 {<person:0> ns2:friendOf* <person:26>. }
 
 }

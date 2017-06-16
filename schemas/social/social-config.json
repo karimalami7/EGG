@@ -1,12 +1,12 @@
 {
 	"interval":10,
 	"nodes":
-		{"author":[]},
+		{"person":[]},
 	"edges":	
-		{"coauthor":[]},
+		{"friendOf":[]},
 	"validity":{
-		"author":{"type":"node","init":{"T"},"succ":{"T":"T"}},
-		"coauthor":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"person":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"friendOf":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
 	},
 	"ListDynP":{}
 
