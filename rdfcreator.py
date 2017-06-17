@@ -13,10 +13,6 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 	g = rdflib.ConjunctiveGraph()
 
-	vg = open(schema+'-vg.txt','w')
-
-
-
 	with open(schema+'-graph.txt','r') as f:
 		
 		for line in f.readlines():
@@ -37,8 +33,6 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 				p=rdflib.URIRef("edge"+":"+match.group(4))
 
-				true=list()
-
 				for snap in egg[match.group(5)]["valid"]:
 					
 					if egg[match.group(5)]["valid"][snap] == "T":
@@ -47,15 +41,6 @@ def write_rdf(schema,graph_elements,egg,configG):
 					
 						g.add((s,p,o,n))
 
-						if schema == "social":
-
-							true.append(snap)
-				
-				if schema == "social":
-
-					vg.write(match.group(3) + " " + match.group(7) + " " + str(min(true)) + "," + str(max(true)) + "\n")
-
-	vg.close()
 
 	logging.info ("1 rdf end")
 	

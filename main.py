@@ -53,6 +53,9 @@ parser.add_argument('--plot-byobject', metavar='object', type=str, nargs='?', co
 parser.add_argument('--rdf-output', action='store_true',
                    help='outout egg in rdf')
 
+parser.add_argument('--vg-output', action='store_true',
+                   help='outout egg in vg')
+
 parser.add_argument('--log', action='store_true',
                    help='outout egg in rdf')
 
@@ -414,7 +417,14 @@ logging.info ("Ti end")
 # 	if not egg[e] == {} :
 # 		logging.info (e+str(egg[e])+"\n\n\n")
 
+################################
+# vg output 
+################################
 
+if args.vg_output == True:
+	
+	import vgcreator
+	vgcreator.write(args.schema[0],egg)
 
 ################################
 # rdf output 

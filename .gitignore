@@ -35,3 +35,6 @@ schemas/dblp/egg.log.1000000.after
 schemas/dblp/egg.log.1000000.normal
 rdf_creator_new.py
 rdf_creator_new.pyc
+schemas/social/social-output.trig
+schemas/social/social-vg.txt
+vgcreator.pyc
