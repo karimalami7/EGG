@@ -23,13 +23,15 @@ def write_rdf(schema,graph_elements,egg,configG):
 			
 				s=rdflib.URIRef(match.group(2)+":"+match.group(3))
 			
-				p=rdflib.URIRef(match.group(4)+":"+match.group(5))
-			
 				o=rdflib.URIRef(match.group(6)+":"+match.group(7))
 
-				n=rdflib.URIRef("http://egg/ng/gmark")
+				if configG["ListDynP"]:
+					
+					p=rdflib.URIRef(match.group(4)+":"+match.group(5))
 
-				g.add((s,p,o,n))
+					n=rdflib.URIRef("http://egg/ng/gmark")
+
+					g.add((s,p,o,n))
 
 				p=rdflib.URIRef("edge"+":"+match.group(4))
 
