@@ -1,162 +1,175 @@
 {
 	"interval":10,
-	"nodes_edges":
+	"nodes":
 		{"city":["weather","qAir"],
-		"hotel":["availRoom","star","hotelPrice"],
-		"train":["trainPrice"]}
+		"hotel":["availRoom","star","hotelPrice"]},
+	"edges":
+		{"train":["trainPrice"],
+		"abrite":[]
+		}	
 	,
-	"ListDynP": {"weather":
+	"validity":{
+		"city":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"hotel":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"train":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"abrite":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
+
+	},
+	"ListDynP": {
+
+		
+		"weather":
 		{		
-				"element":"node",
-				"elements_type":"city",
-				"domain":{
-					"type":"qualitatif",
-					"order":"false",
-					"v":"true",
-					"values":["sunny","rainy","cloudy"],
-					"distribution":{"type":"uniform"}
-				},
-				"duration":1,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.5,
-					"succesors":{"sunny":["sunny","cloudy"]}
-				},
-				"rules":[],
-				"rulese":[]
-	
-		},"qAir":
+			"element":"node",
+			"elements_type":"city",
+			"domain":{
+				"type":"qualitatif",
+				"order":"false",
+				"v":"true",
+				"values":["sunny","rainy","cloudy"],
+				"distribution":{"type":"uniform"}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.5,
+				"succesors":{"sunny":["sunny","cloudy"]}
+			},
+			"rules":[],
+			"rulese":[]
+		},
+
+		"qAir":
 		{
-				"element":"node",
-				"elements_type":"city",
-				"domain":{
-					"type":"qualitatif",
-					"order":"true",
-					"v":"true",
-					"values":["1","2","3","4","5","6","7","8","9","10"],
-					"distribution":{"type":"binom","p":0.6}
-				},
-				"duration":7,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.8,
-					"offset":{
-						"min":-1,
-						"max":1,
-						"distribution":{"type":"uniform"}
-					}
-				},
-				"rules":[],
-				"rulese":[
-					{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
-					{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
-					{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
-				]
+			"element":"node",
+			"elements_type":"city",
+			"domain":{
+				"type":"qualitatif",
+				"order":"true",
+				"v":"true",
+				"values":["1","2","3","4","5","6","7","8","9","10"],
+				"distribution":{"type":"binom","p":0.6}
+			},
+			"duration":7,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.8,
+				"offset":{
+					"min":-1,
+					"max":1,
+					"distribution":{"type":"uniform"}
+				}
+			},
+			"rules":[],
+			"rulese":[
+				{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+				{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+				{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
+			]
 			
 
 		},"availRoom":
 		{
-				"element":"node",
-				"elements_type":"hotel",
-				"domain":{
-					"type":"quantitatif:dis",
-					
-					"v":"true",
-					"values":{"min":1,"max":100},
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"quantitatif:dis",
+				
+				"v":"true",
+				"values":{"min":1,"max":100},
+				"distribution":{"type":"binom","p":0.5}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.2,
+				"offset":{
+					"min":-5,
+					"max":5,
 					"distribution":{"type":"binom","p":0.5}
-				},
-				"duration":1,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.2,
-					"offset":{
-						"min":-5,
-						"max":5,
-						"distribution":{"type":"binom","p":0.5}
-					}
-				},
-				"rules":[],
-				"rulese":[
-					]
+				}
+			},
+			"rules":[],
+			"rulese":[]
 			
 		},"star":
 		{	
-				"element":"node",
-				"elements_type":"hotel",
-				"domain":{
-					"type":"qualitatif",
-					"order":"true",
-					"v":"true",
-					"values":["1","2","3","4","5"],
-					"distribution":{"type":"geom","p":0.65}
-				},
-				"duration":30,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.9,
-					"offset":{
-						"min":-1,
-						"max":1,
-						"distribution":{"type":"binom","p":0.5}
-					}
-				},
-				"rules":[],
-				"rulese":[]
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"qualitatif",
+				"order":"true",
+				"v":"true",
+				"values":["1","2","3","4","5"],
+				"distribution":{"type":"geom","p":0.65}
+			},
+			"duration":30,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.9,
+				"offset":{
+					"min":-1,
+					"max":1,
+					"distribution":{"type":"binom","p":0.5}
+				}
+			},
+			"rules":[],
+			"rulese":[]
 			
 		},"hotelPrice":
 		{		
-				"element":"node",
-				"elements_type":"hotel",
-				"domain":{
-					"type":"quantitatif:con",	
-					"v":"false",
-					"distribution":{"type":""}
-				},
-				"duration":1,
-				"evolution":{
-					"e":"false",
-					"relation":"true",
-					"staticity":0.5,
-				},
-				"rules":[
-					{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
-					{"if":{"prop":"star","hasValues":["2"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":21,"max":50},"distribution":{"type":"normal","mean":35,"sigma":4}},"evolution":{"offset":{"min":-3,"max":3,"distribution":{"type":"normal","mean":0,"sigma":1}}}}}},
-					{"if":{"prop":"star","hasValues":["3"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":51,"max":100},"distribution":{"type":"normal","mean":75,"sigma":8}},"evolution":{"offset":{"min":-7,"max":7,"distribution":{"type":"normal","mean":0,"sigma":3}}}}}},
-					{"if":{"prop":"star","hasValues":["4"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":101,"max":300},"distribution":{"type":"normal","mean":200,"sigma":20}},"evolution":{"offset":{"min":-20,"max":20,"distribution":{"type":"normal","mean":0,"sigma":7}}}}}},
-					{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
-				],
-				"rulese":[
-					{"if":{"prop":"availRoom","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
-					{"if":{"prop":"availRoom","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
-				]
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"quantitatif:con",	
+				"v":"false",
+				"distribution":{"type":""}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"false",
+				"relation":"true",
+				"staticity":0.5,
+			},
+			"rules":[
+				{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
+				{"if":{"prop":"star","hasValues":["2"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":21,"max":50},"distribution":{"type":"normal","mean":35,"sigma":4}},"evolution":{"offset":{"min":-3,"max":3,"distribution":{"type":"normal","mean":0,"sigma":1}}}}}},
+				{"if":{"prop":"star","hasValues":["3"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":51,"max":100},"distribution":{"type":"normal","mean":75,"sigma":8}},"evolution":{"offset":{"min":-7,"max":7,"distribution":{"type":"normal","mean":0,"sigma":3}}}}}},
+				{"if":{"prop":"star","hasValues":["4"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":101,"max":300},"distribution":{"type":"normal","mean":200,"sigma":20}},"evolution":{"offset":{"min":-20,"max":20,"distribution":{"type":"normal","mean":0,"sigma":7}}}}}},
+				{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
+			],
+			"rulese":[
+				{"if":{"prop":"availRoom","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
+				{"if":{"prop":"availRoom","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
+			]
 		},"trainPrice":
 		{		
-				"element":"edge",
-				"elements_type":"train",
-				"domain":{
-					"type":"quantitatif:con",
-					
-					"v":"true",
-					"values":{"min":20,"max":100},
-					"distribution":{"type":"normal","mean":60,"sigma":6}
-				},
-				"duration":1,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.7,
-					"offset":{
-						"min":-10,
-						"max":10,
-						"distribution":{"type":"normal","mean":0,"sigma":3}
-					}
-				},
-				"rules":[],
-				"rulese":[]
+			"element":"edge",
+			"elements_type":"train",
+			"domain":{
+				"type":"quantitatif:con",
+				
+				"v":"true",
+				"values":{"min":20,"max":100},
+				"distribution":{"type":"normal","mean":60,"sigma":6}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.7,
+				"offset":{
+					"min":-10,
+					"max":10,
+					"distribution":{"type":"normal","mean":0,"sigma":3}
+				}
+			},
+			"rules":[],
+			"rulese":[]
 			
 		}
 	}	

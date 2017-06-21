@@ -11,13 +11,14 @@ def plot(egg,elements_list,prop,config_egg):
 	x=list()
 	y=list()
 
-	for i in range(0,len(egg[elements_list[0]][prop])):
+	for i in range(0,config_egg["interval"]):
 
 		x.append(i)
 
 	
-
 	### plot distribution
+
+
 
 	if config_egg['ListDynP'][prop]['domain']['type']=='qualitatif':
 		if config_egg['ListDynP'][prop]['domain']['order']=='false':	
@@ -182,7 +183,97 @@ def plot(egg,elements_list,prop,config_egg):
 	
 	plt.title('Property ' + prop + ' of '+ config_egg['ListDynP'][prop]["elements_type"])
 
-
-
 	plt.savefig("byproperty/"+prop+".png")
+
 	plt.clf() # clear plot 
+
+
+
+def plot_validity(egg,graph,config_egg):
+
+	for node_label in config_egg["nodes"]:
+
+		values_dict={"T":0,"F":0}
+
+		for i in range(0,config_egg["interval"]):
+
+			for e in graph[node_label]:
+
+				value = egg[e]["valid"][i]
+
+				values_dict[value] = values_dict[value] + 1
+
+			bar=list()
+
+			bar.insert(0,plt.bar(i,values_dict["F"],color=color_tab[0]))
+
+			bar.insert(1,plt.bar(i,values_dict["T"],color=color_tab[1],bottom=values_dict["F"]))
+
+			values_dict={"T":0,"F":0}
+
+		plt.legend(bar,["F","T"])
+
+		plt.xlabel('Time', fontsize=14, color='black')
+
+		plt.ylabel(str(len(graph[node_label]))+" nodes "+" of type "+node_label, fontsize=14, color='black')
+
+		plt.title('Validity of '+ node_label)
+
+		plt.savefig("byproperty/validity_"+node_label+".png")
+
+		plt.clf() # clear plot 
+
+
+
+	for edge_label in config_egg["edges"]:
+
+		values_dict={"T":0,"F":0}
+
+		for i in range(0,config_egg["interval"]):
+
+			for e in graph[edge_label]:
+
+				value = egg[e]["valid"][i]
+
+				values_dict[value] = values_dict[value] + 1
+
+			bar=list()
+
+			bar.insert(0,plt.bar(i,values_dict["F"],color=color_tab[0]))
+
+			bar.insert(1,plt.bar(i,values_dict["T"],color=color_tab[1],bottom=values_dict["F"]))
+
+			values_dict={"T":0,"F":0}
+
+		plt.legend(bar,["F","T"])
+
+		plt.xlabel('Time', fontsize=14, color='black')
+
+		plt.ylabel(str(len(graph[edge_label]))+" edges "+" of type "+edge_label, fontsize=14, color='black')
+
+		plt.title('Validity of '+ edge_label)
+
+		plt.savefig("byproperty/validity_"+edge_label+".png")
+
+		plt.clf() # clear plot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

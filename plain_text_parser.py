@@ -15,26 +15,30 @@ def graph_parser(schema):
 			if match:
 				# parse edges
 				if match.group(4) in graph_elements: 
-	  				elements_set=graph_elements[match.group(4)]
-	  				elements_set.add(match.group(5))
+	  				graph_elements[match.group(4)].add(match.group(5))
 	  				egg[match.group(5)]=dict()
+	  				egg[match.group(5)].update({"out":match.group(3)})
+	  				egg[match.group(5)].update({"in":match.group(7)})
 				else:
 	 				graph_elements[match.group(4)]={match.group(5)}
 	 				egg[match.group(5)]=dict()
+	 				egg[match.group(5)].update({"out":match.group(3)})
+	  				egg[match.group(5)].update({"in":match.group(7)})
 	 			# parse source nodes 
 	 			if match.group(2) in graph_elements: 
-	  				elements_set=graph_elements[match.group(2)]
-	  				elements_set.add(match.group(3))
+	  				graph_elements[match.group(2)].add(match.group(3))
 	  				egg[match.group(3)]=dict()
 				else:
 	 				graph_elements[match.group(2)]={match.group(3)}
 	 				egg[match.group(3)]=dict()
 	 			# parse object nodes
 	 			if match.group(6) in graph_elements: 
-	  				elements_set=graph_elements[match.group(6)]
-	  				elements_set.add(match.group(7))
+	  				graph_elements[match.group(6)].add(match.group(7))
 	  				egg[match.group(7)]=dict()
 				else:
 	 				graph_elements[match.group(6)]={match.group(7)}
 	 				egg[match.group(7)]=dict()
+
+	
+
 	return (egg,graph_elements)

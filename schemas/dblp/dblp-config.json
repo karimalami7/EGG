@@ -1,30 +1,38 @@
 {
 	"interval":10,
-	"nodes_edges":
-		{"author":[],
-		"coauthor":["valid"]}
-	,
-	"ListDynP": {"valid":
+	"nodes":
+		{"author":[]},
+	"edges":	
+		{"coauthor":["num_publi"]},
+	"validity":{
+		"author":{"type":"node","init":{"F"},"succ":{"F":{"T":0.5,"F":0.5},"T":"T"}},
+		"coauthor":{"type":"edge","init":{"T"},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+	},
+	"ListDynP":{
+		"num_publi":
 		{		
-				"element":"edge",
-				"elements_type":"coauthor",
-				"domain":{
-					"type":"qualitatif",
-					"order":"false",
-					"v":"true",
-					"values":["0","1"],
-					"distribution":{"type":"uniform"}
-				},
-				"duration":1,
-				"evolution":{
-					"e":"true",
-					"relation":"true",
-					"staticity":0.5,
-					"succesors":{"1":["1"]}
-				},
-				"rules":[],
-				"rulese":[]
-	
-		}
+			"element":"edge",
+			"elements_type":"coauthor",
+			"domain":{
+				"type":"quantitatif:dis",
+				"v":"true",
+				"values":{"min":0,"max":10},
+				"distribution":{"type":"binom","p":0.4}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"relation":"true",
+				"staticity":0.7,
+				"offset":{
+					"min":-1,
+					"max":1,
+					"distribution":{"type":"binom","p":0.5}
+				}
+			},
+			"rules":[],
+			"rulese":[]
+		},
 	}
+
 }

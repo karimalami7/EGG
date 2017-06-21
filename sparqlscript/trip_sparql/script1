@@ -1,0 +1,23 @@
+##############################
+#
+# Select the values of a property at each snapshot
+#
+
+
+PREFIX ns1: <http://egg/ng/> 
+PREFIX ns2: <http://egg/predicate/> 
+PREFIX ns3: <http://egg/> 
+PREFIX ns4: <http://egg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+
+
+SELECT ?snap ?z WHERE {
+
+	GRAPH ?x {  <hotel:40> ns2:hasProperty <Property:hotelPrice>  }
+
+	GRAPH ?snap {?x ns4:value ?z}
+}

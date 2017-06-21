@@ -240,6 +240,78 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 
+def validity(param1,param2,param3,param4,egg):
+	#param1 : list_element
+	#param2 : config de la propriete
+	#param3 : nom de la propriete
+	#param4 : snapshot id
+	#egg which is egg
+
+
+
+	random_for_all = list(uniform.rvs(size=(len(param1))))
+
+	for element in param1:
+
+		valid_pr = egg[element]["valid"][param4-1]
+
+		if len (param2["succ"][valid_pr]) == 1:
+
+			egg[element]["valid"].update({param4:param2["succ"][valid_pr]}) 
+
+		else :
+
+			random = random_for_all.pop()
+
+			if random < param2["succ"][valid_pr]["T"]:
+
+				egg[element]["valid"].update({param4 : "T"})
+
+			else :
+
+				egg[element]["valid"].update({param4 : "F"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
