@@ -24,6 +24,8 @@ import argparse
 import logging
 import plot1
 import plot2
+import psutil
+import os
 
 
 ################### 
@@ -219,10 +221,7 @@ for i in range(1,obj['interval']):
 		gi_distrib_new.validity(changing_element,obj['validity'][edge_label],edge_label,i,egg)
 
 
-<<<<<<< HEAD
-	#i=1
 
-=======
 
 
 	################################# 
@@ -236,7 +235,7 @@ for i in range(1,obj['interval']):
 
 
 	##############################  generate random numbers for all elements
->>>>>>> 9f30d1e81ea25fa8330c12c24f9ee55ad8c168fa
+
 	size_of_graph=0
 
 	for prop in L:
@@ -412,8 +411,13 @@ logging.info ("Ti end")
 
 
 
+##########################
+# memory usage at the end 
+##########################
+print os.getpid()
+p = psutil.Process(os.getpid())
 
-
+print p.memory_info()
 
 
 
@@ -439,8 +443,8 @@ if args.vg_output == True:
 
 if args.rdf_output == True:
 	
-	import rdfcreator_new
-	rdfcreator_new.write_rdf(args.schema[0],graph_elements,egg,obj)
+	import rdfcreator
+	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
 
 
 ################################
