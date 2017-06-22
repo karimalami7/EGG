@@ -253,11 +253,11 @@ def validity(param1,param2,param3,param4,egg):
 
 	for element in param1:
 
-		valid_pr = egg[element]["valid"][param4-1]
+		valid_pr = egg[element]["v"][param4-1]
 
 		if len (param2["succ"][valid_pr]) == 1:
 
-			egg[element]["valid"].update({param4:param2["succ"][valid_pr]}) 
+			egg[element]["v"].insert(param4,param2["succ"][valid_pr]) 
 
 		else :
 
@@ -265,11 +265,11 @@ def validity(param1,param2,param3,param4,egg):
 
 			if random < param2["succ"][valid_pr]["T"]:
 
-				egg[element]["valid"].update({param4 : "T"})
+				egg[element]["v"].insert(param4,"T")
 
 			else :
 
-				egg[element]["valid"].update({param4 : "F"})
+				egg[element]["v"].insert(param4,"F")
 
 
 

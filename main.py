@@ -116,21 +116,21 @@ for node_label in obj["nodes"]:
 
 for edge_label in obj["edges"]:
 
-	changing_element=list()
-
+	changing_element=list()    
+    
 	for edge_element in graph_elements[edge_label] :
 
 		out_element = egg[edge_element]["out"]
 
 		in_element = egg[edge_element]["in"]
 
-		if egg[out_element]["valid"][0] == "T" and egg[in_element]["valid"][0] == "T":
+		if egg[out_element]["v"][0] == "T" and egg[in_element]["v"][0] == "T":
 
 			changing_element.append(edge_element)
 
 		else :
 
-			egg[edge_element].update({"valid":{0:"F"}})
+			egg[edge_element].update({"v":["F"]})
 
 	g0_distrib.validity(changing_element,obj['validity'][edge_label],edge_label,0,egg)
 
@@ -210,13 +210,13 @@ for i in range(1,obj['interval']):
 
 			in_element = egg[edge_element]["in"]
 
-			if egg[out_element]["valid"][i] == "T" and egg[in_element]["valid"][i] == "T":
+			if egg[out_element]["v"][i] == "T" and egg[in_element]["v"][i] == "T":
 
 				changing_element.append(edge_element)
 
 			else :
 
-				egg[edge_element]["valid"][i] = "F"
+				egg[edge_element]["v"].insert(i, "F")
 
 		gi_distrib_new.validity(changing_element,obj['validity'][edge_label],edge_label,i,egg)
 

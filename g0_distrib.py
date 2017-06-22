@@ -15,7 +15,7 @@ def distrib(param1,param2,param3,param4,egg):
 			random =  randint.rvs(0, len(param2['domain']['values']), size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:{param4:param2['domain']['values'][random[i]]}})
+				egg[element].update({param3:[param2['domain']['values'][random[i]]]})
 				i=i+1
 		#############################  uniform	
 
@@ -24,7 +24,7 @@ def distrib(param1,param2,param3,param4,egg):
 			random =  binom.rvs(len(param2['domain']['values']), param2['domain']['distribution']['p'] , size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:{param4:param2['domain']['values'][random[i]-1]}})
+				egg[element].update({param3:[param2['domain']['values'][random[i]-1]]})
 				i=i+1		
 		#############################  binom
 
@@ -42,7 +42,7 @@ def distrib(param1,param2,param3,param4,egg):
 						break
 			i=0
 			for element in param1:
-				egg[element].update({param3:{param4:param2['domain']['values'][geomValues[i]-1]}})
+				egg[element].update({param3:[param2['domain']['values'][geomValues[i]-1]]})
 				i=i+1
 
 		#############################  geom
@@ -56,7 +56,7 @@ def distrib(param1,param2,param3,param4,egg):
 			random = binom.rvs(param2['domain']['values']['max']-param2['domain']['values']['min'],param2['domain']['distribution']['p'],size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:{param4:random[i]}})
+				egg[element].update({param3:[random[i]]})
 				i=i+1
 		#############################  binom
 	############################ quantitatif:dis 
@@ -68,7 +68,7 @@ def distrib(param1,param2,param3,param4,egg):
 			random = norm.rvs(size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:{param4:round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)}})
+				egg[element].update({param3:[round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)]})
 				i=i+1
 		############################# normal
 	############################ quantitatif:con
@@ -97,7 +97,7 @@ def validity(param1,param2,param3,param4,egg):
 
 			for element in param1:
 				
-				egg[element].update({"valid":{0 : value}})
+				egg[element].update({"v":[value]})
 
 
 			
@@ -111,10 +111,10 @@ def validity(param1,param2,param3,param4,egg):
 
 			if random < param2["init"]["T"]:
 
-				egg[element].update({"valid":{0 : "T"}})
+				egg[element].update({"v":["T"]})
 
 			else :
 
-				egg[element].update({"valid":{0 : "F"}})
+				egg[element].update({"v":["F"]})
 
 

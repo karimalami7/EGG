@@ -15,10 +15,11 @@ def write(schema,egg):
 
 				true=list()
 
-				egg_valid=egg[match.group(5)]["valid"]
+				egg_valid=egg[int(match.group(5))]["v"]
 
-				for snap in egg_valid:
+				for snap in range (0,len(egg_valid)):
 					
+                    
 					if egg_valid[snap] == "T" and (snap == 0 or egg_valid[snap-1] == "F") :
 
 						true.append(dict())
