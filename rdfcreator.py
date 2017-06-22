@@ -3,7 +3,7 @@ import logging
 
 logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
-def write_rdf(schema,graph_elements,egg,configG):
+def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 
 	predicate=rdflib.Namespace("http://egg/predicate/")
@@ -35,11 +35,11 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 				p=rdflib.URIRef("edge"+":"+match.group(4))
 
-				for snap in egg[match.group(5)]["valid"]:
+				for snap in range (0,len(egg[int(match.group(5))]["v"])):
 					
-					if egg[match.group(5)]["valid"][snap] == "T":
+					if egg[int(match.group(5))]["v"][snap] == "T":
 						
-						n=rdflib.URIRef("http://egg/ng/snap"+str(snap))
+						n=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snap))
 					
 						g.add((s,p,o,n))
 
@@ -52,7 +52,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 		for element in graph_elements[key]:
 
-			s=rdflib.URIRef(key+":"+element)
+			s=rdflib.URIRef(key+":"+str(element))
 
 			p=rdflib.URIRef(predicate.hasProperty)
 
@@ -66,7 +66,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 				
 					g.add((s,p,o,n))
 
-					for snapshot in egg[element][prop]:
+					for snapshot in range (0,len(egg[int(match.group(5))]["v"])):
 
 						s1=rdflib.URIRef("http://egg/ng/G"+str(i))
 
@@ -74,7 +74,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 
-						n1=rdflib.URIRef("http://egg/ng/snap"+str(snapshot))
+						n1=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snapshot))
 
 						g.add((s1,p1,o1,n1))
 
@@ -90,7 +90,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 				
 					g.add((s,p,o,n))
 
-					for snapshot in egg[element][prop]:
+					for snapshot in range (0,len(egg[match.group(5)]["v"])):
 
 						s1=rdflib.URIRef("http://egg/ng/G"+str(i))
 
@@ -98,7 +98,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 
-						n1=rdflib.URIRef("http://egg/ng/snap"+str(snapshot))
+						n1=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snapshot))
 
 						g.add((s1,p1,o1,n1))
 
@@ -109,7 +109,7 @@ def write_rdf(schema,graph_elements,egg,configG):
 	logging.info ("2 rdf end")				
 	
 
-	with open(schema+"-output.trig","w") as f:
+	with open(schema+"-output.trig","a") as f:
 		f.write(g.serialize(format='trig'))	
 
 

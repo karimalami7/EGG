@@ -55,7 +55,7 @@ def distrib(param1,param2,param3,param4,egg):
 
 			for elementId in no_succ_elements:
 
-				egg[elementId][param3].update({param4:param2['domain']['values'][random.pop()]})
+				egg[elementId][param3].insert(param4,param2['domain']['values'][random.pop()])
 
 			######################### end
 
@@ -71,7 +71,7 @@ def distrib(param1,param2,param3,param4,egg):
 
 				for elementId in succ_list:
 
-					egg[elementId][param3].update({param4:param2['evolution']['succesors'][succ_key][random.pop()]})
+					egg[elementId][param3].insert(param4,param2['evolution']['succesors'][succ_key][random.pop()])
 
 				succ_index=succ_index+1
 
@@ -105,11 +105,11 @@ def distrib(param1,param2,param3,param4,egg):
 						indice=param2['domain']['values'].index(value_pr)
 
 						if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
-							egg[param1_element][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]})##### we take the last value
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1])##### we take the last value
 						elif indice+offset_list[random[i]]<0:
-							egg[param1_element][param3].update({param4:param2['domain']['values'][0]}) ######### we take the first value
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
 						else:
-							egg[param1_element][param3].update({param4:param2['domain']['values'][indice+offset_list[random[i]]]})	
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])	
 						i=i+1
 
 				if param2['evolution']['offset']['distribution']['type']=="binom":
@@ -124,11 +124,11 @@ def distrib(param1,param2,param3,param4,egg):
 
 						#logging.info( param3+param1+str(param4)+str(indice)+str(offset_list)+str(random[0]))
 						if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
-							egg[param1_element][param3].update({param4:param2['domain']['values'][len(param2['domain']['values'])-1]}) ##### we take the last value
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1]) ##### we take the last value
 						elif indice+offset_list[random[i]]<0:
-							egg[param1_element][param3].update({param4:param2['domain']['values'][0]}) ######### we take the first value
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
 						else:
-							egg[param1_element][param3].update({param4:param2['domain']['values'][indice+offset_list[random[i]]]})
+							egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])
 						i=i+1
 
 
@@ -180,11 +180,11 @@ def distrib(param1,param2,param3,param4,egg):
 			previous_value=value_pr
 			next_value=previous_value+offset_list[random[i]]
 			if next_value < param2["domain"]["values"]["min"]:
-				egg[param1_element][param3].update({param4:param2["domain"]["values"]["min"]})
+				egg[param1_element][param3].insert(param4,param2["domain"]["values"]["min"])
 			elif next_value >param2["domain"]["values"]["max"]: 
-				egg[param1_element][param3].update({param4:param2["domain"]["values"]["max"]})
+				egg[param1_element][param3].insert(param4,param2["domain"]["values"]["max"])
 			else:
-				egg[param1_element][param3].update({param4:next_value})
+				egg[param1_element][param3].insert(param4,next_value)
 
 			i+1
 
@@ -223,11 +223,11 @@ def distrib(param1,param2,param3,param4,egg):
 			previous_value=value_pr
 			next_value=round(previous_value+((random[i]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']),1)
 			if next_value < param2["domain"]["values"]["min"]:
-				egg[param1_element][param3].update({param4:param2["domain"]["values"]["min"]})
+				egg[param1_element][param3].insert(param4,param2["domain"]["values"]["min"])
 			elif next_value >param2["domain"]["values"]["max"]: 
-				egg[param1_element][param3].update({param4:param2["domain"]["values"]["max"]})
+				egg[param1_element][param3].insert(param4,param2["domain"]["values"]["max"])
 			else:
-				egg[param1_element][param3].update({param4:next_value})
+				egg[param1_element][param3].insert(param4,next_value)
 
 			i=i+1
 	############################ quantitatif:con

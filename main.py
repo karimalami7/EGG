@@ -149,7 +149,7 @@ for prop in L:
 
 	if obj['ListDynP'][prop]['domain']['v'] == 'true': #### si la prop a un domaine bien defini.
 
-		egg=g0_distrib.distrib(graph_elements[obj['ListDynP'][prop]['elements_type']],obj['ListDynP'][prop],prop,0,egg)
+		g0_distrib.distrib(graph_elements[obj['ListDynP'][prop]['elements_type']],obj['ListDynP'][prop],prop,0,egg)
 
 	else:	####### call distrib function for each rule
 		
@@ -188,8 +188,10 @@ logging.info ("T0 end")
 #######################################
 # Ti : Begin
 #######################################
+i=1
 
-for i in range(1,obj['interval']):
+for k in range(1,obj['interval']):
+
 
 	################################# 
 	#Ti validity : Begin 
@@ -258,7 +260,7 @@ for i in range(1,obj['interval']):
 		
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 		
-					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 		
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							
@@ -304,7 +306,7 @@ for i in range(1,obj['interval']):
 					
 					for element in elements_with_rule: #### constitution de elements with rule and config modif
 						
-						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 						
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 
@@ -334,7 +336,7 @@ for i in range(1,obj['interval']):
 			
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 			
-					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 			
 						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 			
@@ -377,7 +379,7 @@ for i in range(1,obj['interval']):
 
 					for element in elements_with_rule: #### constitution de elements with rule and config modif
 		
-						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["valid"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
+						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 		
 							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 		
@@ -397,6 +399,49 @@ for i in range(1,obj['interval']):
 
 		logging.info (str(i)+" "+prop+" "+"end")
 	logging.info (str(i)+" "+"end")
+
+	i=i+1
+
+	if k % 50 == 0:
+
+		
+		
+		
+		if k == 50:
+
+			if args.vg_output == True:
+	
+				import vgcreator
+				vgcreator.write(args.schema[0],egg)
+
+		else:
+			
+			if args.vg_output == True:
+	
+				import vgcreator
+				vgcreator.write_suite(args.schema[0],egg,k)
+
+		if args.rdf_output == True:
+	
+			import rdfcreator
+			rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,k-50)
+
+
+		for x in egg:
+
+			for y in x:
+
+				if not ( y=="out" or y=="in" ):
+
+					x[y] = list(x[y][50])
+		i=1			
+
+		logging.info("clear")
+
+
+
+
+
 
 
 	#################################
@@ -433,9 +478,16 @@ print p.memory_info()
 ################################
 
 if args.vg_output == True:
-	
+
 	import vgcreator
-	vgcreator.write(args.schema[0],egg)
+
+	if obj["interval"] < 50:
+		
+		vgcreator.write(args.schema[0],egg)
+
+	else:
+
+		vgcreator.write_suite(args.schema[0],egg,(obj["interval"]/50)*50)
 
 ################################
 # rdf output 
@@ -444,7 +496,7 @@ if args.vg_output == True:
 if args.rdf_output == True:
 	
 	import rdfcreator
-	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj)
+	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,(obj["interval"]/50)*50)
 
 
 ################################
