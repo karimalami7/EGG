@@ -35,9 +35,9 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 				p=rdflib.URIRef("edge"+":"+match.group(4))
 
-				for snap in range (0,len(egg[int(match.group(5))]["v"])):
+				for snap in range (0,len(egg[match.group(5)]["v"])):
 					
-					if egg[int(match.group(5))]["v"][snap] == "T":
+					if egg[match.group(5)]["v"][snap] == "T":
 						
 						n=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snap))
 					
@@ -66,7 +66,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 				
 					g.add((s,p,o,n))
 
-					for snapshot in range (0,len(egg[int(match.group(5))]["v"])):
+					for snapshot in range (0,len(egg[match.group(5)]["v"])):
 
 						s1=rdflib.URIRef("http://egg/ng/G"+str(i))
 

@@ -15,7 +15,7 @@ def write(schema,egg):
 
 				true=list()
 
-				egg_valid=egg[int(match.group(5))]["v"]
+				egg_valid=egg[match.group(5)]["v"]
 
 				for snap in range (0,len(egg_valid)):
 					
@@ -66,7 +66,7 @@ def write_suite(schema, egg, start_point):
 
 			true=list()
 
-			egg_valid=egg[int(match_f.group(5))]["v"]
+			egg_valid=egg[match_f.group(5)]["v"]
 
 
 
@@ -86,13 +86,34 @@ def write_suite(schema, egg, start_point):
 
 			if true : 
 
-
+				
 
 				if not "max" in true[len(true)-1]:
 
 					true[len(true)-1]["max"] = len (egg_valid) -1
 
 				edge_in_vg = line_vg.rstrip()
+
+				edge_in_vg_split = edge_in_vg.split(" ")
+
+				last_interval = edge_in_vg_split[len(edge_in_vg_split)-1].split(",")
+				
+
+				if int(last_interval[1]) == start_point:
+
+					edge_in_vg_split.pop()
+
+					edge_in_vg = edge_in_vg_split.pop(0)
+
+					edge_in_vg = edge_in_vg + " " +edge_in_vg_split.pop(0)	
+
+					
+					for s in range (0,len(edge_in_vg_split)):
+
+						edge_in_vg = edge_in_vg + " " + edge_in_vg_split[s]
+
+					edge_in_vg = edge_in_vg + " " + last_interval[0] + "," + str(start_point + true.pop(0)["max"])
+ 
 
 				for interval in true:
 

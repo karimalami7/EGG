@@ -93,7 +93,7 @@ L=json_parser.sorted_list(obj)
 
 logging.info ("config parse")
 
-
+clear_snap = 40 # clear memory after clear_snap
 
 
 
@@ -272,9 +272,9 @@ for k in range(1,obj['interval']):
 			
 					else:
 				
-						if i-1 in egg[element][prop]:
+						#if i-1 in egg[element][prop]:
 				
-							egg[element][prop].update({i:egg[element][prop][i-1]})
+						egg[element][prop].insert(i,egg[element][prop][i-1])
 			
 				if changing_element:
 			
@@ -291,7 +291,7 @@ for k in range(1,obj['interval']):
 					for elements in egg:
 				
 						if rule['if']['prop'] in egg[elements]: # si la prop if est presente pour ces elements 
-				
+						
 							if egg[elements][rule['if']['prop']][i] in rule['if']['hasValues']: # l element a une valeur presente dans les regles
 				
 								elements_with_rule.append(elements)
@@ -318,9 +318,9 @@ for k in range(1,obj['interval']):
 						
 						else:
 					
-							if i-1 in egg[element][prop]:
+							#if i-1 in egg[element][prop]:
 				
-								egg[element][prop].update({i:egg[element][prop][i-1]})
+							egg[element][prop].insert(i,egg[element][prop][i-1])
 				
 					if changing_element:
 				
@@ -348,9 +348,9 @@ for k in range(1,obj['interval']):
 			
 					else:
 			
-						if i-1 in egg[element][prop]:
+						#if i-1 in egg[element][prop]:
 			
-							egg[element][prop].update({i:egg[element][prop][i-1]})
+						egg[element][prop].insert(i,egg[element][prop][i-1])
 			
 				egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(obj['ListDynP'][prop]),prop,i,egg)
 
@@ -390,9 +390,9 @@ for k in range(1,obj['interval']):
 								pass
 						else:
 		
-							if i-1 in egg[element][prop]:
+							#if i-1 in egg[element][prop]:
 		
-								egg[element][prop].update({i:egg[element][prop][i-1]})
+							egg[element][prop].insert(i,egg[element][prop][i-1])
 
 					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
 
@@ -400,14 +400,19 @@ for k in range(1,obj['interval']):
 		logging.info (str(i)+" "+prop+" "+"end")
 	logging.info (str(i)+" "+"end")
 
+	
+
+
+
+
 	i=i+1
 
-	if k % 50 == 0:
+	if k % clear_snap == 0:
 
 		
 		
 		
-		if k == 50:
+		if k == clear_snap:
 
 			if args.vg_output == True:
 	
@@ -419,21 +424,21 @@ for k in range(1,obj['interval']):
 			if args.vg_output == True:
 	
 				import vgcreator
-				vgcreator.write_suite(args.schema[0],egg,k)
+				vgcreator.write_suite(args.schema[0],egg,k-clear_snap)
 
 		if args.rdf_output == True:
 	
 			import rdfcreator
-			rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,k-50)
+			rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,k-clear_snap)
 
 
 		for x in egg:
 
-			for y in x:
+			for y in egg[x]:
 
 				if not ( y=="out" or y=="in" ):
 
-					x[y] = list(x[y][50])
+					egg[x][y] = list(egg[x][y][clear_snap])
 		i=1			
 
 		logging.info("clear")
@@ -481,13 +486,13 @@ if args.vg_output == True:
 
 	import vgcreator
 
-	if obj["interval"] < 50:
+	if obj["interval"] < clear_snap:
 		
 		vgcreator.write(args.schema[0],egg)
 
 	else:
 
-		vgcreator.write_suite(args.schema[0],egg,(obj["interval"]/50)*50)
+		vgcreator.write_suite(args.schema[0],egg,(obj["interval"]/clear_snap)*clear_snap)
 
 ################################
 # rdf output 
@@ -496,7 +501,7 @@ if args.vg_output == True:
 if args.rdf_output == True:
 	
 	import rdfcreator
-	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,(obj["interval"]/50)*50)
+	rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,(obj["interval"]/clear_snap)*clear_snap)
 
 
 ################################
