@@ -464,8 +464,7 @@ print p.memory_info()
 # 	if not egg[e] == {} :
 # 		logging.info (e+str(egg[e])+"\n\n\n")
 
-logging.info (str(egg["23"]["hotelPrice"])+"\n\n\n")
-logging.info (str(egg["23"]["availRoom"])+"\n\n\n")
+
 
 ################################
 # vg output 

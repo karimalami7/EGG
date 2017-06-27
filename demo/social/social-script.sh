@@ -11,4 +11,4 @@ mkdir -p "byproperty"
 
 rm "egg.log"
 
-python "../../main.py" "social" --log   --vg-output
+python "../../src/main.py" "social" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject
