@@ -32,7 +32,6 @@
 			"duration":1,
 			"evolution":{
 				"e":"true",
-				"relation":"true",
 				"staticity":0.5,
 				"succesors":{"sunny":["sunny","cloudy"]}
 			},
@@ -54,7 +53,6 @@
 			"duration":7,
 			"evolution":{
 				"e":"true",
-				"relation":"true",
 				"staticity":0.8,
 				"offset":{
 					"min":-1,
@@ -84,7 +82,6 @@
 			"duration":1,
 			"evolution":{
 				"e":"true",
-				"relation":"true",
 				"staticity":0.2,
 				"offset":{
 					"min":-5,
@@ -109,7 +106,6 @@
 			"duration":30,
 			"evolution":{
 				"e":"true",
-				"relation":"true",
 				"staticity":0.9,
 				"offset":{
 					"min":-1,
@@ -132,7 +128,6 @@
 			"duration":1,
 			"evolution":{
 				"e":"false",
-				"relation":"true",
 				"staticity":0.5,
 			},
 			"rules":[
@@ -160,7 +155,6 @@
 			"duration":1,
 			"evolution":{
 				"e":"true",
-				"relation":"true",
 				"staticity":0.7,
 				"offset":{
 					"min":-10,

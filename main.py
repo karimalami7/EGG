@@ -261,14 +261,9 @@ for k in range(1,obj['interval']):
 				for element in graph_elements[obj['ListDynP'][prop]['elements_type']]:
 		
 					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
-		
-						if obj['ListDynP'][prop]['evolution']['relation']=="true":
 							
-							changing_element.append(element)
+						changing_element.append(element)
 							
-						else:
-				
-							pass    #### general random generator
 			
 					else:
 				
@@ -308,13 +303,11 @@ for k in range(1,obj['interval']):
 						
 						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 						
-							if obj['ListDynP'][prop]['evolution']['relation']=="true":
 
-								changing_element.append(element)	
+
+							changing_element.append(element)	
 							
-							else:
-							
-								pass
+
 						
 						else:
 					
@@ -338,13 +331,11 @@ for k in range(1,obj['interval']):
 			
 					if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 			
-						if obj['ListDynP'][prop]['evolution']['relation']=="true":
-			
-							changing_element.append(element)
 
-						else:
 			
-							pass#### general random generator
+						changing_element.append(element)
+
+
 			
 					else:
 			
@@ -381,13 +372,8 @@ for k in range(1,obj['interval']):
 		
 						if i%obj['ListDynP'][prop]['duration']==0 and egg[element]["v"][i] == "T" and obj['ListDynP'][prop]['evolution']['staticity']<random_for_all.pop(): ###check if it has to change now
 		
-							if obj['ListDynP'][prop]['evolution']['relation']=="true":
-		
 								changing_element.append(element)
-		
-							else:
-		
-								pass
+
 						else:
 		
 							#if i-1 in egg[element][prop]:
@@ -477,6 +463,9 @@ print p.memory_info()
 # for e in egg:
 # 	if not egg[e] == {} :
 # 		logging.info (e+str(egg[e])+"\n\n\n")
+
+logging.info (str(egg["23"]["hotelPrice"])+"\n\n\n")
+logging.info (str(egg["23"]["availRoom"])+"\n\n\n")
 
 ################################
 # vg output 

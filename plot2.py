@@ -9,7 +9,7 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG):
 
 	element_dict.pop('in', None)
 	element_dict.pop('out', None)
-	valid_dict=element_dict.pop('valid', None)
+	valid_dict=element_dict.pop('v', None)
 
 	if len(element_dict) > 0 :
 		plt.figure(1)
@@ -20,7 +20,6 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG):
 
 		plot_id=list()
 		for i in range(0,interval):
-
 			if valid_dict[i] == "T":
 				plot_id.insert(0,axarr[0].bar(i,1,color=color_dict[0]))
 			else:

@@ -77,7 +77,8 @@ def plot(egg,elements_list,prop,config_egg):
 				y.append(list())
 
 
-				for keys in egg[e][prop]:
+				for keys in range(0,len(egg[e][prop])):
+
 		
 					y[j].append(egg[e][prop][keys])
 
@@ -108,8 +109,8 @@ def plot(egg,elements_list,prop,config_egg):
 		j=0
 		for e in elements_list:
 			y.append(list())
-			for keys in egg[e][prop]:
-	
+			for keys in range(0,len(egg[e][prop])):
+				
 				y[j].append(egg[e][prop][keys])
 			plt.plot(x,y[j],'r-')
 			j=j+1
@@ -134,7 +135,8 @@ def plot(egg,elements_list,prop,config_egg):
 				y.append(list())
 
 
-				for keys in egg[e][prop]:
+				for keys in range(0,len(egg[e][prop])):
+
 		
 					y[j].append(egg[e][prop][keys])
 
@@ -160,7 +162,8 @@ def plot(egg,elements_list,prop,config_egg):
 				y.append(list())
 
 
-				for keys in egg[e][prop]:
+				for keys in range(0,len(egg[e][prop])):
+
 		
 					y[j].append(egg[e][prop][keys])
 				
@@ -199,7 +202,7 @@ def plot_validity(egg,graph,config_egg):
 
 			for e in graph[node_label]:
 
-				value = egg[e]["valid"][i]
+				value = egg[e]["v"][i]
 
 				values_dict[value] = values_dict[value] + 1
 
@@ -233,7 +236,7 @@ def plot_validity(egg,graph,config_egg):
 
 			for e in graph[edge_label]:
 
-				value = egg[e]["valid"][i]
+				value = egg[e]["v"][i]
 
 				values_dict[value] = values_dict[value] + 1
 
