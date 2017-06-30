@@ -1,0 +1,44 @@
+<generator>
+	<graph>
+		<nodes>50</nodes>
+	</graph>
+	<predicates>
+		<size>2</size>
+
+		<alias symbol="0">train</alias>
+		<alias symbol="1">abrite</alias>
+
+	</predicates>
+	<types>
+		<size>2</size>
+		<alias type="0">city</alias>
+		<proportion type="0">0.1</proportion>
+
+		<alias type="1">hotel</alias>
+		<proportion type="1">0.9</proportion>
+
+	</types>
+	<schema>
+		<source type="0"> <!-- city -->
+			<target type="0" symbol="0" > <!-- train city -->
+				<indistribution type="gaussian">
+					<mu>3</mu>
+					<sigma>1</sigma>
+				</indistribution>	
+				<outdistribution type="uniform">
+					<min>1</min>
+					<max>1</max>
+				</outdistribution>
+			</target>
+			<target type="1" symbol="1"  > <!-- located in city -->
+				<indistribution type="uniform">
+					<min>1</min>
+					<max>1</max>
+				</indistribution>
+				<outdistribution type="zipfian">
+					<alpha>0.9</alpha>
+				</outdistribution>
+			</target>
+		</source>
+	</schema>
+</generator>

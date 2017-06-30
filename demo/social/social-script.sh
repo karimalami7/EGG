@@ -1,9 +1,12 @@
 #/bin/bash
 
-#cd "/Users/mac/Desktop/code/EGG/schemas/trip"
+######## gmark execution
 
 
+../../gmark/src/test -c ../../use_cases/social/social.xml -g social-graph.txt -r ./ -a
 
+
+######## egg exection
 
 mkdir -p "byobject"
 
