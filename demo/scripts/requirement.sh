@@ -21,6 +21,7 @@ mv gmark ../../
 cd ../../gmark/src
 make
 
+apt-get install python-tk
 
 ####check pip
 if ! [ -x "$(command -v pip)" ]; then
