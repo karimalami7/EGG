@@ -28,14 +28,6 @@ import psutil
 import os
 
 
-################### 
-#put log in egg.log
-###################
-logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
-
-
-logging.info ("Let EGG begin")
-
 
 ############################
 #check the arguments : Begin 
@@ -70,6 +62,13 @@ if args.log == False :
 #check the arguments : End
 ###########################
 
+################### 
+#put log in egg.log
+###################
+logging.basicConfig(filename='../egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
+
+
+logging.info ("Let EGG begin")
 
 #######################
 #Parse the gmark output
@@ -116,8 +115,10 @@ for node_label in obj["nodes"]:
 
 for edge_label in obj["edges"]:
 
-	changing_element=list()    
-    
+	changing_element=list()
+
+
+	
 	for edge_element in graph_elements[edge_label] :
 
 		out_element = egg[edge_element]["out"]
@@ -498,7 +499,7 @@ if args.rdf_output == True:
 
 if args.plot_byproperty=="all": 
 
-	plot1.plot_validity(egg,graph_elements,obj)
+	plot1.plot_validity(egg,graph_elements,obj,args.schema[0])
 
 	if "ListDynP" in obj:
 
@@ -506,19 +507,19 @@ if args.plot_byproperty=="all":
 
 			elements_list=graph_elements[obj["ListDynP"][prop]["elements_type"]]
 
-			plot1.plot(egg,list(elements_list),prop,obj)
+			plot1.plot(egg,list(elements_list),prop,obj,args.schema[0])
 
 elif not args.plot_byproperty == None:
 
 	if args.plot_byproperty == "valid":
 
-		plot1.plot_validity(egg,graph_elements,obj)
+		plot1.plot_validity(egg,graph_elements,obj,args.schema[0])
 
 	else:
 
 		elements_list=graph_elements[obj["ListDynP"][args.plot_byproperty]["elements_type"]]
 
-		plot1.plot(egg,list(elements_list),args.plot_byproperty,obj)
+		plot1.plot(egg,list(elements_list),args.plot_byproperty,obj,args.schema[0])
 
 ################################
 # plot by object 
@@ -539,10 +540,10 @@ if args.plot_byobject=="all" :
 	for element in egg:
 		if len(egg[element])>0:
 			
-			plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"],element_label(element),obj)
+			plot2.plot_one(egg[element],element,obj["interval"],obj["ListDynP"],element_label(element),obj,args.schema[0])
 
 elif not args.plot_byobject==None:
 
-	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"],element_label(element),obj)
+	plot2.plot_one(egg[args.plot_byobject],args.plot_byobject,obj["interval"],obj["ListDynP"],element_label(element),obj,args.schema[0])
 
 

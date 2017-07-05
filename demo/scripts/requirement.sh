@@ -2,7 +2,7 @@
 if ! [ -x "$(command -v g++)" ]; then
 	apt-get install gcc-5 g++-5
 else 
-	echo 'g++ kayn'
+	echo 'g++ exists'
 fi
 
 
@@ -10,7 +10,7 @@ fi
 if ! [ -x "$(command -v python)" ]; then
 	apt-get install sudo apt-get install python2.7
 else 
-	echo 'python kayn'
+	echo 'python exists'
 fi
 
 

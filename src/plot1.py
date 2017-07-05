@@ -5,7 +5,7 @@ formdict={"1":['b-','r-'],"2":['b--','r--'],"3":['b^','r^'],"4":['b-','r-'],"5":
 color_tab=['b','g','r','y','p']
 ### plot by property
 
-def plot(egg,elements_list,prop,config_egg):
+def plot(egg,elements_list,prop,config_egg,schema):
 
 	
 	x=list()
@@ -186,13 +186,13 @@ def plot(egg,elements_list,prop,config_egg):
 	
 	plt.title('Property ' + prop + ' of '+ config_egg['ListDynP'][prop]["elements_type"])
 
-	plt.savefig("byproperty/"+prop+".png")
+	plt.savefig("../"+schema+"_output/"+"byproperty/"+prop+".png")
 
 	plt.clf() # clear plot 
 
 
 
-def plot_validity(egg,graph,config_egg):
+def plot_validity(egg,graph,config_egg,schema):
 
 	for node_label in config_egg["nodes"]:
 
@@ -222,7 +222,7 @@ def plot_validity(egg,graph,config_egg):
 
 		plt.title('Validity of '+ node_label)
 
-		plt.savefig("byproperty/validity_"+node_label+".png")
+		plt.savefig("../"+schema+"_output/"+"byproperty/validity_"+node_label+".png")
 
 		plt.clf() # clear plot 
 
@@ -256,7 +256,7 @@ def plot_validity(egg,graph,config_egg):
 
 		plt.title('Validity of '+ edge_label)
 
-		plt.savefig("byproperty/validity_"+edge_label+".png")
+		plt.savefig("../"+schema+"_output/"+"byproperty/validity_"+edge_label+".png")
 
 		plt.clf() # clear plot
 

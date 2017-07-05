@@ -1,0 +1,13 @@
+{
+	"interval":10,
+	"nodes":
+		{"person":[]},
+	"edges":	
+		{"friendOf":[]},
+	"validity":{
+		"person":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"friendOf":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
+	},
+	"ListDynP":{}
+
+}

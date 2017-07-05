@@ -1,0 +1,219 @@
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <edge:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snap1 {
+    <Offer:12> ns2:offer_includes <Product:2> .
+
+    <Offer:14> ns2:offer_includes <Product:7> .
+
+    <Offer:18> ns2:offer_includes <Product:2> .
+
+    <Offer:20> ns2:eligi_region <Country:100>,
+            <Country:105> .
+
+    <Offer:21> ns2:offer_includes <Product:2> .
+
+    <Offer:23> ns2:eligi_region <Country:104> .
+
+    <Offer:31> ns2:offer_includes <Product:0> .
+
+    <Offer:40> ns2:eligi_region <Country:100> .
+
+    <Offer:42> ns2:eligi_region <Country:102> ;
+        ns2:offer_includes <Product:0> .
+
+    <Offer:43> ns2:eligi_region <Country:103> .
+
+    <Offer:46> ns2:eligi_region <Country:101> ;
+        ns2:offer_includes <Product:2> .
+
+    <Offer:47> ns2:offer_includes <Product:2> .
+
+    <Offer:51> ns2:offer_includes <Product:6> .
+
+    <Offer:53> ns2:eligi_region <Country:105> .
+
+    <Offer:58> ns2:eligi_region <Country:103> ;
+        ns2:offer_includes <Product:0> .
+
+    <Offer:66> ns2:offer_includes <Product:7> .
+
+    <Offer:76> ns2:offer_includes <Product:2> .
+
+    <Offer:80> ns2:offer_includes <Product:7> .
+
+    <Offer:86> ns2:offer_includes <Product:7> .
+
+    <Offer:94> ns2:offer_includes <Product:6> .
+
+    <Offer:98> ns2:offer_includes <Product:2> .
+}
+
+ns1:snap0 {
+    <Offer:17> ns2:offer_includes <Product:8> .
+
+    <Offer:23> ns2:eligi_region <Country:104> .
+
+    <Offer:30> ns2:offer_includes <Product:9> .
+
+    <Offer:34> ns2:offer_includes <Product:3> .
+
+    <Offer:39> ns2:offer_includes <Product:8> .
+
+    <Offer:40> ns2:eligi_region <Country:100> ;
+        ns2:offer_includes <Product:8> .
+
+    <Offer:53> ns2:eligi_region <Country:105> ;
+        ns2:offer_includes <Product:8> .
+
+    <Offer:55> ns2:offer_includes <Product:8> .
+
+    <Offer:58> ns2:eligi_region <Country:103> .
+
+    <Offer:60> ns2:offer_includes <Product:8> .
+
+    <Offer:70> ns2:eligi_region <Country:100> .
+
+    <Offer:72> ns2:offer_includes <Product:3> .
+
+    <Offer:73> ns2:eligi_region <Country:100> .
+
+    <Offer:82> ns2:eligi_region <Country:100> ;
+        ns2:offer_includes <Product:9> .
+
+    <Offer:84> ns2:offer_includes <Product:3> .
+
+    <Offer:89> ns2:offer_includes <Product:8> .
+
+    <Offer:92> ns2:eligi_region <Country:103> ;
+        ns2:offer_includes <Product:9> .
+}
+
+ns1:snap3 {
+    <Offer:14> ns2:offer_includes <Product:7> .
+
+    <Offer:18> ns2:offer_includes <Product:2> .
+
+    <Offer:21> ns2:offer_includes <Product:2> .
+
+    <Offer:25> ns2:offer_includes <Product:2> .
+
+    <Offer:30> ns2:offer_includes <Product:9> .
+
+    <Offer:38> ns2:offer_includes <Product:2> .
+
+    <Offer:40> ns2:eligi_region <Country:100> .
+
+    <Offer:46> ns2:eligi_region <Country:101> ;
+        ns2:offer_includes <Product:2> .
+
+    <Offer:48> ns2:offer_includes <Product:5> .
+
+    <Offer:52> ns2:offer_includes <Product:10> .
+
+    <Offer:57> ns2:eligi_region <Country:101>,
+            <Country:103>,
+            <Country:104>,
+            <Country:105> ;
+        ns2:offer_includes <Product:10> .
+
+    <Offer:73> ns2:eligi_region <Country:100> .
+
+    <Offer:76> ns2:offer_includes <Product:2> .
+
+    <Offer:78> ns2:offer_includes <Product:7> .
+
+    <Offer:80> ns2:offer_includes <Product:7> .
+
+    <Offer:82> ns2:eligi_region <Country:100> ;
+        ns2:offer_includes <Product:9> .
+
+    <Offer:98> ns2:offer_includes <Product:2> .
+
+    <Offer:99> ns2:offer_includes <Product:10> .
+}
+
+ns1:snap2 {
+    <Offer:11> ns2:offer_includes <Product:5> .
+
+    <Offer:12> ns2:offer_includes <Product:2> .
+
+    <Offer:15> ns2:offer_includes <Product:10> .
+
+    <Offer:17> ns2:offer_includes <Product:8> .
+
+    <Offer:18> ns2:offer_includes <Product:2> .
+
+    <Offer:20> ns2:eligi_region <Country:100>,
+            <Country:105> ;
+        ns2:offer_includes <Product:4> .
+
+    <Offer:22> ns2:eligi_region <Country:102> ;
+        ns2:offer_includes <Product:6> .
+
+    <Offer:26> ns2:offer_includes <Product:10> .
+
+    <Offer:29> ns2:offer_includes <Product:2> .
+
+    <Offer:30> ns2:offer_includes <Product:9> .
+
+    <Offer:32> ns2:offer_includes <Product:4> .
+
+    <Offer:37> ns2:offer_includes <Product:3> .
+
+    <Offer:42> ns2:eligi_region <Country:102> .
+
+    <Offer:45> ns2:offer_includes <Product:2> .
+
+    <Offer:46> ns2:eligi_region <Country:101> ;
+        ns2:offer_includes <Product:2> .
+
+    <Offer:47> ns2:offer_includes <Product:2> .
+
+    <Offer:53> ns2:eligi_region <Country:105> ;
+        ns2:offer_includes <Product:8> .
+
+    <Offer:56> ns2:offer_includes <Product:3> .
+
+    <Offer:57> ns2:eligi_region <Country:101>,
+            <Country:103>,
+            <Country:104>,
+            <Country:105> ;
+        ns2:offer_includes <Product:10> .
+
+    <Offer:58> ns2:eligi_region <Country:103> .
+
+    <Offer:61> ns2:offer_includes <Product:1> .
+
+    <Offer:62> ns2:offer_includes <Product:9> .
+
+    <Offer:65> ns2:offer_includes <Product:4> .
+
+    <Offer:67> ns2:offer_includes <Product:4> .
+
+    <Offer:71> ns2:offer_includes <Product:10> .
+
+    <Offer:73> ns2:eligi_region <Country:100> ;
+        ns2:offer_includes <Product:1> .
+
+    <Offer:77> ns2:offer_includes <Product:3> .
+
+    <Offer:81> ns2:offer_includes <Product:5> .
+
+    <Offer:82> ns2:eligi_region <Country:100> ;
+        ns2:offer_includes <Product:9> .
+
+    <Offer:92> ns2:eligi_region <Country:103> ;
+        ns2:offer_includes <Product:9> .
+
+    <Offer:96> ns2:offer_includes <Product:4> .
+
+    <Offer:98> ns2:offer_includes <Product:2> .
+
+    <Offer:99> ns2:offer_includes <Product:10> .
+}
+

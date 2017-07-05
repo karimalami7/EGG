@@ -1,7 +1,7 @@
 import re
 import logging
 
-logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
+logging.basicConfig(filename='../egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
 def graph_parser(schema):
 
@@ -9,7 +9,7 @@ def graph_parser(schema):
 	
 	graph_elements=dict()
 	
-	with open(schema+'-graph.txt','r') as f:
+	with open("../"+schema+"_output/"+schema+'-graph.txt','r') as f:
 		for line in f.readlines():
 			match=re.match(r"(^(\w+):(\w+) (\w+):(\w+) (\w+):(\w+))",line)
 			if match:

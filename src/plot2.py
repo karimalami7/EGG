@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 color_dict=['b','g','r','y','p']
 
-def plot_one(element_dict,element_id,interval,config_egg,label,configG):
+def plot_one(element_dict,element_id,interval,config_egg,label,configG,schema):
 
 	element_dict.pop('in', None)
 	element_dict.pop('out', None)
@@ -106,5 +106,5 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG):
 
 	
 
-	plt.savefig("byobject/"+element_id+".png")
+	plt.savefig("../"+schema+"_output/"+"byobject/"+element_id+".png")
 	plt.clf()

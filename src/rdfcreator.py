@@ -1,7 +1,7 @@
 import rdflib,re
 import logging
 
-logging.basicConfig(filename='egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
+logging.basicConfig(filename='../egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
 def write_rdf(schema,graph_elements,egg,configG,start_point):
 
@@ -13,7 +13,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 	g = rdflib.ConjunctiveGraph()
 
-	with open(schema+'-graph.txt','r') as f:
+	with open("../"+schema+"_output/"+schema+'-graph.txt','r') as f:
 		
 		for line in f.readlines():
 			
@@ -109,7 +109,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 	logging.info ("2 rdf end")				
 	
 
-	with open(schema+"-output.trig","a") as f:
+	with open("../"+schema+"_output/"+schema+"-output.trig","a") as f:
 		f.write(g.serialize(format='trig'))	
 
 

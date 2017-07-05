@@ -5,14 +5,14 @@
 		"hotel":["availRoom","star","hotelPrice"]},
 	"edges":
 		{"train":["trainPrice"],
-		"abrite":[]
+		"contain":[]
 		}	
 	,
 	"validity":{
 		"city":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"hotel":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"train":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
-		"abrite":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
+		"contain":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 
 	},
 	"ListDynP": {

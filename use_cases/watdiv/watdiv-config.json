@@ -1,0 +1,22 @@
+{
+	"interval":4,
+	"nodes":{
+		"Product":[],
+		"Offer":[],
+		"Country":[],
+
+	},
+	"edges":{
+		"offer_includes":[],
+		"eligi_region":[],
+	}	
+	,
+	"validity":{
+		"Product":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"Offer":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"Country":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"offer_includes":{"type":"edge","init":{"T"},"succ":{"T":"T","F":"T"}},
+		"eligi_region":{"type":"edge","init":{"T"},"succ":{"T":"T","F":"T"}},
+	},
+	"ListDynP": {}	
+}

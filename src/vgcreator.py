@@ -3,9 +3,9 @@ import logging,re,os
 
 def write(schema,egg):
 
-	vg = open(schema+'-vg.txt','w')
+	vg = open("../"+schema+"_output/"+schema+'-vg.txt','w')
 
-	with open(schema+'-graph.txt','r') as f:
+	with open("../"+schema+"_output/"+schema+'-graph.txt','r') as f:
 	
 		for line in f.readlines():
 		
@@ -52,11 +52,11 @@ def write(schema,egg):
 
 def write_suite(schema, egg, start_point):
 
-	vg_suite = open(schema+'-vg.txt.suite','w')
+	vg_suite = open("../"+schema+"_output/"+schema+'-vg.txt.suite','w')
 
-	vg = open(schema+'-vg.txt','r')
+	vg = open("../"+schema+"_output/"+schema+'-vg.txt','r')
 
-	f = open(schema+'-graph.txt','r')
+	f = open("../"+schema+"_output/"+schema+'-graph.txt','r')
 
 	for (line_vg,line_f) in zip(vg.readlines(),f.readlines()) :
 
@@ -125,7 +125,7 @@ def write_suite(schema, egg, start_point):
 	f.close()
 	vg_suite.close()
 
-	os.rename(schema+'-vg.txt.suite',schema+'-vg.txt')
+	os.rename("../"+schema+"_output/"+schema+'-vg.txt.suite',"../"+schema+"_output/"+schema+'-vg.txt')
 	
 	logging.info ("vg_suite end")
 
