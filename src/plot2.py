@@ -21,9 +21,9 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG,schema):
 		plot_id=[None,None]
 		for i in range(0,interval):
 			if valid_dict[i] == "T":
-				plot_id[0]=plt.bar(i,1,color=color_dict[0])
+				plot_id[0]=axarr[0].bar(i,1,color=color_dict[0])
 			else:
-				plot_id[1]=plt.bar(i,1,color=color_dict[1])
+				plot_id[1]=axarr[0].bar(i,1,color=color_dict[1])
 
 			axarr[0].legend(plot_id,["T","F"])
 			axarr[0].set_yticks([])

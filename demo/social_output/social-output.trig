@@ -7636,3 +7636,1505 @@ ns1:snap6 {
     <person:49> ns2:friendOf <person:35> .
 }
 
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <edge:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snap9 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:36>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:0>,
+            <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:22>,
+            <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:28>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30>,
+            <person:41> .
+
+    <person:41> ns2:friendOf <person:37> .
+}
+
+ns1:snap8 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:36>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:0>,
+            <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:22>,
+            <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:28>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30>,
+            <person:41> .
+
+    <person:41> ns2:friendOf <person:37> .
+}
+
+ns1:snap1 {
+    <person:0> ns2:friendOf <person:19>,
+            <person:4>,
+            <person:45> .
+
+    <person:20> ns2:friendOf <person:33> .
+
+    <person:27> ns2:friendOf <person:16> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:12> ns2:friendOf <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:30> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:42>,
+            <person:49> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:8> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:38>,
+            <person:46> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:42> ns2:friendOf <person:18> .
+
+    <person:43> ns2:friendOf <person:36>,
+            <person:5> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:6> ns2:friendOf <person:2> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:39> ns2:friendOf <person:45> .
+
+    <person:4> ns2:friendOf <person:11>,
+            <person:44> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:47> ns2:friendOf <person:32>,
+            <person:35> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:30>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+}
+
+ns1:snap0 {
+    <person:0> ns2:friendOf <person:19>,
+            <person:45> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:27> ns2:friendOf <person:16> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:34> ns2:friendOf <person:10> .
+
+    <person:4> ns2:friendOf <person:11> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:9> ns2:friendOf <person:2> .
+
+    <person:11> ns2:friendOf <person:26>,
+            <person:47> .
+
+    <person:12> ns2:friendOf <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24> .
+
+    <person:18> ns2:friendOf <person:42>,
+            <person:49> .
+
+    <person:21> ns2:friendOf <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:48>,
+            <person:5> .
+
+    <person:28> ns2:friendOf <person:38>,
+            <person:44> .
+
+    <person:30> ns2:friendOf <person:1> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19> .
+
+    <person:39> ns2:friendOf <person:45> .
+
+    <person:43> ns2:friendOf <person:36>,
+            <person:5> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:6> ns2:friendOf <person:2> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3> .
+
+    <person:10> ns2:friendOf <person:46> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:29> ns2:friendOf <person:8> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:30>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:47> ns2:friendOf <person:35> .
+}
+
+ns1:snap3 {
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:27> ns2:friendOf <person:16>,
+            <person:34> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:45> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:1> ns2:friendOf <person:1> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:42> ns2:friendOf <person:18> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:19> ns2:friendOf <person:30> .
+}
+
+ns1:snap2 {
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:27> ns2:friendOf <person:16>,
+            <person:34> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:45> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:42>,
+            <person:49> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:43> ns2:friendOf <person:36>,
+            <person:5> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:30>,
+            <person:42> .
+
+    <person:1> ns2:friendOf <person:1> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:42> ns2:friendOf <person:18> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:47> ns2:friendOf <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:19> ns2:friendOf <person:30> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+}
+
+ns1:snap5 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:22>,
+            <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30> .
+}
+
+ns1:snap4 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:41> ns2:friendOf <person:37> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30> .
+}
+
+ns1:snap7 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:36>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:0>,
+            <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:22>,
+            <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:28>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30>,
+            <person:41> .
+
+    <person:41> ns2:friendOf <person:37> .
+}
+
+ns1:snap6 {
+    <person:27> ns2:friendOf <person:0>,
+            <person:16>,
+            <person:34> .
+
+    <person:11> ns2:friendOf <person:16>,
+            <person:26>,
+            <person:47> .
+
+    <person:14> ns2:friendOf <person:19> .
+
+    <person:20> ns2:friendOf <person:33>,
+            <person:9> .
+
+    <person:34> ns2:friendOf <person:10>,
+            <person:17>,
+            <person:46> .
+
+    <person:40> ns2:friendOf <person:39>,
+            <person:9> .
+
+    <person:7> ns2:friendOf <person:47>,
+            <person:6> .
+
+    <person:8> ns2:friendOf <person:21>,
+            <person:3>,
+            <person:41> .
+
+    <person:12> ns2:friendOf <person:0>,
+            <person:1>,
+            <person:31> .
+
+    <person:13> ns2:friendOf <person:23>,
+            <person:24>,
+            <person:35> .
+
+    <person:17> ns2:friendOf <person:43> .
+
+    <person:18> ns2:friendOf <person:21>,
+            <person:36>,
+            <person:42>,
+            <person:49> .
+
+    <person:24> ns2:friendOf <person:15>,
+            <person:37>,
+            <person:44>,
+            <person:48>,
+            <person:5> .
+
+    <person:29> ns2:friendOf <person:3>,
+            <person:39>,
+            <person:6>,
+            <person:8> .
+
+    <person:31> ns2:friendOf <person:10>,
+            <person:4> .
+
+    <person:32> ns2:friendOf <person:16>,
+            <person:28>,
+            <person:29> .
+
+    <person:33> ns2:friendOf <person:26>,
+            <person:33>,
+            <person:38> .
+
+    <person:37> ns2:friendOf <person:0>,
+            <person:18>,
+            <person:19>,
+            <person:28>,
+            <person:48>,
+            <person:6> .
+
+    <person:48> ns2:friendOf <person:49>,
+            <person:7> .
+
+    <person:9> ns2:friendOf <person:2>,
+            <person:26>,
+            <person:30>,
+            <person:42> .
+
+    <person:0> ns2:friendOf <person:13>,
+            <person:19>,
+            <person:4>,
+            <person:43>,
+            <person:45> .
+
+    <person:1> ns2:friendOf <person:1>,
+            <person:41> .
+
+    <person:16> ns2:friendOf <person:13> .
+
+    <person:2> ns2:friendOf <person:14>,
+            <person:5> .
+
+    <person:21> ns2:friendOf <person:22>,
+            <person:23>,
+            <person:24>,
+            <person:3> .
+
+    <person:23> ns2:friendOf <person:19>,
+            <person:44>,
+            <person:47> .
+
+    <person:26> ns2:friendOf <person:12>,
+            <person:28>,
+            <person:29>,
+            <person:31>,
+            <person:39> .
+
+    <person:28> ns2:friendOf <person:3>,
+            <person:38>,
+            <person:44> .
+
+    <person:30> ns2:friendOf <person:1>,
+            <person:2>,
+            <person:38>,
+            <person:46> .
+
+    <person:39> ns2:friendOf <person:15>,
+            <person:45> .
+
+    <person:4> ns2:friendOf <person:10>,
+            <person:11>,
+            <person:40>,
+            <person:44>,
+            <person:45>,
+            <person:46> .
+
+    <person:42> ns2:friendOf <person:18>,
+            <person:20> .
+
+    <person:43> ns2:friendOf <person:12>,
+            <person:32>,
+            <person:36>,
+            <person:5> .
+
+    <person:47> ns2:friendOf <person:19>,
+            <person:32>,
+            <person:35>,
+            <person:41> .
+
+    <person:6> ns2:friendOf <person:2>,
+            <person:21> .
+
+    <person:10> ns2:friendOf <person:4>,
+            <person:46> .
+
+    <person:3> ns2:friendOf <person:10>,
+            <person:23>,
+            <person:30>,
+            <person:41>,
+            <person:43> .
+
+    <person:44> ns2:friendOf <person:42> .
+
+    <person:46> ns2:friendOf <person:17> .
+
+    <person:19> ns2:friendOf <person:25>,
+            <person:30>,
+            <person:41> .
+
+    <person:41> ns2:friendOf <person:37> .
+}
+

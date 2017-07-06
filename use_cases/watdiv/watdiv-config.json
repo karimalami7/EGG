@@ -1,5 +1,5 @@
 {
-	"interval":4,
+	"interval":10,
 	"nodes":{
 		"Product":[],
 		"Offer":[],

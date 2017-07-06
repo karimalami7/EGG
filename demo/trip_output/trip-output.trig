@@ -6265,3 +6265,1628 @@ ns1:G56 {
     <hotel:9> ns2:hasProperty <Property:star> .
 }
 
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix ns3: <http://egg/> .
+@prefix ns4: <edge:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:G3 {
+    <city:0> ns2:hasProperty <Property:qAir> .
+}
+
+ns1:G2 {
+    <city:0> ns2:hasProperty <Property:weather> .
+}
+
+ns1:G1 {
+    <city:1> ns2:hasProperty <Property:qAir> .
+}
+
+ns1:G0 {
+    <city:1> ns2:hasProperty <Property:weather> .
+}
+
+ns1:G7 {
+    <city:2> ns2:hasProperty <Property:qAir> .
+}
+
+ns1:G6 {
+    <city:2> ns2:hasProperty <Property:weather> .
+}
+
+ns1:G5 {
+    <city:3> ns2:hasProperty <Property:qAir> .
+}
+
+ns1:G4 {
+    <city:3> ns2:hasProperty <Property:weather> .
+}
+
+ns1:G9 {
+    <city:4> ns2:hasProperty <Property:qAir> .
+}
+
+ns1:G8 {
+    <city:4> ns2:hasProperty <Property:weather> .
+}
+
+ns1:G39 {
+    <hotel:5> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G38 {
+    <hotel:5> ns2:hasProperty <Property:star> .
+}
+
+ns1:G51 {
+    <hotel:29> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G50 {
+    <hotel:29> ns2:hasProperty <Property:star> .
+}
+
+ns1:G56 {
+    <train:52> ns2:hasProperty <Property:trainPrice> .
+}
+
+ns1:G55 {
+    <train:53> ns2:hasProperty <Property:trainPrice> .
+}
+
+ns1:G54 {
+    <train:51> ns2:hasProperty <Property:trainPrice> .
+}
+
+ns1:G31 {
+    <hotel:40> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G30 {
+    <hotel:36> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G33 {
+    <hotel:40> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G32 {
+    <hotel:40> ns2:hasProperty <Property:star> .
+}
+
+ns1:G35 {
+    <hotel:34> ns2:hasProperty <Property:star> .
+}
+
+ns1:G34 {
+    <hotel:34> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G37 {
+    <hotel:5> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G36 {
+    <hotel:34> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G17 {
+    <hotel:44> ns2:hasProperty <Property:star> .
+}
+
+ns1:G16 {
+    <hotel:44> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G15 {
+    <hotel:25> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G14 {
+    <hotel:25> ns2:hasProperty <Property:star> .
+}
+
+ns1:G13 {
+    <hotel:25> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G12 {
+    <hotel:24> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G11 {
+    <hotel:24> ns2:hasProperty <Property:star> .
+}
+
+ns1:G10 {
+    <hotel:24> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G26 {
+    <hotel:31> ns2:hasProperty <Property:star> .
+}
+
+ns1:G23 {
+    <hotel:22> ns2:hasProperty <Property:star> .
+}
+
+ns1:G19 {
+    <hotel:27> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G18 {
+    <hotel:44> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:gmark {
+    <city:4> <contain:57> <hotel:31> ;
+        <contain:58> <hotel:40> ;
+        <contain:59> <hotel:25> ;
+        <contain:60> <hotel:27> ;
+        <contain:61> <hotel:34> ;
+        <contain:62> <hotel:36> ;
+        <contain:63> <hotel:7> ;
+        <contain:64> <hotel:5> ;
+        <contain:65> <hotel:9> ;
+        <contain:66> <hotel:22> ;
+        <contain:67> <hotel:24> ;
+        <contain:68> <hotel:29> ;
+        <contain:69> <hotel:44> ;
+        <train:55> <city:0> .
+
+    <city:0> <train:51> <city:1> .
+
+    <city:2> <train:53> <city:2> .
+
+    <city:3> <train:54> <city:1> .
+
+    <city:1> <contain:56> <hotel:41> ;
+        <train:52> <city:3> .
+}
+
+ns1:G24 {
+    <hotel:22> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G25 {
+    <hotel:31> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:snap9 {
+    <city:3> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "sunny" .
+
+    ns1:G1 ns3:value "10" .
+
+    ns1:G10 ns3:value "49" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.3" .
+
+    ns1:G13 ns3:value "60" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "16.0" .
+
+    ns1:G16 ns3:value "51" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "14.4" .
+
+    ns1:G19 ns3:value "62" .
+
+    ns1:G2 ns3:value "cloudy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "16.0" .
+
+    ns1:G22 ns3:value "48" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "735.7" .
+
+    ns1:G25 ns3:value "52" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.3" .
+
+    ns1:G28 ns3:value "55" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.5" .
+
+    ns1:G31 ns3:value "63" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "13.1" .
+
+    ns1:G34 ns3:value "61" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "13.3" .
+
+    ns1:G37 ns3:value "52" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "15.8" .
+
+    ns1:G4 ns3:value "rainy" .
+
+    ns1:G40 ns3:value "52" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "17.3" .
+
+    ns1:G43 ns3:value "58" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "15.8" .
+
+    ns1:G46 ns3:value "53" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "15.1" .
+
+    ns1:G49 ns3:value "59" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.6" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.3" .
+
+    ns1:G54 ns3:value "64.3" .
+
+    ns1:G55 ns3:value "56.7" .
+
+    ns1:G56 ns3:value "55.2" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:snap8 {
+    <city:1> ns4:contain <hotel:41> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "10" .
+
+    ns1:G10 ns3:value "47" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.7" .
+
+    ns1:G13 ns3:value "58" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "16.0" .
+
+    ns1:G16 ns3:value "51" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "14.4" .
+
+    ns1:G19 ns3:value "60" .
+
+    ns1:G2 ns3:value "sunny" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "16.0" .
+
+    ns1:G22 ns3:value "46" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "723.0" .
+
+    ns1:G25 ns3:value "50" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.2" .
+
+    ns1:G28 ns3:value "53" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.5" .
+
+    ns1:G31 ns3:value "61" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "13.1" .
+
+    ns1:G34 ns3:value "59" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "12.8" .
+
+    ns1:G37 ns3:value "50" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "15.8" .
+
+    ns1:G4 ns3:value "cloudy" .
+
+    ns1:G40 ns3:value "50" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.6" .
+
+    ns1:G43 ns3:value "56" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "15.8" .
+
+    ns1:G46 ns3:value "51" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "15.1" .
+
+    ns1:G49 ns3:value "59" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.9" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.3" .
+
+    ns1:G54 ns3:value "64.3" .
+
+    ns1:G55 ns3:value "56.7" .
+
+    ns1:G56 ns3:value "55.2" .
+
+    ns1:G6 ns3:value "cloudy" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+}
+
+ns1:G20 {
+    <hotel:27> ns2:hasProperty <Property:star> .
+}
+
+ns1:snap1 {
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "43" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "14.5" .
+
+    ns1:G13 ns3:value "54" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "14.7" .
+
+    ns1:G16 ns3:value "48" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "15.6" .
+
+    ns1:G19 ns3:value "56" .
+
+    ns1:G2 ns3:value "rainy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.3" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "729.2" .
+
+    ns1:G25 ns3:value "45" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.6" .
+
+    ns1:G28 ns3:value "48" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "14.3" .
+
+    ns1:G31 ns3:value "56" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "13.5" .
+
+    ns1:G34 ns3:value "54" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "13.8" .
+
+    ns1:G37 ns3:value "46" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "14.8" .
+
+    ns1:G4 ns3:value "rainy" .
+
+    ns1:G40 ns3:value "46" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "15.3" .
+
+    ns1:G43 ns3:value "51" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "14.9" .
+
+    ns1:G46 ns3:value "47" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.7" .
+
+    ns1:G49 ns3:value "55" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "35.7" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "60.2" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "cloudy" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> ;
+        ns4:train <city:3> .
+
+    <city:2> ns4:train <city:2> .
+
+    <city:3> ns4:train <city:1> .
+}
+
+ns1:snap0 {
+    <city:3> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> ;
+        ns4:train <city:0> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "42" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "15.5" .
+
+    ns1:G13 ns3:value "53" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.1" .
+
+    ns1:G16 ns3:value "48" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "16.0" .
+
+    ns1:G19 ns3:value "56" .
+
+    ns1:G2 ns3:value "rainy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.3" .
+
+    ns1:G22 ns3:value "44" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "743.9" .
+
+    ns1:G25 ns3:value "44" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.6" .
+
+    ns1:G28 ns3:value "47" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "15.3" .
+
+    ns1:G31 ns3:value "55" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "13.2" .
+
+    ns1:G34 ns3:value "54" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "13.8" .
+
+    ns1:G37 ns3:value "45" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "14.8" .
+
+    ns1:G4 ns3:value "rainy" .
+
+    ns1:G40 ns3:value "45" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "15.3" .
+
+    ns1:G43 ns3:value "50" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "14.9" .
+
+    ns1:G46 ns3:value "47" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "15.0" .
+
+    ns1:G49 ns3:value "54" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "35.7" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "60.2" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:0> ns4:train <city:1> .
+
+    <city:2> ns4:train <city:2> .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:snap3 {
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> ;
+        ns4:train <city:0> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "45" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.9" .
+
+    ns1:G13 ns3:value "56" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.3" .
+
+    ns1:G16 ns3:value "48" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "15.4" .
+
+    ns1:G19 ns3:value "58" .
+
+    ns1:G2 ns3:value "cloudy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.3" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "746.8" .
+
+    ns1:G25 ns3:value "47" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.1" .
+
+    ns1:G28 ns3:value "50" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "12.7" .
+
+    ns1:G31 ns3:value "58" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "12.9" .
+
+    ns1:G34 ns3:value "56" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "13.8" .
+
+    ns1:G37 ns3:value "48" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "15.9" .
+
+    ns1:G4 ns3:value "sunny" .
+
+    ns1:G40 ns3:value "48" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.2" .
+
+    ns1:G43 ns3:value "53" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "16.0" .
+
+    ns1:G46 ns3:value "49" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.5" .
+
+    ns1:G49 ns3:value "57" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "35.3" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "60.2" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> ;
+        ns4:train <city:3> .
+
+    <city:2> ns4:train <city:2> .
+
+    <city:3> ns4:train <city:1> .
+}
+
+ns1:snap2 {
+    <city:0> ns4:train <city:1> .
+
+    <city:3> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "45" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "14.3" .
+
+    ns1:G13 ns3:value "56" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.3" .
+
+    ns1:G16 ns3:value "48" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "15.6" .
+
+    ns1:G19 ns3:value "58" .
+
+    ns1:G2 ns3:value "rainy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.3" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "746.8" .
+
+    ns1:G25 ns3:value "47" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "13.7" .
+
+    ns1:G28 ns3:value "50" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.2" .
+
+    ns1:G31 ns3:value "58" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "12.9" .
+
+    ns1:G34 ns3:value "56" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "13.8" .
+
+    ns1:G37 ns3:value "48" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "15.1" .
+
+    ns1:G4 ns3:value "sunny" .
+
+    ns1:G40 ns3:value "48" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "15.3" .
+
+    ns1:G43 ns3:value "53" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "15.5" .
+
+    ns1:G46 ns3:value "49" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.6" .
+
+    ns1:G49 ns3:value "57" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.1" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "60.2" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "rainy" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:snap5 {
+    <city:3> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> ;
+        ns4:train <city:0> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "46" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.7" .
+
+    ns1:G13 ns3:value "56" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.3" .
+
+    ns1:G16 ns3:value "49" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "14.4" .
+
+    ns1:G19 ns3:value "59" .
+
+    ns1:G2 ns3:value "cloudy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.1" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "746.8" .
+
+    ns1:G25 ns3:value "48" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.0" .
+
+    ns1:G28 ns3:value "51" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.4" .
+
+    ns1:G31 ns3:value "59" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "12.9" .
+
+    ns1:G34 ns3:value "57" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "14.4" .
+
+    ns1:G37 ns3:value "49" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "16.3" .
+
+    ns1:G4 ns3:value "sunny" .
+
+    ns1:G40 ns3:value "48" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.2" .
+
+    ns1:G43 ns3:value "54" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "16.0" .
+
+    ns1:G46 ns3:value "49" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.9" .
+
+    ns1:G49 ns3:value "58" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.9" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "64.3" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "cloudy" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:0> ns4:train <city:1> .
+
+    <city:2> ns4:train <city:2> .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:snap4 {
+    <city:0> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "46" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.9" .
+
+    ns1:G13 ns3:value "56" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.3" .
+
+    ns1:G16 ns3:value "49" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "15.4" .
+
+    ns1:G19 ns3:value "59" .
+
+    ns1:G2 ns3:value "cloudy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.1" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "746.8" .
+
+    ns1:G25 ns3:value "48" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "13.9" .
+
+    ns1:G28 ns3:value "51" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "12.7" .
+
+    ns1:G31 ns3:value "59" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "12.3" .
+
+    ns1:G34 ns3:value "57" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "14.6" .
+
+    ns1:G37 ns3:value "49" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "16.3" .
+
+    ns1:G4 ns3:value "sunny" .
+
+    ns1:G40 ns3:value "48" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.2" .
+
+    ns1:G43 ns3:value "54" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "16.0" .
+
+    ns1:G46 ns3:value "49" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.5" .
+
+    ns1:G49 ns3:value "58" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.9" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.4" .
+
+    ns1:G54 ns3:value "60.2" .
+
+    ns1:G55 ns3:value "57.8" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:snap7 {
+    <city:0> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "10" .
+
+    ns1:G10 ns3:value "47" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.7" .
+
+    ns1:G13 ns3:value "58" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.7" .
+
+    ns1:G16 ns3:value "51" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "14.4" .
+
+    ns1:G19 ns3:value "60" .
+
+    ns1:G2 ns3:value "rainy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "16.0" .
+
+    ns1:G22 ns3:value "46" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "717.9" .
+
+    ns1:G25 ns3:value "50" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.2" .
+
+    ns1:G28 ns3:value "53" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.4" .
+
+    ns1:G31 ns3:value "61" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "13.1" .
+
+    ns1:G34 ns3:value "59" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "12.8" .
+
+    ns1:G37 ns3:value "50" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "16.3" .
+
+    ns1:G4 ns3:value "cloudy" .
+
+    ns1:G40 ns3:value "50" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.6" .
+
+    ns1:G43 ns3:value "56" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "15.6" .
+
+    ns1:G46 ns3:value "51" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "15.2" .
+
+    ns1:G49 ns3:value "59" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.9" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.3" .
+
+    ns1:G54 ns3:value "64.3" .
+
+    ns1:G55 ns3:value "56.7" .
+
+    ns1:G56 ns3:value "55.2" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "sunny" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:1> ns4:contain <hotel:41> ;
+        ns4:train <city:3> .
+}
+
+ns1:snap6 {
+    <city:0> ns4:train <city:1> .
+
+    <city:3> ns4:train <city:1> .
+
+    <city:4> ns4:contain <hotel:22>,
+            <hotel:24>,
+            <hotel:25>,
+            <hotel:27>,
+            <hotel:29>,
+            <hotel:31>,
+            <hotel:34>,
+            <hotel:36>,
+            <hotel:40>,
+            <hotel:44>,
+            <hotel:5>,
+            <hotel:7>,
+            <hotel:9> .
+
+    ns1:G0 ns3:value "rainy" .
+
+    ns1:G1 ns3:value "9" .
+
+    ns1:G10 ns3:value "47" .
+
+    ns1:G11 ns3:value "1" .
+
+    ns1:G12 ns3:value "13.7" .
+
+    ns1:G13 ns3:value "57" .
+
+    ns1:G14 ns3:value "1" .
+
+    ns1:G15 ns3:value "15.7" .
+
+    ns1:G16 ns3:value "50" .
+
+    ns1:G17 ns3:value "1" .
+
+    ns1:G18 ns3:value "14.4" .
+
+    ns1:G19 ns3:value "59" .
+
+    ns1:G2 ns3:value "cloudy" .
+
+    ns1:G20 ns3:value "1" .
+
+    ns1:G21 ns3:value "15.7" .
+
+    ns1:G22 ns3:value "45" .
+
+    ns1:G23 ns3:value "5" .
+
+    ns1:G24 ns3:value "717.9" .
+
+    ns1:G25 ns3:value "49" .
+
+    ns1:G26 ns3:value "1" .
+
+    ns1:G27 ns3:value "14.2" .
+
+    ns1:G28 ns3:value "52" .
+
+    ns1:G29 ns3:value "1" .
+
+    ns1:G3 ns3:value "5" .
+
+    ns1:G30 ns3:value "13.4" .
+
+    ns1:G31 ns3:value "60" .
+
+    ns1:G32 ns3:value "1" .
+
+    ns1:G33 ns3:value "12.7" .
+
+    ns1:G34 ns3:value "58" .
+
+    ns1:G35 ns3:value "1" .
+
+    ns1:G36 ns3:value "14.4" .
+
+    ns1:G37 ns3:value "50" .
+
+    ns1:G38 ns3:value "1" .
+
+    ns1:G39 ns3:value "16.3" .
+
+    ns1:G4 ns3:value "cloudy" .
+
+    ns1:G40 ns3:value "49" .
+
+    ns1:G41 ns3:value "1" .
+
+    ns1:G42 ns3:value "16.2" .
+
+    ns1:G43 ns3:value "55" .
+
+    ns1:G44 ns3:value "1" .
+
+    ns1:G45 ns3:value "15.6" .
+
+    ns1:G46 ns3:value "50" .
+
+    ns1:G47 ns3:value "1" .
+
+    ns1:G48 ns3:value "14.9" .
+
+    ns1:G49 ns3:value "59" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "2" .
+
+    ns1:G51 ns3:value "36.9" .
+
+    ns1:G52 ns3:value "71.4" .
+
+    ns1:G53 ns3:value "60.3" .
+
+    ns1:G54 ns3:value "64.3" .
+
+    ns1:G55 ns3:value "56.7" .
+
+    ns1:G56 ns3:value "54.6" .
+
+    ns1:G6 ns3:value "sunny" .
+
+    ns1:G7 ns3:value "7" .
+
+    ns1:G8 ns3:value "cloudy" .
+
+    ns1:G9 ns3:value "7" .
+
+    <city:2> ns4:train <city:2> .
+
+    <city:1> ns4:contain <hotel:41> .
+}
+
+ns1:G28 {
+    <hotel:36> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G29 {
+    <hotel:36> ns2:hasProperty <Property:star> .
+}
+
+ns1:G48 {
+    <hotel:41> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G49 {
+    <hotel:29> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G22 {
+    <hotel:22> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G45 {
+    <hotel:9> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G46 {
+    <hotel:41> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G47 {
+    <hotel:41> ns2:hasProperty <Property:star> .
+}
+
+ns1:G40 {
+    <hotel:7> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G27 {
+    <hotel:31> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G42 {
+    <hotel:7> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G43 {
+    <hotel:9> ns2:hasProperty <Property:availRoom> .
+}
+
+ns1:G53 {
+    <train:54> ns2:hasProperty <Property:trainPrice> .
+}
+
+ns1:G21 {
+    <hotel:27> ns2:hasProperty <Property:hotelPrice> .
+}
+
+ns1:G44 {
+    <hotel:9> ns2:hasProperty <Property:star> .
+}
+
+ns1:G52 {
+    <train:55> ns2:hasProperty <Property:trainPrice> .
+}
+
+ns1:G41 {
+    <hotel:7> ns2:hasProperty <Property:star> .
+}
+

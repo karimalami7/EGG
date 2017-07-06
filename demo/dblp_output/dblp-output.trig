@@ -7656,3 +7656,4120 @@ ns1:G43 {
     <coauthor:113> ns2:hasProperty <Property:num_publi> .
 }
 
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix ns3: <http://egg/> .
+@prefix ns4: <edge:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:G39 {
+    <coauthor:115> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G38 {
+    <coauthor:178> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G31 {
+    <coauthor:57> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G30 {
+    <coauthor:54> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G33 {
+    <coauthor:51> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G32 {
+    <coauthor:56> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G35 {
+    <coauthor:52> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G34 {
+    <coauthor:53> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G37 {
+    <coauthor:179> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G36 {
+    <coauthor:164> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:gmark {
+    <author:0> <coauthor:101> <author:20> ;
+        <coauthor:103> <author:21> ;
+        <coauthor:144> <author:34> ;
+        <coauthor:176> <author:47> .
+
+    <author:7> <coauthor:109> <author:23> ;
+        <coauthor:126> <author:29> ;
+        <coauthor:175> <author:47> .
+
+    <author:11> <coauthor:138> <author:32> ;
+        <coauthor:178> <author:48> ;
+        <coauthor:60> <author:4> ;
+        <coauthor:62> <author:4> ;
+        <coauthor:71> <author:8> .
+
+    <author:23> <coauthor:108> <author:22> ;
+        <coauthor:110> <author:24> ;
+        <coauthor:172> <author:45> ;
+        <coauthor:68> <author:8> ;
+        <coauthor:86> <author:14> .
+
+    <author:36> <coauthor:150> <author:37> ;
+        <coauthor:52> <author:1> ;
+        <coauthor:99> <author:20> .
+
+    <author:17> <coauthor:100> <author:20> ;
+        <coauthor:117> <author:26> ;
+        <coauthor:134> <author:31> ;
+        <coauthor:84> <author:13> .
+
+    <author:18> <coauthor:105> <author:21> ;
+        <coauthor:113> <author:25> ;
+        <coauthor:120> <author:27> ;
+        <coauthor:127> <author:29> .
+
+    <author:24> <coauthor:139> <author:33> ;
+        <coauthor:180> <author:48> ;
+        <coauthor:81> <author:12> ;
+        <coauthor:82> <author:13> .
+
+    <author:35> <coauthor:114> <author:25> ;
+        <coauthor:131> <author:30> ;
+        <coauthor:141> <author:33> ;
+        <coauthor:78> <author:11> ;
+        <coauthor:94> <author:17> .
+
+    <author:40> <coauthor:145> <author:35> .
+
+    <author:43> <coauthor:129> <author:30> ;
+        <coauthor:80> <author:12> .
+
+    <author:45> <coauthor:154> <author:39> ;
+        <coauthor:98> <author:19> .
+
+    <author:47> <coauthor:130> <author:30> ;
+        <coauthor:135> <author:32> ;
+        <coauthor:159> <author:40> .
+
+    <author:49> <coauthor:177> <author:48> .
+
+    <author:5> <coauthor:162> <author:41> .
+
+    <author:1> <coauthor:128> <author:30> .
+
+    <author:12> <coauthor:132> <author:31> ;
+        <coauthor:143> <author:34> ;
+        <coauthor:163> <author:42> ;
+        <coauthor:165> <author:42> ;
+        <coauthor:168> <author:44> ;
+        <coauthor:58> <author:3> .
+
+    <author:14> <coauthor:123> <author:28> ;
+        <coauthor:146> <author:35> ;
+        <coauthor:147> <author:36> ;
+        <coauthor:88> <author:14> .
+
+    <author:2> <coauthor:140> <author:33> ;
+        <coauthor:156> <author:39> ;
+        <coauthor:54> <author:2> ;
+        <coauthor:66> <author:6> ;
+        <coauthor:83> <author:13> .
+
+    <author:20> <coauthor:149> <author:37> .
+
+    <author:22> <coauthor:112> <author:25> ;
+        <coauthor:151> <author:38> ;
+        <coauthor:167> <author:43> ;
+        <coauthor:97> <author:19> .
+
+    <author:25> <coauthor:118> <author:27> ;
+        <coauthor:148> <author:37> .
+
+    <author:26> <coauthor:115> <author:26> ;
+        <coauthor:89> <author:16> ;
+        <coauthor:90> <author:16> .
+
+    <author:28> <coauthor:179> <author:48> ;
+        <coauthor:64> <author:5> ;
+        <coauthor:73> <author:9> ;
+        <coauthor:85> <author:13> .
+
+    <author:29> <coauthor:61> <author:4> .
+
+    <author:3> <coauthor:106> <author:22> ;
+        <coauthor:170> <author:44> .
+
+    <author:33> <coauthor:119> <author:27> ;
+        <coauthor:121> <author:27> ;
+        <coauthor:157> <author:39> ;
+        <coauthor:169> <author:44> .
+
+    <author:38> <coauthor:111> <author:24> ;
+        <coauthor:124> <author:28> ;
+        <coauthor:72> <author:9> ;
+        <coauthor:87> <author:14> .
+
+    <author:4> <coauthor:69> <author:8> .
+
+    <author:41> <coauthor:102> <author:21> ;
+        <coauthor:160> <author:41> ;
+        <coauthor:76> <author:10> ;
+        <coauthor:95> <author:18> .
+
+    <author:42> <coauthor:116> <author:26> ;
+        <coauthor:158> <author:40> ;
+        <coauthor:182> <author:49> .
+
+    <author:44> <coauthor:70> <author:8> ;
+        <coauthor:93> <author:17> .
+
+    <author:9> <coauthor:136> <author:32> ;
+        <coauthor:181> <author:49> ;
+        <coauthor:79> <author:12> ;
+        <coauthor:96> <author:18> .
+
+    <author:13> <coauthor:122> <author:28> ;
+        <coauthor:161> <author:41> ;
+        <coauthor:65> <author:6> .
+
+    <author:16> <coauthor:53> <author:1> ;
+        <coauthor:55> <author:2> ;
+        <coauthor:57> <author:3> .
+
+    <author:21> <coauthor:107> <author:22> ;
+        <coauthor:155> <author:39> ;
+        <coauthor:171> <author:45> ;
+        <coauthor:63> <author:5> ;
+        <coauthor:77> <author:10> .
+
+    <author:27> <coauthor:133> <author:31> ;
+        <coauthor:142> <author:34> ;
+        <coauthor:153> <author:38> ;
+        <coauthor:166> <author:43> ;
+        <coauthor:51> <author:1> .
+
+    <author:30> <coauthor:164> <author:42> ;
+        <coauthor:56> <author:2> ;
+        <coauthor:59> <author:3> ;
+        <coauthor:75> <author:10> .
+
+    <author:32> <coauthor:67> <author:6> ;
+        <coauthor:91> <author:16> .
+
+    <author:39> <coauthor:137> <author:32> ;
+        <coauthor:152> <author:38> .
+
+    <author:48> <coauthor:104> <author:21> ;
+        <coauthor:125> <author:29> ;
+        <coauthor:173> <author:46> ;
+        <coauthor:174> <author:46> ;
+        <coauthor:74> <author:9> .
+
+    <author:8> <coauthor:92> <author:16> .
+}
+
+ns1:G100 {
+    <coauthor:151> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G101 {
+    <coauthor:150> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G102 {
+    <coauthor:153> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G103 {
+    <coauthor:152> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G104 {
+    <coauthor:155> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G105 {
+    <coauthor:154> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G106 {
+    <coauthor:157> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G107 {
+    <coauthor:156> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G108 {
+    <coauthor:159> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G109 {
+    <coauthor:158> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:snap9 {
+    <author:29> ns4:coauthor <author:4> .
+
+    <author:38> ns4:coauthor <author:28> .
+
+    <author:39> ns4:coauthor <author:32> .
+
+    <author:5> ns4:coauthor <author:41> .
+
+    <author:7> ns4:coauthor <author:23>,
+            <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "0" .
+
+    ns1:G100 ns3:value "5" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "5" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "5" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "0" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "6" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "2" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "1" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "4" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "3" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "6" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "6" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "3" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "5" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "4" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "2" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "2" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "4" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "3" .
+
+    ns1:G55 ns3:value "2" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "3" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "5" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "2" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "3" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "4" .
+
+    ns1:G73 ns3:value "2" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "2" .
+
+    ns1:G76 ns3:value "1" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "4" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "3" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "4" .
+
+    ns1:G94 ns3:value "6" .
+
+    ns1:G95 ns3:value "3" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "5" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:11> ns4:coauthor <author:32>,
+            <author:8> .
+
+    <author:12> ns4:coauthor <author:31>,
+            <author:34>,
+            <author:42>,
+            <author:44> .
+
+    <author:13> ns4:coauthor <author:41> .
+
+    <author:17> ns4:coauthor <author:13>,
+            <author:20>,
+            <author:26> .
+
+    <author:2> ns4:coauthor <author:2>,
+            <author:6> .
+
+    <author:20> ns4:coauthor <author:37> .
+
+    <author:21> ns4:coauthor <author:45> .
+
+    <author:23> ns4:coauthor <author:14>,
+            <author:24>,
+            <author:45>,
+            <author:8> .
+
+    <author:24> ns4:coauthor <author:48> .
+
+    <author:25> ns4:coauthor <author:37> .
+
+    <author:27> ns4:coauthor <author:34>,
+            <author:43> .
+
+    <author:28> ns4:coauthor <author:48> .
+
+    <author:30> ns4:coauthor <author:10>,
+            <author:3> .
+
+    <author:33> ns4:coauthor <author:27>,
+            <author:44> .
+
+    <author:36> ns4:coauthor <author:37> .
+
+    <author:4> ns4:coauthor <author:8> .
+
+    <author:40> ns4:coauthor <author:35> .
+
+    <author:47> ns4:coauthor <author:30>,
+            <author:32>,
+            <author:40> .
+
+    <author:9> ns4:coauthor <author:12>,
+            <author:18>,
+            <author:32> .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:35>,
+            <author:36> .
+
+    <author:26> ns4:coauthor <author:16>,
+            <author:26> .
+
+    <author:3> ns4:coauthor <author:22> .
+
+    <author:35> ns4:coauthor <author:11>,
+            <author:17>,
+            <author:25>,
+            <author:33> .
+
+    <author:48> ns4:coauthor <author:9> .
+
+    <author:16> ns4:coauthor <author:3> .
+
+    <author:41> ns4:coauthor <author:10>,
+            <author:18>,
+            <author:21>,
+            <author:41> .
+
+    <author:8> ns4:coauthor <author:16> .
+
+    <author:32> ns4:coauthor <author:16>,
+            <author:6> .
+}
+
+ns1:snap8 {
+    <author:0> ns4:coauthor <author:20> .
+
+    <author:11> ns4:coauthor <author:32>,
+            <author:4>,
+            <author:8> .
+
+    <author:23> ns4:coauthor <author:14>,
+            <author:22>,
+            <author:24>,
+            <author:45> .
+
+    <author:26> ns4:coauthor <author:16> .
+
+    <author:35> ns4:coauthor <author:17>,
+            <author:30>,
+            <author:33> .
+
+    <author:43> ns4:coauthor <author:30> .
+
+    <author:5> ns4:coauthor <author:41> .
+
+    <author:7> ns4:coauthor <author:29> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "5" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "5" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "6" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "3" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "5" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "4" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "2" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "3" .
+
+    ns1:G55 ns3:value "2" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "4" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "5" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "4" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "1" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "4" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "4" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:12> ns4:coauthor <author:34> .
+
+    <author:18> ns4:coauthor <author:25>,
+            <author:27> .
+
+    <author:2> ns4:coauthor <author:13>,
+            <author:2>,
+            <author:33>,
+            <author:39>,
+            <author:6> .
+
+    <author:29> ns4:coauthor <author:4> .
+
+    <author:3> ns4:coauthor <author:44> .
+
+    <author:36> ns4:coauthor <author:20> .
+
+    <author:42> ns4:coauthor <author:49> .
+
+    <author:48> ns4:coauthor <author:21>,
+            <author:46> .
+
+    <author:9> ns4:coauthor <author:12>,
+            <author:18>,
+            <author:32>,
+            <author:49> .
+
+    <author:16> ns4:coauthor <author:1>,
+            <author:3> .
+
+    <author:17> ns4:coauthor <author:13>,
+            <author:20> .
+
+    <author:21> ns4:coauthor <author:10>,
+            <author:22>,
+            <author:45> .
+
+    <author:22> ns4:coauthor <author:19>,
+            <author:25>,
+            <author:38> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:31>,
+            <author:38> .
+
+    <author:28> ns4:coauthor <author:13> .
+
+    <author:30> ns4:coauthor <author:10>,
+            <author:42> .
+
+    <author:33> ns4:coauthor <author:27>,
+            <author:39>,
+            <author:44> .
+
+    <author:38> ns4:coauthor <author:14>,
+            <author:24>,
+            <author:9> .
+
+    <author:4> ns4:coauthor <author:8> .
+
+    <author:44> ns4:coauthor <author:17> .
+
+    <author:45> ns4:coauthor <author:19>,
+            <author:39> .
+
+    <author:49> ns4:coauthor <author:48> .
+
+    <author:8> ns4:coauthor <author:16> .
+
+    <author:13> ns4:coauthor <author:28>,
+            <author:41>,
+            <author:6> .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:28>,
+            <author:36> .
+
+    <author:41> ns4:coauthor <author:10>,
+            <author:21>,
+            <author:41> .
+}
+
+ns1:snap1 {
+    <author:0> ns4:coauthor <author:47> .
+
+    <author:27> ns4:coauthor <author:31> .
+
+    <author:30> ns4:coauthor <author:2> .
+
+    <author:36> ns4:coauthor <author:37> .
+
+    <author:39> ns4:coauthor <author:38> .
+
+    <author:41> ns4:coauthor <author:21> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "4" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "4" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "5" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "5" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "4" .
+
+    ns1:G115 ns3:value "4" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "3" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "4" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "6" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "3" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "5" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "4" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "6" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "3" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "6" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "5" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "6" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "2" .
+
+    ns1:G98 ns3:value "5" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:28>,
+            <author:35> .
+
+    <author:16> ns4:coauthor <author:2> .
+
+    <author:26> ns4:coauthor <author:16>,
+            <author:26> .
+
+    <author:38> ns4:coauthor <author:28> .
+
+    <author:2> ns4:coauthor <author:2> .
+}
+
+ns1:snap0 {
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "4" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "4" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "5" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "5" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "4" .
+
+    ns1:G115 ns3:value "4" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "3" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "4" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "6" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "3" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "5" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "4" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "6" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "3" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "6" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "5" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "6" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "2" .
+
+    ns1:G98 ns3:value "5" .
+
+    ns1:G99 ns3:value "5" .
+}
+
+ns1:snap3 {
+    <author:0> ns4:coauthor <author:20>,
+            <author:34>,
+            <author:47> .
+
+    <author:17> ns4:coauthor <author:20> .
+
+    <author:36> ns4:coauthor <author:1>,
+            <author:37> .
+
+    <author:41> ns4:coauthor <author:18>,
+            <author:21> .
+
+    <author:7> ns4:coauthor <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:11> ns4:coauthor <author:4> .
+
+    <author:12> ns4:coauthor <author:3> .
+
+    <author:16> ns4:coauthor <author:1>,
+            <author:2>,
+            <author:3> .
+
+    <author:22> ns4:coauthor <author:25> .
+
+    <author:24> ns4:coauthor <author:33>,
+            <author:48> .
+
+    <author:26> ns4:coauthor <author:16>,
+            <author:26> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:34>,
+            <author:38>,
+            <author:43> .
+
+    <author:28> ns4:coauthor <author:5>,
+            <author:9> .
+
+    <author:30> ns4:coauthor <author:2> .
+
+    <author:33> ns4:coauthor <author:27> .
+
+    <author:35> ns4:coauthor <author:11> .
+
+    <author:39> ns4:coauthor <author:38> .
+
+    <author:40> ns4:coauthor <author:35> .
+
+    <author:43> ns4:coauthor <author:12> .
+
+    <author:45> ns4:coauthor <author:39> .
+
+    <author:48> ns4:coauthor <author:21>,
+            <author:29>,
+            <author:46> .
+
+    <author:14> ns4:coauthor <author:14> .
+
+    <author:18> ns4:coauthor <author:29> .
+
+    <author:20> ns4:coauthor <author:37> .
+
+    <author:21> ns4:coauthor <author:45>,
+            <author:5> .
+
+    <author:3> ns4:coauthor <author:22> .
+
+    <author:32> ns4:coauthor <author:6> .
+
+    <author:38> ns4:coauthor <author:14>,
+            <author:24>,
+            <author:28>,
+            <author:9> .
+
+    <author:47> ns4:coauthor <author:30>,
+            <author:32>,
+            <author:40> .
+
+    <author:9> ns4:coauthor <author:18>,
+            <author:32> .
+}
+
+ns1:snap2 {
+    <author:0> ns4:coauthor <author:47> .
+
+    <author:11> ns4:coauthor <author:4> .
+
+    <author:12> ns4:coauthor <author:44> .
+
+    <author:14> ns4:coauthor <author:28>,
+            <author:36> .
+
+    <author:16> ns4:coauthor <author:1>,
+            <author:2>,
+            <author:3> .
+
+    <author:22> ns4:coauthor <author:25> .
+
+    <author:35> ns4:coauthor <author:17> .
+
+    <author:43> ns4:coauthor <author:30> .
+
+    <author:48> ns4:coauthor <author:29> .
+
+    <author:7> ns4:coauthor <author:29>,
+            <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "4" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "4" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "5" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "5" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "4" .
+
+    ns1:G115 ns3:value "4" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "3" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "4" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "6" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "3" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "5" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "4" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "6" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "3" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "6" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "5" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "6" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "2" .
+
+    ns1:G98 ns3:value "5" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:17> ns4:coauthor <author:20> .
+
+    <author:21> ns4:coauthor <author:45>,
+            <author:5> .
+
+    <author:26> ns4:coauthor <author:26> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:31>,
+            <author:34> .
+
+    <author:28> ns4:coauthor <author:5> .
+
+    <author:33> ns4:coauthor <author:27>,
+            <author:44> .
+
+    <author:36> ns4:coauthor <author:20> .
+
+    <author:38> ns4:coauthor <author:24> .
+
+    <author:39> ns4:coauthor <author:38> .
+
+    <author:45> ns4:coauthor <author:19>,
+            <author:39> .
+
+    <author:1> ns4:coauthor <author:30> .
+
+    <author:2> ns4:coauthor <author:2>,
+            <author:33> .
+
+    <author:20> ns4:coauthor <author:37> .
+
+    <author:3> ns4:coauthor <author:44> .
+
+    <author:30> ns4:coauthor <author:3> .
+
+    <author:41> ns4:coauthor <author:21>,
+            <author:41> .
+
+    <author:5> ns4:coauthor <author:41> .
+
+    <author:44> ns4:coauthor <author:8> .
+}
+
+ns1:snap5 {
+    <author:0> ns4:coauthor <author:20>,
+            <author:47> .
+
+    <author:2> ns4:coauthor <author:13>,
+            <author:6> .
+
+    <author:29> ns4:coauthor <author:4> .
+
+    <author:33> ns4:coauthor <author:27> .
+
+    <author:45> ns4:coauthor <author:39> .
+
+    <author:7> ns4:coauthor <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:11> ns4:coauthor <author:32> .
+
+    <author:12> ns4:coauthor <author:44> .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:28>,
+            <author:35>,
+            <author:36> .
+
+    <author:21> ns4:coauthor <author:10>,
+            <author:22>,
+            <author:39>,
+            <author:5> .
+
+    <author:24> ns4:coauthor <author:13>,
+            <author:48> .
+
+    <author:26> ns4:coauthor <author:16> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:31>,
+            <author:43> .
+
+    <author:3> ns4:coauthor <author:22>,
+            <author:44> .
+
+    <author:35> ns4:coauthor <author:11>,
+            <author:17>,
+            <author:25>,
+            <author:30> .
+
+    <author:36> ns4:coauthor <author:1> .
+
+    <author:38> ns4:coauthor <author:24>,
+            <author:28> .
+
+    <author:4> ns4:coauthor <author:8> .
+
+    <author:5> ns4:coauthor <author:41> .
+
+    <author:9> ns4:coauthor <author:12>,
+            <author:18> .
+
+    <author:1> ns4:coauthor <author:30> .
+
+    <author:17> ns4:coauthor <author:13>,
+            <author:26> .
+
+    <author:18> ns4:coauthor <author:25> .
+
+    <author:22> ns4:coauthor <author:38> .
+
+    <author:28> ns4:coauthor <author:48>,
+            <author:9> .
+
+    <author:30> ns4:coauthor <author:10>,
+            <author:3> .
+
+    <author:32> ns4:coauthor <author:16> .
+
+    <author:41> ns4:coauthor <author:18>,
+            <author:21> .
+
+    <author:44> ns4:coauthor <author:17>,
+            <author:8> .
+
+    <author:47> ns4:coauthor <author:32>,
+            <author:40> .
+
+    <author:8> ns4:coauthor <author:16> .
+
+    <author:13> ns4:coauthor <author:41>,
+            <author:6> .
+}
+
+ns1:snap4 {
+    <author:0> ns4:coauthor <author:20>,
+            <author:47> .
+
+    <author:11> ns4:coauthor <author:32>,
+            <author:8> .
+
+    <author:33> ns4:coauthor <author:44> .
+
+    <author:40> ns4:coauthor <author:35> .
+
+    <author:7> ns4:coauthor <author:29>,
+            <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:17> ns4:coauthor <author:13>,
+            <author:20>,
+            <author:26> .
+
+    <author:18> ns4:coauthor <author:21>,
+            <author:27> .
+
+    <author:24> ns4:coauthor <author:12>,
+            <author:13>,
+            <author:48> .
+
+    <author:26> ns4:coauthor <author:16> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:31>,
+            <author:38>,
+            <author:43> .
+
+    <author:28> ns4:coauthor <author:13>,
+            <author:9> .
+
+    <author:3> ns4:coauthor <author:22> .
+
+    <author:35> ns4:coauthor <author:30> .
+
+    <author:36> ns4:coauthor <author:37> .
+
+    <author:41> ns4:coauthor <author:21> .
+
+    <author:43> ns4:coauthor <author:12>,
+            <author:30> .
+
+    <author:45> ns4:coauthor <author:19>,
+            <author:39> .
+
+    <author:48> ns4:coauthor <author:21>,
+            <author:29>,
+            <author:46> .
+
+    <author:5> ns4:coauthor <author:41> .
+
+    <author:1> ns4:coauthor <author:30> .
+
+    <author:12> ns4:coauthor <author:31>,
+            <author:34>,
+            <author:44> .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:36> .
+
+    <author:16> ns4:coauthor <author:1>,
+            <author:2>,
+            <author:3> .
+
+    <author:2> ns4:coauthor <author:2> .
+
+    <author:32> ns4:coauthor <author:16>,
+            <author:6> .
+
+    <author:38> ns4:coauthor <author:14>,
+            <author:24>,
+            <author:28>,
+            <author:9> .
+
+    <author:39> ns4:coauthor <author:32>,
+            <author:38> .
+
+    <author:44> ns4:coauthor <author:17> .
+
+    <author:9> ns4:coauthor <author:18> .
+
+    <author:13> ns4:coauthor <author:6> .
+
+    <author:21> ns4:coauthor <author:39>,
+            <author:45>,
+            <author:5> .
+}
+
+ns1:snap7 {
+    <author:0> ns4:coauthor <author:21>,
+            <author:34> .
+
+    <author:11> ns4:coauthor <author:4>,
+            <author:8> .
+
+    <author:18> ns4:coauthor <author:21>,
+            <author:25>,
+            <author:27> .
+
+    <author:23> ns4:coauthor <author:14>,
+            <author:22> .
+
+    <author:40> ns4:coauthor <author:35> .
+
+    <author:45> ns4:coauthor <author:19> .
+
+    <author:48> ns4:coauthor <author:21>,
+            <author:29> .
+
+    <author:7> ns4:coauthor <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:12> ns4:coauthor <author:3>,
+            <author:31>,
+            <author:34>,
+            <author:42>,
+            <author:44> .
+
+    <author:16> ns4:coauthor <author:1>,
+            <author:2> .
+
+    <author:24> ns4:coauthor <author:13>,
+            <author:33> .
+
+    <author:25> ns4:coauthor <author:27>,
+            <author:37> .
+
+    <author:3> ns4:coauthor <author:22> .
+
+    <author:35> ns4:coauthor <author:17>,
+            <author:33> .
+
+    <author:36> ns4:coauthor <author:1>,
+            <author:37> .
+
+    <author:39> ns4:coauthor <author:38> .
+
+    <author:4> ns4:coauthor <author:8> .
+
+    <author:42> ns4:coauthor <author:26> .
+
+    <author:43> ns4:coauthor <author:30> .
+
+    <author:44> ns4:coauthor <author:17>,
+            <author:8> .
+
+    <author:47> ns4:coauthor <author:30>,
+            <author:32> .
+
+    <author:9> ns4:coauthor <author:12>,
+            <author:32> .
+
+    <author:13> ns4:coauthor <author:28>,
+            <author:41> .
+
+    <author:14> ns4:coauthor <author:14>,
+            <author:28>,
+            <author:36> .
+
+    <author:17> ns4:coauthor <author:26> .
+
+    <author:2> ns4:coauthor <author:13>,
+            <author:2>,
+            <author:39> .
+
+    <author:28> ns4:coauthor <author:5> .
+
+    <author:30> ns4:coauthor <author:10> .
+
+    <author:33> ns4:coauthor <author:27> .
+
+    <author:38> ns4:coauthor <author:24>,
+            <author:9> .
+
+    <author:41> ns4:coauthor <author:10>,
+            <author:21>,
+            <author:41> .
+
+    <author:22> ns4:coauthor <author:19>,
+            <author:38> .
+
+    <author:26> ns4:coauthor <author:26> .
+
+    <author:27> ns4:coauthor <author:31>,
+            <author:43> .
+
+    <author:8> ns4:coauthor <author:16> .
+
+    <author:21> ns4:coauthor <author:22>,
+            <author:5> .
+}
+
+ns1:snap6 {
+    <author:0> ns4:coauthor <author:47> .
+
+    <author:11> ns4:coauthor <author:32>,
+            <author:4>,
+            <author:8> .
+
+    <author:12> ns4:coauthor <author:31>,
+            <author:34>,
+            <author:44> .
+
+    <author:21> ns4:coauthor <author:10>,
+            <author:39>,
+            <author:5> .
+
+    <author:23> ns4:coauthor <author:14>,
+            <author:24>,
+            <author:45>,
+            <author:8> .
+
+    <author:33> ns4:coauthor <author:27>,
+            <author:39>,
+            <author:44> .
+
+    <author:36> ns4:coauthor <author:20>,
+            <author:37> .
+
+    <author:48> ns4:coauthor <author:46>,
+            <author:9> .
+
+    <author:7> ns4:coauthor <author:29>,
+            <author:47> .
+
+    ns1:G0 ns3:value "2" .
+
+    ns1:G1 ns3:value "4" .
+
+    ns1:G10 ns3:value "1" .
+
+    ns1:G100 ns3:value "6" .
+
+    ns1:G101 ns3:value "5" .
+
+    ns1:G102 ns3:value "4" .
+
+    ns1:G103 ns3:value "5" .
+
+    ns1:G104 ns3:value "4" .
+
+    ns1:G105 ns3:value "6" .
+
+    ns1:G106 ns3:value "2" .
+
+    ns1:G107 ns3:value "6" .
+
+    ns1:G108 ns3:value "1" .
+
+    ns1:G109 ns3:value "4" .
+
+    ns1:G11 ns3:value "6" .
+
+    ns1:G110 ns3:value "5" .
+
+    ns1:G111 ns3:value "5" .
+
+    ns1:G112 ns3:value "4" .
+
+    ns1:G113 ns3:value "1" .
+
+    ns1:G114 ns3:value "5" .
+
+    ns1:G115 ns3:value "5" .
+
+    ns1:G116 ns3:value "3" .
+
+    ns1:G117 ns3:value "3" .
+
+    ns1:G118 ns3:value "5" .
+
+    ns1:G119 ns3:value "5" .
+
+    ns1:G12 ns3:value "5" .
+
+    ns1:G120 ns3:value "3" .
+
+    ns1:G121 ns3:value "2" .
+
+    ns1:G122 ns3:value "7" .
+
+    ns1:G123 ns3:value "5" .
+
+    ns1:G124 ns3:value "3" .
+
+    ns1:G125 ns3:value "2" .
+
+    ns1:G126 ns3:value "4" .
+
+    ns1:G127 ns3:value "1" .
+
+    ns1:G128 ns3:value "2" .
+
+    ns1:G129 ns3:value "6" .
+
+    ns1:G13 ns3:value "3" .
+
+    ns1:G130 ns3:value "5" .
+
+    ns1:G131 ns3:value "3" .
+
+    ns1:G14 ns3:value "4" .
+
+    ns1:G15 ns3:value "6" .
+
+    ns1:G16 ns3:value "5" .
+
+    ns1:G17 ns3:value "5" .
+
+    ns1:G18 ns3:value "7" .
+
+    ns1:G19 ns3:value "8" .
+
+    ns1:G2 ns3:value "6" .
+
+    ns1:G20 ns3:value "6" .
+
+    ns1:G21 ns3:value "7" .
+
+    ns1:G22 ns3:value "1" .
+
+    ns1:G23 ns3:value "3" .
+
+    ns1:G24 ns3:value "5" .
+
+    ns1:G25 ns3:value "5" .
+
+    ns1:G26 ns3:value "3" .
+
+    ns1:G27 ns3:value "4" .
+
+    ns1:G28 ns3:value "2" .
+
+    ns1:G29 ns3:value "7" .
+
+    ns1:G3 ns3:value "3" .
+
+    ns1:G30 ns3:value "2" .
+
+    ns1:G31 ns3:value "6" .
+
+    ns1:G32 ns3:value "3" .
+
+    ns1:G33 ns3:value "5" .
+
+    ns1:G34 ns3:value "4" .
+
+    ns1:G35 ns3:value "5" .
+
+    ns1:G36 ns3:value "5" .
+
+    ns1:G37 ns3:value "3" .
+
+    ns1:G38 ns3:value "4" .
+
+    ns1:G39 ns3:value "2" .
+
+    ns1:G4 ns3:value "5" .
+
+    ns1:G40 ns3:value "3" .
+
+    ns1:G41 ns3:value "3" .
+
+    ns1:G42 ns3:value "5" .
+
+    ns1:G43 ns3:value "3" .
+
+    ns1:G44 ns3:value "4" .
+
+    ns1:G45 ns3:value "5" .
+
+    ns1:G46 ns3:value "3" .
+
+    ns1:G47 ns3:value "2" .
+
+    ns1:G48 ns3:value "2" .
+
+    ns1:G49 ns3:value "6" .
+
+    ns1:G5 ns3:value "5" .
+
+    ns1:G50 ns3:value "4" .
+
+    ns1:G51 ns3:value "4" .
+
+    ns1:G52 ns3:value "3" .
+
+    ns1:G53 ns3:value "6" .
+
+    ns1:G54 ns3:value "4" .
+
+    ns1:G55 ns3:value "3" .
+
+    ns1:G56 ns3:value "4" .
+
+    ns1:G57 ns3:value "4" .
+
+    ns1:G58 ns3:value "3" .
+
+    ns1:G59 ns3:value "5" .
+
+    ns1:G6 ns3:value "3" .
+
+    ns1:G60 ns3:value "5" .
+
+    ns1:G61 ns3:value "3" .
+
+    ns1:G62 ns3:value "4" .
+
+    ns1:G63 ns3:value "6" .
+
+    ns1:G64 ns3:value "6" .
+
+    ns1:G65 ns3:value "4" .
+
+    ns1:G66 ns3:value "5" .
+
+    ns1:G67 ns3:value "4" .
+
+    ns1:G68 ns3:value "3" .
+
+    ns1:G69 ns3:value "7" .
+
+    ns1:G7 ns3:value "4" .
+
+    ns1:G70 ns3:value "6" .
+
+    ns1:G71 ns3:value "3" .
+
+    ns1:G72 ns3:value "5" .
+
+    ns1:G73 ns3:value "3" .
+
+    ns1:G74 ns3:value "4" .
+
+    ns1:G75 ns3:value "3" .
+
+    ns1:G76 ns3:value "2" .
+
+    ns1:G77 ns3:value "4" .
+
+    ns1:G78 ns3:value "5" .
+
+    ns1:G79 ns3:value "5" .
+
+    ns1:G8 ns3:value "6" .
+
+    ns1:G80 ns3:value "6" .
+
+    ns1:G81 ns3:value "7" .
+
+    ns1:G82 ns3:value "5" .
+
+    ns1:G83 ns3:value "4" .
+
+    ns1:G84 ns3:value "6" .
+
+    ns1:G85 ns3:value "5" .
+
+    ns1:G86 ns3:value "5" .
+
+    ns1:G87 ns3:value "2" .
+
+    ns1:G88 ns3:value "5" .
+
+    ns1:G89 ns3:value "6" .
+
+    ns1:G9 ns3:value "5" .
+
+    ns1:G90 ns3:value "4" .
+
+    ns1:G91 ns3:value "3" .
+
+    ns1:G92 ns3:value "3" .
+
+    ns1:G93 ns3:value "5" .
+
+    ns1:G94 ns3:value "7" .
+
+    ns1:G95 ns3:value "5" .
+
+    ns1:G96 ns3:value "3" .
+
+    ns1:G97 ns3:value "3" .
+
+    ns1:G98 ns3:value "6" .
+
+    ns1:G99 ns3:value "5" .
+
+    <author:14> ns4:coauthor <author:28>,
+            <author:35> .
+
+    <author:16> ns4:coauthor <author:2> .
+
+    <author:18> ns4:coauthor <author:25> .
+
+    <author:22> ns4:coauthor <author:19>,
+            <author:25>,
+            <author:38> .
+
+    <author:26> ns4:coauthor <author:16> .
+
+    <author:3> ns4:coauthor <author:22>,
+            <author:44> .
+
+    <author:30> ns4:coauthor <author:10>,
+            <author:2>,
+            <author:3>,
+            <author:42> .
+
+    <author:4> ns4:coauthor <author:8> .
+
+    <author:40> ns4:coauthor <author:35> .
+
+    <author:42> ns4:coauthor <author:26> .
+
+    <author:45> ns4:coauthor <author:39> .
+
+    <author:13> ns4:coauthor <author:6> .
+
+    <author:27> ns4:coauthor <author:1>,
+            <author:31>,
+            <author:38> .
+
+    <author:28> ns4:coauthor <author:13>,
+            <author:5> .
+
+    <author:35> ns4:coauthor <author:25> .
+
+    <author:47> ns4:coauthor <author:30>,
+            <author:32>,
+            <author:40> .
+
+    <author:9> ns4:coauthor <author:18> .
+
+    <author:2> ns4:coauthor <author:13>,
+            <author:2>,
+            <author:39> .
+
+    <author:25> ns4:coauthor <author:27> .
+
+    <author:38> ns4:coauthor <author:24>,
+            <author:28>,
+            <author:9> .
+
+    <author:44> ns4:coauthor <author:17>,
+            <author:8> .
+
+    <author:39> ns4:coauthor <author:32>,
+            <author:38> .
+}
+
+ns1:G28 {
+    <coauthor:58> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G29 {
+    <coauthor:55> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G22 {
+    <coauthor:125> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G23 {
+    <coauthor:126> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G20 {
+    <coauthor:123> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G21 {
+    <coauthor:124> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G26 {
+    <coauthor:129> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G27 {
+    <coauthor:59> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G24 {
+    <coauthor:127> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G25 {
+    <coauthor:128> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G119 {
+    <coauthor:141> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G118 {
+    <coauthor:140> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G117 {
+    <coauthor:143> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G116 {
+    <coauthor:142> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G115 {
+    <coauthor:145> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G114 {
+    <coauthor:144> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G113 {
+    <coauthor:147> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G112 {
+    <coauthor:146> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G111 {
+    <coauthor:118> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G110 {
+    <coauthor:119> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G17 {
+    <coauthor:120> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G16 {
+    <coauthor:163> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G15 {
+    <coauthor:162> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G14 {
+    <coauthor:161> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G13 {
+    <coauthor:160> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G12 {
+    <coauthor:167> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G11 {
+    <coauthor:166> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G10 {
+    <coauthor:138> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G19 {
+    <coauthor:122> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G18 {
+    <coauthor:121> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G99 {
+    <coauthor:89> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G98 {
+    <coauthor:88> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G97 {
+    <coauthor:96> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G96 {
+    <coauthor:97> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G95 {
+    <coauthor:94> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G94 {
+    <coauthor:95> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G93 {
+    <coauthor:92> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G92 {
+    <coauthor:93> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G91 {
+    <coauthor:90> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G90 {
+    <coauthor:91> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G88 {
+    <coauthor:168> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G89 {
+    <coauthor:169> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G80 {
+    <coauthor:172> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G81 {
+    <coauthor:171> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G82 {
+    <coauthor:170> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G83 {
+    <coauthor:182> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G84 {
+    <coauthor:180> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G85 {
+    <coauthor:181> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G86 {
+    <coauthor:99> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G87 {
+    <coauthor:98> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G75 {
+    <coauthor:68> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G74 {
+    <coauthor:67> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G77 {
+    <coauthor:175> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G76 {
+    <coauthor:69> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G71 {
+    <coauthor:64> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G70 {
+    <coauthor:63> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G73 {
+    <coauthor:66> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G72 {
+    <coauthor:65> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G79 {
+    <coauthor:173> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G78 {
+    <coauthor:174> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G66 {
+    <coauthor:176> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G67 {
+    <coauthor:60> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G64 {
+    <coauthor:105> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G65 {
+    <coauthor:177> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G62 {
+    <coauthor:107> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G63 {
+    <coauthor:104> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G60 {
+    <coauthor:101> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G61 {
+    <coauthor:106> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G68 {
+    <coauthor:61> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G69 {
+    <coauthor:62> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G3 {
+    <coauthor:131> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G2 {
+    <coauthor:132> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G1 {
+    <coauthor:133> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G0 {
+    <coauthor:165> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G7 {
+    <coauthor:135> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G6 {
+    <coauthor:136> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G5 {
+    <coauthor:137> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G4 {
+    <coauthor:130> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G9 {
+    <coauthor:139> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G8 {
+    <coauthor:134> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G53 {
+    <coauthor:84> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G52 {
+    <coauthor:87> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G51 {
+    <coauthor:86> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G50 {
+    <coauthor:81> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G57 {
+    <coauthor:102> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G56 {
+    <coauthor:109> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G55 {
+    <coauthor:108> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G54 {
+    <coauthor:85> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G59 {
+    <coauthor:100> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G58 {
+    <coauthor:103> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G126 {
+    <coauthor:73> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G127 {
+    <coauthor:72> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G124 {
+    <coauthor:75> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G125 {
+    <coauthor:74> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G122 {
+    <coauthor:77> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G123 {
+    <coauthor:76> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G120 {
+    <coauthor:148> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G121 {
+    <coauthor:149> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G128 {
+    <coauthor:71> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G129 {
+    <coauthor:70> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G48 {
+    <coauthor:83> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G49 {
+    <coauthor:80> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G44 {
+    <coauthor:110> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G45 {
+    <coauthor:113> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G46 {
+    <coauthor:112> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G47 {
+    <coauthor:82> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G40 {
+    <coauthor:114> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G41 {
+    <coauthor:117> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G42 {
+    <coauthor:116> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G43 {
+    <coauthor:111> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G131 {
+    <coauthor:78> ns2:hasProperty <Property:num_publi> .
+}
+
+ns1:G130 {
+    <coauthor:79> ns2:hasProperty <Property:num_publi> .
+}
+
