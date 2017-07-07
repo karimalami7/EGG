@@ -1,7 +1,7 @@
 {
 	"interval":10,
 	"nodes":{
-		"Product":[],
+		"Product":["type_product"],
 		"Offer":[],
 		"Country":[],
 
@@ -12,11 +12,35 @@
 	}	
 	,
 	"validity":{
-		"Product":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"Product":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
 		"Offer":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
 		"Country":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"offer_includes":{"type":"edge","init":{"T"},"succ":{"T":"T","F":"T"}},
 		"eligi_region":{"type":"edge","init":{"T"},"succ":{"T":"T","F":"T"}},
 	},
-	"ListDynP": {}	
+	"ListDynP": {
+
+		"type_product":
+		{		
+			"element":"node",
+			"elements_type":"Product",
+			"domain":{
+				"type":"qualitatif",
+				"order":"false",
+				"v":"true",
+				"values":["book","music","movie"],
+				"distribution":{"type":"uniform"}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"staticity":1,
+				"succesors":{}
+			},
+			"rules":[],
+			"rulese":[]
+		}
+
+
+	}	
 }
