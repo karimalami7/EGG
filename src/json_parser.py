@@ -1,11 +1,29 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: json_parser.py
+#
+#
+#	Description: Parse configuration file of EGG and set the property dependence graph
+
+
+
 import logging
-#################evaluate config file json and put it in dict
+
+##############################################
+#evaluate config file json and put it in dict
+##############################################
+
 def eval_config(schema):
 	f=open('../../use_cases/'+schema+'/'+schema+'-config.json','r')	
 	obj=eval(f.read())
 	return obj
 
-#################property dependance graph
+############################
+#property dependance graph
+############################
+
 def sorted_list(obj):
 	graph=dict()
 	if "ListDynP" in obj:

@@ -1,3 +1,16 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: rdfcreator.py
+#
+#
+#	Description: create an rdf for the egg graph.
+#
+#   			structure: each snap is a named graph, tuples in a named graph are valid at this snapshot
+
+
+
 import rdflib,re
 import logging
 
@@ -13,6 +26,10 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 	g = rdflib.ConjunctiveGraph()
 
+	#############################################
+	# write gmark and valid tuples in rdf: begin
+	#############################################
+
 	with open("../"+schema+"_output/"+schema+'-graph.txt','r') as f:
 		
 		for line in f.readlines():
@@ -25,7 +42,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 			
 				o=rdflib.URIRef(match.group(6)+":"+match.group(7))
 
-				if configG["ListDynP"]:
+				if configG["ListDynP"]: #write gmark in rdf only if there is properties 
 					
 					p=rdflib.URIRef(match.group(4)+":"+match.group(5))
 
@@ -45,6 +62,14 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 
 	logging.info ("1 rdf end")
+
+	#############################################
+	# write gmark and valid tuples in rdf: end
+	#############################################
+
+	############################################################
+	# write value of properties of graph elements in rdf: begin
+	############################################################
 	
 	i=0
 
@@ -107,7 +132,14 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 
 	logging.info ("2 rdf end")				
-	
+
+	############################################################
+	# write value of properties of graph elements in rdf: end
+	############################################################
+
+	#####################################
+	# serialize rdf graph in trig format
+	#####################################
 
 	with open("../"+schema+"_output/"+schema+"-output.trig","a") as f:
 		f.write(g.serialize(format='trig'))	

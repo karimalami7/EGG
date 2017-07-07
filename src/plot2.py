@@ -1,3 +1,13 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: plot2.py
+#
+#
+#	Description: Plot by object
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 

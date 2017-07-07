@@ -1,7 +1,31 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: plain_text_parser.py
+#
+#
+#	Description: Parse the output of gMark, create two storages in memory (graph_elements, egg)
+#
+#   			* graph_elements : is a dict, keys : types of edges and nodes
+#											  values : set of elements of this type
+#
+#
+#
+#				* egg : is a dict: keys : elements of the gMark graph
+#								   values : dict -> keys : properties of this element
+#													values : list of values for each snapshot
+
+
+
 import re
 import logging
 
 logging.basicConfig(filename='../egg.log', level=logging.DEBUG,format='%(asctime)s %(message)s')
+
+######################################################
+# parse gmark output and return egg and graph_elements
+######################################################
 
 def graph_parser(schema):
 

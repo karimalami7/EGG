@@ -1,3 +1,15 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: plot1.py
+#
+#
+#	Description: Plot by property 
+
+
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 

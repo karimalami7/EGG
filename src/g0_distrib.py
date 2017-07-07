@@ -1,6 +1,16 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: g0_distrib.py
+#
+#
+#	Description: Assign values for the initial snapshots 
+
+
 from scipy.stats import randint,binom,norm,geom,uniform
 import logging
-############### distrib function debut
+############### distrib function begin
 
 def distrib(param1,param2,param3,param4,egg):
 	#param1 : liste d'elements du graph
@@ -8,27 +18,41 @@ def distrib(param1,param2,param3,param4,egg):
 	#param3 : nom de la propriete
 	#param4 : snapshot id
 
-	############################ qualitatif 
+	############################	
+	# qualitatif :begin
+	############################
 	if param2['domain']['type']=="qualitatif":
-		#############################  uniform	
+		#############################
+		#  uniform	: begin
+		#############################
 		if param2['domain']['distribution']['type']=="uniform":
 			random =  randint.rvs(0, len(param2['domain']['values']), size=len(param1))
 			i=0
 			for element in param1:
 				egg[element].update({param3:[param2['domain']['values'][random[i]]]})
 				i=i+1
-		#############################  uniform	
+		############################# 
+		# uniform :end 
+		#############################
 
-		#############################  binom	
+
+		############################# 
+		# binom	:begin
+		#############################
+
 		if param2['domain']['distribution']['type']=="binom":
 			random =  binom.rvs(len(param2['domain']['values']), param2['domain']['distribution']['p'] , size=len(param1))
 			i=0
 			for element in param1:
 				egg[element].update({param3:[param2['domain']['values'][random[i]-1]]})
 				i=i+1		
-		#############################  binom
+		############################# 
+		# binom: end
+		#############################
 
-		#############################  geom
+		#############################  
+		# geom : begin
+		#############################
 		if param2['domain']['distribution']['type']=="geom":
 			
 			geomValues=list()
@@ -45,41 +69,80 @@ def distrib(param1,param2,param3,param4,egg):
 				egg[element].update({param3:[param2['domain']['values'][geomValues[i]-1]]})
 				i=i+1
 
-		#############################  geom
+		#############################
+		#  geom: end
+		#############################
 
-	############################ qualitatif 
-	
-	############################ quantitatif:dis
+	############################ 
+	#qualitatif :end  
+	############################
+
+
+
+
+
+	############################
+	# quantitatif:dis : begin
+	############################
 	if param2['domain']['type']=="quantitatif:dis":
-		#############################  binom
+		
+		#############################  
+		# binom: begin
+		#############################
+		
 		if param2['domain']['distribution']['type']=="binom":
 			random = binom.rvs(param2['domain']['values']['max']-param2['domain']['values']['min'],param2['domain']['distribution']['p'],size=len(param1))
 			i=0
 			for element in param1:
 				egg[element].update({param3:[random[i]]})
 				i=i+1
-		#############################  binom
-	############################ quantitatif:dis 
+		#############################  
+		# binom: end
+		#############################
+	############################
+	# quantitatif:dis : end
+	############################
 
-	############################ quantitatif:con
+
+
+
+
+
+
+	############################
+	# quantitatif:con : begin
+	############################
 	if param2['domain']['type']=="quantitatif:con":
-		############################# normal
+		#############################  
+		# binom: begin
+		#############################
 		if param2['domain']['distribution']['type']=="normal":
 			random = norm.rvs(size=len(param1))
 			i=0
 			for element in param1:
 				egg[element].update({param3:[round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)]})
 				i=i+1
-		############################# normal
-	############################ quantitatif:con
+		#############################  
+		# binom: end
+		#############################
+	############################
+	# quantitatif:con : end
+	############################
+	
+
+
 	return egg
-############### distrib function fin
+############################
+# distrib function: end
+############################
 
 
 
 
 
-#######################validity distribution
+#######################
+#validity distribution
+#######################
 
 def validity(param1,param2,param3,param4,egg):
 
@@ -91,7 +154,7 @@ def validity(param1,param2,param3,param4,egg):
 	
 	
 
-	if len(param2["init"]) == 1:
+	if len(param2["init"]) == 1: # if the validity can take only one value
 
 		for value in param2["init"]:
 

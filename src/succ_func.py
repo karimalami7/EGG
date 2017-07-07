@@ -1,3 +1,14 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: succ_func.py
+#
+#
+#	Description: Modify the configuration for properties that have rules of evolution.
+
+
+
 import gi_distrib 
 import gi_distrib_new
 import logging

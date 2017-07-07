@@ -1,5 +1,19 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: vgcreator.py
+#
+#
+#	Description: Output the egg graph in version graph format
+
+
+
 import logging,re,os
 
+###############################
+# write egg graph in vg : begin
+###############################
 
 def write(schema,egg):
 
@@ -49,6 +63,13 @@ def write(schema,egg):
 
 	logging.info ("vg end")
 
+###############################
+# write egg graph in vg : end
+###############################
+
+####################################################
+# write suite of egg graph on an existing vg : begin
+####################################################
 
 def write_suite(schema, egg, start_point):
 
@@ -129,7 +150,9 @@ def write_suite(schema, egg, start_point):
 	
 	logging.info ("vg_suite end")
 
-
+####################################################
+# write suite of egg graph on an existing vg : end
+####################################################
 
 
 

@@ -1,12 +1,11 @@
 #######################################
 #
-#	EGG 
+#	Project: EGG 
 #
-#	main.py
-#
-#
+#	File: main.py
 #
 #
+#	Description: Call distribution functions for each snapshot and output functions
 
 ##################################
 # Packages
@@ -268,7 +267,7 @@ for k in range(1,obj['interval']):
 			
 					else:
 				
-						#if i-1 in egg[element][prop]:
+						
 				
 						egg[element][prop].insert(i,egg[element][prop][i-1])
 			
@@ -312,7 +311,7 @@ for k in range(1,obj['interval']):
 						
 						else:
 					
-							#if i-1 in egg[element][prop]:
+						
 				
 							egg[element][prop].insert(i,egg[element][prop][i-1])
 				
@@ -340,7 +339,7 @@ for k in range(1,obj['interval']):
 			
 					else:
 			
-						#if i-1 in egg[element][prop]:
+						
 			
 						egg[element][prop].insert(i,egg[element][prop][i-1])
 			
@@ -377,7 +376,7 @@ for k in range(1,obj['interval']):
 
 						else:
 		
-							#if i-1 in egg[element][prop]:
+						
 		
 							egg[element][prop].insert(i,egg[element][prop][i-1])
 
@@ -387,18 +386,14 @@ for k in range(1,obj['interval']):
 		logging.info (str(i)+" "+prop+" "+"end")
 	logging.info (str(i)+" "+"end")
 
-	
-
-
-
+	########### clear_snap: clear memory after a number of snapshot to avoid 
 
 	i=i+1
 
 	if k % clear_snap == 0:
+		
+		###### write current egg in vg and rdf
 
-		
-		
-		
 		if k == clear_snap:
 
 			if args.vg_output == True:
@@ -418,6 +413,7 @@ for k in range(1,obj['interval']):
 			import rdfcreator
 			rdfcreator.write_rdf(args.schema[0],graph_elements,egg,obj,k-clear_snap)
 
+		####### keep only the last snapshot of all properties and all elements
 
 		for x in egg:
 
@@ -429,9 +425,6 @@ for k in range(1,obj['interval']):
 		i=1			
 
 		logging.info("clear")
-
-
-
 
 
 

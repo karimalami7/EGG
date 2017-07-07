@@ -1,3 +1,14 @@
+#######################################
+#
+#	Project: EGG 
+#
+#	File: gi_distrib_new.py
+#
+#
+#	Description: Define offsets and changes between snapshot i and snapshot i+1
+
+
+
 from scipy.stats import randint,binom,norm,geom,uniform
 import logging
 
@@ -11,10 +22,18 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 
-################################propriete qualitative
+	############################	
+	# qualitatif :begin
+	############################
 
 	if param2['domain']['type']=="qualitatif":
-		###################################### qualitatif sans ordre	
+		
+
+		############################	
+		# qualitatif sans ordre:begin
+		############################	
+		
+
 		if param2['domain']['order']=="false":
 
 			no_succ_elements=list()
@@ -77,89 +96,109 @@ def distrib(param1,param2,param3,param4,egg):
 
 			######################### end
 
+		############################	
+		# qualitatif sans ordre:fin
+		############################
 
 
 
-
-
-
-
-	###################################qualitatif avec ordre
+		############################	
+		# qualitatif avec ordre:begin
+		############################
+		
 		else:
 
 
+			offset_list=list()
+			for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
+				### m ne va pas jusqu au bout
+				offset_list.append(param2['evolution']['offset']['min'] + m)
 
-
-				offset_list=list()
-				for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
-					### m ne va pas jusqu au bout
-					offset_list.append(param2['evolution']['offset']['min'] + m)
+			############################	
+			# uniform:begin
+			############################
 	
-				if param2['evolution']['offset']['distribution']['type']=="uniform":
+			if param2['evolution']['offset']['distribution']['type']=="uniform":
 
-					random =  randint.rvs(0, len(offset_list), size=len(param1))
-					i=0
-					for param1_element in param1 :
+				random =  randint.rvs(0, len(offset_list), size=len(param1))
+				i=0
+				for param1_element in param1 :
 
-						value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
-						indice=param2['domain']['values'].index(value_pr)
+					value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
+					indice=param2['domain']['values'].index(value_pr)
 
-						if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1])##### we take the last value
-						elif indice+offset_list[random[i]]<0:
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
-						else:
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])	
-						i=i+1
-
-				if param2['evolution']['offset']['distribution']['type']=="binom":
-					random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
-
-					i=0
-					for param1_element in param1 :
-
-						value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
-						indice=param2['domain']['values'].index(value_pr)
+					if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1])##### we take the last value
+					elif indice+offset_list[random[i]]<0:
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
+					else:
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])	
+					i=i+1
+			############################	
+			# uniform:end
+			############################
 
 
-						#logging.info( param3+param1+str(param4)+str(indice)+str(offset_list)+str(random[0]))
-						if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1]) ##### we take the last value
-						elif indice+offset_list[random[i]]<0:
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
-						else:
-							egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])
-						i=i+1
+			############################	
+			# binom:begin
+			############################
+			if param2['evolution']['offset']['distribution']['type']=="binom":
+				random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
+
+				i=0
+				for param1_element in param1 :
+
+					value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
+					indice=param2['domain']['values'].index(value_pr)
 
 
+					#logging.info( param3+param1+str(param4)+str(indice)+str(offset_list)+str(random[0]))
+					if len(param2['domain']['values'])-1<indice+offset_list[random[i]]:########## enter here only when indice+offset_list[random[0]] is bigger than the biggest index
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][len(param2['domain']['values'])-1]) ##### we take the last value
+					elif indice+offset_list[random[i]]<0:
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][0]) ######### we take the first value
+					else:
+						egg[param1_element][param3].insert(param4,param2['domain']['values'][indice+offset_list[random[i]]])
+					i=i+1
 
+			############################	
+			# binom:end
+			############################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		############################	
+		# qualitatif avec ordre:end
+		############################
 
 
 
-
-
-
+	############################	
+	# qualitatif :end
+	############################
 
 
 
 
 
 
-	############################ quantitatif:dis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	############################	
+	# quantitatif:dis :begin
+	############################
 
 	if param2['domain']['type']=="quantitatif:dis":
 		
@@ -191,7 +230,9 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 
-	############################ quantitatif:dis
+	############################	
+	# quantitatif:dis :end
+	############################
 
 
 
@@ -200,16 +241,9 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 
-
-
-
-
-
-
-
-	############################ quantitatif:dis
-
-	############################ quantitatif:con
+	############################	
+	# quantitatif:con : begin
+	############################
 
 	if param2['domain']['type']=="quantitatif:con":
 		
@@ -238,14 +272,18 @@ def distrib(param1,param2,param3,param4,egg):
 				egg[param1_element][param3].insert(param4,next_value)
 
 			i=i+1
-	############################ quantitatif:con
+	############################	
+	# quantitatif:con : end
+	############################
 
 	return egg
 
 
 
 
-
+	###############################	
+	# Validity succession function
+	###############################
 
 
 def validity(param1,param2,param3,param4,egg):
