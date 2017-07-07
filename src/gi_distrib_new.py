@@ -177,6 +177,7 @@ def distrib(param1,param2,param3,param4,egg):
 			value_pr=egg[param1_element][param3][param4-1] # value of the previous element, needed for offset
 				
 			### j ajoute -1 pour que random soit entre 0 et le plus grand indice de offset list qui est sa taille -1
+			
 			previous_value=value_pr
 			next_value=previous_value+offset_list[random[i]]
 			if next_value < param2["domain"]["values"]["min"]:
@@ -186,7 +187,7 @@ def distrib(param1,param2,param3,param4,egg):
 			else:
 				egg[param1_element][param3].insert(param4,next_value)
 
-			i+1
+			i=i+1
 
 
 
@@ -221,7 +222,14 @@ def distrib(param1,param2,param3,param4,egg):
 
 			
 			previous_value=value_pr
-			next_value=round(previous_value+((random[i]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']),1)
+			offset = (random[i]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']
+			if offset > param2['evolution']['offset']['max']:
+				offset = param2['evolution']['offset']['max']
+			elif offset < param2['evolution']['offset']['min']:
+				offset = param2['evolution']['offset']['min']
+
+			next_value=round(previous_value+offset,1)
+			
 			if next_value < param2["domain"]["values"]["min"]:
 				egg[param1_element][param3].insert(param4,param2["domain"]["values"]["min"])
 			elif next_value >param2["domain"]["values"]["max"]: 
