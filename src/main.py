@@ -15,7 +15,6 @@ from scipy.stats import randint,binom,norm,geom,uniform
 import json_parser
 import plain_text_parser
 import g0_distrib 
-import gi_distrib 
 import gi_distrib_new
 import succ_func
 import copy
