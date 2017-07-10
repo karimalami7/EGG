@@ -9,7 +9,7 @@ N = 3
 
 
 
-ind = np.arange(N)  # the x locations for the groups
+ind = np.arange(2)  # the x locations for the groups
 width = 0.35       # the width of the bars
 
 fig, ax = plt.subplots()
@@ -17,9 +17,11 @@ fig, ax = plt.subplots()
 ax.grid()
 ax.set_axisbelow(True)
 
-sparql_means =  (60.1594,658.7458,2000)
-sparql_std = (11.71906606,43.71266781,0)
+sparql_means =  (60.1594,658.7458)
+sparql_std = (11.71906606,43.71266781)
 rects1 = ax.bar(ind + width, sparql_means, width, color='r',yerr=sparql_std)
+
+ind = np.arange(N)
 
 DBFS_means = (76.2883,111.2985,165.9069)
 DBFS_std = (121.7716176,186.0376419,231.2786242)
@@ -43,7 +45,7 @@ def autolabel(rects):
         height = rect.get_height()
         ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
                 '%d' % int(height),
-                ha='center', va='bottom')
+                ha='center', va='top')
 
 autolabel(rects1)
 autolabel(rects2)
