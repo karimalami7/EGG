@@ -1,4 +1,3 @@
 # EGG
-evolving graph generator
 
-to run, go to schemas/"schema"/ and run the .sh script
+Define here the gMark schema and EGG evolution properties.
