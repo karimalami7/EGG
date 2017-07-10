@@ -26,7 +26,7 @@ rects2 = ax.bar(ind, DBFS_values, width, color='y')
 oom_values = (0, 0, 2000)
 rects3 = ax.bar(ind + width, oom_values, width, color='b')
 
-ax.set_ylabel('Time')
+ax.set_ylabel('Time (in seconds)')
 ax.set_title('Historical Reachability Queries: Disjunctive-BFS vs SPARQL\n Graph of size 100K nodes, 500K edges; Fixed query size=10')
 ax.set_xticks(ind + width / 2)
 ax.set_xticklabels(('10 snapshots\nInterval=[0,9]', '100 snapshots\nInterval=[45,54]', '1000 snapshots\nInterval=[495,504]'))
@@ -55,7 +55,7 @@ DBFS_values = (47.8177,44.993,32.4027,33.1677)
 
 rects2 = ax.bar(ind, DBFS_values, width, color='y')
 
-ax.set_ylabel('Time')
+ax.set_ylabel('Time (in seconds)')
 ax.set_title('Historical Reachability Queries: Disjunctive-BFS vs SPARQL\n Graph of size 100K nodes, 500K edges; Fixed # of snapsots=100')
 ax.set_xticks(ind + width / 2)
 ax.set_xticklabels(('Interval=[50,50]', 'Interval=[45,54]', 'Interval=[25,74]', 'Interval=[0,99]'))
