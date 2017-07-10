@@ -1,0 +1,39 @@
+###########################
+#  
+#  Asks a path from two nodes in a snapshot, max length 10
+#
+
+
+PREFIX ns1: <http://egg/ng/>
+PREFIX ns2: <edge:>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+
+ASK
+
+WHERE {
+  {GRAPH ?x {<person:13> ns2:friendOf <person:32> }}
+  UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf <person:32> }}
+  UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+  UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+    UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+    UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+    UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+    UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+   UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+   UNION
+  {GRAPH ?x {<person:13> ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf/ns2:friendOf <person:32> }}
+
+}
