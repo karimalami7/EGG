@@ -2,7 +2,7 @@
 
 Nodes: person.
 
-Edges: friendOf.
+Edges: friendOf (person -> person).
 
 Evolution properties:
 
