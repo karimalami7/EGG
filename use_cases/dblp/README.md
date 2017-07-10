@@ -1,13 +1,13 @@
-Dblp use-case:
+# Dblp use-case:
 
 Nodes: author.
 
-Edges: coauthor (author -> author)
+Edges: coauthor (author -> author).
 
 EGG evolution properties:
 
-* author can become valid after being invalid, but not the contrary.
+* author: can become valid after being invalid, but not the contrary.
 
-* coauthor: validity depends on probability, 
+* coauthor: validity depends on probability defined in the configuration,
 
-      * # of publications: quantitative integer, depends on previous value.
+    *  #_of_publications: integer value, defines the number of publications between the two authors, depends on previous value.
