@@ -49,6 +49,7 @@ with open('../'+args.schema[0]+'_output/'+args.schema[0]+'-vg.txt','r') as f:
 
 u = args.schema[2]
 v = args.schema[3]
+########## Please define the query interval i as a list of binaries with length equal to the interval
 i = [1]*int(args.schema[1])
 
 #######################
