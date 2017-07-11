@@ -293,11 +293,25 @@ def validity(param1,param2,param3,param4,egg):
 	#param4 : snapshot id
 	#egg which is egg
 
-
-
 	random_for_all = list(uniform.rvs(size=(len(param1))))
 
 	for element in param1:
+
+		if "max" in param2:
+
+			value = param2["max"].keys()[0]
+
+			if egg[element]["v"].count(value) >= param2["max"][value]:
+
+				if value == "T":
+
+					egg[element]["v"].insert(param4,"F")
+
+				else:
+
+					egg[element]["v"].insert(param4,"T")
+
+				continue
 
 		valid_pr = egg[element]["v"][param4-1]
 
