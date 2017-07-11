@@ -1,18 +1,18 @@
 {
-	"interval":10,
+	"interval":30,
 	"nodes":
 		{"city":["weather","qAir"],
-		"hotel":["availRoom","star","hotelPrice"]},
+		"hotel":["availableRooms","star","hotelPrice"]},
 	"edges":
 		{"train":["trainPrice"],
-		"contain":[]
+		"contains":[]
 		}	
 	,
 	"validity":{
 		"city":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"hotel":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"train":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
-		"contain":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
+		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 
 	},
 	"ListDynP": {
@@ -68,7 +68,7 @@
 			]
 			
 
-		},"availRoom":
+		},"availableRooms":
 		{
 			"element":"node",
 			"elements_type":"hotel",
@@ -138,8 +138,8 @@
 				{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
 			],
 			"rulese":[
-				{"if":{"prop":"availRoom","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
-				{"if":{"prop":"availRoom","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
+				{"if":{"prop":"availableRooms","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
+				{"if":{"prop":"availableRooms","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
 			]
 		},"trainPrice":
 		{		

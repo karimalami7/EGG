@@ -28,19 +28,10 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG,schema):
 	
 		f,axarr=plt.subplots(len(element_dict)+1, sharex=True)
 
-		plot_id=[None,None]
-		for i in range(0,interval):
-			if valid_dict[i] == "T":
-				plot_id[0]=axarr[0].bar(i,1,color=color_dict[0])
-			else:
-				plot_id[1]=axarr[0].bar(i,1,color=color_dict[1])
-
-			axarr[0].legend(plot_id,["T","F"])
-			axarr[0].set_yticks([])
-			axarr[0].set_title("Validity of "+configG["validity"][label]["type"]+" "+element_id+" of type "+label)
 
 
-		j=1
+
+		j=0
 
 		for prop in element_dict:
 				
@@ -90,6 +81,17 @@ def plot_one(element_dict,element_id,interval,config_egg,label,configG,schema):
 					axarr.set_title("Property "+prop+" of "+config_egg[prop]['element']+" "+element_id+" of type "+config_egg[prop]['elements_type'])
 					axarr[j].set_yticks([])
 			j=j+1
+
+		plot_id=[None,None]
+		for i in range(0,interval):
+			if valid_dict[i] == "T":
+				plot_id[0]=axarr[j].bar(i,1,color=color_dict[0])
+			else:
+				plot_id[1]=axarr[j].bar(i,1,color=color_dict[1])
+
+			axarr[j].legend(plot_id,["T","F"])
+			axarr[j].set_yticks([])
+			axarr[j].set_title("Validity of "+configG["validity"][label]["type"]+" "+element_id+" of type "+label)
 	
 		# if node " node type " + le type du noeud
 		# else " edge predicate " + le type de l'arrete

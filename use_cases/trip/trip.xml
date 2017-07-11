@@ -6,7 +6,7 @@
 		<size>2</size>
 
 		<alias symbol="0">train</alias>
-		<alias symbol="1">contain</alias>
+		<alias symbol="1">contains</alias>
 
 	</predicates>
 	<types>
