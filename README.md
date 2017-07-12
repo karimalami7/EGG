@@ -8,7 +8,7 @@ To begin working with EGG, please run the [requirement](https://github.com/karim
 
 Then feel free to modify gMark schema and EGG configuration in [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario.
 
-The final step, is to run EGG for this scenario by specifying the outputs you want:
+The final step, is to run EGG for this scenario by specifying the outputs you want in [play script](https://github.com/karimalami7/EGG/blob/master/demo/play/play-script.sh):
 
 * RDF output: serialization of the evolving graph in RDF.
 
