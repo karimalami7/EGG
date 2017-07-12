@@ -8,7 +8,15 @@ To begin working with EGG, please run the [requirement](https://github.com/karim
 
 Then feel free to modify gMark schema and EGG configuration in [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario.
 
+The final step, is to run EGG for this scenario by specifying the outputs you want:
 
+* RDF output: serialization of the evolving graph in RDF.
+
+* VG ouput: serialization of the evolving grpah in version graph format.
+
+* Plot by property: generate evolution plots of all properties defined in the EGG configuration.
+
+* Plot by object: generate evolution plots for properties of nodes and edges.  
 
 
 
