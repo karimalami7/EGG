@@ -14,9 +14,9 @@ The EGG repository is organised as follow:
 
   * For every scenario:  script to run EGG and directory of its ouputs.
   
-  * Scalability: script to evaluate scalability of EGG. More informations in [EGG scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability.
+  * Scalability: script to evaluate scalability of EGG. More informations in [EGG scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability).
   
-  * System_evaluation: informations in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
+  * System evaluation: informations in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
 
 To begin working with EGG, please run the [requirement](https://github.com/karimalami7/EGG/blob/master/demo/scripts/requirement.sh) script, it checks and installs all software needed to run EGG.
 
@@ -26,7 +26,7 @@ The final step, is to run EGG for this scenario by specifying the outputs you wa
 
 * RDF output: serialization of the evolving graph in RDF.
 
-* VG ouput: serialization of the evolving grpah in version graph format.
+* VG output: serialization of the evolving graph in version graph format.
 
 * Plot by property: generate evolution plots of all properties defined in the EGG configuration.
 
