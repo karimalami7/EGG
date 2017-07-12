@@ -1,0 +1,4 @@
+#/bin/bash
+perl scalcalc.pl interval trip
+
+perl scalcalc.pl size trip
