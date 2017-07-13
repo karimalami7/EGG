@@ -29,7 +29,7 @@ if ! [ -x "$(command -v pip)" ]; then
 	pip install --upgrade pip
 	pip install --upgrade virtualenv
 else 
-	echo 'pip kayn'
+	echo 'pip exists'
 fi
 #### install python libraries
 
