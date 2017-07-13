@@ -4,6 +4,9 @@ An open-source project for generating evolving graphs.
 
 The generation is driven by finely tuned constraint and parameters. It uses [gMark](https://github.com/karimalami7/gmark/tree/gmark_for_egg) to generate static graphs.
 
+
+![](egg-architecture.png)
+
 The EGG repository is organised as follow:
 
 * src/: directory of source code of EGG.
