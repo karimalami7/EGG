@@ -1,4 +1,4 @@
-# EGG
+# EGG: Evolving Graph Generator
 
 An open-source project for generating evolving graphs.
 
