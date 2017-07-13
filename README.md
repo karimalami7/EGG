@@ -6,6 +6,12 @@ We built EGG on top of [gMark](https://github.com/graphMark/gmark), a state-of-t
 
 ![](egg-architecture.png)
 
+### Running example
+
+[Trip use-case](https://github.com/karimalami7/EGG/tree/master/use_cases/trip)
+
+### Repository organization
+
 The EGG repository is organised as follow:
 
 * src/: directory of source code of EGG.
