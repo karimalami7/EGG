@@ -8,7 +8,7 @@ We built EGG on top of [gMark](https://github.com/graphMark/gmark), a state-of-t
 
 ### Running example
 
-[Trip use-case](https://github.com/karimalami7/EGG/tree/master/use_cases/trip)
+To illustrate the different finely-tuned constraints that the user can specify as EGG input, we rely on the [Trip geographical database use-case](https://github.com/karimalami7/EGG/tree/master/use_cases/trip).
 
 ### Repository organization
 
