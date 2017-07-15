@@ -1,0 +1,4 @@
+#/bin/bash
+perl scalcalc.pl interval dblp
+
+perl scalcalc.pl size dblp
