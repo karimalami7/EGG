@@ -6,7 +6,7 @@ For generating the static graph by gMark, we need to indicate size of the graph 
 
 For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate "train" that links a node city to an other node city, and a predicate "contains",that links a node city to a node hotel. This is described in the following xml from the gMark configuration file.
 
-'''xml
+```xml
 <graph>
 		<nodes>50</nodes>
 	</graph>
@@ -26,8 +26,7 @@ For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predica
 		<proportion type="1">0.9</proportion>
 
 	</types>
-
-'''
+```
 
 Nodes: City, Hotel.
 
