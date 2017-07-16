@@ -4,7 +4,7 @@ The trip schema is for generating graphs simulating a geographical database, tha
 
 For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: *node -- edge --> node*.
 
-For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate *train* that links a node *city* to an other node *city*, and a predicate *contains*,that links a node *city* to a node *hotel*. This is described in the following xml from the gMark configuration file.
+For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate *train* that links a node *city* to an other node *city*, and a predicate *contains*, that links a node *city* to a node *hotel*. This is described in the following xml from the gMark configuration file.
 
 ```xml
 	<graph>
@@ -28,11 +28,37 @@ For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predica
 	</types>
 ```
 
-Then, we need to indicate distribution of each relation described bofore. So, for the relation *city -- train --> city*, we want for the in distribution a gaussian distribution with mean=3 and std=1, and for the out distribution, a uniform distribution with maximum and minimum set to 1, in order to have at least one *train* predicate by a node *city*
+Then, we need to indicate distribution of each relation described bofore. So, for the relation *city -- train --> city*, we want for the in distribution a gaussian distribution with mean=3 and std=1, and for the out distribution, a uniform distribution with maximum and minimum set to 1, in order to have one *train* predicate that goes out from a node *city*, and possibly, multiple ones that go in. For the relation *city -- contains --> hotel*, we put for the out distribution, the zipfian distribution, and for the in distribution, uniform distribution with maximum and minimum set to 1, in order to link few cities to a big number of hotels, to link a big number of cities to few hotels, and to link each hotel to only one city. The following xml encodes such configuration.
 
-Nodes: City, Hotel.
+```xml
+	<schema>
+		<source type="0"> <!-- city -->
+			<target type="0" symbol="0" > <!-- train city -->
+				<indistribution type="gaussian">
+					<mu>3</mu>
+					<sigma>1</sigma>
+				</indistribution>	
+				<outdistribution type="uniform">
+					<min>1</min>
+					<max>1</max>
+				</outdistribution>
+			</target>
+			<target type="1" symbol="1"  > <!-- contains hotel -->
+				<indistribution type="uniform">
+					<min>1</min>
+					<max>1</max>
+				</indistribution>
+				<outdistribution type="zipfian">
+					<alpha>0.9</alpha>
+				</outdistribution>
+			</target>
+		</source>
+	</schema>
+```
 
-Edges: Train (City -> City), contain (City -> Hotel)
+> **NOTE**: Satisfying some distribution can be a very long process for large graphs. So, in order to have a fast response from gMark for large graphs, make sure that distributions are reasonable.
+
+
 
 EGG evolution properties:
 
