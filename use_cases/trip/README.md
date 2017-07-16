@@ -2,12 +2,12 @@
 
 The trip schema is for generating graphs simulating a geographical database, that store information about cities, and different facilities such as transportation and hotels. 
 
-For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: node -- edge --> node.
+For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: *node -- edge --> node*.
 
-For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate "train" that links a node city to an other node city, and a predicate "contains",that links a node city to a node hotel. This is described in the following xml from the gMark configuration file.
+For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate *train* that links a node *city* to an other node *city*, and a predicate *contains*,that links a node *city* to a node *hotel*. This is described in the following xml from the gMark configuration file.
 
 ```xml
-<graph>
+	<graph>
 		<nodes>50</nodes>
 	</graph>
 	<predicates>
@@ -27,6 +27,8 @@ For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predica
 
 	</types>
 ```
+
+Then, we need to indicate distribution of each relation described bofore. So, for the relation *city -- train --> city*, we want for the in distribution a gaussian distribution with mean=3 and std=1, and for the out distribution, a uniform distribution with maximum and minimum set to 1, in order to have at least one *train* predicate by a node *city*
 
 Nodes: City, Hotel.
 
