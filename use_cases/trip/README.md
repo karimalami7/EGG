@@ -72,22 +72,154 @@ For our example, we want nodes: *city*, *hotel* and edges: *contains*  to be val
 		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 ```
 
-We defined six dynamic properties: _**Weather**_, _**qAir**_ for the node type *city*, _**Star**_, _**AvailableRooms**_, _**hotelPrice **_ for the node type *hotel*, and _**trainPrice**_ for the edge predicate * Train *.
+We defined six dynamic properties: _**Weather**_, _**qAir**_ for the node type *city*, _**Star**_, _**AvailableRooms**_, _**hotelPrice**_ for the node type *hotel*, and _**trainPrice**_ for the edge predicate * Train *.
+
+Each property can be: ordered qualitative, unordered qualitative, discrete quantitative, continuous quantitive.
+
+We begin by *weather* property for node type *city*. It is an ordered qualitative property, it can have 3 values: sunny, cloudy, rainy, can change with 50% probability, and we define one succession rule that is a city with weather sunny at a snapshot i, can not be rainy at snapshot i+1. 
+
+```json
+		"weather":
+		{		
+			"element":"node",
+			"elements_type":"city",
+			"domain":{
+				"type":"qualitatif",
+				"order":"false",
+				"v":"true",
+				"values":["sunny","rainy","cloudy"],
+				"distribution":{"type":"uniform"}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"staticity":0.5,
+				"succesors":{"sunny":["sunny","cloudy"]}
+			},
+			"rules":[],
+			"rulese":[]
+		}
+```
+
+*qAir* is an ordered property for node type *city*, it has its values in the list [1,2,3,4,5,6,7,8,9,10], the value with the bigger index is bigger. Its value can move by one index in the list with 80% probability. It has 3 rules of evolution where it depends on *weather* change, for example: when *weather* of a node x change from cloudy to sunny, *qAir* of node x becomes better.
+```json
+		"qAir":
+		{
+			"element":"node",
+			"elements_type":"city",
+			"domain":{
+				"type":"qualitatif",
+				"order":"true",
+				"v":"true",
+				"values":["1","2","3","4","5","6","7","8","9","10"],
+				"distribution":{"type":"binom","p":0.6}
+			},
+			"duration":7,
+			"evolution":{
+				"e":"true",
+				"staticity":0.8,
+				"offset":{
+					"min":-1,
+					"max":1,
+					"distribution":{"type":"uniform"}
+				}
+			},
+			"rules":[],
+			"rulese":[
+				{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+				{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+				{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
+			]
+
+```
+
+AvailableRooms is a discrete quantitative for node type "hotel", it has values in the interal [1,100]. It changes each time with an offset within [-5,5] and binomial distribution centered in 0.
+```json
+		"availableRooms":
+		{
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"quantitatif:dis",
+				
+				"v":"true",
+				"values":{"min":1,"max":100},
+				"distribution":{"type":"binom","p":0.5}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"staticity":0,
+				"offset":{
+					"min":-5,
+					"max":5,
+					"distribution":{"type":"binom","p":0.5}
+				}
+			},
+			"rules":[],
+			"rulese":[]
+			
+		}
+```
+
+*Star* is an ordered qualitative property for node type *Hotel*, which have values in the list [1,2,3,4,5], following a geometric distribution. It can change every thirty snapshots with a probability of 1% and move by one position in the list.
+
+```json
+"star":
+		{	
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"qualitatif",
+				"order":"true",
+				"v":"true",
+				"values":["1","2","3","4","5"],
+				"distribution":{"type":"geom","p":0.65}
+			},
+			"duration":30,
+			"evolution":{
+				"e":"true",
+				"staticity":0.9,
+				"offset":{
+					"min":-1,
+					"max":1,
+					"distribution":{"type":"binom","p":0.5}
+				}
+			},
+			"rules":[],
+			"rulese":[]
+			
+		}
+```
+*hotelPrice* is a continuous quantitative property for node type *city*. It is the most complicated property as it depends on *Star* for its domain and *AvailableRomms* for its evolution. 
 
 
+*TrainPrice* is a continuous quantitative property for edge predicate *train*, it has values in [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
 
-EGG evolution properties:
-
-* City : all nodes are valid from the first snapshot to the last one,
-    * Weather: can have three values ["sunny","cloudy","rainy"].
-    * qAir: describe quality of the air, have 10 values in [1..10], can be influenced by weather.
-
-* Hotel : all nodes are valid from the first snapshot to the last one,
-    * star: hotel number of stars, have value in [1,2,3,4,5].
-    * availRoom: integer value in [0..100], change every snapshot.
-    * hotelPrice: real value, its range depends on star, and the evolution depends on availRoom.
-
-* Train: validity depends on adjacent nodes and distibution ,
-    * trainPrice: real value, evolve freely in the range defined in the configuration. 
-
-* contain: all edges are valid from the first snapshot to the last one
+```json
+		"trainPrice":
+		{		
+			"element":"edge",
+			"elements_type":"train",
+			"domain":{
+				"type":"quantitatif:con",
+				
+				"v":"true",
+				"values":{"min":20,"max":100},
+				"distribution":{"type":"normal","mean":60,"sigma":6}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"staticity":0.7,
+				"offset":{
+					"min":-10,
+					"max":10,
+					"distribution":{"type":"normal","mean":0,"sigma":3}
+				}
+			},
+			"rules":[],
+			"rulese":[]
+			
+		}
+```
