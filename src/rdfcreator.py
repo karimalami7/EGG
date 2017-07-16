@@ -56,7 +56,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 					
 					if egg[match.group(5)]["v"][snap] == "T":
 						
-						n=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snap))
+						n=rdflib.URIRef("http://egg/ng/snapshot"+str(start_point+snap))
 					
 						g.add((s,p,o,n))
 
