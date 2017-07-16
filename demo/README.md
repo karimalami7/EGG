@@ -7,4 +7,4 @@ For each scenario x, we have two directory:
 
 **Scalability**: script to evaluate scalability of EGG. More informations in EGG scalability wiki.
 
-**System evaluation**: informations in the system evaluation wiki.
+**System evaluation**: informations in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
