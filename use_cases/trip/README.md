@@ -58,6 +58,19 @@ Then, we need to indicate distribution of each relation described bofore. So, fo
 
 > **NOTE**: Satisfying some distribution can be a very long process for large graphs. So, in order to have a fast response from gMark for large graphs, make sure that distributions are reasonable.
 
+In *EGG*, we indicate the number of snapshots, and we describe validity and dynamic properties evolution rules. 
+
+> **NOTE**: We have to define validity evolution rules for each node type and edge predicate.
+
+For our example, we want nodes: *city*, *hotel* and edges: *contains*  to be valid in all snapshots, but we want edge: *train* validity  to evolve randomly. Below, a part of the json configuration: 
+
+```json
+"validity":{
+		"city":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"hotel":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"train":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
+```
 
 
 EGG evolution properties:
