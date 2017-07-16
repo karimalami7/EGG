@@ -192,8 +192,37 @@ AvailableRooms is a discrete quantitative for node type "hotel", it has values i
 		}
 ```
 *hotelPrice* is a continuous quantitative property for node type *city*. It is the most complicated property as it depends on *Star* for its domain and *AvailableRomms* for its evolution. 
+In fact, to calculate *hotelPrice* for a node x, we need construct its domain regarding its *star* value. So we need to define in the configuration, for each *star* value, the interval of value of *hotelPrice* and the offset of evolution.
+Also, *hotelPrice* depends on *availableRooms* as, if *availableRooms* rise, *hotelPrice* goes down, and if *availableRooms* goes down, *hotelPrice* rise. So the offset is modified, either maximium or minimum is set to 0. 
 
-
+```json
+		"hotelPrice":
+		{		
+			"element":"node",
+			"elements_type":"hotel",
+			"domain":{
+				"type":"quantitatif:con",	
+				"v":"false",
+				"distribution":{"type":""}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"false",
+				"staticity":0,
+			},
+			"rules":[
+				{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
+				{"if":{"prop":"star","hasValues":["2"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":21,"max":50},"distribution":{"type":"normal","mean":35,"sigma":4}},"evolution":{"offset":{"min":-3,"max":3,"distribution":{"type":"normal","mean":0,"sigma":1}}}}}},
+				{"if":{"prop":"star","hasValues":["3"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":51,"max":100},"distribution":{"type":"normal","mean":75,"sigma":8}},"evolution":{"offset":{"min":-7,"max":7,"distribution":{"type":"normal","mean":0,"sigma":3}}}}}},
+				{"if":{"prop":"star","hasValues":["4"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":101,"max":300},"distribution":{"type":"normal","mean":200,"sigma":20}},"evolution":{"offset":{"min":-20,"max":20,"distribution":{"type":"normal","mean":0,"sigma":7}}}}}},
+				{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
+			],
+			"rulese":[
+				{"if":{"prop":"availableRooms","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
+				{"if":{"prop":"availableRooms","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
+			]
+		}
+```
 *TrainPrice* is a continuous quantitative property for edge predicate *train*, it has values in [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
 
 ```json
