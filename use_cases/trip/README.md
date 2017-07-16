@@ -1,5 +1,34 @@
 # Trip use-case:
 
+The trip schema is for generating graphs simulating a geographical database, that store information about cities, and different facilities such as transportation and hotels. 
+
+For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: node -- edge --> node.
+
+For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate "train" that links a node city to an other node city, and a predicate "contains",that links a node city to a node hotel. This is described in the following xml from the gMark configuration file.
+
+'''xml
+<graph>
+		<nodes>50</nodes>
+	</graph>
+	<predicates>
+		<size>2</size>
+
+		<alias symbol="0">train</alias>
+		<alias symbol="1">contains</alias>
+
+	</predicates>
+	<types>
+		<size>2</size>
+		<alias type="0">city</alias>
+		<proportion type="0">0.1</proportion>
+
+		<alias type="1">hotel</alias>
+		<proportion type="1">0.9</proportion>
+
+	</types>
+
+'''
+
 Nodes: City, Hotel.
 
 Edges: Train (City -> City), contain (City -> Hotel)
