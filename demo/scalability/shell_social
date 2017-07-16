@@ -1,4 +1,4 @@
 #/bin/bash
-perl scalcalc.pl interval trip
+perl scalcalc.pl interval social
 
-perl scalcalc.pl size trip
+perl scalcalc.pl size social
