@@ -32,13 +32,19 @@ with open (file+'.txt','r') as f:
 		y.append(line.split(";")[1])
 
 plt.plot(x,y,"bo-")
-plt.xlabel(file_list[2], fontsize=14, color='black')
+
+if file_list[2] == "interval" :
+	plt.xlabel("Size", fontsize=14, color='black')
+else:
+	plt.xlabel("Interval", fontsize=14, color='black')
+
+		
 plt.ylabel('Time in seconds', fontsize=14, color='black')
 plt.xscale("log", nonposx='clip')
 plt.yscale("log", nonposy='clip')
 plt.grid()
 plt.title(file_list[2]+" set to "+file_list[4])
-plt.savefig(file_list[2]+".png")
+plt.savefig(file_list[2]+"_"+file_list[5]+".png")
 plt.clf()
 
 
