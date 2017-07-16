@@ -72,6 +72,9 @@ For our example, we want nodes: *city*, *hotel* and edges: *contains*  to be val
 		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 ```
 
+We defined six dynamic properties: ** * Weather* **, ** * qAir * ** for the node type *city*, ** * Star* **,** * AvailableRooms * **,** * hotelPrice * ** for the node type *hotel*, and ** * trainPrice * ** for the edge predicate * Train *.
+
+
 
 EGG evolution properties:
 
