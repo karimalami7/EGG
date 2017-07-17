@@ -26,6 +26,6 @@ Two csv files will be generated, containing the varying parameter, and the execu
 
 Then you can plot the results by calling [plot_scal.py](https://github.com/karimalami7/EGG/blob/master/demo/scalability/plot_scal.py) script, mentioning a csv file without the .txt extension:
 
-```python 
+```shell 
 python plot.py egg-fixed-interval-to-100-social
 ```
