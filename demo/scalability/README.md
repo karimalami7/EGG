@@ -6,10 +6,10 @@ To run a scalability test, first define the values of the parameters (# of nodes
 
 ```perl
 	my $size=30;
-	my %interval=("d"=>10,"f"=>20,"m"=>2);
+	my %interval=("d"=>10,"f"=>100,"m"=>2);
   
-  my $interval=10;
-	my %size=("d"=>10,"f"=>30,"m"=>10);
+	my $interval=10;
+	my %size=("d"=>10,"f"=>10000,"m"=>10);
 ```
 
 Then run the script associated to each use case, for example, to evaluate scalability of **EGG** with social use case, run the following command:
