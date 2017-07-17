@@ -1,6 +1,6 @@
 # Demo
 
-For each scenario x, we have two directory:
+For each use case x, we have two directory:
 
 * x/: where we put the script to run gMark and EGG with the use case x.
 * x_output/: where we put outputs of gMark and EGG.
