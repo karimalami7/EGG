@@ -52,3 +52,9 @@ The different options from the above [play script](https://github.com/karimalami
 * *--plot-byobject* : generate plots for all node/edge objects showing the evolution of each of their properties
 
 Feel free to modify the **gMark** schema and **EGG** configurations from the [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) directory.
+
+To run each provided scenario X, where X is one of {trip, social, dblp, shop, univ}, please run:
+```shell 
+cd ../X
+./X-script.sh
+```
