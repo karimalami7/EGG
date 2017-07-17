@@ -5,6 +5,6 @@ For each use case x, we have two directory:
 * x/: where we put the script to run gMark and EGG with the use case x.
 * x_output/: where we put outputs of gMark and EGG.
 
-**Scalability**: script to evaluate scalability of EGG. More informations in EGG scalability wiki.
+**Scalability**: scripts to evaluate scalability of EGG. More informations in [EGG scalability wiki](https://github.com/karimalami7/EGG/wiki/Scalability).
 
-**System evaluation**: informations in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
+**System evaluation**:  scripts to evaluate historical reachability queries using EGG output. More information in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
