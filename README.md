@@ -28,24 +28,27 @@ The **EGG** repository is organised as follows:
 
 ### Running EGG
 
-To begin working with **EGG**, please run the [requirement](https://github.com/karimalami7/EGG/blob/master/demo/scripts/requirement.sh) script, which checks and installs all software needed to run **EGG**:
+To begin working with **EGG**, please clone **EGG** and run the [requirement](https://github.com/karimalami7/EGG/blob/master/demo/scripts/requirement.sh) script, which checks and installs all software needed to run **EGG**:
 
 ```shell 
-cd demo/scripts/
+git clone https://github.com/karimalami7/EGG.git
+cd EGG/demo/scripts/
 sudo ./requirement.sh
 ```
+To run **EGG** on a sample [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario, please run the following commands (assuming you are in the aforementioned demo/scripts directory):
 
-Then feel free to modify **gMark** schema and **EGG** configuration in [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario.
+```shell 
+cd ../play
+./play-script.sh
+```
+The different options from the above [play script](https://github.com/karimalami7/EGG/blob/master/demo/play/play-script.sh) are:
 
-The final step, is to run **EGG** for this scenario by specifying the outputs you want in [play script](https://github.com/karimalami7/EGG/blob/master/demo/play/play-script.sh):
+* *--rdf-output* : serialization of the evolving graph in RDF
 
-* **RDF** output: serialization of the evolving graph in RDF.
+* *--vg-output* : serialization of the evolving graph in version graph format
 
-* **VG** output: serialization of the evolving graph in version graph format.
+* *--plot-byproperty* : generate plots for all evolving properties defined in the **EGG** configuration
 
-* Plot by property: generate evolution plots of all properties defined in the **EGG** configuration.
+* *--plot-byobject* : generate plots for all node/edge objects showing the evolution of each of their properties
 
-* Plot by object: generate evolution plots for properties of nodes and edges.  
-
-
-
+Feel free to modify the **gMark** schema and **EGG** configurations from the [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) directory.
