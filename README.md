@@ -28,7 +28,12 @@ The **EGG** repository is organised as follows:
 
 ### Running EGG
 
-To begin working with **EGG**, please run the [requirement](https://github.com/karimalami7/EGG/blob/master/demo/scripts/requirement.sh) script, it checks and installs all software needed to run **EGG**.
+To begin working with **EGG**, please run the [requirement](https://github.com/karimalami7/EGG/blob/master/demo/scripts/requirement.sh) script, which checks and installs all software needed to run **EGG**:
+
+```shell 
+cd demo/scripts/
+sudo ./requirement.sh
+```
 
 Then feel free to modify **gMark** schema and **EGG** configuration in [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario.
 
