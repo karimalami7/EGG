@@ -16,7 +16,7 @@ The **EGG** repository is organised as follows:
 
 * src/: directory of source code of **EGG**.
 
-* use-cases/: one directory for each use case, where we put both **gMark** schema and **EGG** configuration.
+* use-cases/: one directory for each use case, where we put both **gMark** configuration and **EGG** configuration.
 
 * demo/: 
 
@@ -51,7 +51,7 @@ The different options from the above [play script](https://github.com/karimalami
 
 * *--plot-byobject* : generate plots for all node/edge objects showing the evolution of each of their properties
 
-Feel free to modify the **gMark** schema and **EGG** configurations from the [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) directory.
+Feel free to modify the **gMark** configuration and **EGG** configurations from the [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) directory.
 
 To run each provided use case X, where X is one of {trip, social, dblp, shop, univ}, please run:
 ```shell 
