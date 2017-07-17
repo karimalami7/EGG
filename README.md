@@ -35,7 +35,7 @@ git clone https://github.com/karimalami7/EGG.git
 cd EGG/demo/scripts/
 sudo ./requirement.sh
 ```
-To run **EGG** on a sample [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario (simulating the Trip geographical database running example), please run the following commands (assuming you are in the aforementioned demo/scripts directory):
+To run **EGG** on a sample [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario, please run the following commands (assuming you are in the aforementioned demo/scripts directory):
 
 ```shell 
 cd ../play
