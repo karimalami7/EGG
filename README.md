@@ -1,3 +1,5 @@
+![](egg_logo.png)
+
 # EGG: Evolving Graph Generator
 
 **EGG** is an open-source framework for generating evolving **RDF** graphs based on finely-tuned temporal constraints given by the user.
