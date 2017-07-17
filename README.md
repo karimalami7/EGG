@@ -12,19 +12,19 @@ To illustrate the different finely-tuned constraints that the user can specify a
 
 ### Repository organization
 
-The **EGG** repository is organised as follow:
+The **EGG** repository is organised as follows:
 
 * src/: directory of source code of **EGG**.
 
-* use-cases/: one directory for each scenario, where we put **gMark** schema and **EGG** configuration.
+* use-cases/: one directory for each scenario, where we put both **gMark** schema and **EGG** configuration.
 
 * demo/: 
 
-  * For every scenario:  script to run **EGG** and directory of its ouputs.
+  * For every scenario: script to run **EGG** and a directory containing output examples.
   
-  * Scalability: script to evaluate scalability of **EGG**. More informations in [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability).
+  * Scalability: script to evaluate scalability of **EGG**. More information in [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability).
   
-  * System evaluation: informations in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
+  * System evaluation: script to evaluate historical reachability queries using **EGG** output. More information in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
 
 ### Running EGG
 
