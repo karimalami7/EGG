@@ -16,11 +16,11 @@ The **EGG** repository is organised as follows:
 
 * src/: directory of source code of **EGG**.
 
-* use-cases/: one directory for each scenario, where we put both **gMark** schema and **EGG** configuration.
+* use-cases/: one directory for each use case, where we put both **gMark** schema and **EGG** configuration.
 
 * demo/: 
 
-  * For every scenario (trip, social, dblp, shop, univ): script to run **EGG** and a directory containing output examples.
+  * For every use case (trip, social, dblp, shop, univ): script to run **EGG** and a directory containing output examples.
   
   * Scalability: script to evaluate scalability of **EGG**. More information in [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability).
   
@@ -35,7 +35,7 @@ git clone https://github.com/karimalami7/EGG.git
 cd EGG/demo/scripts/
 sudo ./requirement.sh
 ```
-To run **EGG** on a sample [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) scenario, please run the following commands (assuming you are in the aforementioned demo/scripts directory):
+To run **EGG** on a sample [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) use case, please run the following commands (assuming you are in the aforementioned demo/scripts directory):
 
 ```shell 
 cd ../play
@@ -53,7 +53,7 @@ The different options from the above [play script](https://github.com/karimalami
 
 Feel free to modify the **gMark** schema and **EGG** configurations from the [play](https://github.com/karimalami7/EGG/tree/master/use_cases/play) directory.
 
-To run each provided scenario X, where X is one of {trip, social, dblp, shop, univ}, please run:
+To run each provided use case X, where X is one of {trip, social, dblp, shop, univ}, please run:
 ```shell 
 cd ../X
 ./X-script.sh
