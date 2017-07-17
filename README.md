@@ -20,7 +20,7 @@ The **EGG** repository is organised as follows:
 
 * demo/: 
 
-  * For every scenario: script to run **EGG** and a directory containing output examples.
+  * For every scenario (trip, social, dblp, shop, univ): script to run **EGG** and a directory containing output examples.
   
   * Scalability: script to evaluate scalability of **EGG**. More information in [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/EGG-scalability).
   
