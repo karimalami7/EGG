@@ -98,4 +98,4 @@ For this example, we consider snapshots as semesters
 	}
 ```
 
-There is no evolving property for this use case.
+
