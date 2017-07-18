@@ -16,6 +16,6 @@ We defined also four other use cases:
 
 * *social*: stores persons as nodes, and friendship relation as edges.
 
-* *univ*: stores universities, professors, students and courses. Inspired from lubm benchmark.
+* *univ*: Inspired from lubm benchmark. We concentrated on evolving classes. So we encoded the relation between students, professors, courses and universities. More information about this use case in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/univ).
 
-* *shop*: stores shops, products and offers. Inspired from watdiv.
+* *shop*: Inspired from watdiv benchmark. We encoded relation between offers and products, as they have evolving characteristics. More information about this usecase in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/shop).
