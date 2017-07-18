@@ -341,8 +341,9 @@ for k in range(1,obj['interval']):
 						
 			
 						egg[element][prop].insert(i,egg[element][prop][i-1])
-			
-				egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(obj['ListDynP'][prop]),prop,i,egg)
+				
+				if changing_element:
+					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(obj['ListDynP'][prop]),prop,i,egg)
 
 		
 
@@ -378,8 +379,8 @@ for k in range(1,obj['interval']):
 						
 		
 							egg[element][prop].insert(i,egg[element][prop][i-1])
-
-					egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
+					if changing_element:		
+						egg=gi_distrib_new.distrib(changing_element,copy.deepcopy(config_modif),prop,i,egg)
 
 
 		logging.info (str(i)+" "+prop+" "+"end")

@@ -12,10 +12,10 @@
 		<proportion type="0">0.1</proportion>
 
 		<alias type="1">Offer</alias>
-		<proportion type="1">0.9</proportion>
+		<proportion type="1">0.85</proportion>
 
 		<alias type="2">Country</alias>
-		<fixed type="2">5</fixed>
+		<fixed type="2">0.5</fixed>
 	</types>
 
 	<predicates>
@@ -30,17 +30,28 @@
 
 		<source type="1"> <!-- Offer -->
 			<target type="0" symbol="0" multiplicity="1"> <!-- Product -->
-				<outdistribution type="uniform">
+				<indistribution type="uniform">
 					<min>1</min>
 					<max>1</max>
+				</indistribution>
+				<outdistribution type="uniform">
+					<min>1</min>
+					<max>10</max>
 				</outdistribution>
 			</target>
-			<target type="2" symbol="1" multiplicity="*">
-				<outdistribution type="zipfian">
-					<alpha>2.5</alpha>
+			<target type="2" symbol="1" multiplicity="*"> <!-- Country -->
+				<indistribution type="uniform">
+					<min>1</min>
+					<max>15</max>
+				</indistribution>
+				<outdistribution type="uniform">
+					<min>1</min>
+					<max>2</max>
 				</outdistribution>
 			</target>
 		</source>
+
+
 
 	</schema>
 

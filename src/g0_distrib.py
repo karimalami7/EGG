@@ -114,7 +114,7 @@ def distrib(param1,param2,param3,param4,egg):
 	############################
 	if param2['domain']['type']=="quantitatif:con":
 		#############################  
-		# binom: begin
+		# normal: begin
 		#############################
 		if param2['domain']['distribution']['type']=="normal":
 			random = norm.rvs(size=len(param1))
@@ -123,7 +123,20 @@ def distrib(param1,param2,param3,param4,egg):
 				egg[element].update({param3:[round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)]})
 				i=i+1
 		#############################  
-		# binom: end
+		# normal: end
+		#############################
+
+		#############################  
+		# uniform: begin
+		#############################
+		if param2['domain']['distribution']['type']=="uniform":
+			random = uniform.rvs(size=len(param1))
+			i=0
+			for element in param1:
+				egg[element].update({param3:[round(((param2['domain']['values']['max']-param2['domain']['values']['min'])*random[i])+param2['domain']['values']['min'],1)]})
+				i=i+1
+		#############################  
+		# uniform: end
 		#############################
 	############################
 	# quantitatif:con : end

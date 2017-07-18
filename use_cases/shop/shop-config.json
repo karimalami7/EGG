@@ -1,8 +1,8 @@
 {
-	"interval":10,
+	"interval":30,
 	"nodes":{
-		"Product":["type_product"],
-		"Offer":[],
+		"Product":["type_product","productPrice"],
+		"Offer":["discount"],
 		"Country":[],
 
 	},
@@ -12,7 +12,7 @@
 	}	
 	,
 	"validity":{
-		"Product":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
+		"Product":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}},"max":{"T":10}},
 		"Offer":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
 		"Country":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"offer_includes":{"type":"edge","init":{"T"},"succ":{"T":"T","F":"T"}},
@@ -39,8 +39,49 @@
 			},
 			"rules":[],
 			"rulese":[]
-		}
+		},
 
+		"productPrice":
+		{		
+			"element":"node",
+			"elements_type":"Product",
+			"domain":{
+				"type":"quantitatif:con",	
+				"v":"false",
+				"distribution":{"type":""}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"false",
+				"staticity":1,
+			},
+			"rules":[
+				{"if":{"prop":"type_product","hasValues":["book"]},"then":{"prop":"productPrice","config":{"domain":{"values":{"min":5,"max":50},"distribution":{"type":"uniform"}},"evolution":{"e":"false","staticity":1}}}},
+				{"if":{"prop":"type_product","hasValues":["music"]},"then":{"prop":"productPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"uniform"}},"evolution":{"e":"false","staticity":1}}}},
+				{"if":{"prop":"type_product","hasValues":["movie"]},"then":{"prop":"productPrice","config":{"domain":{"values":{"min":25,"max":60},"distribution":{"type":"uniform"}},"evolution":{"e":"false","staticity":1}}}},
+			],
+			"rulese":[]
+		},
+
+		"discount":
+		{		
+			"element":"node",
+			"elements_type":"Offer",
+			"domain":{
+				"type":"qualitatif",
+				"order":"true",
+				"v":"true",
+				"values":["10","20","30","40","50","60","70","80"],
+				"distribution":{"type":"uniform"}
+			},
+			"duration":1,
+			"evolution":{
+				"e":"true",
+				"staticity":1,
+			},
+			"rules":[],
+			"rulese":[]
+		}
 
 	}	
 }

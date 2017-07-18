@@ -164,6 +164,30 @@ def plot(egg,elements_list,prop,config_egg,schema):
 			y.append(list())
 			plt.ylabel('Values', fontsize=14, color='black')
 
+		elif config_egg['ListDynP'][prop]['domain']['distribution']['type']=="uniform":
+
+			j=0
+
+			for e in elements_list:
+
+				y.append(list())
+
+
+				for keys in range(0,len(egg[e][prop])):
+
+		
+					y[j].append(egg[e][prop][keys])
+
+				plt.plot(x,y[j],'r-')
+
+				j=j+1
+
+
+			y.append(list())
+			
+			plt.ylabel('Values', fontsize=14, color='black')
+
+
 	for rule in config_egg['ListDynP'][prop]['rules']:
 		if rule['then']['config']['domain']['distribution']['type']=="normal":
 		
@@ -189,9 +213,32 @@ def plot(egg,elements_list,prop,config_egg,schema):
 			plt.plot(x,y[len(y)-1],'b+')
 			y.append(list())
 
+		if rule['then']['config']['domain']['distribution']['type']=="uniform":
+		
+			j=0
+
+			for e in elements_list:
+
+				y.append(list())
+
+
+				for keys in range(0,len(egg[e][prop])):
+
+		
+					y[j].append(egg[e][prop][keys])
+				
+				plt.plot(x,y[j],'r-')
+
+				j=j+1
+			
+			y.append(list())
+			
+
 		y=list()
 
 		plt.ylabel('Values', fontsize=14, color='black')
+
+
 	###
 
 	plt.xlabel('Time', fontsize=14, color='black')
