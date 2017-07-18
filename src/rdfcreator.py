@@ -20,8 +20,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 
 	predicate=rdflib.Namespace("http://egg/predicate/")
-	egg_nm=rdflib.Namespace("http://egg/")
-	property_Nm=rdflib.Namespace("http://egg/property/")
+	named_graph =rdflib.Namespace("http://egg/ng/")
 
 
 	g = rdflib.ConjunctiveGraph()
@@ -46,17 +45,17 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 					
 					p=rdflib.URIRef(match.group(4)+":"+match.group(5))
 
-					n=rdflib.URIRef("http://egg/ng/gmark")
+					n=rdflib.URIRef(named_graph+"gmark")
 
 					g.add((s,p,o,n))
 
-				p=rdflib.URIRef("edge"+":"+match.group(4))
+				p=rdflib.URIRef(predicate+match.group(4))
 
 				for snap in range (0,len(egg[match.group(5)]["v"])):
 					
 					if egg[match.group(5)]["v"][snap] == "T":
 						
-						n=rdflib.URIRef("http://egg/ng/snapshot"+str(start_point+snap))
+						n=rdflib.URIRef(named_graph+"snapshot"+str(start_point+snap))
 					
 						g.add((s,p,o,n))
 
@@ -87,19 +86,19 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 				
 					o=rdflib.URIRef("Property:"+prop)
 				
-					n=rdflib.URIRef("http://egg/ng/G"+str(i))
+					n=rdflib.URIRef(named_graph+"G"+str(i))
 				
 					g.add((s,p,o,n))
 
 					for snapshot in range (0,len(egg[match.group(5)]["v"])):
 
-						s1=rdflib.URIRef("http://egg/ng/G"+str(i))
+						s1=rdflib.URIRef(named_graph+"G"+str(i))
 
 						p1=rdflib.URIRef(egg_nm.value)
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 
-						n1=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snapshot))
+						n1=rdflib.URIRef(named_graph+"snap"+str(start_point+snapshot))
 
 						g.add((s1,p1,o1,n1))
 
@@ -111,19 +110,19 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 				
 					o=rdflib.URIRef("Property:"+prop)
 				
-					n=rdflib.URIRef("http://egg/ng/G"+str(i))
+					n=rdflib.URIRef(named_graph+"G"+str(i))
 				
 					g.add((s,p,o,n))
 
 					for snapshot in range (0,len(egg[match.group(5)]["v"])):
 
-						s1=rdflib.URIRef("http://egg/ng/G"+str(i))
+						s1=rdflib.URIRef(named_graph+"G"+str(i))
 
 						p1=rdflib.URIRef(egg_nm.value)
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 
-						n1=rdflib.URIRef("http://egg/ng/snap"+str(start_point+snapshot))
+						n1=rdflib.URIRef(named_graph+"snap"+str(start_point+snapshot))
 
 						g.add((s1,p1,o1,n1))
 
