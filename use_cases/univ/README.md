@@ -75,16 +75,21 @@ Edges: has_course (University --> Course), teaches_course(Professor --> Course),
 
 ```
 
-Evolving Properties:
+For this example, we consider snapshots as semesters
 
 * Validity of nodes and edges
 
+	* Universites are always valid. 
+ 	* Professor become valid and and teaches somes courses.
+	* Students become valid for six snapshots only.
+	* Courses are always valid and linked to a university
+	
 ```json
 "validity":{
 
 		"University":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"Professor":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
-		"Student":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":1,"F":0},"F":{"T":0.5,"F":0.5}},"max":{"T":3}},
+		"Student":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":1,"F":0},"F":{"T":0.5,"F":0.5}},"max":{"T":6}},
 		"Course":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 
 		"teaches_course":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
@@ -92,3 +97,5 @@ Evolving Properties:
 		"takes_course":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
 	}
 ```
+
+There is no evolving property for this use case.
