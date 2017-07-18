@@ -52,7 +52,15 @@ Edges: offer_includes (Offer --> Product), eligi_region (Offer --> Country).
 
 EGG evolution properties:
 
-Validity of nodes and edges:
+For this use case, we can consider that snapshots are weeks.
+
+* Validity of nodes and edges:
+
+	* Product: stay valid during 10 snapshots.
+	* Offer: is linked to multiple nodes *Product*. Its validity depends on the probability.
+	* Country: always valid.
+	* offer_includes: is always valid when the adjacent *offer* node is valid.
+	* eligi_region: is always valid when the adjacent *offer* node is valid.
 
 ```json
 	"validity":{
