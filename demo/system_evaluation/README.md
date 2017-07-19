@@ -5,10 +5,10 @@ of approaches for answering historical reachability queries, a problem introduce
 
 As described in the [system evalution wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries), we have implemented two approches for this query paradigm and run them against *social* use case, which is actually inspired by the datasets used in the aforementioned TimeReach paper.
 
-To run Disjunctive-BFS, please follow the steps below.
+To run Disjunctive-BFS, please follow the following steps.
 
 1. in [Dis-BFS-limited_length.py](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/Dis-BFS-limited_length.py), fix the query size i.e., the size of the interval in which we look for a snapshot where the input connected.
-This should be encoded in the variable *i* as a bit vector e.g., *i=00011110* to encode the interval [3,6] in a case with a total of 8 snapshots.
+This should be encoded in the variable *i* as a bit vector e.g., *i=[00011110]* to encode the interval [3,6] in a case with a total of 8 snapshots.
 
 
 2. run the script with the following parameters: the use case, # of snapshots of the evolving graph, source node, target node, max depth:
