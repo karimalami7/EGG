@@ -1,6 +1,8 @@
 # Scalability
 
-Scalability aims to evaluate performance of **EGG** in generating evolving graphs, compared to # of nodes and # of snapshots.
+In order to evaluate the scalability of our generator, we have run EGG with several use cases and graphs of increasing sizes (in terms of both # of graph nodes and # of graph snapshots).
+Details about our experimental findings are available on our [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/Scalability).
+We explain here how to reproduce these results and run further similar experiments.
 
 To run a scalability test, first define the values of the parameters (# of nodes and # of snapshots) in the file scalcalc.pl
 
