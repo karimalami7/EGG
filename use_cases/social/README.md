@@ -1,4 +1,4 @@
-# Social use-case 
+# Social Use Case 
 
 All nodes are of type *person* and all edges are of type *friendOf* (connecting two persons).
 
@@ -34,11 +34,11 @@ All nodes are of type *person* and all edges are of type *friendOf* (connecting 
 	</schema>
 ```
 
-In this use case, we assume that a snapshot correspond to a day. The EGG Evolution properties are as follows:
+In this use case, we assume that a snapshot correspond to a day. The EGG evolving properties are as follows:
 
 * Validity of nodes *person*: all nodes are valid from the first snapshot to the last one.
 
-* Validity of edges *friendOf*: At the beggining, each edge has 50% probability to be valid. Then, if an edge is invalid, it has 50% probability to become valid in the next snapshot. Once an edge becomes valid, it remains valid until the last snapshot.
+* Validity of edges *friendOf*: at the beggining, each edge has 50% probability to be valid. Then, if an edge is invalid, it has 50% probability to become valid in the next snapshot. Once an edge becomes valid, it remains valid until the last snapshot.
 
 ```json
 "validity":{
