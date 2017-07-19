@@ -15,10 +15,10 @@
 		<proportion type="1">0.15</proportion>
 
 		<alias type="2">Student</alias>
-		<fixed type="2">0.5</fixed>
+		<proportion type="2">0.5</proportion>
 
 		<alias type="3">Course</alias>
-		<fixed type="3">0.30</fixed>
+		<proportion type="3">0.30</proportion>
 
 	</types>
 
