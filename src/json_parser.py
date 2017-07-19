@@ -17,8 +17,13 @@ import logging
 
 def eval_config(schema):
 	f=open('../../use_cases/'+schema+'/'+schema+'-config.json','r')	
-	obj=eval(f.read())
-	return obj
+	try:
+		obj=eval(f.read())
+		return obj
+	except: 
+		print '\n***************\n*\n*	Error: Check syntax of the configuration file\n*\n***************'
+		exit()
+	
 
 ############################
 #property dependance graph
