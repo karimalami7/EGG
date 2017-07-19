@@ -69,9 +69,10 @@ def distrib(param1,param2,param3,param4,egg):
 			######################### end
 
 			#########################  affectation des valeurs a no succ elements
-
-			random =  list(randint.rvs(0, len(param2['domain']['values']), size=len(no_succ_elements)))
-
+			try:
+				random =  list(randint.rvs(0, len(param2['domain']['values']), size=len(no_succ_elements)))
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 			for elementId in no_succ_elements:
 
 				egg[elementId][param3].insert(param4,param2['domain']['values'][random.pop()])
@@ -85,9 +86,10 @@ def distrib(param1,param2,param3,param4,egg):
 			for  succ_key in param2["evolution"]["succesors"]:
 
 				succ_list=succ_elements[succ_index]
-
-				random =  list(randint.rvs(0, len(param2['evolution']['succesors'][succ_key]), size=len(succ_list)))
-
+				try:
+					random =  list(randint.rvs(0, len(param2['evolution']['succesors'][succ_key]), size=len(succ_list)))
+				except:
+					print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 				for elementId in succ_list:
 
 					egg[elementId][param3].insert(param4,param2['evolution']['succesors'][succ_key][random.pop()])
@@ -110,17 +112,22 @@ def distrib(param1,param2,param3,param4,egg):
 
 
 			offset_list=list()
-			for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
-				### m ne va pas jusqu au bout
-				offset_list.append(param2['evolution']['offset']['min'] + m)
-
+			try:
+				for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
+					### m ne va pas jusqu au bout
+					offset_list.append(param2['evolution']['offset']['min'] + m)
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 			############################	
 			# uniform:begin
 			############################
 	
 			if param2['evolution']['offset']['distribution']['type']=="uniform":
 
-				random =  randint.rvs(0, len(offset_list), size=len(param1))
+				try:
+					random =  randint.rvs(0, len(offset_list), size=len(param1))
+				except:
+					print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 				i=0
 				for param1_element in param1 :
 
@@ -143,8 +150,10 @@ def distrib(param1,param2,param3,param4,egg):
 			# binom:begin
 			############################
 			if param2['evolution']['offset']['distribution']['type']=="binom":
-				random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
-
+				try:
+					random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
+				except:
+					print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 				i=0
 				for param1_element in param1 :
 
@@ -204,12 +213,17 @@ def distrib(param1,param2,param3,param4,egg):
 		
 
 		offset_list=list()
-		for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
-			### jai ajoute 1 car il yavait un bug que je ne comprenais pas , m n allait pas jusqu au plus grand nombre
-			offset_list.append(param2['evolution']['offset']['min'] + m)
+		try:
+			for m in range(0,param2['evolution']['offset']['max']-param2['evolution']['offset']['min']+1):
+				### jai ajoute 1 car il yavait un bug que je ne comprenais pas , m n allait pas jusqu au plus grand nombre
+				offset_list.append(param2['evolution']['offset']['min'] + m)
+		except:
+			print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 
-		random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
-
+		try:
+			random =  binom.rvs(len(offset_list)-1,param2['evolution']['offset']['distribution']["p"] , size=len(param1))
+		except:
+			print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 		i=0
 		for param1_element in param1 :
 
@@ -247,6 +261,7 @@ def distrib(param1,param2,param3,param4,egg):
 
 	if param2['domain']['type']=="quantitatif:con":
 		
+		
 		random = norm.rvs(size=len(param1))
 
 		i=0
@@ -256,7 +271,11 @@ def distrib(param1,param2,param3,param4,egg):
 
 			
 			previous_value=value_pr
-			offset = (random[i]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']
+			try:
+				offset = (random[i]*param2['evolution']['offset']['distribution']['sigma'])+param2['evolution']['offset']['distribution']['mean']
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
+			
 			if offset > param2['evolution']['offset']['max']:
 				offset = param2['evolution']['offset']['max']
 			elif offset < param2['evolution']['offset']['min']:

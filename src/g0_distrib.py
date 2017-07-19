@@ -41,7 +41,10 @@ def distrib(param1,param2,param3,param4,egg):
 		#############################
 
 		if param2['domain']['distribution']['type']=="binom":
-			random =  binom.rvs(len(param2['domain']['values']), param2['domain']['distribution']['p'] , size=len(param1))
+			try:
+				random =  binom.rvs(len(param2['domain']['values']), param2['domain']['distribution']['p'] , size=len(param1))
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 			i=0
 			for element in param1:
 				egg[element].update({param3:[param2['domain']['values'][random[i]-1]]})
@@ -58,7 +61,11 @@ def distrib(param1,param2,param3,param4,egg):
 			geomValues=list()
 			for i in range (0,len(param1)):
 				while True:
-					value=geom.rvs(param2['domain']['distribution']['p'],size=1)[0]
+					try:
+						value=geom.rvs(param2['domain']['distribution']['p'],size=1)[0]
+					except:
+						print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
+				
 					if  value > len(param2['domain']['values']):
 						pass
 					else :
@@ -91,7 +98,10 @@ def distrib(param1,param2,param3,param4,egg):
 		#############################
 		
 		if param2['domain']['distribution']['type']=="binom":
-			random = binom.rvs(param2['domain']['values']['max']-param2['domain']['values']['min'],param2['domain']['distribution']['p'],size=len(param1))
+			try:
+				random = binom.rvs(param2['domain']['values']['max']-param2['domain']['values']['min'],param2['domain']['distribution']['p'],size=len(param1))
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 			i=0
 			for element in param1:
 				egg[element].update({param3:[random[i]]})
@@ -105,7 +115,10 @@ def distrib(param1,param2,param3,param4,egg):
 		#############################
 		
 		if param2['domain']['distribution']['type']=="randint":
-			random =  randint.rvs(param2['domain']['values']['min'],param2['domain']['values']['max'], size=len(param1))
+			try:
+				random =  randint.rvs(param2['domain']['values']['min'],param2['domain']['values']['max'], size=len(param1))
+			except:
+				print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 			i=0
 			for element in param1:
 				egg[element].update({param3:[random[i]]})
@@ -134,7 +147,10 @@ def distrib(param1,param2,param3,param4,egg):
 			random = norm.rvs(size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:[round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)]})
+				try:
+					egg[element].update({param3:[round(((random[i]*param2['domain']['distribution']['sigma'])+param2['domain']['distribution']['mean']),1)]})
+				except:
+					print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 				i=i+1
 		#############################  
 		# normal: end
@@ -147,7 +163,10 @@ def distrib(param1,param2,param3,param4,egg):
 			random = uniform.rvs(size=len(param1))
 			i=0
 			for element in param1:
-				egg[element].update({param3:[round(((param2['domain']['values']['max']-param2['domain']['values']['min'])*random[i])+param2['domain']['values']['min'],1)]})
+				try:
+					egg[element].update({param3:[round(((param2['domain']['values']['max']-param2['domain']['values']['min'])*random[i])+param2['domain']['values']['min'],1)]})
+				except:
+					print '\n***************\n*\n*	Error: Check the configuration of property: ',param3,'\n*\n***************'
 				i=i+1
 		#############################  
 		# uniform: end

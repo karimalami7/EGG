@@ -90,7 +90,7 @@ L=json_parser.sorted_list(obj)
 
 logging.info ("config parse")
 
-clear_snap = 101 # clear memory after clear_snap
+clear_snap = 1000000 # clear memory after clear_snap
 
 
 
