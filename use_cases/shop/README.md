@@ -13,7 +13,7 @@ The shop use case stores the relation between offers and products in an online s
 		<proportion type="1">0.85</proportion>
 
 		<alias type="2">Country</alias>
-		<fixed type="2">0.5</fixed>
+		<fixed type="2">0.05</fixed>
 	</types>
 
 	<predicates>
