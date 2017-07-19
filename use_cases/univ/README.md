@@ -1,8 +1,6 @@
 # Univ use case
 
-Nodes: University, Professor, Student, Course.
-
-Edges: has_course (University --> Course), teaches_course(Professor --> Course), takes_course (Student --> Course).
+The univ use case stores the relation between students, professors, courses, and universities. It consits of four node types (*student*,*professor*,*course*,*university*), and the edge types: *has_course* (connects a university to a course), *teaches_course* (connects a professor to a course) and *takes_course*(connects a student to a course).
 
 ```xml
 <types>
@@ -75,21 +73,23 @@ Edges: has_course (University --> Course), teaches_course(Professor --> Course),
 
 ```
 
-For this example, we consider snapshots as semesters
+For this example, we assume that a snapshots correspond to a semester. The **EGG** evolving properties are as follows:
 
-* Validity of nodes and edges
+* Validity of node type *university*: valid from the first snapshot to the last one. 
+* Validity of node type *professor*: at the beginning, each node has 50% probability to be valid. Once it becomes valid, it remains until the last snapshot. 
+* Validity of node type *student*: at the beginning, each node has 50% probability to be valid. Once it becomes valid, it remains valid for six snapshots only.
+* Validity of node type *course*: valid from the first snapshot to the last one.
+* Validity of edge type *has_course*: valid from the first snapshot to the last one. (A course is always linked to a university).
+* Validity of edge type *teaches_course*: at the beginning, each node has 50% probability to be valid. And it has 50% probability to become valid after being invalid, and vice-versa
+* Validity of edge type *takes_course*: similar to the validity of edge type *teaches_course*.
 
-	* Universites are always valid. 
- 	* Professor become valid and and teaches somes courses.
-	* Students become valid for six snapshots only.
-	* Courses are always valid and linked to a university
-	
+
 ```json
 "validity":{
 
 		"University":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"Professor":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
-		"Student":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":1,"F":0},"F":{"T":0.5,"F":0.5}},"max":{"T":6}},
+		"Student":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T"},"F":{"T":0.5,"F":0.5}},"max":{"T":6}},
 		"Course":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 
 		"teaches_course":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
