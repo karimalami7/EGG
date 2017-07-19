@@ -1,10 +1,12 @@
-# Trip use-case:
+# Trip Use Case
 
-The trip schema is for generating graphs simulating a geographical database, that store information about cities, and different facilities such as transportation and hotels. 
+The **trip** use case is useful for generating graphs simulating a geographical database, which stores information about cities and different facilities such as transportation and hotels. 
 
-For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: *node -- edge --> node*.
+For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: *(source node type, edge predicate, target node type)*.
 
-For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predicate *train* that links a node *city* to an other node *city*, and a predicate *contains*, that links a node *city* to a node *hotel*. This is described in the following xml from the gMark configuration file.
+For example, the following snippet of a gMark configuration file generates a static graph having 50 nodes, out of which 10% are cities and 90% are hotels. 
+Moreover, we want an edge predicate *train* (that links a node *city* to an other node *city*) and an edge predicate *contains*
+(that links a node *city* to a node *hotel*). 
 
 ```xml
 	<graph>
@@ -28,11 +30,21 @@ For our example, we want 50 nodes, 10% cities, and 90% hotels. We want a predica
 	</types>
 ```
 
-Then, we need to indicate distribution of each relation described bofore. So, for the relation *city -- train --> city*, we want for the in distribution a gaussian distribution with mean=3 and std=1, and for the out distribution, a uniform distribution with maximum and minimum set to 1, in order to have one *train* predicate that goes out from a node *city*, and possibly, multiple ones that go in. For the relation *city -- contains --> hotel*, we put for the out distribution, the zipfian distribution, and for the in distribution, uniform distribution with maximum and minimum set to 1, in order to link few cities to a big number of hotels, to link a big number of cities to few hotels, and to link each hotel to only one city. The following xml encodes such configuration.
+Then, we indicate degree distributions for each triple *(source node type, edge predicate, target node type)*.
+For example, the following snippet specifies that an edge of type *contains* from a node of type *city* to a node of type *hotel* follows a Zipfian out-distribution (since it is realistic to assume that the number of hotels in a city follows such a power-law distribution) and a uniform [1,1] in-distribution (since a hotel is located in precisely one city).
 
 ```xml
 	<schema>
 		<source type="0"> <!-- city -->
+			<target type="1" symbol="1"  > <!-- contains hotel -->
+				<indistribution type="uniform">
+					<min>1</min>
+					<max>1</max>
+				</indistribution>
+				<outdistribution type="zipfian">
+					<alpha>0.9</alpha>
+				</outdistribution>
+			</target>
 			<target type="0" symbol="0" > <!-- train city -->
 				<indistribution type="gaussian">
 					<mu>3</mu>
@@ -43,26 +55,15 @@ Then, we need to indicate distribution of each relation described bofore. So, fo
 					<max>1</max>
 				</outdistribution>
 			</target>
-			<target type="1" symbol="1"  > <!-- contains hotel -->
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</indistribution>
-				<outdistribution type="zipfian">
-					<alpha>0.9</alpha>
-				</outdistribution>
-			</target>
 		</source>
 	</schema>
 ```
 
-> **NOTE**: Satisfying some distribution can be a very long process for large graphs. So, in order to have a fast response from gMark for large graphs, make sure that distributions are reasonable.
+In the *EGG* evolving graph configuration, we indicate the number of snapshots (for this example we assume that a snapshot is a day), and we describe validity and evolution rules for evolving properties. 
 
-In *EGG*, we indicate the number of snapshots, and we describe validity and dynamic properties evolution rules. 
-
-> **NOTE**: We have to define validity evolution rules for each node type and edge predicate.
-
-For our example, we want nodes: *city*, *hotel* and edges: *contains*  to be valid in all snapshots, but we want edge: *train* validity  to evolve randomly. Below, a part of the json configuration: 
+For our example, we want the nodes of type *city* and *hotel*, and the edges of type *contains* to be valid in all snapshots, but we want that the validity of the edge type *train* evolves randomly. 
+Intuitively, this is to encode that a train connection between two cities may not be valid during all snapshots.
+This is done with the following code:
 
 ```json
 "validity":{
@@ -72,11 +73,12 @@ For our example, we want nodes: *city*, *hotel* and edges: *contains*  to be val
 		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 ```
 
-We defined six dynamic properties: _**Weather**_, _**qAir**_ for the node type *city*, _**Star**_, _**AvailableRooms**_, _**hotelPrice**_ for the node type *hotel*, and _**trainPrice**_ for the edge predicate * Train *.
+We defined six evolving properties: _**weather**_ and _**qAir**_ for the node type *city*, _**star**_, _**availableRooms**_, and _**hotelPrice**_ for the node type *hotel*, and _**trainPrice**_ for the edge type *train*.
 
-Each property can be: ordered qualitative, unordered qualitative, discrete quantitative, continuous quantitive.
+An evolving property has one of the following types: unordered qualitative, ordered qualitative, discrete quantitative, continuous quantitive.
 
-We begin by *weather* property for node type *city*. It is an ordered qualitative property, it can have 3 values: sunny, cloudy, rainy, can change with 50% probability, and we define one succession rule that is a city with weather sunny at a snapshot i, can not be rainy at snapshot i+1. 
+We begin by *weather* property for the node type *city*. It is an unordered qualitative property, which can have 3 values: sunny, cloudy, rainy.
+It can change with 50% probability, and we define one succession rule that is: a city with weather sunny at a snapshot i cannot be rainy at snapshot i+1. 
 
 ```json
 		"weather":
@@ -101,7 +103,12 @@ We begin by *weather* property for node type *city*. It is an ordered qualitativ
 		}
 ```
 
-*qAir* is an ordered property for node type *city*, it has its values in the list [1,2,3,4,5,6,7,8,9,10], the value with the bigger index is bigger. Its value can move by one index in the list with 80% probability. It has 3 rules of evolution where it depends on *weather* change, for example: when *weather* of a node x change from cloudy to sunny, *qAir* of node x becomes better.
+*qAir* is an ordered property for the node type *city*, which has ten possible values corresponding to integers between 1 and 10. 
+
+There is a probability of 80% that qAir does not change from a snapshot to the next one, hence 20% to change.
+Moreover, it can only increment or decrement by 1 between two consecutive snapshots.
+There are 3 evolution rules where the change of *qAir* depends on the change of *weather* e.g., when *weather* of a node x changes from cloudy to sunny, then *qAir* of node x increases.
+
 ```json
 		"qAir":
 		{
@@ -133,7 +140,9 @@ We begin by *weather* property for node type *city*. It is an ordered qualitativ
 
 ```
 
-AvailableRooms is a discrete quantitative for node type "hotel", it has values in the interal [1,100]. It changes each time with an offset within [-5,5] and binomial distribution centered in 0.
+The evolving property *availableRooms* of the node type *hotel* is discrete quantitative, with values in the interal [1,100]. 
+It always changes between two consecutive snapshots, and it can increment or decrement by an integer up to 5 (drawn according to a binomial distribution centered in 0).
+
 ```json
 		"availableRooms":
 		{
@@ -162,7 +171,7 @@ AvailableRooms is a discrete quantitative for node type "hotel", it has values i
 		}
 ```
 
-*Star* is an ordered qualitative property for node type *Hotel*, which have values in the list [1,2,3,4,5], following a geometric distribution. It can change every thirty snapshots with a probability of 1% and move by one position in the list.
+The evolving property *star* of the node type *hotel* is ordered qualitative, with values in the list [1,2,3,4,5], following a geometric distribution. It can change every thirty snapshots with a probability of 1% and move by one position in the list.
 
 ```json
 "star":
@@ -191,9 +200,10 @@ AvailableRooms is a discrete quantitative for node type "hotel", it has values i
 			
 		}
 ```
-*hotelPrice* is a continuous quantitative property for node type *city*. It is the most complicated property as it depends on *Star* for its domain and *AvailableRomms* for its evolution. 
-In fact, to calculate *hotelPrice* for a node x, we need construct its domain regarding its *star* value. So we need to define in the configuration, for each *star* value, the interval of value of *hotelPrice* and the offset of evolution.
-Also, *hotelPrice* depends on *availableRooms* as, if *availableRooms* rise, *hotelPrice* goes down, and if *availableRooms* goes down, *hotelPrice* rise. So the offset is modified, either maximium or minimum is set to 0. 
+The evolving property *hotelPrice* of the node type *city* is continuous quantitative. It is the most complex property of this use case as it depends both on *star* for its domain and *availableRomms* for its evolution. 
+More precisely, to compute *hotelPrice* for a node x, we need to construct its domain depending on its *star* value. 
+Hence, we need to define in the configuration, for each *star* value, the interval of *hotelPrice* values and the offset of the evolution.
+Moreover, *hotelPrice* depends on *availableRooms* in the sense that these two properties are anti-correlated: if *availableRooms* increases, then *hotelPrice* decreases, and vice-versa. 
 
 ```json
 		"hotelPrice":
@@ -223,7 +233,8 @@ Also, *hotelPrice* depends on *availableRooms* as, if *availableRooms* rise, *ho
 			]
 		}
 ```
-*TrainPrice* is a continuous quantitative property for edge predicate *train*, it has values in [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
+
+The evolving property *trainPrice* of the edge prdicate *train* is continuous quantitative with values in the interval [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
 
 ```json
 		"trainPrice":
