@@ -14,19 +14,19 @@ To run a scalability test, first define the values of the parameters (# of nodes
 	my %size=("d"=>10,"f"=>10000,"m"=>10);
 ```
 
-Then run the script associated to each use case, for example, to evaluate scalability of **EGG** with *social* use case, run the following command:
+Then, run the script associated to each use case e.g., to evaluate scalability of **EGG** with *social* use case, run the following command:
 
 ```shell
 ./shell_social
 ```
-
-Two csv files will be generated, containing the varying parameter, and the execution time of **EGG**.
+This will generate two csv files, containing the varying parameter and the execution time of **EGG**.
+We provide here examples of such csv files:
 
 [egg-fixed-interval-to-100-social.txt](https://github.com/karimalami7/EGG/blob/master/demo/scalability/egg-fixed-interval-to-100-social.txt)
 
 [egg-fixed-size-to-100000-social.txt](https://github.com/karimalami7/EGG/blob/master/demo/scalability/egg-fixed-size-to-100000-social.txt)
 
-Then you can plot the results by calling [plot_scal.py](https://github.com/karimalami7/EGG/blob/master/demo/scalability/plot_scal.py) script, mentioning a csv file without the .txt extension:
+Then, to plot the results, run the [plot_scal.py](https://github.com/karimalami7/EGG/blob/master/demo/scalability/plot_scal.py) script, having as parameter the name of a csv file without the .txt extension:
 
 ```shell 
 python plot.py egg-fixed-interval-to-100-social
