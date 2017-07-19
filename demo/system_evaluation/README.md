@@ -16,14 +16,14 @@ This should be encoded in the variable *i* as a bit vector e.g., *i=[00011110]* 
   ```shell
   python Dis-BFS-limited_length.py "use-case" "# of snapshots" "source node" "target node" "max depth" 
   ```
-To run SPARQL script, please follow the steps below:
+To run SPARQL, please follow the following steps:
 
-1. define the source node and the target node in the script file
+1. define the source node and the target node in the [script file](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/His_Reach_social_sparql)
 
   ```sparql
   GRAPH ?x {<source node> predicate <target node> }}
   ```
-2. call SPARQL engine and mention the evolving graph RDF file and the SPARQL script
+2. call the SPARQL engine while giving as parameters the SPARQL script and the RDF file encoding the evolving graph
 
   ```shell
   sparql --query His_Reach_social_sparql --data ../"use case"_output/"use case"_output.trig
