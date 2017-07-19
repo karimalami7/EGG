@@ -1,6 +1,6 @@
-# Shop use case
+# Shop Use Case
 
-The shop use case stores the relation between offers and products in an online shop. It consists of three node type (product, offer, country), and two edge type: offer_includes (links an offer to a product) and eligi_region (links an offer to a country).
+The shop use case stores the relation between offers and products in an online shop. It consists of three node types (product, offer, country), and two edge types: offer_includes (links an offer to a product) and eligi_region (links an offer to a country).
 
 ```xml
 <types>
@@ -13,7 +13,7 @@ The shop use case stores the relation between offers and products in an online s
 		<proportion type="1">0.85</proportion>
 
 		<alias type="2">Country</alias>
-		<fixed type="2">0.05</fixed>
+		<proportion type="2">0.05</proportion>
 	</types>
 
 	<predicates>
@@ -50,8 +50,8 @@ The shop use case stores the relation between offers and products in an online s
 
 In this use case, we assume that a snapshot corresponds to a month. The EGG evolving properties are as follows:
 
-* Validity of node type *product*: at the beginning, a node *product* has 50% probability to be valid. When a node *product* become valid, it remains valid for 10 snapshots, and then become invalid until the last snapshot.
-* Validity of node type *offer*: similar to the validity of node type *product*, except that there is no limit in number of snapshot with being valid  .
+* Validity of node type *product*: at the beginning, a node *product* has 50% probability to be valid. When a node *product* becomes valid, it remains valid for 10 snapshots, and then becomes invalid until the last snapshot.
+* Validity of node type *offer*: similarly to the validity of node type *product*, except that there is no limit in the number of snapshots where it is valid.
 * Validity of node type *country*: valid from the first snapshot to the last one.
 * Validity of edge type *offer_includes*: always valid when the adjacent node of type *offer* is valid.
 * Validity of edge type *eligi_region*: always valid when the adjacent node of type *offer* is valid.
@@ -66,7 +66,7 @@ In this use case, we assume that a snapshot corresponds to a month. The EGG evol
 	}
 ```
 
-* Evolving property *discount* of node type *offer*: ordered qualitative property with values in [10,20,30,40,50,60,70,80] distributed randomly.
+* Evolving property *discount* of node type *offer*: ordered qualitative property with values in [10,20,30,40,50,60,70,80] distributed randomly (it intuitively encodes the percentage of the price that is discounted).
 ```json
 "discount":
 		{		
@@ -115,7 +115,7 @@ In this use case, we assume that a snapshot corresponds to a month. The EGG evol
 		}
   ```
   
-* Evolving property *productPrice* of node type *product*: continuous quantitative property that define the price of a product. Its possible values are defined by the property *productType* of a node. 
+* Evolving property *productPrice* of node type *product*: continuous quantitative property that defines the price of a product. Its possible values are defined dynamically based on the property *productType* of a node. 
 
   ```json
   "productPrice":
