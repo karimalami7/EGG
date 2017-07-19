@@ -10,7 +10,7 @@ Our running example is the use case **trip**, which is a geographical database s
 The **trip** use case includes examples of the very diverse evolution constraints that we support in **EGG**.
 We develop this use case in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/trip).
 
-We defined also four other use cases:
+We also defined four other use cases:
 
 * **dblp**: stores nodes of type author and edges of type co-author. The edges have an evolving property *number of publications*, which stores the number of publications between two authors in a given year. 
 More information about this use case in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/dblp).
