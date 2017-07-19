@@ -44,9 +44,9 @@ plt.xscale("log", nonposx='clip')
 plt.yscale("log", nonposy='clip')
 plt.grid()
 if file_list[2] == "interval" :
-	plt.title(file_list[5]+" schema: "+"# of graph snapshots"+" set to "+file_list[4])
+	plt.title(file_list[5]+" use case: "+"# of graph snapshots"+" set to "+file_list[4])
 else :
-	plt.title(file_list[5]+" schema: "+"# of graph nodes"+" set to "+file_list[4])
+	plt.title(file_list[5]+" use case: "+"# of graph nodes"+" set to "+file_list[4])
 
 plt.savefig(file_list[2]+"_"+file_list[5]+".png")
 plt.clf()
