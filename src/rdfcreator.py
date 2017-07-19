@@ -94,7 +94,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 						s1=rdflib.URIRef(named_graph+"G"+str(i))
 
-						p1=rdflib.URIRef(egg_nm.value)
+						p1=rdflib.URIRef(predicate.value)
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 
@@ -118,7 +118,7 @@ def write_rdf(schema,graph_elements,egg,configG,start_point):
 
 						s1=rdflib.URIRef(named_graph+"G"+str(i))
 
-						p1=rdflib.URIRef(egg_nm.value)
+						p1=rdflib.URIRef(predicate.value)
 
 						o1=rdflib.Literal(str(egg[element][prop][snapshot]))
 

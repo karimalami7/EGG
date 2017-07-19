@@ -99,6 +99,20 @@ def distrib(param1,param2,param3,param4,egg):
 		#############################  
 		# binom: end
 		#############################
+
+		#############################  
+		# rand: begin
+		#############################
+		
+		if param2['domain']['distribution']['type']=="randint":
+			random =  randint.rvs(param2['domain']['values']['min'],param2['domain']['values']['max'], size=len(param1))
+			i=0
+			for element in param1:
+				egg[element].update({param3:[random[i]]})
+				i=i+1
+		#############################  
+		# rand: end
+		#############################
 	############################
 	# quantitatif:dis : end
 	############################
