@@ -1,10 +1,12 @@
 # Demo
 
-For each use case x, we have two directory:
+For each use case X, we have two directories:
 
-* x/: where we put the script to run gMark and EGG with the use case x.
-* x_output/: where we put outputs of gMark and EGG.
+* X/: where we put an example of script to run **gMark** and **EGG** with the use case X.
+* X_output/: where we put examples of outputs of **gMark** and **EGG** such as RDF output encoded in [TriG](https://www.w3.org/TR/trig/) format, version graph output, accuracy plots.
 
-**Scalability**: scripts to evaluate scalability of EGG. More informations in [EGG scalability wiki](https://github.com/karimalami7/EGG/wiki/Scalability).
+We additionally have two other directories:
 
-**System evaluation**:  scripts to evaluate historical reachability queries using EGG output. More information in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
+* *Scalability*: where we put scripts to evaluate the scalability of EGG. More information about this demonstration scenario is available in the [EGG scalability wiki](https://github.com/karimalami7/EGG/wiki/Scalability).
+
+* *System evaluation*: where we put scripts to evaluate two approaches for historical reachability queries on top of **EGG** output. More information about such demonstration scenario is available in the [system evaluation wiki](https://github.com/karimalami7/EGG/wiki/System-Evaluation:-Historical-Reachability-Queries).
