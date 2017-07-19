@@ -7,7 +7,7 @@ As described in the [system evalution wiki](https://github.com/karimalami7/EGG/w
 
 To run Disjunctive-BFS, please follow the following steps.
 
-1. in [Dis-BFS-limited_length.py](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/Dis-BFS-limited_length.py), fix the query size i.e., the size of the interval in which we look for a snapshot where the input connected.
+1. in [Dis-BFS-limited_length.py](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/Dis-BFS-limited_length.py), fix the interval in which we look for a snapshot where the input nodes are connected.
 This should be encoded in the variable *i* as a bit vector e.g., *i=[00011110]* to encode the interval [3,6] in a case with a total of 8 snapshots.
 
 
