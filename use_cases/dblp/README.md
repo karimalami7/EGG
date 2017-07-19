@@ -1,8 +1,6 @@
-# Dblp use-case:
+# DBLP use-case
 
-Nodes: author.
-
-Edges: coauthor (author -> author).
+All nodes are of type *author* and all edges are of type *coauthor* (connecting two authors).
 
 ```xml
 <graph>
@@ -36,18 +34,19 @@ Edges: coauthor (author -> author).
 	</schema>
 ```
 
-EGG evolution properties:
+In this use case, we assume that a snapshot corresponds to a year.
+The **EGG** evolving properties are as follows:
 
-* author: can become valid after being invalid, but not the contrary.
+* validity of *author* nodes: at the beginning, we assume that no author is valid (intuitively, at year 0 no author is yet active) and between two consecutive years there is 50% probability that an author becomes valid (intuitively, new authors appear every year). Once an author becomes valid, it remains valid until the end of time.
 
-* coauthor: validity depends on probability defined in the configuration,
+* validity of *coauthor* edges: it is similar to the aforementioned evolving property, except that after becoming valid, a *coauthor* edge may become invalid again (intuitively, two authors may publish together for some years, but stop their collaboration afterwise).
 
-    *  #_of_publications: integer value, defines the number of publications between the two authors, depends on previous value.
+*  property *num_publi* of edge *coauthor*: is an integer defining the number of publications between two authors, which is computed only when the coauthorship between two authors is valid and can evolve according to its rule defined below.
 
 ```json
 "validity":{
 		"author":{"type":"node","init":{"F"},"succ":{"F":{"T":0.5,"F":0.5},"T":"T"}},
-		"coauthor":{"type":"edge","init":{"T"},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
+		"coauthor":{"type":"edge","init":{"F"},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
 	},
    
    "num_publi":
