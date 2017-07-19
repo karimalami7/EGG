@@ -1,8 +1,6 @@
-# Social use-case:
+# Social use-case 
 
-Nodes: person.
-
-Edges: friendOf (person -> person).
+All nodes are of type *person* and all edges are of type *friendOf* (connecting two persons).
 
 ```xml
 <graph>
@@ -36,11 +34,11 @@ Edges: friendOf (person -> person).
 	</schema>
 ```
 
-EGG Evolution properties:
+In this use case, we assume that a snapshot correspond to a day. The EGG Evolution properties are as follows:
 
-* person: all nodes are valid from the first snapshot to the last one.
+* Validity of nodes *person*: all nodes are valid from the first snapshot to the last one.
 
-* friendOf: can change from invalid to valid but not the contrary.
+* Validity of edges *friendOf*: At the beggining, each edge has 50% probability to be valid. Then, if an edge is invalid, it has 50% probability to become valid in the next snapshot. Once an edge becomes valid, it remains valid until the last snapshot.
 
 ```json
 "validity":{
