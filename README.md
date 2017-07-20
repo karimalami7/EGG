@@ -63,8 +63,8 @@ cd ../X
 
 ### Contact
 
-* Karim Alami (Université Clermont Auvergne) [mailto:alami.karim7@gmail.com](alami.karim7@gmail.com)
+* Karim Alami (Université Clermont Auvergne) [alami.karim7@gmail.com](mailto:alami.karim7@gmail.com)
 
-* [http://ws.isima.fr/~ciucanu/](Radu Ciucanu) (Université Clermont Auvergne) [mailto:ciucanu@isima.fr](ciucanu@isima.fr)
+* [Radu Ciucanu](http://ws.isima.fr/~ciucanu/) (Université Clermont Auvergne) [ciucanu@isima.fr](mailto:ciucanu@isima.fr)
 
-* [http://ws.isima.fr/~mephu/](Engelbert Mephu Nguifo) (Université Clermont Auvergne) [mailto:mephu@isima.fr](mephu@isima.fr)
+* [Engelbert Mephu Nguifo](http://ws.isima.fr/~mephu/) (Université Clermont Auvergne) [mephu@isima.fr](mailto:mephu@isima.fr)
