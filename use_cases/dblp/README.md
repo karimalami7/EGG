@@ -1,17 +1,17 @@
 # DBLP Use Case
 
-All nodes are of type *author* and all edges are of type *coauthor* (connecting two authors).
+All nodes are of type *author* and all edge predicates are of type *coauthor* (connecting two authors).
 
 ```xml
-<predicates>
-	<size>1</size>
-	<alias symbol="0">coauthor</alias>
-</predicates>
 <types>
 	<size>1</size>
 	<alias type="0">author</alias>
 	<proportion type="0">1</proportion>
 </types>
+<predicates>
+	<size>1</size>
+	<alias symbol="0">coauthor</alias>
+</predicates>
 <schema>
 	<source type="0"> <!-- author -->
 		<target type="0" symbol="0" > <!-- co-author author -->
