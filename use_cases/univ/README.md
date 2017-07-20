@@ -87,9 +87,9 @@ For this example, we assume that a snapshot correspond to a semester. The **EGG*
 ```json
 "validity":{
 
-		"University":{"type":"node","init":{"T"},"succ":{"T":"T"}},
+		"Univ":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 		"Professor":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":"T","F":{"T":0.5,"F":0.5}}},
-		"Student":{"type":"node","init":{"T":0.5,"F":0.5},"succ":{"T":{"T"},"F":{"T":0.5,"F":0.5}},"max":{"T":6}},
+		"Student":{"type":"node","init":{"T":0.2,"F":0.8},"succ":{"T":"T","F":{"T":0.2,"F":0.8}},"max":{"T":6}},
 		"Course":{"type":"node","init":{"T"},"succ":{"T":"T"}},
 
 		"teaches_course":{"type":"edge","init":{"T":0.5,"F":0.5},"succ":{"T":{"T":0.5,"F":0.5},"F":{"T":0.5,"F":0.5}}},
