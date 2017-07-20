@@ -142,7 +142,7 @@ There are 3 evolution rules where the change of *qAir* depends on the change of 
 }
 ```
 
-The evolving property *availableRooms* of the node type *hotel* is discrete quantitative, with values in the interal [1,100]. 
+The evolving property *availableRooms* of the node type *hotel* is discrete quantitative, with values in the interval [1,100]. 
 It always changes between two consecutive snapshots, and it can increment or decrement by an integer up to 5 (drawn according to a binomial distribution centered in 0).
 
 ```json
@@ -236,7 +236,7 @@ Moreover, *hotelPrice* depends on *availableRooms* in the sense that these two p
 }
 ```
 
-The evolving property *trainPrice* of the edge prdicate *train* is continuous quantitative with values in the interval [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
+The evolving property *trainPrice* of the edge prdicate *train* is continuous quantitative with values in the interval [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset [-10,10] following a normal distribution centered in 0.
 
 ```json
 "trainPrice":
