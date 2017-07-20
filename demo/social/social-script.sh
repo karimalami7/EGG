@@ -15,4 +15,6 @@ mkdir -p "../social_output/byproperty"
 
 rm "../egg.log"
 
+rm "../social_output/social-output.trig"
+
 python "../../src/main.py" "social" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject

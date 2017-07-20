@@ -15,4 +15,6 @@ mkdir -p "../shop_output/byproperty"
 
 rm "../egg.log"
 
+rm "../shop_output/shop-output.trig"
+
 python "../../src/main.py" "shop" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject

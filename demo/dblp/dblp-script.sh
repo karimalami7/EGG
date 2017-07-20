@@ -15,4 +15,6 @@ mkdir -p "../dblp_output/byproperty"
 
 rm "../egg.log"
 
+rm "../dblp_output/dblp-output.trig"
+
 python "../../src/main.py" "dblp" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject

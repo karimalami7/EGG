@@ -15,4 +15,6 @@ mkdir -p "../trip_output/byproperty"
 
 rm "../egg.log"
 
+rm "../trip_output/trip-output.trig"
+
 python "../../src/main.py" "trip" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject

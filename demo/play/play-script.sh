@@ -15,4 +15,6 @@ mkdir -p "../play_output/byproperty"
 
 rm "../egg.log"
 
+rm "../play_output/play-output.trig"
+
 python "../../src/main.py" "play" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject

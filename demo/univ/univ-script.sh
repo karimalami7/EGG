@@ -15,4 +15,6 @@ mkdir -p "../univ_output/byproperty"
 
 rm "../egg.log"
 
+rm "../univ_output/univ-output.trig"
+
 python "../../src/main.py" "univ" --log   --vg-output --rdf-output --plot-byproperty --plot-byobject
