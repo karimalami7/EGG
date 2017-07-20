@@ -1,6 +1,6 @@
 # Trip Use Case
 
-The **trip** use case is useful for generating graphs simulating a geographical database, which stores information about cities and different facilities such as transportation and hotels. 
+The **Trip** use case is our running example, which generates graphs simulating a geographical database that stores information about cities and different facilities such as transportation and hotels. 
 
 For generating the static graph by gMark, we need to indicate size of the graph (number of nodes), node types, edge predicates, proportion of each node type, and distribution of the triple: *(source node type, edge predicate, target node type)*.
 
@@ -9,25 +9,18 @@ Moreover, we want an edge predicate *train* (that links a node *city* to an othe
 (that links a node *city* to a node *hotel*). 
 
 ```xml
-	<graph>
-		<nodes>50</nodes>
-	</graph>
-	<predicates>
-		<size>2</size>
-
-		<alias symbol="0">train</alias>
-		<alias symbol="1">contains</alias>
-
-	</predicates>
-	<types>
-		<size>2</size>
-		<alias type="0">city</alias>
-		<proportion type="0">0.1</proportion>
-
-		<alias type="1">hotel</alias>
-		<proportion type="1">0.9</proportion>
-
-	</types>
+<types>
+	<size>2</size>
+	<alias type="0">city</alias>
+	<proportion type="0">0.1</proportion>
+	<alias type="1">hotel</alias>
+	<proportion type="1">0.9</proportion>
+</types>
+<predicates>
+	<size>2</size>
+	<alias symbol="0">train</alias>
+	<alias symbol="1">contains</alias>
+</predicates>
 ```
 
 Then, we indicate degree distributions for each triple *(source node type, edge predicate, target node type)*.
