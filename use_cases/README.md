@@ -23,5 +23,5 @@ We were inspired by the LUBM benchmark, while focusing only on the classes susce
 More information about this use case in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/univ).
 
 * **shop**: stores the relation between offers and products in an online shop.
-We were inspired by the WatDiv benchmark, while focusing only on the classes susceptible to have evolving properties. 
-More information about this usecase in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/shop).
+We were inspired by the default use case of the WatDiv benchmark, while focusing only on the classes susceptible to have evolving properties. 
+More information about this use case in its dedicated [readme](https://github.com/karimalami7/EGG/tree/master/use_cases/shop).
