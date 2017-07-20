@@ -1,75 +1,63 @@
 # Univ Use Case
 
-The univ use case stores the relation between students, professors, courses, and universities. It consits of four node types (*student*, *professor*, *course*, *university*), and three edge types: *has_course* (connects a university to a course), *teaches_course* (connects a professor to a course) and *takes_course* (connects a student to a course).
+The Univ use case stores the relation between students, professors, courses, and universities. It consits of four node types (*student*, *professor*, *course*, *university*), and three edge types: *has_course* (connects a university to a course), *teaches_course* (connects a professor to a course) and *takes_course* (connects a student to a course).
 
 ```xml
 <types>
-		<size>4</size>
-
-		<alias type="0">Univ</alias>
-		<proportion type="0">0.05</proportion>
-
-		<alias type="1">Professor</alias>
-		<proportion type="1">0.15</proportion>
-
-		<alias type="2">Student</alias>
-		<proportion type="2">0.5</proportion>
-
-		<alias type="3">Course</alias>
-		<proportion type="3">0.30</proportion>
-
-	</types>
-
-	<predicates>
-		<size>3</size>
-
-		<alias symbol="0">has_course</alias>
-		<alias symbol="1">teaches_course</alias>
-		<alias symbol="2">takes_course</alias>
-
-	</predicates>
-
-	<schema>
-
-		<source type="0"> <!-- University -->
-			<target type="3" symbol="0" > <!-- has_course course -->
-				<outdistribution type="uniform">
-					<min>3</min>
-					<max>10</max>
-				</outdistribution>
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</indistribution>
-			</target>
-		</source>
-
-		<source type="1"> <!-- Professor -->
-			<target type="3" symbol="1"> <!-- teaches_course course -->
-				<outdistribution type="uniform">
-					<min>1</min>
-					<max>2</max>
-				</outdistribution>
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</indistribution>
-			</target>
-		</source>
-
-		<source type="2"> <!-- Student -->
-			<target type="3" symbol="2" > <!-- takes_course course -->
-				<outdistribution type="uniform">
-					<min>1</min>
-					<max>10</max>
-				</outdistribution>
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>10</max>
-				</indistribution>
-			</target>
-		</source>
-	</schema>
+	<size>4</size>
+	<alias type="0">Univ</alias>
+	<proportion type="0">0.05</proportion>
+	<alias type="1">Professor</alias>
+	<proportion type="1">0.15</proportion>
+	<alias type="2">Student</alias>
+	<proportion type="2">0.5</proportion>
+	<alias type="3">Course</alias>
+	<proportion type="3">0.30</proportion>
+</types>
+<predicates>
+	<size>3</size>
+	<alias symbol="0">has_course</alias>
+	<alias symbol="1">teaches_course</alias>
+	<alias symbol="2">takes_course</alias>
+</predicates>
+<schema>
+	<source type="0"> <!-- University -->
+		<target type="3" symbol="0" > <!-- has_course course -->
+			<outdistribution type="uniform">
+				<min>3</min>
+				<max>10</max>
+			</outdistribution>
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>1</max>
+			</indistribution>
+		</target>
+	</source>
+	<source type="1"> <!-- Professor -->
+		<target type="3" symbol="1"> <!-- teaches_course course -->
+			<outdistribution type="uniform">
+				<min>1</min>
+				<max>2</max>
+			</outdistribution>
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>1</max>
+			</indistribution>
+		</target>
+	</source>
+	<source type="2"> <!-- Student -->
+		<target type="3" symbol="2" > <!-- takes_course course -->
+			<outdistribution type="uniform">
+				<min>1</min>
+				<max>10</max>
+			</outdistribution>
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>10</max>
+			</indistribution>
+		</target>
+	</source>
+</schema>
 
 ```
 
@@ -80,7 +68,7 @@ For this example, we assume that a snapshot correspond to a semester. The **EGG*
 * Validity of node type *student*: at the beginning, each node has 20% probability to be valid. Once it becomes valid, it remains valid for six snapshots only (intuitively, a student is allowed to be in a university only for three years i.e., six semesters).
 * Validity of node type *course*: valid from the first snapshot to the last one.
 * Validity of edge type *has_course*: valid from the first snapshot to the last one (intuitively, a course is always linked to its university).
-* Validity of edge type *teaches_course*: at the beginning, each node has 50% probability to be valid; there is a probability of 50% to become valid after being invalid, and vice-versa
+* Validity of edge type *teaches_course*: at the beginning, each edge has 50% probability to be valid; there is a probability of 50% to become valid after being invalid, and vice-versa
 * Validity of edge type *takes_course*: similar to the validity of edge type *teaches_course*.
 
 
