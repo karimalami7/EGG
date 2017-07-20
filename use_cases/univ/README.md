@@ -77,7 +77,7 @@ For this example, we assume that a snapshot correspond to a semester. The **EGG*
 
 * Validity of node type *university*: valid from the first snapshot to the last one. 
 * Validity of node type *professor*: at the beginning, each node has 50% probability to be valid. Once it becomes valid, it remains until the last snapshot. 
-* Validity of node type *student*: at the beginning, each node has 50% probability to be valid. Once it becomes valid, it remains valid for six snapshots only (intuitively, a student is allowed to be in a university only for three years i.e., six semesters).
+* Validity of node type *student*: at the beginning, each node has 20% probability to be valid. Once it becomes valid, it remains valid for six snapshots only (intuitively, a student is allowed to be in a university only for three years i.e., six semesters).
 * Validity of node type *course*: valid from the first snapshot to the last one.
 * Validity of edge type *has_course*: valid from the first snapshot to the last one (intuitively, a course is always linked to its university).
 * Validity of edge type *teaches_course*: at the beginning, each node has 50% probability to be valid; there is a probability of 50% to become valid after being invalid, and vice-versa
