@@ -1,6 +1,6 @@
 # Scalability
 
-In order to evaluate the scalability of our generator, we have run EGG with several use cases and graphs of increasing sizes (in terms of both # of graph nodes and # of graph snapshots).
+In order to evaluate the scalability of our generator, we have run **EGG** with several use cases and graphs of increasing sizes (in terms of both # of graph nodes and # of graph snapshots).
 Details about our experimental findings are available on our [**EGG** scalability wiki](https://github.com/karimalami7/EGG/wiki/Scalability).
 We explain here how to reproduce these results and run further similar experiments.
 
