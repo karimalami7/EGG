@@ -113,7 +113,7 @@ def then_func(param1,param2):
 	#param1 rulee[then]
 	#param2 elementconfig 
 	if "change" in param1:
-		pass
+		param2['evolution']['succesors']=param1['change']['succesors']
 	if "sens" in param1:
 		if param1['sens']=='down':
 			param2['evolution']['offset']['max']=0
