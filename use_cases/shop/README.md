@@ -1,54 +1,49 @@
 # Shop Use Case
 
-The shop use case stores the relation between offers and products in an online shop. It consists of three node types (product, offer, country), and two edge types: offer_includes (links an offer to a product) and eligi_region (links an offer to a country).
+The Shop use case stores the relation between offers and products in an online shop. It consists of three node types (product, offer, country), and two edge types: offer_includes (links an offer to a product) and eligi_region (links an offer to a country).
 
 ```xml
 <types>
-		<size>3</size>
-
-		<alias type="0">Product</alias>
-		<proportion type="0">0.1</proportion>
-
-		<alias type="1">Offer</alias>
-		<proportion type="1">0.85</proportion>
-
-		<alias type="2">Country</alias>
-		<proportion type="2">0.05</proportion>
-	</types>
-
-	<predicates>
-		<size>2</size>
-		<alias symbol="0">offer_includes</alias>
-		<alias symbol="1">eligi_region</alias>
-	</predicates>
-
-	<schema>
-		<source type="1"> <!-- Offer -->
-			<target type="0" symbol="0" multiplicity="1"> <!-- Product -->
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</indistribution>
-				<outdistribution type="uniform">
-					<min>1</min>
-					<max>10</max>
-				</outdistribution>
-			</target>
-			<target type="2" symbol="1" multiplicity="*"> <!-- Country -->
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>15</max>
-				</indistribution>
-				<outdistribution type="uniform">
-					<min>1</min>
-					<max>2</max>
-				</outdistribution>
-			</target>
-		</source>
-	</schema>
+	<size>3</size>
+	<alias type="0">Product</alias>
+	<proportion type="0">0.1</proportion>
+	<alias type="1">Offer</alias>
+	<proportion type="1">0.85</proportion>
+	<alias type="2">Country</alias>
+	<proportion type="2">0.05</proportion>
+</types>
+<predicates>
+	<size>2</size>
+	<alias symbol="0">offer_includes</alias>
+	<alias symbol="1">eligi_region</alias>
+</predicates>
+<schema>
+	<source type="1"> <!-- Offer -->
+		<target type="0" symbol="0" multiplicity="1"> <!-- Product -->
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>1</max>
+			</indistribution>
+			<outdistribution type="uniform">
+				<min>1</min>
+				<max>10</max>
+			</outdistribution>
+		</target>
+		<target type="2" symbol="1" multiplicity="*"> <!-- Country -->
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>15</max>
+			</indistribution>
+			<outdistribution type="uniform">
+				<min>1</min>
+				<max>2</max>
+			</outdistribution>
+		</target>
+	</source>
+</schema>
 ```
 
-In this use case, we assume that a snapshot corresponds to a month. The EGG evolving properties are as follows:
+In this use case, we assume that a snapshot corresponds to a month. The **EGG** evolving properties are as follows:
 
 * Validity of node type *product*: at the beginning, a node *product* has 50% probability to be valid. When a node *product* becomes valid, it remains valid for 10 snapshots, and then becomes invalid until the last snapshot.
 * Validity of node type *offer*: similarly to the validity of node type *product*, except that there is no limit in the number of snapshots where it is valid.
