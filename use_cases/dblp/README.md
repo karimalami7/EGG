@@ -3,35 +3,29 @@
 All nodes are of type *author* and all edges are of type *coauthor* (connecting two authors).
 
 ```xml
-<graph>
-		<nodes>50</nodes>
-	</graph>
-	<predicates>
-		<size>1</size>
-
-		<alias symbol="0">coauthor</alias>
-
-	</predicates>
-	<types>
-		<size>1</size>
-		<alias type="0">author</alias>
-		<proportion type="0">1</proportion>
-
-	</types>
-	<schema>
-		<source type="0"> <!-- author -->
-			<target type="0" symbol="0" > <!-- co-author author -->
-				<indistribution type="gaussian">
-					<mu>3</mu>
-					<sigma>1</sigma>
-				</indistribution>	
-				<outdistribution type="uniform">
-					<min>0</min>
-					<max>6</max>
-				</outdistribution>
-			</target>
-		</source>
-	</schema>
+<predicates>
+	<size>1</size>
+	<alias symbol="0">coauthor</alias>
+</predicates>
+<types>
+	<size>1</size>
+	<alias type="0">author</alias>
+	<proportion type="0">1</proportion>
+</types>
+<schema>
+	<source type="0"> <!-- author -->
+		<target type="0" symbol="0" > <!-- co-author author -->
+			<indistribution type="gaussian">
+				<mu>3</mu>
+				<sigma>1</sigma>
+			</indistribution>	
+			<outdistribution type="uniform">
+				<min>0</min>
+				<max>6</max>
+			</outdistribution>
+		</target>
+	</source>
+</schema>
 ```
 
 In this use case, we assume that a snapshot corresponds to a year.
