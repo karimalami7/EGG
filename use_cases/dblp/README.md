@@ -1,4 +1,4 @@
-# DBLP use-case
+# DBLP Use Case
 
 All nodes are of type *author* and all edges are of type *coauthor* (connecting two authors).
 
