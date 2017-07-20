@@ -9,8 +9,8 @@ var data = google.visualization.arrayToDataTable([
 ['Node type', 'Number of nodes'], 
 ['Univ', 5],
 ['Professor', 15],
-['Student', 44],
-['Course', 36],
+['Student', 50],
+['Course', 30],
 ]);
 var options = {
 vAxis: { logScale: true, baseline: 1 },
@@ -22,8 +22,8 @@ var data = google.visualization.arrayToDataTable([
 ['Node type', 'Number of nodes'], 
 ['Univ', 5],
 ['Professor', 15],
-['Student', 44],
-['Course', 36],
+['Student', 50],
+['Course', 30],
 ]);
 var options = {
 vAxis: { logScale: true, baseline: 1 },
@@ -45,9 +45,9 @@ var chart = new google.visualization.ColumnChart(document.getElementById('hist21
 chart.draw(data, options);
 var data = google.visualization.arrayToDataTable([
 ['Predicate type', 'Number of predicates'], 
-['has_course', 29],
-['teaches_course', 21],
-['takes_course', 199],
+['has_course', 30],
+['teaches_course', 23],
+['takes_course', 132],
 ]);
 var options = {
 vAxis: { logScale: true, baseline: 1 },
@@ -59,7 +59,7 @@ chart.draw(data, options);
 </script></head>
 <body>
 <table border="1">
-<tr><td>Size</td><td width="600">100 nodes</td><td width="600">100 nodes (249 edges)</td></tr>
+<tr><td>Size</td><td width="600">100 nodes</td><td width="600">100 nodes (185 edges)</td></tr>
 <tr><td>Execution time</td><td></td><td>0 seconds</td></tr>
 <tr><td></td><td><div id="hist11"/></td><td><div id="hist12"/></td></tr>
 <tr><td></td><td><div id="hist21"/></td><td><div id="hist22"/></td></tr>

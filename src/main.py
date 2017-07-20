@@ -444,10 +444,10 @@ logging.info ("Ti end")
 ##########################
 # memory usage at the end 
 ##########################
-print os.getpid()
-p = psutil.Process(os.getpid())
+#print os.getpid()
+#p = psutil.Process(os.getpid())
 
-print p.memory_info()
+#print p.memory_info()
 
 
 

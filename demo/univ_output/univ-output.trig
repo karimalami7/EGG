@@ -2713,3 +2713,3890 @@ ns1:snap6 {
             <Course:98> .
 }
 
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snapshot5 {
+    <Professor:10> ns2:teaches_course <Course:83> .
+
+    <Professor:12> ns2:teaches_course <Course:91> .
+
+    <Professor:13> ns2:teaches_course <Course:71>,
+            <Course:78> .
+
+    <Professor:15> ns2:teaches_course <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:97> .
+
+    <Professor:17> ns2:teaches_course <Course:86>,
+            <Course:94> .
+
+    <Professor:19> ns2:teaches_course <Course:81> .
+
+    <Professor:5> ns2:teaches_course <Course:82>,
+            <Course:90> .
+
+    <Professor:6> ns2:teaches_course <Course:80> .
+
+    <Professor:9> ns2:teaches_course <Course:92> .
+
+    <Student:31> ns2:takes_course <Course:88>,
+            <Course:91> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:62> ns2:takes_course <Course:71>,
+            <Course:83>,
+            <Course:88>,
+            <Course:95>,
+            <Course:97>,
+            <Course:99> .
+
+    <Student:63> ns2:takes_course <Course:70>,
+            <Course:83>,
+            <Course:96> .
+
+    <Student:65> ns2:takes_course <Course:78>,
+            <Course:96> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot4 {
+    <Professor:10> ns2:teaches_course <Course:83> .
+
+    <Professor:13> ns2:teaches_course <Course:78> .
+
+    <Professor:16> ns2:teaches_course <Course:96>,
+            <Course:97> .
+
+    <Professor:17> ns2:teaches_course <Course:86> .
+
+    <Professor:18> ns2:teaches_course <Course:89> .
+
+    <Professor:5> ns2:teaches_course <Course:82> .
+
+    <Professor:9> ns2:teaches_course <Course:92> .
+
+    <Student:21> ns2:takes_course <Course:95> .
+
+    <Student:22> ns2:takes_course <Course:78>,
+            <Course:89> .
+
+    <Student:31> ns2:takes_course <Course:88>,
+            <Course:91>,
+            <Course:92> .
+
+    <Student:35> ns2:takes_course <Course:80>,
+            <Course:92>,
+            <Course:98> .
+
+    <Student:38> ns2:takes_course <Course:76>,
+            <Course:77>,
+            <Course:86> .
+
+    <Student:43> ns2:takes_course <Course:77>,
+            <Course:78>,
+            <Course:84>,
+            <Course:88>,
+            <Course:93> .
+
+    <Student:46> ns2:takes_course <Course:77> .
+
+    <Student:54> ns2:takes_course <Course:74> .
+
+    <Student:62> ns2:takes_course <Course:97> .
+
+    <Student:63> ns2:takes_course <Course:70>,
+            <Course:71>,
+            <Course:77>,
+            <Course:96> .
+
+    <Student:65> ns2:takes_course <Course:96> .
+
+    <Student:68> ns2:takes_course <Course:92> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot7 {
+    <Professor:10> ns2:teaches_course <Course:73> .
+
+    <Professor:13> ns2:teaches_course <Course:78> .
+
+    <Professor:16> ns2:teaches_course <Course:96> .
+
+    <Professor:17> ns2:teaches_course <Course:86>,
+            <Course:94> .
+
+    <Professor:18> ns2:teaches_course <Course:89> .
+
+    <Professor:5> ns2:teaches_course <Course:82>,
+            <Course:90> .
+
+    <Professor:8> ns2:teaches_course <Course:77> .
+
+    <Professor:9> ns2:teaches_course <Course:92>,
+            <Course:93> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot6 {
+    <Professor:10> ns2:teaches_course <Course:73> .
+
+    <Professor:11> ns2:teaches_course <Course:84> .
+
+    <Professor:13> ns2:teaches_course <Course:71>,
+            <Course:78> .
+
+    <Professor:15> ns2:teaches_course <Course:76>,
+            <Course:95> .
+
+    <Professor:16> ns2:teaches_course <Course:97> .
+
+    <Professor:17> ns2:teaches_course <Course:86>,
+            <Course:94> .
+
+    <Professor:5> ns2:teaches_course <Course:90> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:7> ns2:teaches_course <Course:99> .
+
+    <Professor:9> ns2:teaches_course <Course:92>,
+            <Course:93> .
+
+    <Student:31> ns2:takes_course <Course:88>,
+            <Course:91>,
+            <Course:92> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot1 {
+    <Professor:10> ns2:teaches_course <Course:73> .
+
+    <Professor:13> ns2:teaches_course <Course:71> .
+
+    <Professor:15> ns2:teaches_course <Course:95> .
+
+    <Professor:17> ns2:teaches_course <Course:94> .
+
+    <Professor:19> ns2:teaches_course <Course:81> .
+
+    <Professor:5> ns2:teaches_course <Course:90> .
+
+    <Professor:6> ns2:teaches_course <Course:80> .
+
+    <Professor:7> ns2:teaches_course <Course:99> .
+
+    <Professor:9> ns2:teaches_course <Course:92>,
+            <Course:93> .
+
+    <Student:20> ns2:takes_course <Course:84> .
+
+    <Student:23> ns2:takes_course <Course:77>,
+            <Course:78>,
+            <Course:92> .
+
+    <Student:24> ns2:takes_course <Course:80> .
+
+    <Student:28> ns2:takes_course <Course:79>,
+            <Course:85>,
+            <Course:95> .
+
+    <Student:33> ns2:takes_course <Course:78> .
+
+    <Student:34> ns2:takes_course <Course:95> .
+
+    <Student:37> ns2:takes_course <Course:72>,
+            <Course:83> .
+
+    <Student:39> ns2:takes_course <Course:81>,
+            <Course:92> .
+
+    <Student:41> ns2:takes_course <Course:81>,
+            <Course:95> .
+
+    <Student:42> ns2:takes_course <Course:77>,
+            <Course:85> .
+
+    <Student:44> ns2:takes_course <Course:99> .
+
+    <Student:45> ns2:takes_course <Course:73>,
+            <Course:80>,
+            <Course:88>,
+            <Course:93> .
+
+    <Student:47> ns2:takes_course <Course:80> .
+
+    <Student:49> ns2:takes_course <Course:75>,
+            <Course:99> .
+
+    <Student:53> ns2:takes_course <Course:92>,
+            <Course:95> .
+
+    <Student:56> ns2:takes_course <Course:87>,
+            <Course:89> .
+
+    <Student:58> ns2:takes_course <Course:72>,
+            <Course:84>,
+            <Course:90> .
+
+    <Student:59> ns2:takes_course <Course:81> .
+
+    <Student:61> ns2:takes_course <Course:93> .
+
+    <Student:64> ns2:takes_course <Course:91> .
+
+    <Student:66> ns2:takes_course <Course:70>,
+            <Course:82> .
+
+    <Student:69> ns2:takes_course <Course:72>,
+            <Course:75>,
+            <Course:84> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot0 {
+    <Professor:15> ns2:teaches_course <Course:95> .
+
+    <Professor:17> ns2:teaches_course <Course:94> .
+
+    <Professor:9> ns2:teaches_course <Course:92> .
+
+    <Student:25> ns2:takes_course <Course:77> .
+
+    <Student:28> ns2:takes_course <Course:72>,
+            <Course:79>,
+            <Course:95> .
+
+    <Student:30> ns2:takes_course <Course:80>,
+            <Course:89> .
+
+    <Student:34> ns2:takes_course <Course:93> .
+
+    <Student:39> ns2:takes_course <Course:81>,
+            <Course:92>,
+            <Course:95> .
+
+    <Student:41> ns2:takes_course <Course:80>,
+            <Course:83> .
+
+    <Student:42> ns2:takes_course <Course:77> .
+
+    <Student:45> ns2:takes_course <Course:80>,
+            <Course:92>,
+            <Course:93>,
+            <Course:97> .
+
+    <Student:47> ns2:takes_course <Course:80>,
+            <Course:86> .
+
+    <Student:53> ns2:takes_course <Course:95>,
+            <Course:98> .
+
+    <Student:56> ns2:takes_course <Course:81>,
+            <Course:87>,
+            <Course:94> .
+
+    <Student:60> ns2:takes_course <Course:88> .
+
+    <Student:66> ns2:takes_course <Course:82> .
+
+    <Student:67> ns2:takes_course <Course:84>,
+            <Course:88> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot3 {
+    <Professor:10> ns2:teaches_course <Course:73> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:71>,
+            <Course:78> .
+
+    <Professor:16> ns2:teaches_course <Course:96> .
+
+    <Professor:17> ns2:teaches_course <Course:94> .
+
+    <Professor:18> ns2:teaches_course <Course:89> .
+
+    <Professor:19> ns2:teaches_course <Course:81> .
+
+    <Professor:5> ns2:teaches_course <Course:82> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Student:20> ns2:takes_course <Course:81>,
+            <Course:84>,
+            <Course:85> .
+
+    <Student:21> ns2:takes_course <Course:95> .
+
+    <Student:22> ns2:takes_course <Course:80> .
+
+    <Student:23> ns2:takes_course <Course:78> .
+
+    <Student:24> ns2:takes_course <Course:72> .
+
+    <Student:27> ns2:takes_course <Course:95>,
+            <Course:97>,
+            <Course:98> .
+
+    <Student:33> ns2:takes_course <Course:78> .
+
+    <Student:35> ns2:takes_course <Course:92>,
+            <Course:98> .
+
+    <Student:36> ns2:takes_course <Course:78>,
+            <Course:86> .
+
+    <Student:38> ns2:takes_course <Course:77>,
+            <Course:86> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:43> ns2:takes_course <Course:75>,
+            <Course:77>,
+            <Course:78>,
+            <Course:84> .
+
+    <Student:44> ns2:takes_course <Course:99> .
+
+    <Student:46> ns2:takes_course <Course:77> .
+
+    <Student:49> ns2:takes_course <Course:75>,
+            <Course:83>,
+            <Course:98>,
+            <Course:99> .
+
+    <Student:54> ns2:takes_course <Course:74>,
+            <Course:97>,
+            <Course:99> .
+
+    <Student:58> ns2:takes_course <Course:72>,
+            <Course:84> .
+
+    <Student:62> ns2:takes_course <Course:71>,
+            <Course:88>,
+            <Course:99> .
+
+    <Student:63> ns2:takes_course <Course:70>,
+            <Course:83>,
+            <Course:96> .
+
+    <Student:64> ns2:takes_course <Course:91> .
+
+    <Student:65> ns2:takes_course <Course:96> .
+
+    <Student:68> ns2:takes_course <Course:92> .
+
+    <Student:69> ns2:takes_course <Course:75>,
+            <Course:84> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot2 {
+    <Professor:10> ns2:teaches_course <Course:83> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:71>,
+            <Course:78> .
+
+    <Professor:15> ns2:teaches_course <Course:76> .
+
+    <Professor:19> ns2:teaches_course <Course:81> .
+
+    <Professor:5> ns2:teaches_course <Course:82> .
+
+    <Professor:6> ns2:teaches_course <Course:80> .
+
+    <Student:20> ns2:takes_course <Course:81>,
+            <Course:84>,
+            <Course:93> .
+
+    <Student:21> ns2:takes_course <Course:86>,
+            <Course:95> .
+
+    <Student:22> ns2:takes_course <Course:89>,
+            <Course:95> .
+
+    <Student:23> ns2:takes_course <Course:77>,
+            <Course:78>,
+            <Course:92> .
+
+    <Student:24> ns2:takes_course <Course:72>,
+            <Course:94> .
+
+    <Student:25> ns2:takes_course <Course:77>,
+            <Course:93> .
+
+    <Student:27> ns2:takes_course <Course:98> .
+
+    <Student:28> ns2:takes_course <Course:72>,
+            <Course:79> .
+
+    <Student:30> ns2:takes_course <Course:80>,
+            <Course:89> .
+
+    <Student:32> ns2:takes_course <Course:77>,
+            <Course:79> .
+
+    <Student:34> ns2:takes_course <Course:93>,
+            <Course:95> .
+
+    <Student:35> ns2:takes_course <Course:77> .
+
+    <Student:36> ns2:takes_course <Course:78>,
+            <Course:86> .
+
+    <Student:37> ns2:takes_course <Course:72>,
+            <Course:83> .
+
+    <Student:38> ns2:takes_course <Course:77> .
+
+    <Student:39> ns2:takes_course <Course:95> .
+
+    <Student:41> ns2:takes_course <Course:81> .
+
+    <Student:42> ns2:takes_course <Course:77> .
+
+    <Student:43> ns2:takes_course <Course:75>,
+            <Course:78>,
+            <Course:84>,
+            <Course:88>,
+            <Course:97> .
+
+    <Student:44> ns2:takes_course <Course:99> .
+
+    <Student:45> ns2:takes_course <Course:80>,
+            <Course:88>,
+            <Course:92>,
+            <Course:97>,
+            <Course:98> .
+
+    <Student:47> ns2:takes_course <Course:82> .
+
+    <Student:49> ns2:takes_course <Course:75>,
+            <Course:98> .
+
+    <Student:52> ns2:takes_course <Course:98> .
+
+    <Student:53> ns2:takes_course <Course:92> .
+
+    <Student:54> ns2:takes_course <Course:85>,
+            <Course:99> .
+
+    <Student:56> ns2:takes_course <Course:81>,
+            <Course:89> .
+
+    <Student:58> ns2:takes_course <Course:72>,
+            <Course:90> .
+
+    <Student:64> ns2:takes_course <Course:91> .
+
+    <Student:66> ns2:takes_course <Course:70>,
+            <Course:82> .
+
+    <Student:67> ns2:takes_course <Course:84>,
+            <Course:88>,
+            <Course:97> .
+
+    <Student:68> ns2:takes_course <Course:92> .
+
+    <Student:69> ns2:takes_course <Course:72> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot9 {
+    <Professor:10> ns2:teaches_course <Course:73> .
+
+    <Professor:11> ns2:teaches_course <Course:84> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:78> .
+
+    <Professor:14> ns2:teaches_course <Course:88> .
+
+    <Professor:15> ns2:teaches_course <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:96>,
+            <Course:97> .
+
+    <Professor:17> ns2:teaches_course <Course:94> .
+
+    <Professor:18> ns2:teaches_course <Course:89> .
+
+    <Professor:19> ns2:teaches_course <Course:81> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:7> ns2:teaches_course <Course:99> .
+
+    <Professor:9> ns2:teaches_course <Course:92>,
+            <Course:93> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+ns1:snapshot8 {
+    <Professor:10> ns2:teaches_course <Course:73>,
+            <Course:83> .
+
+    <Professor:11> ns2:teaches_course <Course:84> .
+
+    <Professor:12> ns2:teaches_course <Course:72>,
+            <Course:91> .
+
+    <Professor:13> ns2:teaches_course <Course:71>,
+            <Course:78> .
+
+    <Professor:14> ns2:teaches_course <Course:87>,
+            <Course:88> .
+
+    <Professor:15> ns2:teaches_course <Course:76>,
+            <Course:95> .
+
+    <Professor:16> ns2:teaches_course <Course:96>,
+            <Course:97> .
+
+    <Professor:17> ns2:teaches_course <Course:86>,
+            <Course:94> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:80> .
+
+    <Professor:7> ns2:teaches_course <Course:99> .
+
+    <Professor:9> ns2:teaches_course <Course:92>,
+            <Course:93> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:80>,
+            <Course:81>,
+            <Course:84> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:76>,
+            <Course:77>,
+            <Course:85>,
+            <Course:86>,
+            <Course:87>,
+            <Course:92>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:2> ns2:has_course <Course:75>,
+            <Course:89>,
+            <Course:90>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96>,
+            <Course:97> .
+
+    <Univ:3> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:74>,
+            <Course:82>,
+            <Course:83>,
+            <Course:88>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:78>,
+            <Course:79>,
+            <Course:94> .
+}
+
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snapshot5 {
+    <Professor:10> ns2:teaches_course <Course:93> .
+
+    <Professor:11> ns2:teaches_course <Course:94>,
+            <Course:99> .
+
+    <Professor:13> ns2:teaches_course <Course:76>,
+            <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:86> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Student:20> ns2:takes_course <Course:94>,
+            <Course:99> .
+
+    <Student:24> ns2:takes_course <Course:71>,
+            <Course:79>,
+            <Course:82>,
+            <Course:92> .
+
+    <Student:26> ns2:takes_course <Course:73>,
+            <Course:79>,
+            <Course:93>,
+            <Course:94>,
+            <Course:97> .
+
+    <Student:27> ns2:takes_course <Course:75>,
+            <Course:93> .
+
+    <Student:29> ns2:takes_course <Course:79>,
+            <Course:84> .
+
+    <Student:30> ns2:takes_course <Course:82> .
+
+    <Student:32> ns2:takes_course <Course:82>,
+            <Course:83> .
+
+    <Student:38> ns2:takes_course <Course:85> .
+
+    <Student:40> ns2:takes_course <Course:81>,
+            <Course:99> .
+
+    <Student:49> ns2:takes_course <Course:88> .
+
+    <Student:59> ns2:takes_course <Course:70>,
+            <Course:94> .
+
+    <Student:63> ns2:takes_course <Course:78>,
+            <Course:88>,
+            <Course:94>,
+            <Course:97> .
+
+    <Student:67> ns2:takes_course <Course:85>,
+            <Course:97> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot4 {
+    <Professor:10> ns2:teaches_course <Course:93> .
+
+    <Professor:16> ns2:teaches_course <Course:83> .
+
+    <Professor:18> ns2:teaches_course <Course:92> .
+
+    <Professor:19> ns2:teaches_course <Course:96> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Professor:9> ns2:teaches_course <Course:82> .
+
+    <Student:20> ns2:takes_course <Course:84>,
+            <Course:94>,
+            <Course:99> .
+
+    <Student:21> ns2:takes_course <Course:75>,
+            <Course:95> .
+
+    <Student:24> ns2:takes_course <Course:71>,
+            <Course:80>,
+            <Course:87>,
+            <Course:92> .
+
+    <Student:25> ns2:takes_course <Course:96> .
+
+    <Student:26> ns2:takes_course <Course:73>,
+            <Course:79>,
+            <Course:97> .
+
+    <Student:28> ns2:takes_course <Course:84> .
+
+    <Student:29> ns2:takes_course <Course:79>,
+            <Course:84> .
+
+    <Student:36> ns2:takes_course <Course:72> .
+
+    <Student:38> ns2:takes_course <Course:81>,
+            <Course:83> .
+
+    <Student:40> ns2:takes_course <Course:80>,
+            <Course:81>,
+            <Course:99> .
+
+    <Student:41> ns2:takes_course <Course:89> .
+
+    <Student:44> ns2:takes_course <Course:72>,
+            <Course:78>,
+            <Course:87> .
+
+    <Student:50> ns2:takes_course <Course:70> .
+
+    <Student:59> ns2:takes_course <Course:70>,
+            <Course:94> .
+
+    <Student:62> ns2:takes_course <Course:75> .
+
+    <Student:65> ns2:takes_course <Course:71> .
+
+    <Student:67> ns2:takes_course <Course:85>,
+            <Course:97> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot7 {
+    <Professor:10> ns2:teaches_course <Course:91> .
+
+    <Professor:11> ns2:teaches_course <Course:94> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:76>,
+            <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:17> ns2:teaches_course <Course:80>,
+            <Course:84> .
+
+    <Professor:18> ns2:teaches_course <Course:75>,
+            <Course:92> .
+
+    <Professor:19> ns2:teaches_course <Course:96> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:77> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Professor:9> ns2:teaches_course <Course:79>,
+            <Course:82> .
+
+    <Student:27> ns2:takes_course <Course:84>,
+            <Course:86> .
+
+    <Student:49> ns2:takes_course <Course:81>,
+            <Course:88>,
+            <Course:98> .
+
+    <Student:53> ns2:takes_course <Course:83>,
+            <Course:84> .
+
+    <Student:54> ns2:takes_course <Course:70>,
+            <Course:91> .
+
+    <Student:55> ns2:takes_course <Course:91>,
+            <Course:93> .
+
+    <Student:63> ns2:takes_course <Course:79>,
+            <Course:94>,
+            <Course:96>,
+            <Course:99> .
+
+    <Student:66> ns2:takes_course <Course:82>,
+            <Course:85>,
+            <Course:91>,
+            <Course:94> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot6 {
+    <Professor:10> ns2:teaches_course <Course:91> .
+
+    <Professor:11> ns2:teaches_course <Course:94> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:14> ns2:teaches_course <Course:86> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:16> ns2:teaches_course <Course:83> .
+
+    <Professor:17> ns2:teaches_course <Course:80>,
+            <Course:84> .
+
+    <Professor:18> ns2:teaches_course <Course:75>,
+            <Course:92> .
+
+    <Professor:19> ns2:teaches_course <Course:96> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:77> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Student:27> ns2:takes_course <Course:75>,
+            <Course:86>,
+            <Course:93> .
+
+    <Student:29> ns2:takes_course <Course:84>,
+            <Course:92> .
+
+    <Student:32> ns2:takes_course <Course:83> .
+
+    <Student:41> ns2:takes_course <Course:89> .
+
+    <Student:49> ns2:takes_course <Course:81> .
+
+    <Student:67> ns2:takes_course <Course:70>,
+            <Course:85> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot1 {
+    <Professor:11> ns2:teaches_course <Course:94> .
+
+    <Professor:14> ns2:teaches_course <Course:74>,
+            <Course:86> .
+
+    <Professor:18> ns2:teaches_course <Course:75> .
+
+    <Professor:5> ns2:teaches_course <Course:71> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:9> ns2:teaches_course <Course:79> .
+
+    <Student:23> ns2:takes_course <Course:70>,
+            <Course:97> .
+
+    <Student:31> ns2:takes_course <Course:71>,
+            <Course:94>,
+            <Course:99> .
+
+    <Student:34> ns2:takes_course <Course:75>,
+            <Course:79>,
+            <Course:81> .
+
+    <Student:45> ns2:takes_course <Course:72>,
+            <Course:75>,
+            <Course:98> .
+
+    <Student:46> ns2:takes_course <Course:94> .
+
+    <Student:47> ns2:takes_course <Course:74>,
+            <Course:78> .
+
+    <Student:48> ns2:takes_course <Course:97> .
+
+    <Student:52> ns2:takes_course <Course:78> .
+
+    <Student:57> ns2:takes_course <Course:82> .
+
+    <Student:60> ns2:takes_course <Course:74>,
+            <Course:84> .
+
+    <Student:64> ns2:takes_course <Course:77>,
+            <Course:79>,
+            <Course:91> .
+
+    <Student:68> ns2:takes_course <Course:72> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot0 {
+    <Professor:13> ns2:teaches_course <Course:90> .
+
+    <Professor:19> ns2:teaches_course <Course:96> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:77> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Student:31> ns2:takes_course <Course:71> .
+
+    <Student:43> ns2:takes_course <Course:92> .
+
+    <Student:45> ns2:takes_course <Course:72>,
+            <Course:75>,
+            <Course:83> .
+
+    <Student:46> ns2:takes_course <Course:83>,
+            <Course:94>,
+            <Course:98> .
+
+    <Student:48> ns2:takes_course <Course:97> .
+
+    <Student:61> ns2:takes_course <Course:83>,
+            <Course:85>,
+            <Course:86>,
+            <Course:93> .
+
+    <Student:68> ns2:takes_course <Course:72> .
+
+    <Student:69> ns2:takes_course <Course:70>,
+            <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot3 {
+    <Professor:10> ns2:teaches_course <Course:91> .
+
+    <Professor:11> ns2:teaches_course <Course:94>,
+            <Course:99> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:18> ns2:teaches_course <Course:92> .
+
+    <Professor:9> ns2:teaches_course <Course:79>,
+            <Course:82> .
+
+    <Student:21> ns2:takes_course <Course:95> .
+
+    <Student:23> ns2:takes_course <Course:70> .
+
+    <Student:24> ns2:takes_course <Course:80>,
+            <Course:82>,
+            <Course:87>,
+            <Course:92> .
+
+    <Student:25> ns2:takes_course <Course:78>,
+            <Course:96> .
+
+    <Student:28> ns2:takes_course <Course:84>,
+            <Course:97> .
+
+    <Student:30> ns2:takes_course <Course:82> .
+
+    <Student:34> ns2:takes_course <Course:75>,
+            <Course:79>,
+            <Course:81>,
+            <Course:83>,
+            <Course:93> .
+
+    <Student:36> ns2:takes_course <Course:72> .
+
+    <Student:38> ns2:takes_course <Course:85> .
+
+    <Student:40> ns2:takes_course <Course:72>,
+            <Course:76>,
+            <Course:80> .
+
+    <Student:44> ns2:takes_course <Course:86>,
+            <Course:87> .
+
+    <Student:50> ns2:takes_course <Course:70>,
+            <Course:86> .
+
+    <Student:57> ns2:takes_course <Course:82> .
+
+    <Student:59> ns2:takes_course <Course:70>,
+            <Course:94> .
+
+    <Student:60> ns2:takes_course <Course:86>,
+            <Course:90> .
+
+    <Student:62> ns2:takes_course <Course:81>,
+            <Course:84>,
+            <Course:97>,
+            <Course:99> .
+
+    <Student:64> ns2:takes_course <Course:79> .
+
+    <Student:65> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot2 {
+    <Professor:10> ns2:teaches_course <Course:93> .
+
+    <Professor:11> ns2:teaches_course <Course:99> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:16> ns2:teaches_course <Course:83> .
+
+    <Professor:18> ns2:teaches_course <Course:75>,
+            <Course:92> .
+
+    <Professor:19> ns2:teaches_course <Course:96> .
+
+    <Professor:5> ns2:teaches_course <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Professor:9> ns2:teaches_course <Course:79> .
+
+    <Student:21> ns2:takes_course <Course:75> .
+
+    <Student:23> ns2:takes_course <Course:97> .
+
+    <Student:25> ns2:takes_course <Course:78> .
+
+    <Student:31> ns2:takes_course <Course:94> .
+
+    <Student:34> ns2:takes_course <Course:75>,
+            <Course:81>,
+            <Course:93> .
+
+    <Student:44> ns2:takes_course <Course:78>,
+            <Course:87> .
+
+    <Student:45> ns2:takes_course <Course:83>,
+            <Course:89>,
+            <Course:96>,
+            <Course:98> .
+
+    <Student:46> ns2:takes_course <Course:83>,
+            <Course:94>,
+            <Course:98> .
+
+    <Student:48> ns2:takes_course <Course:86> .
+
+    <Student:50> ns2:takes_course <Course:70>,
+            <Course:86> .
+
+    <Student:52> ns2:takes_course <Course:82> .
+
+    <Student:60> ns2:takes_course <Course:84> .
+
+    <Student:61> ns2:takes_course <Course:85>,
+            <Course:93> .
+
+    <Student:62> ns2:takes_course <Course:75>,
+            <Course:84>,
+            <Course:97> .
+
+    <Student:64> ns2:takes_course <Course:91>,
+            <Course:97> .
+
+    <Student:68> ns2:takes_course <Course:72> .
+
+    <Student:69> ns2:takes_course <Course:97> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot9 {
+    <Professor:10> ns2:teaches_course <Course:91> .
+
+    <Professor:11> ns2:teaches_course <Course:94>,
+            <Course:99> .
+
+    <Professor:12> ns2:teaches_course <Course:72> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:18> ns2:teaches_course <Course:75> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Professor:8> ns2:teaches_course <Course:81> .
+
+    <Student:53> ns2:takes_course <Course:72>,
+            <Course:78>,
+            <Course:83>,
+            <Course:84> .
+
+    <Student:54> ns2:takes_course <Course:83>,
+            <Course:91> .
+
+    <Student:55> ns2:takes_course <Course:91>,
+            <Course:93> .
+
+    <Student:56> ns2:takes_course <Course:89>,
+            <Course:93> .
+
+    <Student:58> ns2:takes_course <Course:81> .
+
+    <Student:66> ns2:takes_course <Course:90>,
+            <Course:91>,
+            <Course:94> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+ns1:snapshot8 {
+    <Professor:10> ns2:teaches_course <Course:93> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:16> ns2:teaches_course <Course:83> .
+
+    <Professor:17> ns2:teaches_course <Course:80> .
+
+    <Professor:18> ns2:teaches_course <Course:75> .
+
+    <Professor:5> ns2:teaches_course <Course:71> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Professor:9> ns2:teaches_course <Course:79>,
+            <Course:82> .
+
+    <Student:53> ns2:takes_course <Course:72>,
+            <Course:83> .
+
+    <Student:54> ns2:takes_course <Course:70>,
+            <Course:91> .
+
+    <Student:55> ns2:takes_course <Course:91>,
+            <Course:93> .
+
+    <Student:56> ns2:takes_course <Course:89> .
+
+    <Student:58> ns2:takes_course <Course:81> .
+
+    <Student:66> ns2:takes_course <Course:82>,
+            <Course:85>,
+            <Course:90>,
+            <Course:91>,
+            <Course:94> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:76>,
+            <Course:85>,
+            <Course:88>,
+            <Course:90>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:72>,
+            <Course:75>,
+            <Course:78>,
+            <Course:79>,
+            <Course:80>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:3> ns2:has_course <Course:71>,
+            <Course:87>,
+            <Course:93>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:81>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+}
+
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snapshot5 {
+    <Professor:10> ns2:teaches_course <Course:88> .
+
+    <Professor:11> ns2:teaches_course <Course:71> .
+
+    <Professor:12> ns2:teaches_course <Course:77>,
+            <Course:94> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:17> ns2:teaches_course <Course:75> .
+
+    <Professor:18> ns2:teaches_course <Course:91>,
+            <Course:97> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:78>,
+            <Course:81> .
+
+    <Student:20> ns2:takes_course <Course:94> .
+
+    <Student:23> ns2:takes_course <Course:71>,
+            <Course:85> .
+
+    <Student:26> ns2:takes_course <Course:75> .
+
+    <Student:32> ns2:takes_course <Course:96> .
+
+    <Student:34> ns2:takes_course <Course:84>,
+            <Course:87>,
+            <Course:89> .
+
+    <Student:35> ns2:takes_course <Course:79>,
+            <Course:80>,
+            <Course:94> .
+
+    <Student:38> ns2:takes_course <Course:78> .
+
+    <Student:39> ns2:takes_course <Course:83>,
+            <Course:96> .
+
+    <Student:40> ns2:takes_course <Course:91>,
+            <Course:92> .
+
+    <Student:41> ns2:takes_course <Course:83>,
+            <Course:90> .
+
+    <Student:42> ns2:takes_course <Course:77>,
+            <Course:88> .
+
+    <Student:44> ns2:takes_course <Course:70>,
+            <Course:76>,
+            <Course:84>,
+            <Course:92> .
+
+    <Student:46> ns2:takes_course <Course:70> .
+
+    <Student:47> ns2:takes_course <Course:76> .
+
+    <Student:48> ns2:takes_course <Course:90> .
+
+    <Student:51> ns2:takes_course <Course:71> .
+
+    <Student:53> ns2:takes_course <Course:70>,
+            <Course:80>,
+            <Course:93> .
+
+    <Student:55> ns2:takes_course <Course:78>,
+            <Course:85> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:77> .
+
+    <Student:57> ns2:takes_course <Course:89>,
+            <Course:90> .
+
+    <Student:58> ns2:takes_course <Course:71>,
+            <Course:83>,
+            <Course:85> .
+
+    <Student:60> ns2:takes_course <Course:94> .
+
+    <Student:64> ns2:takes_course <Course:70>,
+            <Course:85>,
+            <Course:90> .
+
+    <Student:66> ns2:takes_course <Course:83>,
+            <Course:86>,
+            <Course:90> .
+
+    <Student:68> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot4 {
+    <Professor:10> ns2:teaches_course <Course:92> .
+
+    <Professor:11> ns2:teaches_course <Course:70> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:16> ns2:teaches_course <Course:98> .
+
+    <Professor:17> ns2:teaches_course <Course:75>,
+            <Course:80> .
+
+    <Professor:6> ns2:teaches_course <Course:78> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Professor:9> ns2:teaches_course <Course:83> .
+
+    <Student:20> ns2:takes_course <Course:71>,
+            <Course:94> .
+
+    <Student:23> ns2:takes_course <Course:85> .
+
+    <Student:24> ns2:takes_course <Course:76>,
+            <Course:77>,
+            <Course:89> .
+
+    <Student:27> ns2:takes_course <Course:76>,
+            <Course:98> .
+
+    <Student:34> ns2:takes_course <Course:89> .
+
+    <Student:35> ns2:takes_course <Course:70>,
+            <Course:79>,
+            <Course:80>,
+            <Course:94> .
+
+    <Student:38> ns2:takes_course <Course:78> .
+
+    <Student:40> ns2:takes_course <Course:77>,
+            <Course:91>,
+            <Course:92> .
+
+    <Student:41> ns2:takes_course <Course:83>,
+            <Course:96> .
+
+    <Student:42> ns2:takes_course <Course:72>,
+            <Course:77>,
+            <Course:88>,
+            <Course:89> .
+
+    <Student:44> ns2:takes_course <Course:76>,
+            <Course:85>,
+            <Course:87> .
+
+    <Student:46> ns2:takes_course <Course:70>,
+            <Course:72>,
+            <Course:99> .
+
+    <Student:47> ns2:takes_course <Course:76>,
+            <Course:83> .
+
+    <Student:51> ns2:takes_course <Course:76>,
+            <Course:89> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:89> .
+
+    <Student:57> ns2:takes_course <Course:89>,
+            <Course:90> .
+
+    <Student:58> ns2:takes_course <Course:72> .
+
+    <Student:60> ns2:takes_course <Course:94> .
+
+    <Student:64> ns2:takes_course <Course:70>,
+            <Course:90> .
+
+    <Student:66> ns2:takes_course <Course:83>,
+            <Course:86>,
+            <Course:90> .
+
+    <Student:69> ns2:takes_course <Course:70> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot7 {
+    <Professor:12> ns2:teaches_course <Course:77> .
+
+    <Professor:17> ns2:teaches_course <Course:75>,
+            <Course:80> .
+
+    <Professor:18> ns2:teaches_course <Course:91>,
+            <Course:97> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:78> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Professor:8> ns2:teaches_course <Course:85> .
+
+    <Professor:9> ns2:teaches_course <Course:83> .
+
+    <Student:21> ns2:takes_course <Course:90> .
+
+    <Student:23> ns2:takes_course <Course:71>,
+            <Course:93>,
+            <Course:97> .
+
+    <Student:24> ns2:takes_course <Course:76>,
+            <Course:77>,
+            <Course:89> .
+
+    <Student:26> ns2:takes_course <Course:88> .
+
+    <Student:32> ns2:takes_course <Course:96> .
+
+    <Student:34> ns2:takes_course <Course:90> .
+
+    <Student:35> ns2:takes_course <Course:70>,
+            <Course:79>,
+            <Course:80>,
+            <Course:94> .
+
+    <Student:36> ns2:takes_course <Course:76>,
+            <Course:92>,
+            <Course:93> .
+
+    <Student:39> ns2:takes_course <Course:77>,
+            <Course:83>,
+            <Course:89>,
+            <Course:92> .
+
+    <Student:40> ns2:takes_course <Course:91>,
+            <Course:92> .
+
+    <Student:44> ns2:takes_course <Course:70>,
+            <Course:76> .
+
+    <Student:45> ns2:takes_course <Course:90> .
+
+    <Student:46> ns2:takes_course <Course:72> .
+
+    <Student:48> ns2:takes_course <Course:77>,
+            <Course:94> .
+
+    <Student:50> ns2:takes_course <Course:70>,
+            <Course:96> .
+
+    <Student:51> ns2:takes_course <Course:84>,
+            <Course:89> .
+
+    <Student:53> ns2:takes_course <Course:86> .
+
+    <Student:54> ns2:takes_course <Course:86>,
+            <Course:96> .
+
+    <Student:56> ns2:takes_course <Course:74> .
+
+    <Student:58> ns2:takes_course <Course:71>,
+            <Course:72>,
+            <Course:80>,
+            <Course:85> .
+
+    <Student:60> ns2:takes_course <Course:84> .
+
+    <Student:61> ns2:takes_course <Course:74>,
+            <Course:77>,
+            <Course:85>,
+            <Course:99> .
+
+    <Student:62> ns2:takes_course <Course:76>,
+            <Course:89>,
+            <Course:93> .
+
+    <Student:64> ns2:takes_course <Course:85>,
+            <Course:90> .
+
+    <Student:69> ns2:takes_course <Course:70> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot6 {
+    <Professor:10> ns2:teaches_course <Course:88>,
+            <Course:92> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:14> ns2:teaches_course <Course:89> .
+
+    <Professor:16> ns2:teaches_course <Course:98> .
+
+    <Professor:17> ns2:teaches_course <Course:75>,
+            <Course:80> .
+
+    <Professor:18> ns2:teaches_course <Course:91>,
+            <Course:97> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Professor:9> ns2:teaches_course <Course:83> .
+
+    <Student:23> ns2:takes_course <Course:71>,
+            <Course:85> .
+
+    <Student:27> ns2:takes_course <Course:76> .
+
+    <Student:32> ns2:takes_course <Course:96> .
+
+    <Student:33> ns2:takes_course <Course:81> .
+
+    <Student:34> ns2:takes_course <Course:84>,
+            <Course:87>,
+            <Course:90> .
+
+    <Student:35> ns2:takes_course <Course:70>,
+            <Course:73>,
+            <Course:80>,
+            <Course:94> .
+
+    <Student:36> ns2:takes_course <Course:93> .
+
+    <Student:39> ns2:takes_course <Course:92>,
+            <Course:94> .
+
+    <Student:40> ns2:takes_course <Course:77>,
+            <Course:91>,
+            <Course:92> .
+
+    <Student:44> ns2:takes_course <Course:76>,
+            <Course:84>,
+            <Course:92> .
+
+    <Student:45> ns2:takes_course <Course:90> .
+
+    <Student:46> ns2:takes_course <Course:72>,
+            <Course:99> .
+
+    <Student:51> ns2:takes_course <Course:76>,
+            <Course:89> .
+
+    <Student:53> ns2:takes_course <Course:86>,
+            <Course:89>,
+            <Course:93>,
+            <Course:95> .
+
+    <Student:54> ns2:takes_course <Course:86> .
+
+    <Student:55> ns2:takes_course <Course:78> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:77>,
+            <Course:89> .
+
+    <Student:58> ns2:takes_course <Course:71>,
+            <Course:80> .
+
+    <Student:60> ns2:takes_course <Course:84>,
+            <Course:94> .
+
+    <Student:61> ns2:takes_course <Course:74>,
+            <Course:77>,
+            <Course:85>,
+            <Course:98> .
+
+    <Student:62> ns2:takes_course <Course:89> .
+
+    <Student:64> ns2:takes_course <Course:70>,
+            <Course:74>,
+            <Course:90> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot1 {
+    <Professor:10> ns2:teaches_course <Course:88> .
+
+    <Professor:11> ns2:teaches_course <Course:70>,
+            <Course:71> .
+
+    <Professor:12> ns2:teaches_course <Course:77>,
+            <Course:94> .
+
+    <Professor:16> ns2:teaches_course <Course:74> .
+
+    <Professor:19> ns2:teaches_course <Course:93> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:81> .
+
+    <Student:20> ns2:takes_course <Course:85>,
+            <Course:94> .
+
+    <Student:38> ns2:takes_course <Course:78>,
+            <Course:97> .
+
+    <Student:41> ns2:takes_course <Course:96> .
+
+    <Student:42> ns2:takes_course <Course:72>,
+            <Course:77>,
+            <Course:88>,
+            <Course:89> .
+
+    <Student:47> ns2:takes_course <Course:72>,
+            <Course:76>,
+            <Course:79> .
+
+    <Student:55> ns2:takes_course <Course:85> .
+
+    <Student:57> ns2:takes_course <Course:89> .
+
+    <Student:66> ns2:takes_course <Course:83>,
+            <Course:85> .
+
+    <Student:68> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot0 {
+    <Professor:11> ns2:teaches_course <Course:70>,
+            <Course:71> .
+
+    <Professor:14> ns2:teaches_course <Course:89> .
+
+    <Professor:19> ns2:teaches_course <Course:93> .
+
+    <Student:20> ns2:takes_course <Course:71>,
+            <Course:85> .
+
+    <Student:38> ns2:takes_course <Course:97> .
+
+    <Student:41> ns2:takes_course <Course:83>,
+            <Course:90> .
+
+    <Student:42> ns2:takes_course <Course:88> .
+
+    <Student:47> ns2:takes_course <Course:76>,
+            <Course:79> .
+
+    <Student:57> ns2:takes_course <Course:89> .
+
+    <Student:66> ns2:takes_course <Course:78>,
+            <Course:86>,
+            <Course:90> .
+
+    <Student:68> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot3 {
+    <Professor:10> ns2:teaches_course <Course:88>,
+            <Course:92> .
+
+    <Professor:12> ns2:teaches_course <Course:77> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:16> ns2:teaches_course <Course:74> .
+
+    <Professor:17> ns2:teaches_course <Course:80> .
+
+    <Professor:18> ns2:teaches_course <Course:91>,
+            <Course:97> .
+
+    <Professor:19> ns2:teaches_course <Course:93> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:78>,
+            <Course:81> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Student:20> ns2:takes_course <Course:85> .
+
+    <Student:23> ns2:takes_course <Course:71>,
+            <Course:85>,
+            <Course:94>,
+            <Course:97> .
+
+    <Student:32> ns2:takes_course <Course:93>,
+            <Course:96> .
+
+    <Student:34> ns2:takes_course <Course:84>,
+            <Course:90> .
+
+    <Student:42> ns2:takes_course <Course:88> .
+
+    <Student:44> ns2:takes_course <Course:70>,
+            <Course:76>,
+            <Course:84>,
+            <Course:87> .
+
+    <Student:46> ns2:takes_course <Course:72> .
+
+    <Student:47> ns2:takes_course <Course:72>,
+            <Course:79>,
+            <Course:83> .
+
+    <Student:48> ns2:takes_course <Course:77>,
+            <Course:90> .
+
+    <Student:55> ns2:takes_course <Course:85> .
+
+    <Student:56> ns2:takes_course <Course:77> .
+
+    <Student:58> ns2:takes_course <Course:71>,
+            <Course:80>,
+            <Course:83>,
+            <Course:98> .
+
+    <Student:60> ns2:takes_course <Course:94> .
+
+    <Student:64> ns2:takes_course <Course:85>,
+            <Course:90> .
+
+    <Student:66> ns2:takes_course <Course:83>,
+            <Course:85>,
+            <Course:86> .
+
+    <Student:68> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot2 {
+    <Professor:10> ns2:teaches_course <Course:88>,
+            <Course:92> .
+
+    <Professor:12> ns2:teaches_course <Course:77> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:14> ns2:teaches_course <Course:89> .
+
+    <Professor:15> ns2:teaches_course <Course:73> .
+
+    <Professor:16> ns2:teaches_course <Course:74>,
+            <Course:98> .
+
+    <Professor:19> ns2:teaches_course <Course:93> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:78>,
+            <Course:81> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Professor:9> ns2:teaches_course <Course:83> .
+
+    <Student:20> ns2:takes_course <Course:94> .
+
+    <Student:23> ns2:takes_course <Course:71>,
+            <Course:74>,
+            <Course:93>,
+            <Course:94> .
+
+    <Student:32> ns2:takes_course <Course:93> .
+
+    <Student:34> ns2:takes_course <Course:90> .
+
+    <Student:38> ns2:takes_course <Course:97> .
+
+    <Student:41> ns2:takes_course <Course:77> .
+
+    <Student:42> ns2:takes_course <Course:77>,
+            <Course:88> .
+
+    <Student:44> ns2:takes_course <Course:76>,
+            <Course:84>,
+            <Course:92> .
+
+    <Student:47> ns2:takes_course <Course:76>,
+            <Course:79> .
+
+    <Student:56> ns2:takes_course <Course:89> .
+
+    <Student:57> ns2:takes_course <Course:90> .
+
+    <Student:66> ns2:takes_course <Course:78>,
+            <Course:83>,
+            <Course:85> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot9 {
+    <Professor:10> ns2:teaches_course <Course:92> .
+
+    <Professor:12> ns2:teaches_course <Course:77> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:74> .
+
+    <Professor:17> ns2:teaches_course <Course:75>,
+            <Course:80> .
+
+    <Professor:18> ns2:teaches_course <Course:91> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:6> ns2:teaches_course <Course:78>,
+            <Course:81> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Student:22> ns2:takes_course <Course:82>,
+            <Course:84> .
+
+    <Student:26> ns2:takes_course <Course:88> .
+
+    <Student:35> ns2:takes_course <Course:70>,
+            <Course:73>,
+            <Course:79> .
+
+    <Student:36> ns2:takes_course <Course:76> .
+
+    <Student:37> ns2:takes_course <Course:74>,
+            <Course:80> .
+
+    <Student:39> ns2:takes_course <Course:83>,
+            <Course:89>,
+            <Course:94> .
+
+    <Student:40> ns2:takes_course <Course:77>,
+            <Course:92> .
+
+    <Student:50> ns2:takes_course <Course:70>,
+            <Course:96> .
+
+    <Student:51> ns2:takes_course <Course:76>,
+            <Course:84>,
+            <Course:89> .
+
+    <Student:53> ns2:takes_course <Course:93>,
+            <Course:95> .
+
+    <Student:54> ns2:takes_course <Course:86>,
+            <Course:96> .
+
+    <Student:61> ns2:takes_course <Course:77>,
+            <Course:99> .
+
+    <Student:63> ns2:takes_course <Course:76>,
+            <Course:92>,
+            <Course:94> .
+
+    <Student:69> ns2:takes_course <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+ns1:snapshot8 {
+    <Professor:10> ns2:teaches_course <Course:92> .
+
+    <Professor:11> ns2:teaches_course <Course:71> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:13> ns2:teaches_course <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:74> .
+
+    <Professor:18> ns2:teaches_course <Course:97> .
+
+    <Professor:19> ns2:teaches_course <Course:93> .
+
+    <Professor:5> ns2:teaches_course <Course:84> .
+
+    <Professor:7> ns2:teaches_course <Course:86> .
+
+    <Student:24> ns2:takes_course <Course:76>,
+            <Course:77>,
+            <Course:89> .
+
+    <Student:27> ns2:takes_course <Course:76> .
+
+    <Student:33> ns2:takes_course <Course:78>,
+            <Course:81> .
+
+    <Student:35> ns2:takes_course <Course:70>,
+            <Course:73>,
+            <Course:80> .
+
+    <Student:36> ns2:takes_course <Course:92> .
+
+    <Student:37> ns2:takes_course <Course:70>,
+            <Course:80> .
+
+    <Student:39> ns2:takes_course <Course:77>,
+            <Course:92>,
+            <Course:94>,
+            <Course:96> .
+
+    <Student:40> ns2:takes_course <Course:77>,
+            <Course:84>,
+            <Course:92> .
+
+    <Student:48> ns2:takes_course <Course:90> .
+
+    <Student:51> ns2:takes_course <Course:76> .
+
+    <Student:53> ns2:takes_course <Course:70>,
+            <Course:86>,
+            <Course:89> .
+
+    <Student:54> ns2:takes_course <Course:96> .
+
+    <Student:58> ns2:takes_course <Course:80>,
+            <Course:83>,
+            <Course:85>,
+            <Course:98> .
+
+    <Student:60> ns2:takes_course <Course:84>,
+            <Course:94> .
+
+    <Student:61> ns2:takes_course <Course:82>,
+            <Course:98> .
+
+    <Student:62> ns2:takes_course <Course:76>,
+            <Course:89> .
+
+    <Student:63> ns2:takes_course <Course:90>,
+            <Course:94> .
+
+    <Student:64> ns2:takes_course <Course:85>,
+            <Course:90>,
+            <Course:98> .
+
+    <Student:69> ns2:takes_course <Course:70>,
+            <Course:71> .
+
+    <Univ:0> ns2:has_course <Course:70>,
+            <Course:72>,
+            <Course:77>,
+            <Course:80>,
+            <Course:86>,
+            <Course:93>,
+            <Course:98> .
+
+    <Univ:1> ns2:has_course <Course:79>,
+            <Course:81>,
+            <Course:84>,
+            <Course:87>,
+            <Course:88>,
+            <Course:89>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:71>,
+            <Course:76>,
+            <Course:83>,
+            <Course:91>,
+            <Course:95>,
+            <Course:96> .
+
+    <Univ:3> ns2:has_course <Course:75>,
+            <Course:92>,
+            <Course:99> .
+
+    <Univ:4> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:78>,
+            <Course:90>,
+            <Course:94> .
+}
+
+@prefix ns1: <http://egg/ng/> .
+@prefix ns2: <http://egg/predicate/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:snapshot5 {
+    <Professor:11> ns2:teaches_course <Course:91>,
+            <Course:93> .
+
+    <Professor:12> ns2:teaches_course <Course:99> .
+
+    <Professor:13> ns2:teaches_course <Course:72>,
+            <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:76> .
+
+    <Professor:15> ns2:teaches_course <Course:86> .
+
+    <Professor:16> ns2:teaches_course <Course:73>,
+            <Course:83> .
+
+    <Professor:5> ns2:teaches_course <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Student:20> ns2:takes_course <Course:70>,
+            <Course:97> .
+
+    <Student:22> ns2:takes_course <Course:70>,
+            <Course:77>,
+            <Course:80> .
+
+    <Student:23> ns2:takes_course <Course:76>,
+            <Course:85> .
+
+    <Student:25> ns2:takes_course <Course:75> .
+
+    <Student:27> ns2:takes_course <Course:72> .
+
+    <Student:31> ns2:takes_course <Course:70>,
+            <Course:72>,
+            <Course:92> .
+
+    <Student:33> ns2:takes_course <Course:75>,
+            <Course:98> .
+
+    <Student:35> ns2:takes_course <Course:71>,
+            <Course:89> .
+
+    <Student:37> ns2:takes_course <Course:78> .
+
+    <Student:39> ns2:takes_course <Course:93> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:41> ns2:takes_course <Course:73>,
+            <Course:77>,
+            <Course:78> .
+
+    <Student:42> ns2:takes_course <Course:75>,
+            <Course:89> .
+
+    <Student:45> ns2:takes_course <Course:80> .
+
+    <Student:47> ns2:takes_course <Course:87> .
+
+    <Student:48> ns2:takes_course <Course:85>,
+            <Course:89> .
+
+    <Student:50> ns2:takes_course <Course:75>,
+            <Course:89> .
+
+    <Student:51> ns2:takes_course <Course:85> .
+
+    <Student:53> ns2:takes_course <Course:94>,
+            <Course:99> .
+
+    <Student:54> ns2:takes_course <Course:98> .
+
+    <Student:56> ns2:takes_course <Course:73>,
+            <Course:99> .
+
+    <Student:57> ns2:takes_course <Course:91> .
+
+    <Student:61> ns2:takes_course <Course:99> .
+
+    <Student:64> ns2:takes_course <Course:77> .
+
+    <Student:67> ns2:takes_course <Course:91> .
+
+    <Student:69> ns2:takes_course <Course:97>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot4 {
+    <Professor:10> ns2:teaches_course <Course:79> .
+
+    <Professor:11> ns2:teaches_course <Course:91> .
+
+    <Professor:12> ns2:teaches_course <Course:99> .
+
+    <Professor:13> ns2:teaches_course <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:15> ns2:teaches_course <Course:86> .
+
+    <Professor:16> ns2:teaches_course <Course:73> .
+
+    <Professor:19> ns2:teaches_course <Course:92> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Student:20> ns2:takes_course <Course:70> .
+
+    <Student:22> ns2:takes_course <Course:70>,
+            <Course:77>,
+            <Course:80> .
+
+    <Student:23> ns2:takes_course <Course:76>,
+            <Course:85> .
+
+    <Student:25> ns2:takes_course <Course:75>,
+            <Course:90> .
+
+    <Student:27> ns2:takes_course <Course:72>,
+            <Course:94> .
+
+    <Student:28> ns2:takes_course <Course:96>,
+            <Course:98> .
+
+    <Student:31> ns2:takes_course <Course:72>,
+            <Course:88> .
+
+    <Student:33> ns2:takes_course <Course:98> .
+
+    <Student:35> ns2:takes_course <Course:71>,
+            <Course:85>,
+            <Course:89>,
+            <Course:99> .
+
+    <Student:36> ns2:takes_course <Course:83> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:41> ns2:takes_course <Course:73>,
+            <Course:77> .
+
+    <Student:42> ns2:takes_course <Course:89> .
+
+    <Student:44> ns2:takes_course <Course:95> .
+
+    <Student:45> ns2:takes_course <Course:80>,
+            <Course:87>,
+            <Course:90> .
+
+    <Student:48> ns2:takes_course <Course:70>,
+            <Course:85>,
+            <Course:89> .
+
+    <Student:50> ns2:takes_course <Course:71>,
+            <Course:75>,
+            <Course:79>,
+            <Course:89> .
+
+    <Student:52> ns2:takes_course <Course:70> .
+
+    <Student:53> ns2:takes_course <Course:90> .
+
+    <Student:55> ns2:takes_course <Course:79> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:99> .
+
+    <Student:57> ns2:takes_course <Course:91> .
+
+    <Student:61> ns2:takes_course <Course:99> .
+
+    <Student:63> ns2:takes_course <Course:94> .
+
+    <Student:67> ns2:takes_course <Course:91> .
+
+    <Student:69> ns2:takes_course <Course:96>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot7 {
+    <Professor:10> ns2:teaches_course <Course:79> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:13> ns2:teaches_course <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:73>,
+            <Course:83> .
+
+    <Professor:17> ns2:teaches_course <Course:84> .
+
+    <Professor:19> ns2:teaches_course <Course:75> .
+
+    <Professor:5> ns2:teaches_course <Course:71>,
+            <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Professor:9> ns2:teaches_course <Course:82> .
+
+    <Student:23> ns2:takes_course <Course:85> .
+
+    <Student:29> ns2:takes_course <Course:79> .
+
+    <Student:31> ns2:takes_course <Course:88>,
+            <Course:92> .
+
+    <Student:35> ns2:takes_course <Course:85> .
+
+    <Student:36> ns2:takes_course <Course:83> .
+
+    <Student:39> ns2:takes_course <Course:83> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:41> ns2:takes_course <Course:73>,
+            <Course:77>,
+            <Course:78> .
+
+    <Student:42> ns2:takes_course <Course:75>,
+            <Course:89> .
+
+    <Student:47> ns2:takes_course <Course:77> .
+
+    <Student:50> ns2:takes_course <Course:75>,
+            <Course:79>,
+            <Course:96> .
+
+    <Student:59> ns2:takes_course <Course:70>,
+            <Course:88> .
+
+    <Student:64> ns2:takes_course <Course:73>,
+            <Course:77>,
+            <Course:79> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot6 {
+    <Professor:10> ns2:teaches_course <Course:79> .
+
+    <Professor:11> ns2:teaches_course <Course:93> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:19> ns2:teaches_course <Course:75>,
+            <Course:92> .
+
+    <Professor:6> ns2:teaches_course <Course:77> .
+
+    <Student:22> ns2:takes_course <Course:70>,
+            <Course:80> .
+
+    <Student:23> ns2:takes_course <Course:70>,
+            <Course:76>,
+            <Course:85> .
+
+    <Student:29> ns2:takes_course <Course:76>,
+            <Course:79>,
+            <Course:97> .
+
+    <Student:31> ns2:takes_course <Course:72>,
+            <Course:92> .
+
+    <Student:35> ns2:takes_course <Course:89>,
+            <Course:92>,
+            <Course:99> .
+
+    <Student:36> ns2:takes_course <Course:83> .
+
+    <Student:39> ns2:takes_course <Course:81>,
+            <Course:93>,
+            <Course:98> .
+
+    <Student:41> ns2:takes_course <Course:77> .
+
+    <Student:42> ns2:takes_course <Course:75>,
+            <Course:89> .
+
+    <Student:47> ns2:takes_course <Course:77>,
+            <Course:87>,
+            <Course:99> .
+
+    <Student:48> ns2:takes_course <Course:85>,
+            <Course:89>,
+            <Course:98> .
+
+    <Student:50> ns2:takes_course <Course:79> .
+
+    <Student:51> ns2:takes_course <Course:82>,
+            <Course:93> .
+
+    <Student:56> ns2:takes_course <Course:99> .
+
+    <Student:59> ns2:takes_course <Course:72>,
+            <Course:88> .
+
+    <Student:64> ns2:takes_course <Course:73>,
+            <Course:77> .
+
+    <Student:69> ns2:takes_course <Course:73>,
+            <Course:97>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot1 {
+    <Professor:11> ns2:teaches_course <Course:91> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:13> ns2:teaches_course <Course:72> .
+
+    <Professor:14> ns2:teaches_course <Course:76> .
+
+    <Professor:19> ns2:teaches_course <Course:75> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Student:20> ns2:takes_course <Course:93>,
+            <Course:97> .
+
+    <Student:25> ns2:takes_course <Course:75>,
+            <Course:90> .
+
+    <Student:27> ns2:takes_course <Course:94> .
+
+    <Student:28> ns2:takes_course <Course:73>,
+            <Course:83> .
+
+    <Student:33> ns2:takes_course <Course:75>,
+            <Course:98> .
+
+    <Student:37> ns2:takes_course <Course:86> .
+
+    <Student:45> ns2:takes_course <Course:72>,
+            <Course:87>,
+            <Course:90>,
+            <Course:98> .
+
+    <Student:52> ns2:takes_course <Course:70> .
+
+    <Student:53> ns2:takes_course <Course:99> .
+
+    <Student:54> ns2:takes_course <Course:96>,
+            <Course:98> .
+
+    <Student:56> ns2:takes_course <Course:73>,
+            <Course:97> .
+
+    <Student:63> ns2:takes_course <Course:94> .
+
+    <Student:69> ns2:takes_course <Course:97>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot0 {
+    <Professor:11> ns2:teaches_course <Course:91> .
+
+    <Professor:13> ns2:teaches_course <Course:72> .
+
+    <Professor:14> ns2:teaches_course <Course:76> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:6> ns2:teaches_course <Course:77> .
+
+    <Student:20> ns2:takes_course <Course:97> .
+
+    <Student:27> ns2:takes_course <Course:72> .
+
+    <Student:28> ns2:takes_course <Course:83>,
+            <Course:96>,
+            <Course:98> .
+
+    <Student:37> ns2:takes_course <Course:78> .
+
+    <Student:45> ns2:takes_course <Course:72>,
+            <Course:87>,
+            <Course:90>,
+            <Course:98> .
+
+    <Student:53> ns2:takes_course <Course:94>,
+            <Course:99> .
+
+    <Student:54> ns2:takes_course <Course:96>,
+            <Course:98> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot3 {
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:15> ns2:teaches_course <Course:86> .
+
+    <Professor:16> ns2:teaches_course <Course:73>,
+            <Course:83> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:19> ns2:teaches_course <Course:75> .
+
+    <Professor:5> ns2:teaches_course <Course:71> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Student:20> ns2:takes_course <Course:70> .
+
+    <Student:22> ns2:takes_course <Course:70>,
+            <Course:77> .
+
+    <Student:25> ns2:takes_course <Course:75>,
+            <Course:90> .
+
+    <Student:28> ns2:takes_course <Course:83> .
+
+    <Student:31> ns2:takes_course <Course:70>,
+            <Course:72>,
+            <Course:92> .
+
+    <Student:33> ns2:takes_course <Course:75>,
+            <Course:83>,
+            <Course:97>,
+            <Course:98> .
+
+    <Student:35> ns2:takes_course <Course:85>,
+            <Course:89>,
+            <Course:99> .
+
+    <Student:37> ns2:takes_course <Course:86> .
+
+    <Student:44> ns2:takes_course <Course:95> .
+
+    <Student:45> ns2:takes_course <Course:72>,
+            <Course:87>,
+            <Course:90>,
+            <Course:98> .
+
+    <Student:48> ns2:takes_course <Course:70>,
+            <Course:89> .
+
+    <Student:50> ns2:takes_course <Course:75>,
+            <Course:79>,
+            <Course:96> .
+
+    <Student:52> ns2:takes_course <Course:70>,
+            <Course:91> .
+
+    <Student:53> ns2:takes_course <Course:90>,
+            <Course:94> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:73>,
+            <Course:99> .
+
+    <Student:57> ns2:takes_course <Course:91> .
+
+    <Student:61> ns2:takes_course <Course:99> .
+
+    <Student:63> ns2:takes_course <Course:94> .
+
+    <Student:69> ns2:takes_course <Course:96>,
+            <Course:97>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot2 {
+    <Professor:11> ns2:teaches_course <Course:91>,
+            <Course:93> .
+
+    <Professor:14> ns2:teaches_course <Course:74>,
+            <Course:76> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:19> ns2:teaches_course <Course:92> .
+
+    <Professor:5> ns2:teaches_course <Course:85> .
+
+    <Professor:6> ns2:teaches_course <Course:70>,
+            <Course:77> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Student:20> ns2:takes_course <Course:93> .
+
+    <Student:25> ns2:takes_course <Course:90> .
+
+    <Student:27> ns2:takes_course <Course:72>,
+            <Course:94> .
+
+    <Student:28> ns2:takes_course <Course:83>,
+            <Course:96>,
+            <Course:98> .
+
+    <Student:33> ns2:takes_course <Course:98> .
+
+    <Student:35> ns2:takes_course <Course:71>,
+            <Course:85>,
+            <Course:92> .
+
+    <Student:37> ns2:takes_course <Course:78> .
+
+    <Student:40> ns2:takes_course <Course:72> .
+
+    <Student:45> ns2:takes_course <Course:90> .
+
+    <Student:48> ns2:takes_course <Course:70>,
+            <Course:85> .
+
+    <Student:53> ns2:takes_course <Course:90>,
+            <Course:94>,
+            <Course:99> .
+
+    <Student:54> ns2:takes_course <Course:98> .
+
+    <Student:56> ns2:takes_course <Course:72>,
+            <Course:97> .
+
+    <Student:63> ns2:takes_course <Course:94> .
+
+    <Student:69> ns2:takes_course <Course:73>,
+            <Course:96>,
+            <Course:99> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot9 {
+    <Professor:10> ns2:teaches_course <Course:79> .
+
+    <Professor:11> ns2:teaches_course <Course:93> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:14> ns2:teaches_course <Course:74> .
+
+    <Professor:16> ns2:teaches_course <Course:73>,
+            <Course:83> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:19> ns2:teaches_course <Course:75>,
+            <Course:92> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Student:23> ns2:takes_course <Course:76> .
+
+    <Student:24> ns2:takes_course <Course:74> .
+
+    <Student:29> ns2:takes_course <Course:76> .
+
+    <Student:32> ns2:takes_course <Course:79> .
+
+    <Student:34> ns2:takes_course <Course:73> .
+
+    <Student:36> ns2:takes_course <Course:83> .
+
+    <Student:39> ns2:takes_course <Course:81>,
+            <Course:83> .
+
+    <Student:41> ns2:takes_course <Course:77>,
+            <Course:78> .
+
+    <Student:42> ns2:takes_course <Course:75>,
+            <Course:89> .
+
+    <Student:47> ns2:takes_course <Course:77> .
+
+    <Student:51> ns2:takes_course <Course:85> .
+
+    <Student:59> ns2:takes_course <Course:88> .
+
+    <Student:62> ns2:takes_course <Course:80>,
+            <Course:91> .
+
+    <Student:64> ns2:takes_course <Course:73> .
+
+    <Student:66> ns2:takes_course <Course:75> .
+
+    <Student:67> ns2:takes_course <Course:91> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
+ns1:snapshot8 {
+    <Professor:10> ns2:teaches_course <Course:79> .
+
+    <Professor:11> ns2:teaches_course <Course:93> .
+
+    <Professor:12> ns2:teaches_course <Course:94> .
+
+    <Professor:13> ns2:teaches_course <Course:90> .
+
+    <Professor:14> ns2:teaches_course <Course:74>,
+            <Course:76> .
+
+    <Professor:16> ns2:teaches_course <Course:83> .
+
+    <Professor:18> ns2:teaches_course <Course:80> .
+
+    <Professor:5> ns2:teaches_course <Course:71> .
+
+    <Professor:7> ns2:teaches_course <Course:87> .
+
+    <Professor:9> ns2:teaches_course <Course:82> .
+
+    <Student:22> ns2:takes_course <Course:70>,
+            <Course:80> .
+
+    <Student:23> ns2:takes_course <Course:85> .
+
+    <Student:29> ns2:takes_course <Course:88> .
+
+    <Student:31> ns2:takes_course <Course:72>,
+            <Course:88>,
+            <Course:92> .
+
+    <Student:39> ns2:takes_course <Course:83>,
+            <Course:98> .
+
+    <Student:41> ns2:takes_course <Course:73>,
+            <Course:77>,
+            <Course:78> .
+
+    <Student:42> ns2:takes_course <Course:89> .
+
+    <Student:47> ns2:takes_course <Course:77>,
+            <Course:87>,
+            <Course:99> .
+
+    <Student:50> ns2:takes_course <Course:79>,
+            <Course:89>,
+            <Course:96> .
+
+    <Student:51> ns2:takes_course <Course:80>,
+            <Course:82>,
+            <Course:85>,
+            <Course:93> .
+
+    <Student:59> ns2:takes_course <Course:70>,
+            <Course:88>,
+            <Course:94> .
+
+    <Student:64> ns2:takes_course <Course:73>,
+            <Course:77>,
+            <Course:79> .
+
+    <Student:66> ns2:takes_course <Course:75> .
+
+    <Univ:0> ns2:has_course <Course:73>,
+            <Course:74>,
+            <Course:85>,
+            <Course:88>,
+            <Course:92>,
+            <Course:94> .
+
+    <Univ:1> ns2:has_course <Course:75>,
+            <Course:76>,
+            <Course:78>,
+            <Course:80>,
+            <Course:90>,
+            <Course:97> .
+
+    <Univ:2> ns2:has_course <Course:72>,
+            <Course:79>,
+            <Course:83>,
+            <Course:84>,
+            <Course:86> .
+
+    <Univ:3> ns2:has_course <Course:77>,
+            <Course:82>,
+            <Course:89>,
+            <Course:98> .
+
+    <Univ:4> ns2:has_course <Course:70>,
+            <Course:71>,
+            <Course:81>,
+            <Course:87>,
+            <Course:91>,
+            <Course:93>,
+            <Course:95>,
+            <Course:96>,
+            <Course:99> .
+}
+
