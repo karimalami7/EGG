@@ -60,3 +60,11 @@ To run each provided use case X, where X is one of {trip, social, dblp, shop, un
 cd ../X
 ./X-script.sh
 ```
+
+### Contact
+
+* Karim Alami (Université Clermont Auvergne) [mailto:alami.karim7@gmail.com](alami.karim7@gmail.com)
+
+* [http://ws.isima.fr/~ciucanu/](Radu Ciucanu) (Université Clermont Auvergne) [mailto:ciucanu@isima.fr](ciucanu@isima.fr)
+
+* [http://ws.isima.fr/~mephu/](Engelbert Mephu Nguifo) (Université Clermont Auvergne) [mailto:mephu@isima.fr](mephu@isima.fr)
