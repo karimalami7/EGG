@@ -9,6 +9,9 @@ Moreover, we want an edge predicate *train* (that links a node *city* to an othe
 (that links a node *city* to a node *hotel*). 
 
 ```xml
+<graph>
+	<nodes>50</nodes>
+</graph>
 <types>
 	<size>2</size>
 	<alias type="0">city</alias>
@@ -27,29 +30,29 @@ Then, we indicate degree distributions for each triple *(source node type, edge 
 For example, the following snippet specifies that an edge of type *contains* from a node of type *city* to a node of type *hotel* follows a Zipfian out-distribution (since it is realistic to assume that the number of hotels in a city follows such a power-law distribution) and a uniform [1,1] in-distribution (since a hotel is located in precisely one city).
 
 ```xml
-	<schema>
-		<source type="0"> <!-- city -->
-			<target type="1" symbol="1"  > <!-- contains hotel -->
-				<indistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</indistribution>
-				<outdistribution type="zipfian">
-					<alpha>0.9</alpha>
-				</outdistribution>
-			</target>
-			<target type="0" symbol="0" > <!-- train city -->
-				<indistribution type="gaussian">
-					<mu>3</mu>
-					<sigma>1</sigma>
-				</indistribution>	
-				<outdistribution type="uniform">
-					<min>1</min>
-					<max>1</max>
-				</outdistribution>
-			</target>
-		</source>
-	</schema>
+<schema>
+	<source type="0"> <!-- city -->
+		<target type="1" symbol="1"  > <!-- contains hotel -->
+			<indistribution type="uniform">
+				<min>1</min>
+				<max>1</max>
+			</indistribution>
+			<outdistribution type="zipfian">
+				<alpha>0.9</alpha>
+			</outdistribution>
+		</target>
+		<target type="0" symbol="0" > <!-- train city -->
+			<indistribution type="gaussian">
+				<mu>3</mu>
+				<sigma>1</sigma>
+			</indistribution>	
+			<outdistribution type="uniform">
+				<min>1</min>
+				<max>1</max>
+			</outdistribution>
+		</target>
+	</source>
+</schema>
 ```
 
 In the *EGG* evolving graph configuration, we indicate the number of snapshots (for this example we assume that a snapshot is a day), and we describe validity and evolution rules for evolving properties. 
@@ -66,7 +69,7 @@ This is done with the following code:
 		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 ```
 
-We defined six evolving properties: _**weather**_ and _**qAir**_ for the node type *city*, _**star**_, _**availableRooms**_, and _**hotelPrice**_ for the node type *hotel*, and _**trainPrice**_ for the edge type *train*.
+We defined six evolving properties: *weather* and *qAir* for the node type *city*, *star*, *availableRooms*, and *hotelPrice* for the node type *hotel*, and *trainPrice* for the edge type *train*.
 
 An evolving property has one of the following types: unordered qualitative, ordered qualitative, discrete quantitative, continuous quantitive.
 
