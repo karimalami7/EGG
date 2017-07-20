@@ -18,7 +18,7 @@ This should be encoded in the variable *i* as a bit vector e.g., *i=[00011110]* 
   ```
 To run SPARQL, please do the following steps:
 
-1. define the source node and the target node in the [script file](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/His_Reach_social_sparql)
+1. define the source node and the target node in the [SPARQL script file](https://github.com/karimalami7/EGG/blob/master/demo/system_evaluation/His_Reach_social_sparql)
 
   ```sparql
   GRAPH ?x {<source node> predicate <target node> }}
