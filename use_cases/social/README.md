@@ -1,37 +1,31 @@
 # Social Use Case 
 
-All nodes are of type *person* and all edges are of type *friendOf* (connecting two persons).
+All nodes are of type *person* and all edge predicates are of type *friendOf* (connecting two persons).
 
 ```xml
-<graph>
-		<nodes>50</nodes>
-	</graph>
-	<predicates>
-		<size>1</size>
-
-		<alias symbol="0">friendOf</alias>
-
-	</predicates>
-	<types>
-		<size>1</size>
-		<alias type="0">person</alias>
-		<proportion type="0">1</proportion>
-
-	</types>
-	<schema>
-		<source type="0"> <!-- person -->
-			<target type="0" symbol="0" > <!-- friendOf person -->
-				<indistribution type="gaussian">
-					<mu>3</mu>
-					<sigma>1</sigma>
-				</indistribution>	
-				<outdistribution type="uniform">
-					<min>0</min>
-					<max>6</max>
-				</outdistribution>
-			</target>
-		</source>
-	</schema>
+<types>
+	<size>1</size>
+	<alias type="0">person</alias>
+	<proportion type="0">1</proportion>
+</types>
+<predicates>
+	<size>1</size>
+	<alias symbol="0">friendOf</alias>
+</predicates>
+<schema>
+	<source type="0"> <!-- person -->
+		<target type="0" symbol="0" > <!-- friendOf person -->
+			<indistribution type="gaussian">
+				<mu>3</mu>
+				<sigma>1</sigma>
+			</indistribution>	
+			<outdistribution type="uniform">
+				<min>0</min>
+				<max>6</max>
+			</outdistribution>
+		</target>
+	</source>
+</schema>
 ```
 
 In this use case, we assume that a snapshot correspond to a day. The EGG evolving properties are as follows:
