@@ -69,7 +69,13 @@ This is done with the following code:
 		"contains":{"type":"edge","init":{"T"},"succ":{"T":"T"}}
 ```
 
-We defined six evolving properties: *weather* and *qAir* for the node type *city*, *star*, *availableRooms*, and *hotelPrice* for the node type *hotel*, and *trainPrice* for the edge type *train*.
+We defined six evolving properties: 
+
+* *weather* and *qAir* for the node type *city*
+
+* *star*, *availableRooms*, and *hotelPrice* for the node type *hotel*
+
+* *trainPrice* for the edge type *train*
 
 An evolving property has one of the following types: unordered qualitative, ordered qualitative, discrete quantitative, continuous quantitive.
 
@@ -77,26 +83,26 @@ We begin by *weather* property for the node type *city*. It is an unordered qual
 It can change with 50% probability, and we define one succession rule that is: a city with weather sunny at a snapshot i cannot be rainy at snapshot i+1. 
 
 ```json
-		"weather":
-		{		
-			"element":"node",
-			"elements_type":"city",
-			"domain":{
-				"type":"qualitatif",
-				"order":"false",
-				"v":"true",
-				"values":["sunny","rainy","cloudy"],
-				"distribution":{"type":"uniform"}
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"staticity":0.5,
-				"succesors":{"sunny":["sunny","cloudy"]}
-			},
-			"rules":[],
-			"rulese":[]
-		}
+"weather":
+{		
+	"element":"node",
+	"elements_type":"city",
+	"domain":{
+		"type":"qualitatif",
+		"order":"false",
+		"v":"true",
+		"values":["sunny","rainy","cloudy"],
+		"distribution":{"type":"uniform"}
+	},
+	"duration":1,
+	"evolution":{
+		"e":"true",
+		"staticity":0.5,
+		"succesors":{"sunny":["sunny","cloudy"]}
+	},
+	"rules":[],
+	"rulese":[]
+}
 ```
 
 *qAir* is an ordered property for the node type *city*, which has ten possible values corresponding to integers between 1 and 10. 
@@ -106,95 +112,95 @@ Moreover, it can only increment or decrement by 1 between two consecutive snapsh
 There are 3 evolution rules where the change of *qAir* depends on the change of *weather* e.g., when *weather* of a node x changes from cloudy to sunny, then *qAir* of node x increases.
 
 ```json
-		"qAir":
-		{
-			"element":"node",
-			"elements_type":"city",
-			"domain":{
-				"type":"qualitatif",
-				"order":"true",
-				"v":"true",
-				"values":["1","2","3","4","5","6","7","8","9","10"],
-				"distribution":{"type":"binom","p":0.6}
-			},
-			"duration":7,
-			"evolution":{
-				"e":"true",
-				"staticity":0.8,
-				"offset":{
-					"min":-1,
-					"max":1,
-					"distribution":{"type":"uniform"}
-				}
-			},
-			"rules":[],
-			"rulese":[
-				{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
-				{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
-				{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
-			]
-
+"qAir":
+{
+	"element":"node",
+	"elements_type":"city",
+	"domain":{
+		"type":"qualitatif",
+		"order":"true",
+		"v":"true",
+		"values":["1","2","3","4","5","6","7","8","9","10"],
+		"distribution":{"type":"binom","p":0.6}
+	},
+	"duration":7,
+	"evolution":{
+		"e":"true",
+		"staticity":0.8,
+		"offset":{
+			"min":-1,
+			"max":1,
+			"distribution":{"type":"uniform"}
+		}
+	},
+	"rules":[],
+	"rulese":[
+		{"if":{"prop":"weather","change":["cloudy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+		{"if":{"prop":"weather","change":["rainy","sunny"]},"then":{"prop":"qAir","sens":"up"}},
+		{"if":{"prop":"weather","change":["sunny","cloudy"]},"then":{"prop":"qAir","sens":"down"}}
+	]
+}
 ```
 
 The evolving property *availableRooms* of the node type *hotel* is discrete quantitative, with values in the interal [1,100]. 
 It always changes between two consecutive snapshots, and it can increment or decrement by an integer up to 5 (drawn according to a binomial distribution centered in 0).
 
 ```json
-		"availableRooms":
-		{
-			"element":"node",
-			"elements_type":"hotel",
-			"domain":{
-				"type":"quantitatif:dis",
-				
-				"v":"true",
-				"values":{"min":1,"max":100},
-				"distribution":{"type":"binom","p":0.5}
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"staticity":0,
-				"offset":{
-					"min":-5,
-					"max":5,
-					"distribution":{"type":"binom","p":0.5}
-				}
-			},
-			"rules":[],
-			"rulese":[]
-			
+"availableRooms":
+{
+	"element":"node",
+	"elements_type":"hotel",
+	"domain":{
+		"type":"quantitatif:dis",
+
+		"v":"true",
+		"values":{"min":1,"max":100},
+		"distribution":{"type":"binom","p":0.5}
+	},
+	"duration":1,
+	"evolution":{
+		"e":"true",
+		"staticity":0,
+		"offset":{
+			"min":-5,
+			"max":5,
+			"distribution":{"type":"binom","p":0.5}
 		}
+	},
+	"rules":[],
+	"rulese":[]
+
+}
 ```
 
 The evolving property *star* of the node type *hotel* is ordered qualitative, with values in the list [1,2,3,4,5], following a geometric distribution. It can change every thirty snapshots with a probability of 1% and move by one position in the list.
 
 ```json
 "star":
-		{	
-			"element":"node",
-			"elements_type":"hotel",
-			"domain":{
-				"type":"qualitatif",
-				"order":"true",
-				"v":"true",
-				"values":["1","2","3","4","5"],
-				"distribution":{"type":"geom","p":0.65}
-			},
-			"duration":30,
-			"evolution":{
-				"e":"true",
-				"staticity":0.9,
-				"offset":{
-					"min":-1,
-					"max":1,
-					"distribution":{"type":"binom","p":0.5}
-				}
-			},
-			"rules":[],
-			"rulese":[]
-			
+{	
+	"element":"node",
+	"elements_type":"hotel",
+	"domain":{
+		"type":"qualitatif",
+		"order":"true",
+		"v":"true",
+		"values":["1","2","3","4","5"],
+		"distribution":{"type":"geom","p":0.65}
+	},
+	"duration":30,
+	"evolution":{
+		"e":"true",
+		"staticity":0.9,
+		"offset":{
+			"min":-1,
+			"max":1,
+			"distribution":{"type":"binom","p":0.5}
 		}
+	},
+	"rules":[],
+	"rulese":[]
+
+}
 ```
 The evolving property *hotelPrice* of the node type *city* is continuous quantitative. It is the most complex property of this use case as it depends both on *star* for its domain and *availableRomms* for its evolution. 
 More precisely, to compute *hotelPrice* for a node x, we need to construct its domain depending on its *star* value. 
@@ -202,60 +208,60 @@ Hence, we need to define in the configuration, for each *star* value, the interv
 Moreover, *hotelPrice* depends on *availableRooms* in the sense that these two properties are anti-correlated: if *availableRooms* increases, then *hotelPrice* decreases, and vice-versa. 
 
 ```json
-		"hotelPrice":
-		{		
-			"element":"node",
-			"elements_type":"hotel",
-			"domain":{
-				"type":"quantitatif:con",	
-				"v":"false",
-				"distribution":{"type":""}
-			},
-			"duration":1,
-			"evolution":{
-				"e":"false",
-				"staticity":0,
-			},
-			"rules":[
-				{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
-				{"if":{"prop":"star","hasValues":["2"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":21,"max":50},"distribution":{"type":"normal","mean":35,"sigma":4}},"evolution":{"offset":{"min":-3,"max":3,"distribution":{"type":"normal","mean":0,"sigma":1}}}}}},
-				{"if":{"prop":"star","hasValues":["3"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":51,"max":100},"distribution":{"type":"normal","mean":75,"sigma":8}},"evolution":{"offset":{"min":-7,"max":7,"distribution":{"type":"normal","mean":0,"sigma":3}}}}}},
-				{"if":{"prop":"star","hasValues":["4"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":101,"max":300},"distribution":{"type":"normal","mean":200,"sigma":20}},"evolution":{"offset":{"min":-20,"max":20,"distribution":{"type":"normal","mean":0,"sigma":7}}}}}},
-				{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
-			],
-			"rulese":[
-				{"if":{"prop":"availableRooms","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
-				{"if":{"prop":"availableRooms","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
-			]
-		}
+"hotelPrice":
+{		
+	"element":"node",
+	"elements_type":"hotel",
+	"domain":{
+		"type":"quantitatif:con",	
+		"v":"false",
+		"distribution":{"type":""}
+	},
+	"duration":1,
+	"evolution":{
+		"e":"false",
+		"staticity":0,
+	},
+	"rules":[
+		{"if":{"prop":"star","hasValues":["1"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":10,"max":20},"distribution":{"type":"normal","mean":15,"sigma":1}},"evolution":{"offset":{"min":-1,"max":1,"distribution":{"type":"normal","mean":0,"sigma":0.5}}}}}},
+		{"if":{"prop":"star","hasValues":["2"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":21,"max":50},"distribution":{"type":"normal","mean":35,"sigma":4}},"evolution":{"offset":{"min":-3,"max":3,"distribution":{"type":"normal","mean":0,"sigma":1}}}}}},
+		{"if":{"prop":"star","hasValues":["3"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":51,"max":100},"distribution":{"type":"normal","mean":75,"sigma":8}},"evolution":{"offset":{"min":-7,"max":7,"distribution":{"type":"normal","mean":0,"sigma":3}}}}}},
+		{"if":{"prop":"star","hasValues":["4"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":101,"max":300},"distribution":{"type":"normal","mean":200,"sigma":20}},"evolution":{"offset":{"min":-20,"max":20,"distribution":{"type":"normal","mean":0,"sigma":7}}}}}},
+		{"if":{"prop":"star","hasValues":["5"]},"then":{"prop":"hotelPrice","config":{"domain":{"values":{"min":301,"max":1000},"distribution":{"type":"normal","mean":650,"sigma":65}},"evolution":{"offset":{"min":-50,"max":50,"distribution":{"type":"normal","mean":0,"sigma":20}}}}}}
+	],
+	"rulese":[
+		{"if":{"prop":"availableRooms","sens":"down"},"then":{"prop":"hotelPrice","sens":"up"}},
+		{"if":{"prop":"availableRooms","sens":"up"},"then":{"prop":"hotelPrice","sens":"down"}}
+	]
+}
 ```
 
 The evolving property *trainPrice* of the edge prdicate *train* is continuous quantitative with values in the interval [20,100], following a normal distribution centered in 60. It can change every day with 30% probability, with an offset[-10,10] following a normal distribution centered in 0.
 
 ```json
-		"trainPrice":
-		{		
-			"element":"edge",
-			"elements_type":"train",
-			"domain":{
-				"type":"quantitatif:con",
-				
-				"v":"true",
-				"values":{"min":20,"max":100},
-				"distribution":{"type":"normal","mean":60,"sigma":6}
-			},
-			"duration":1,
-			"evolution":{
-				"e":"true",
-				"staticity":0.7,
-				"offset":{
-					"min":-10,
-					"max":10,
-					"distribution":{"type":"normal","mean":0,"sigma":3}
-				}
-			},
-			"rules":[],
-			"rulese":[]
-			
+"trainPrice":
+{		
+	"element":"edge",
+	"elements_type":"train",
+	"domain":{
+		"type":"quantitatif:con",
+
+		"v":"true",
+		"values":{"min":20,"max":100},
+		"distribution":{"type":"normal","mean":60,"sigma":6}
+	},
+	"duration":1,
+	"evolution":{
+		"e":"true",
+		"staticity":0.7,
+		"offset":{
+			"min":-10,
+			"max":10,
+			"distribution":{"type":"normal","mean":0,"sigma":3}
 		}
+	},
+	"rules":[],
+	"rulese":[]
+
+}
 ```
