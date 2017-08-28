@@ -8,19 +8,16 @@ We built **EGG** on top of [**gMark**](https://github.com/graphMark/gmark), a st
 
 ![](egg-architecture.png)
 
-**EGG has been accepted as a demo paper in ISWC 2017**. If you use EGG, please cite:
+**EGG has been accepted as a demo paper in ISWC 2017**. 
 
->@inproceedings{ACM17,
+If you use EGG, please cite:
 
-    author    = {Alami, K. and Ciucanu, R. and Mephu Nguifo, E.},
-
-    title     = {{EGG}: A Framework for Generating Evolving {RDF} Graphs},
-    
-    booktitle = {ISWC Posters \& Demonstrations},
-    
-    year      = {2017}
-  
-  }
+    @inproceedings{ACM17,
+     author    = {Alami, K. and Ciucanu, R. and Mephu Nguifo, E.},
+     title     = {{EGG}: A Framework for Generating Evolving {RDF} Graphs},
+     booktitle = {ISWC Posters \& Demonstrations},
+     year      = {2017}
+    }
 
 ### Running example
 
