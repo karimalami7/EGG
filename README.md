@@ -8,6 +8,15 @@ We built **EGG** on top of [**gMark**](https://github.com/graphMark/gmark), a st
 
 ![](egg-architecture.png)
 
+**EGG has been accepted as a demo paper in ISWC 2017**. If you use EGG, please cite:
+
+>@inproceedings{ACM17,
+    author    = {Alami, K. and Ciucanu, R. and Mephu Nguifo, E.},
+    title     = {{EGG}: A Framework for Generating Evolving {RDF} Graphs},
+    booktitle = {ISWC Posters \& Demonstrations},
+    year      = {2017}
+  }
+
 ### Running example
 
 To illustrate the different finely-tuned constraints that the user can specify as EGG input, we rely on the [Trip geographical database use-case](https://github.com/karimalami7/EGG/tree/master/use_cases/trip).
